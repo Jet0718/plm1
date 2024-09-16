@@ -4,7 +4,8 @@ from odoo.exceptions import UserError
 
 class TestModel(models.Model):
     _name = "requirement"
-    item_number =fields.Char("編號" , default=lambda self: _('New'), copy=False , readonly=True , tracking =True)
+    _description = "Require management main model for OpenPLM."
+    item_number =fields.Char("編號" , default=lambda self: _('New'), copy=False , readonly=True )
     name =fields.Char("需求名称",required=True)
     partner_id =fields.Many2one('res.partner',string='客戶',required=True)    
     contract_name =fields.Char("聯絡人")

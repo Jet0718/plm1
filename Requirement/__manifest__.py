@@ -4,6 +4,7 @@
     'depends': ['base','product'],
     'author': "BWCS PMO",
     'category': 'Category',
+    'license' : 'LGPL-3',
     'description': """
     Requirement & Evaluate 需求評估
     """,    
