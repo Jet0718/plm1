@@ -1,0 +1,69 @@
+from odoo import api,fields, models,_
+from datetime import timedelta
+from odoo.exceptions import UserError
+
+class TestModel(models.Model):
+    _name = "requirement"
+    item_number =fields.Char("編號" , default=lambda self: _('New'), copy=False , readonly=True , tracking =True)
+    name =fields.Char("需求名称",required=True)
+    partner_id =fields.Many2one('res.partner',string='客戶',required=True)    
+    contract_name =fields.Char("聯絡人")
+    owner_id =fields.Many2one('res.users',string='負責人',default=lambda self: self.env.user)
+    prd_type_id =fields.Many2one('product.category',string='需求產品類型')    
+    prd_purpose_id =fields.Many2one('requirement.purpose',string='產品用途')  
+    sample =fields.Boolean("是否打樣",default=False)
+    quotation =fields.Boolean("是否報價",default=False)
+
+
+    state =fields.Selection(
+        string="状态",
+        selection=[('Draft','草稿'),('Evaluting','评价'),('Approved','核准'),('Abort','中止')],
+        default="Draft",readonly=True
+    )
+    speical_req =fields.Text("特殊要求")
+    ref_product =fields.Many2one('product.template',string='參考產品') 
+    active =fields.Boolean("啟用",default=True)    
+    spec_ids =fields.One2many('requirement.spec','requirement_id')
+
+    # #上传单个档案写法
+    # binary_field = fields.Binary("档案")
+    # binary_file_name =fields.Char("档案名称")
+    # #上传多个档案写法
+    binary_fields =fields.Many2many("ir.attachment",string="Multi Files Upload")
+
+    # Seqence 自动领号写法
+    @api.model_create_multi
+    def create(self, vals_list):
+         """ Create a sequence for the requirement model """
+         for vals in vals_list:
+               if vals.get('item_number', _('New')) == _('New'):
+                      vals['item_number'] = self.env['ir.sequence'].next_by_code('requirement')
+                      return super().create(vals_list)     
+    
+    #定义按钮
+    def action_set_Evaluting(self):
+        if self.state =='Draft':
+            self.write ({'state':'Evaluting'})        
+        elif self.state =='Evaluting':
+            raise UserError('已是"评价"状态')
+        else:
+            raise UserError('不可以推到"评价"状态')
+    def action_set_Approved(self):
+        if self.state =='Evaluting':
+            self.write({'state':'Approved'})
+        elif self.state =='Approved':
+            raise UserError('已是"核准"状态')
+        elif self.state =='Abort':
+            raise UserError('已中止,不能被核准')
+        else:
+            raise UserError('不可以推到"核准"状态')
+    def action_set_Abort(self):
+        if self.state =='Evaluting':
+            self.write({'state':'Abort'})
+        elif self.state =='Draft':
+            self.write({'state':'Abort'})             
+        elif self.state =='Abort':
+            raise UserError('已是"中止"状态')
+        else:
+            raise UserError('已核准,不能被中止')
+    
