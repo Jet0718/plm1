@@ -1,5 +1,5 @@
 from odoo import api,fields, models
-from datetime import timedelta
+#from datetime import timedelta
 
 class requirement_purpose(models.Model):
     _name = "requirement.spec"
