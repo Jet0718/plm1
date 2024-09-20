@@ -1,13 +1,13 @@
 {
     'name': "Requirement & Evaluate",
     'version': '1.0',
+    'depends': ['base','product'],
     'author': "BWCS PMO",
     'category': 'Category',
     'license' : 'LGPL-3',
     'description': """
     Requirement & Evaluate 需求評估
     """,    
-    'depends': ['base','product'],
     'data': [
         'security/ir.model.access.csv',
         'views/requirement_view.xml',

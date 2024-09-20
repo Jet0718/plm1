@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <record id="issue_code_model_action" model="ir.actions.act_window">
+        <field name="name">问题编码</field>
+        <field name="res_model">issue.code</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <record id="issue_code_view_tree" model="ir.ui.view">
+        <field name="name">issue.code.tree</field>
+        <field name="model">issue.code</field>
+        <field name="arch" type="xml">
+            <tree string="问题编码">
+                <field name="item_number"  string="问题代码"/>
+                <field name="name"  string="问题编码主旨"/>
+                <field name="description" string="问题编码说明"/>
+                <field name="class1" string="问题编码分类一"/>
+            </tree>
+        </field>
+    </record>
+    <record id="issue_code_view_form" model="ir.ui.view">
+        <field name="name">issue.code.form"</field>
+        <field name="model">issue.code</field>
+        <field name="arch" type="xml">
+            <form string="问题编码">                
+                <sheet>
+                    <group>
+                        <field name="item_number"  string="问题代码"/>
+                        <field name="name"  string="问题编码主旨"/>
+                        <field name="description" string="问题编码说明"/>
+                        <field name="class1" string="问题编码分类一"/>
+                        
+                        <field name="class2a" string="问题编码分类二" invisible="class1 != '人'"/>
+                        <field name="class2b" string="问题编码分类二" invisible="class1 != '机'"/>
+                        <field name="class2c" string="问题编码分类二" invisible="class1 != '料'"/>
+                        <field name="class2d" string="问题编码分类二" invisible="class1 != '法'"/>
+                        <field name="class2e" string="问题编码分类二" invisible="class1 != '环'"/>
+                        <field name="class2f" string="问题编码分类二" invisible="class1 != '测'"/>
+                        <field name="class2g" string="问题编码分类二" invisible="class1 != '设计开发'"/>
+                        <field name="class3c1" string="问题编码分类三" invisible="class2c != '冷水机异常'"/>
+                        <field name="class3c3" string="问题编码分类三" invisible="class2c != '配电板'"/>
+                        <field name="class3c4" string="问题编码分类三" invisible="class2c != '保护镜异常'"/>
+
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" groups="base.group_user"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+        </field>
+    </record>
+    <record id="issue_code_view_search" model="ir.ui.view">
+        <field name="name">issue.code.search"</field>
+        <field name="model">issue.code</field>
+        <field name="arch" type="xml">
+            <search string="问题编码搜寻">
+                <field name="item_number"  string="问题代码"/>
+                <field name="name"  string="问题编码主旨"/>
+                <field name="description" string="问题编码说明"/>
+                <field name="class1" string="问题编码分类一"/>
+                <separator/>                    
+            </search>
+        </field>
+    </record>
+</odoo>

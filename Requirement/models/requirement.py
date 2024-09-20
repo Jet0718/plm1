@@ -5,6 +5,8 @@ from odoo.exceptions import UserError
 class TestModel(models.Model):
     _name = "requirement"
     _description = "Require management main model for OpenPLM."
+    _inherit = ['mail.thread','mail.activity.mixin']
+    
     item_number =fields.Char("編號" , default=lambda self: _('New'), copy=False , readonly=True )
     name =fields.Char("需求名称",required=True)
     partner_id =fields.Many2one('res.partner',string='客戶',required=True)    
@@ -19,7 +21,7 @@ class TestModel(models.Model):
     state =fields.Selection(
         string="状态",
         selection=[('Draft','草稿'),('Evaluting','评价'),('Approved','核准'),('Abort','中止')],
-        default="Draft",readonly=True
+        default="Draft",readonly=True,tracking=1
     )
     speical_req =fields.Text("特殊要求")
     ref_product =fields.Many2one('product.template',string='參考產品') 
