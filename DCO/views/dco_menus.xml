@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- the root elements of the data file -->
+<odoo>
+    <menuitem id="dco_menu_root" name="DCO.图文签审单"/>
+    <menuitem id="dco_first_level_menu" name="主目录" parent="dco_menu_root" sequence="1"/> 
+    <menuitem id="dco_model_menu_action" name="图文签审"  parent="dco_first_level_menu" action="dco_model_action"/>
+    <menuitem id="dco_setting_menu" name="次目录" parent="dco_menu_root" sequence="2"/>   
+    <menuitem id="dco_tag_setting_action" name="标签" parent="dco_setting_menu" action="dco_tag_action"/>
+ </odoo>
+ 

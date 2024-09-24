@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record id="product_template_plm_form_view" model="ir.ui.view">
+            <field name="name">plm.product.template.product.form</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='action_open_label_layout']" position="after"> 
+                    <!-- <field name ="state"/> -->
+                    <!-- #增加状态按钮                   -->
+                    <!-- <button name="action_set_Review" string="审核中" type="object"/>
+                    <button name="action_set_Approved" string="核准" type="object"/>
+                    <button name="action_set_Cancel" string="取消" type="object"/> -->
+                    <!-- #将状态改成管道状态列 -->
+                    <field name="state" widget="statusbar" statusbar_visible="New,Review,Released,InChange,Superseded"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
