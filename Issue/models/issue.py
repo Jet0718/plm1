@@ -42,7 +42,16 @@ class IssueModel(models.Model):
         selection=[('Submitted','提交'),('In Verification','验证中'),('Verified','已验证'),('Closed','关闭'),('Cancel','取消')],
         default="Submitted",readonly=True,tracking=1
     )
- 
+    #关联其他表单2024.9.25 Herbert增加
+    project_id =fields.Many2one('project.project',string='关联专案')
+    dco_id =fields.Many2one('dco',string='关联DCO')
+    pco_id =fields.Many2one('pco',string='关联PCO')
+    #增加栏位 2024.9.25 Herbert增加
+    solution =fields.Text("解决方案")
+    vresults =fields.Selection(
+        string="验证结果",
+        selection=[('Acceptable','可接受'),('Observed','待观察')]
+    )
    
 
     # #上传单个档案写法

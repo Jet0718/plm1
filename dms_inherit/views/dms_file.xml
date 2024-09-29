@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_dmsfileprj_form_inherit" model="ir.ui.view">
+            <field name="name">dms_file.form</field>
+            <field name="model">dms.file</field>
+            <field name="inherit_id" ref="dms.view_dms_file_form" />
+            <field name="arch" type="xml">
+                <xpath expr="//header" position="attributes">
+                    <field name="state" widget="statusbar" statusbar_visible="Draft,Review,Released,InChange,Superseded" />
+                </xpath>                
+                <field name="storage_id" position="after">   
+                        <field name="item_number"  />
+                        <field name="version"  />
+                        <field name="active"  />
+                        <field name="owner"  />
+                </field>
+
+                 <xpath expr="//notebook" position="inside">    
+                    <page string="项目">
+                        <field name="cn_file2prj" >
+                            <tree> 
+                                <field name="name" />
+                            </tree> 
+                        </field>
+                    </page> 
+                    <page string="产品">
+                        <field name="cn_file2prd" >
+                            <tree> 
+                                <field name="item_number" />
+                                <field name="name" />
+                            </tree> 
+                        </field>
+                    </page>        
+                </xpath>
+
+                
+            </field> 
+        </record>
+    </data>
+</odoo>

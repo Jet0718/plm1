@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record id="issue_dco_form_view" model="ir.ui.view">
+            <field name="name">issue.dco.form</field>
+            <field name="model">dco</field>
+            <field name="inherit_id" ref="DCO.dco_view_form"/>
+            <field name="arch" type="xml">
+                <!-- 栏位显示在表头中的写法 -->
+                <!-- <xpath expr="//field[@name='flow_class']" position="before"> 
+                    <field name ="issue_ids" string="关联issue"/>
+                    <field name ="issue_count" string="关联issue数量"/>
+                </xpath> -->
+                <!-- 在最上面显示按钮的写法 -->
+                <xpath expr="//sheet" position="inside">
+                    <div class="oe_button_box" name="button_box">             
+                        <button name="%(issue_model_action)d" string="Issue" class="oe_stat_button" icon="fa-question-circle-o" type="action" border="1">
+                            <field name="issue_count"  widget="statinfo" string=" Issue" />
+                        </button>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

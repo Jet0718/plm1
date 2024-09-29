@@ -56,7 +56,9 @@
                             <field name="ref_product" string="參考產品"/>
                             <field name="prd_type_id" string="需求產品類型"/>
                             <field name="prd_purpose_id" string="產品用途"/>
-                            
+                            <!-- <field name ="project_ids" string="关联項目"/> -->
+                            <field name ="project_count" string="关联項目数量"/>    
+                            <field name ="lead_count" string="关联商機数量"/>      
                         </group>
                     </group>
                     <notebook>

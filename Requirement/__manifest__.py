@@ -1,7 +1,7 @@
 {
     'name': "Requirement & Evaluate",
     'version': '1.0',
-    'depends': ['base','product'],
+    'depends': ['base','product','project'],
     'author': "BWCS PMO",
     'category': 'Category',
     'license' : 'LGPL-3',
@@ -13,7 +13,9 @@
         'views/requirement_view.xml',
         'views/requirement_purpose_view.xml',
         'views/requirement_spec_view.xml',
-        'views/requirement_menus.xml',
+        'views/requirement_menus.xml',  
+        'views/requirement_project_view.xml',
+        'views/requirement_lead_view.xml',
         'data/requirement_sequence.xml'     
     ]
 }

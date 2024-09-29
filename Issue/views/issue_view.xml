@@ -26,7 +26,13 @@
                 <field name="reproduce" string="重现操作顺序"/> 
                 <field name="respond" string="回应"/>         
                 <field name="quantity" string="数量"/> 
-                <field name="state" string="状态"/>           
+                <field name="state" string="状态"/>
+                <!-- 2024.9.25 Herbert增加内容      -->
+                <field name="project_id" string="关联专案"/>
+                <field name="dco_id" string="关联DCO"/> 
+                <field name="pco_id" string="关联PCO"/> 
+                <field name="solution" string="解决方案"/> 
+                <field name="vresults" string="验证结果"/>           
             </tree>
         </field>
     </record>
@@ -65,7 +71,13 @@
                             <field name="description" string="问题描述"/>
                             <field name="environmental" string="环境说明"/>
                             <field name="reproduce" string="重现操作顺序"/>
-                            <field name="quantity" string="数量"/>                          
+                            <field name="quantity" string="数量"/>
+                            <!-- 2024.9.25 Herbert增加内容      -->
+                            <field name="project_id" string="关联专案"/>
+                            <field name="dco_id" string="关联DCO"/> 
+                            <field name="pco_id" string="关联PCO"/> 
+                            <field name="solution" string="解决方案"/> 
+                            <field name="vresults" string="验证结果"/>                          
                         </group>
                     </group>
                     <notebook>

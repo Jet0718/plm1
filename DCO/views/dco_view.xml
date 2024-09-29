@@ -31,6 +31,7 @@
                 <header>
                     <!-- #增加状态按钮                   -->
                     <button name="action_set_Review" string="审核中" type="object"/>
+                    <button name="action_set_Review_after" string="变更后审核" type="object"  invisible="not new_affected_item_id or new_affected_item_id.version !=1" />
                     <button name="action_set_Approved" string="核准" type="object"/>
                     <button name="action_set_Cancel" string="取消" type="object"/>
                     <!-- #将状态改成管道状态列 -->
@@ -48,7 +49,8 @@
                         </group>
                         <group>
                             <field name="flow_class" string="審批類別" widget ="radio"/>   <!--下拉变成radio单选模式-->
-                            <field name="affected_item_id" string="審批文件"/>                         
+                            <field name="affected_item_id" string="審批文件" options="{'no_create': True}"/>   <!-- no_create 不让新增-->   
+                             <field name="new_affected_item_id" string="新版文件" options="{'no_create': True}"/>                  
                             <field name="tag_ids" string="Tags" widget="many2many_tags"/>                            
                         </group>
                     </group>

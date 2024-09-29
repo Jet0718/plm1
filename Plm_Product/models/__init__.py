@@ -1,4 +1,2 @@
-# -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
-
-from . import plm_product_templete
+from . import cnproduct_template
+from . import cnproduct_bom

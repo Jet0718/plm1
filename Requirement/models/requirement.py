@@ -28,6 +28,12 @@ class TestModel(models.Model):
     active =fields.Boolean("啟用",default=True)    
     spec_ids =fields.One2many('requirement.spec','requirement_id')
 
+    # 2024.9.29 Herbert新增内容:增加关联项目 及 项目数量
+    project_ids = fields.One2many('project.project','requirement_id')
+    project_count =fields.Integer("数量" ,compute='_compute_project_count')
+    lead_ids = fields.One2many('crm.lead','requirement_id')
+    lead_count =fields.Integer("数量" ,compute='_compute_lead_count')
+
     # #上传单个档案写法
     # binary_field = fields.Binary("档案")
     # binary_file_name =fields.Char("档案名称")
@@ -70,3 +76,14 @@ class TestModel(models.Model):
         else:
             raise UserError('已核准,不能被中止')
     
+    #计算关联Project的数量
+    @api.depends("project_ids")
+    def _compute_project_count(self):
+        for record in self:
+            record.project_count = len(record.project_ids)
+        
+    #计算关联Lead的数量
+    @api.depends("lead_ids")
+    def _compute_lead_count(self):
+        for record in self:
+            record.lead_count = len(record.lead_ids)

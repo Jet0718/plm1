@@ -8,7 +8,7 @@ class PCOModel(models.Model):
     _inherit = ['mail.thread','mail.activity.mixin']
         
     item_number =fields.Char("編號" , default=lambda self: _('New'), copy=False , readonly=True )
-    title=fields.Char("主旨" ,compute='_compute_c',required=True,readonly=False) 
+    title=fields.Char("主旨" ,compute='_compute_c',required=True,readonly=False,default=" ") 
     description=fields.Char("說明")
     flow_class =fields.Selection(
         string="審批類別",
@@ -28,11 +28,17 @@ class PCOModel(models.Model):
     affected_bom_id =fields.Many2one('mrp.bom',string='审批物料清单') 
     active =fields.Boolean("啟用",default=True)    
 
+    #ebert 
+    new_affected_bom_id =fields.Many2one('mrp.bom',string='新版物料清单')
+    new_affected_product_id =fields.Many2one('product.template',string='新版審批产品')  
+
+    #ebert end 
+
     # #上传单个档案写法
     # binary_field = fields.Binary("档案")
     # binary_file_name =fields.Char("档案名称")
     # #上传多个档案写法
-    binary_fields =fields.Many2many("ir.attachment",string="Multi Files Upload")
+    binary_fields =fields.Many2many("dms.file",string="Multi Files Upload")
 
     # Seqence 自动领号写法
     @api.model_create_multi
@@ -46,16 +52,102 @@ class PCOModel(models.Model):
     #定义按钮
     def action_set_Review(self):
         if self.state =='New':
-            self.write ({'state':'Review'})     
-            self.affected_product_id.write({'state':'Review'})   
+            self.write ({'state':'Review'})  
+            
+            #ebert version item 换版 条件判断送审物件的版本是否是1， 是则送审发布，否则换版
+            if self.flow_class =='Product':
+                
+                if self.affected_product_id.version !=1  or self.affected_product_id.state == 'Released':
+                    copyitem=self.affected_product_id.copy()
+                    fields = self.env['product.template']._fields
+                    #for fld in fields :
+                    copyitem.write({'cn_configid': self.affected_product_id.cn_configid})
+                    copyitem.write({'cnis_current': True})
+                    copyitem.write({'active': True})
+                    copyitem.write({'name': self.affected_product_id.name})
+                    copyitem.write({'version': self.affected_product_id.version+1})                 
+                    copyitem.write({'state': "Draft"})
+                    self.write ({'new_affected_product_id':copyitem.id})  
+                    self.affected_product_id.write({'state':'InChange'}) 
+                    self.affected_product_id.write({'active':False})
+                    self.affected_product_id.write({'cnis_current':False})     
+                    
+                else :
+                    self.affected_product_id.write({'state':'Review'})
+                    self.write({'new_affected_product_id':self.affected_product_id.id}) 
+            else :
+                if self.flow_class =='Bom' and self.affected_bom_id != False :
+                    #if self.producaffected_product_idtion_id:
+                    # This ECO was generated from a MO. Uses it MO as base for the revision.
+
+
+                 if self.affected_bom_id.version !=1  or self.affected_bom_id.state == 'Released':
+                    if not self.new_affected_bom_id:
+                        self.new_affected_bom_id = self.affected_bom_id.sudo().copy(default={
+                            'version': self.affected_bom_id.version + 1,
+                            'active': True,
+                        })
+                        self.affected_bom_id.write ({'active':False}) 
+                        self.affected_bom_id.write({'state':'InChange'}) 
+                        self.affected_bom_id.write({'cnis_current':False})
+                        self.write({'new_affected_bom_id':self.new_affected_bom_id.id})   
+                    
+                else :
+                    self.affected_bom_id.write({'state':'Review'})
+                    self.write({'new_affected_bom_id':self.affected_bom_id.id}) 
+                    
+                   
+                    
+            # ebert end             
+             
         elif self.state =='Review':
             raise UserError('已是"审核中"状态')
         else:
             raise UserError('不可以推到"审核中"状态')
+   
+    def action_set_Review_after(self):
+        if self.flow_class =='Product':                
+            self.new_affected_product_id.write({'state':'Review'})  
+        elif self.flow_class =='Bom' and self.affected_bom_id != False :                
+                self.affected_bom_id.write({'state':'Review'}) 
+        elif self.state =='Review':
+            raise UserError('已是"变更后审核"状态')
+        else:
+            raise UserError('不可以推到"变更后审核"状态')  
+
     def action_set_Approved(self):
         if self.state =='Review':
             self.write({'state':'Approved'})
-            self.affected_product_id.write({'state':'Released'})  
+
+             #ebert 发布 Released
+            if self.flow_class =='Product':
+                
+                if self.affected_product_id.version !=1  or self.affected_product_id.state == 'InChange':
+                    self.affected_product_id.write({'state':'Superseded'}) 
+                    self.affected_product_id.write({'active':False}) 
+                    self.new_affected_product_id.write({'active':True}) 
+                    self.new_affected_product_id.write({'state':'Released'}) 
+                else :
+                    self.affected_product_id.write({'state':'Released'})
+            else :
+                if self.flow_class =='Bom' and self.affected_bom_id != False  :
+                    #if self.producaffected_product_idtion_id:
+                    # This ECO was generated from a MO. Uses it MO as base for the revision.
+
+                    if self.affected_bom_id.version !=1  or self.affected_bom_id.state == 'InChange':
+                        self.affected_bom_id.write({'state':'Superseded'}) 
+                        self.affected_bom_id.write({'active':False}) 
+                        self.new_affected_bom_id.write({'active':True}) 
+                        self.new_affected_bom_id.write({'state':'Released'}) 
+                    else :
+                        self.new_affected_bom_id.write({'state':'Released'})
+
+                     
+            # ebert end 
+
+
+
+              
         elif self.state =='Approved':
             raise UserError('已是"核准"状态')
         elif self.state =='Cancel':
@@ -88,3 +180,45 @@ class PCOModel(models.Model):
     #         self.affected_product_id.state= 'Released'
     #     else:
     #         pass
+
+    # ebert
+    def open_new_bom(self):
+        self.ensure_one()
+        return {
+            'name': _('Pco BoM'),
+            'type': 'ir.actions.act_window',
+            'view_mode': 'form',
+            'res_model': 'mrp.bom',
+            'target': 'current',
+            'res_id': self.new_affected_bom_id.id,
+            'context': {
+                'default_product_tmpl_id': self.new_affected_product_id.id,
+                'default_product_id': self.new_affected_product_id.product_variant_id.id,
+                'create': self.state != 'done',
+                'edit': self.state != 'done',
+                'delete': self.state != 'done',
+            },
+        }
+    
+    def open_new_product(self):
+         if self.affected_product_id.version == 1 and (self.affected_product_id.state != 'Released'  and self.affected_product_id.state != 'InChange' and self.state != 'Approved' )   :
+            raise UserError('新版发布,打开为空！')
+         else :
+            self.ensure_one()
+            return {
+                'name': _('Pco Product'),
+                'type': 'ir.actions.act_window',
+                'view_mode': 'form',
+                'res_model': 'product.template',
+                'target': 'current',
+                'res_id': self.new_affected_product_id.id,
+                'context': {
+                    'default_product_tmpl_id': self.new_affected_product_id.id,
+                    'default_product_id': self.new_affected_product_id.product_variant_id.id,
+                    'create': self.state != 'done',
+                    'edit': self.state != 'done',
+                    'delete': self.state != 'done',
+                },
+        }
+    
+   

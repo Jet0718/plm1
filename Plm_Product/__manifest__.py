@@ -1,14 +1,18 @@
 {
-    'name': "Plm product templete",
+    'name': 'cn_plm_product',
+    'description': 'plm_product',
+    'author': 'ebert',
     'version': '1.0',
-    'depends': ['base','product'],
-    'author': "BWCS PMO",
-    'category': 'Category',
-    'license' : 'LGPL-3',
-    'description': """
-   plm_product_templete
-    """,    
+    'category': 'Uncategorized',
+    'website': 'http://www.example.com',
+    'depends': ['base','mrp'],
     'data': [
-        'views/plm_product_templete_view.xml'
-    ]
+        'views/product_templates.xml',
+        'views/mrp_bom_views.xml',
+        'data/prodcut_sequence.xml',
+        'data/prodbom_sequence.xml',        
+        'security/ir.model.access.csv',       
+
+    ],
+    'application': True,
 }
