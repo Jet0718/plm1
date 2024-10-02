@@ -1,7 +1,7 @@
 {
     'name': 'cn_plm_product',
-    'description': 'plm_product',
-    'author': 'ebert',
+    'description': 'ebert plm_product',
+    'author': 'BWCS PMO',
     'version': '1.0',
     'category': 'Uncategorized',
     'website': 'http://www.example.com',

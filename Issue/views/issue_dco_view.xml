@@ -4,7 +4,7 @@
         <record id="issue_dco_form_view" model="ir.ui.view">
             <field name="name">issue.dco.form</field>
             <field name="model">dco</field>
-            <field name="inherit_id" ref="DCO.dco_view_form"/>
+            <field name="inherit_id" ref="dco.dco_view_form"/>
             <field name="arch" type="xml">
                 <!-- 栏位显示在表头中的写法 -->
                 <!-- <xpath expr="//field[@name='flow_class']" position="before"> 

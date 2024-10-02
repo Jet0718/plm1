@@ -6,8 +6,11 @@
             <field name="model">project.project</field>
             <field name="inherit_id" ref="project.edit_project" />
             <field name="arch" type="xml">
+                <xpath expr="//div[@name='button_box']" postion="inside">
+                    <button name="open_dmsfile_btn" icon="fa-flask" string="工程文件" type="object"  class="oe_stat_button"/> 
+                </xpath>
                 <field name="tag_ids" position="after">
-                        <field name="cn_prj2pdt_ship" />
+                    <field name="cn_prj2pdt_ship" />
                 </field>
                 <!-- <notebook >                    
                         <page string="产品">

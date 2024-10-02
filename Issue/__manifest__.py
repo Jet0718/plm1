@@ -2,7 +2,7 @@
     'name': "Issue",
     'version': '1.0',
     # 2024.9.25 Herbert新增内容:引用project,DCO,PCO 
-    'depends': ['base','product','mrp','account','mail','project','PCO','DCO'],
+    'depends': ['base','product','mrp','account','mail','project','pco','dco'],
     'author': "BWCS PMO",
     'category': 'Category',
     'license' : 'LGPL-3',

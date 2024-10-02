@@ -6,7 +6,7 @@
     'category': 'Category',
     'license' : 'LGPL-3',
     'description': """
-    PCO 产品签审单
+    PCO 产品签审单 
     """,    
     'data': [
         'security/ir.model.access.csv',
