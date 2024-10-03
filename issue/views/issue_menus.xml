@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- the root elements of the data file -->
+<odoo>
+    <menuitem id="issue_menu_root" name="Issue.问题单"/>
+    <menuitem id="issue_first_level_menu" name="主目录" parent="issue_menu_root" sequence="1"/> 
+    <menuitem id="issue_model_menu_action" name="问题单"  parent="issue_first_level_menu" action="issue_model_action"/>
+    <menuitem id="issue_setting_menu" name="次目录" parent="issue_menu_root" sequence="2"/>   
+    <menuitem id="issue_code_setting_action" name="问题编码" parent="issue_setting_menu" action="issue_code_model_action"/>
+ </odoo>
+ 

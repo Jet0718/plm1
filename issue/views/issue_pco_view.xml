@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record id="issue_pco_form_view" model="ir.ui.view">
+            <field name="name">issue.pco.form</field>
+            <field name="model">pco</field>
+            <field name="inherit_id" ref="pco.pco_view_form"/>
+            <field name="arch" type="xml">
+                <!-- 栏位显示在表头中的写法 -->
+                <!-- <xpath expr="//field[@name='flow_class']" position="before"> 
+                    <field name ="issue_ids" string="关联issue"/>
+                    <field name ="issue_count" string="关联issue数量"/>
+                </xpath> -->
+                <!-- 在最上面显示按钮的写法 -->
+                <!-- <xpath expr="//sheet" position="inside"> -->
+                    <div class="oe_button_box" name="button_box">             
+                        <!-- <button name="%(issue_model_action)d" string="Issue" class="oe_stat_button" icon="fa-question-circle-o" type="action" border="1">
+                            <field name="issue_count"  widget="statinfo" string=" Issue" />
+                        </button> -->
+                        <button name="issue_model_action" string="Issue" class="oe_stat_button" icon="fa-question-circle-o" type="object" border="1">
+                            <field name="issue_count"  widget="statinfo" string=" Issue" />
+                        </button>
+                    </div>
+                <!-- </xpath> -->
+            </field>
+        </record>
+        <!-- <record id="issue_model_action" model="ir.actions.act_window">
+            <field name="name">问题单</field>
+            <field name="res_model">issue</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" eval="issue_view_tree"/>
+            <field name="context">{'default_pco_id': active_id}</field> -->
+            <!-- <field name="domain">[('pco_id', '=', active_id)]</field> -->
+            <!-- <field name="target">new</field> -->
+            
+            <!-- <field name="context">{'default_pco_id': active_id}</field> -->
+             <!-- <field name="domain">[('pco_id', '=', context.get('default_pco_id'))]</field> -->
+        <!-- </record> -->
+    </data>
+</odoo>

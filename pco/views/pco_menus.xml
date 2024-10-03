@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- the root elements of the data file -->
+<odoo>
+    <menuitem id="pco_menu_root" name="PCO.产品签审单"/>
+    <menuitem id="pco_first_level_menu" name="Overview" parent="pco_menu_root" sequence="1"/> 
+    <menuitem id="pco_model_menu_action" name="Product Approval"  parent="pco_first_level_menu" action="pco_model_action"/>
+    <menuitem id="pco_setting_menu" name="Setting" parent="pco_menu_root" sequence="2"/>   
+    <menuitem id="pco_tag_setting_action" name="Tag" parent="pco_setting_menu" action="pco_tag_action"/>
+    <menuitem
+        id="menu_pco_master_data"
+        name="Master Data"
+        parent="pco_menu_root"
+        sequence="15"/>
+    <menuitem
+    id="menu_pco_products"
+    name="Products"
+    action="product.product_template_action"
+    parent="menu_pco_master_data"
+    sequence="5"/>
+    <menuitem
+    id="menu_pco_boms"
+    name="Bill of Materials"
+    action="mrp.mrp_bom_form_action"
+    parent="menu_pco_master_data"
+    sequence="10"/>
+ </odoo>
+ 

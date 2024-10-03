@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- the root elements of the data file -->
+<odoo>
+    <menuitem id="requirement_menu_root" name="需求评估"/>
+    <menuitem id="requirement_first_level_menu" name="主目录" parent="requirement_menu_root" sequence="1"/> 
+    <menuitem id="requirement_model_menu_action" name="需求"  parent="requirement_first_level_menu" action="requirement_model_action"/>
+    <menuitem id="requirement_setting_menu" name="次目录" parent="requirement_menu_root" sequence="2"/>   
+    <menuitem id="requirement_purpose_setting_action" name="产品用途" parent="requirement_setting_menu" action="requirement_purpose_action"/>
+    <menuitem id="requirement_spec_setting_action" name="规格要求" parent="requirement_setting_menu" action="requirement_spec_action"/>
+</odoo>
+ 

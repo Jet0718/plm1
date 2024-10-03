@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="dco_tag_action" model="ir.actions.act_window">
+        <field name="name">dco标签</field>        
+        <field name="res_model">dco.tag</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <record id="dco_tag_view_tree" model="ir.ui.view">
+        <field name="name">dco.tag.tree</field>
+        <field name="model">dco.tag</field>
+        <field name="arch" type="xml">
+            <tree string="dco标签">
+                <field name="name" string="标签名称" />
+                <field name="description" string="标签说明"/>    
+            </tree>
+        </field>
+    </record>
+    <record id="dco_tag_view_form" model="ir.ui.view">
+        <field name="name">dco.tag.form"</field>
+        <field name="model">dco.tag</field>
+        <field name="arch" type="xml">
+            <form string="dco标签">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name" string="标签名称" />
+                            <field name="description" string="标签说明"/>                                
+                        </group>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" groups="base.group_user"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+        </field>
+    </record>
+    <record id="dco_tag_view_search" model="ir.ui.view">
+        <field name="name">dco.tag.search"</field>
+        <field name="model">dco.tag</field>
+        <field name="arch" type="xml">
+            <search string="dco标签搜寻">
+                <field name="name" string="标签名称" />
+                <field name="description" string="标签说明"/>   
+            </search>
+        </field>
+    </record>
+</odoo>

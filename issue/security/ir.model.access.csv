@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_issue,access_issue,model_issue,base.group_user,1,1,1,1
+access_issue_code,access_issue_code,model_issue_code,base.group_user,1,1,1,1
