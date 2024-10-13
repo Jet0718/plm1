@@ -24,7 +24,7 @@ class DCOModel(models.Model):
         default="New",readonly=True,tracking=1
     )
     # #需串联碧涛哥写的工程文件
-    affected_item_id =fields.Many2one('dms.file',string='審批文件',options={'no_create': True})
+    affected_item_id =fields.Many2one('dms.file',string='審批文件')
     # #没法串联碧涛哥写的工程文件,暂代写法  
     #affected_item_id =fields.Char("審批文件")
     active =fields.Boolean("啟用",default=True)    

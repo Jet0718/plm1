@@ -4,7 +4,8 @@
     'author': 'BWCS PMO',
     'version': '1.0',
     'category': 'Uncategorized',
-    'website': 'http://www.example.com',
+    'license' : 'LGPL-3',
+    'website': 'http://www.openplm.com.tw',
     'depends': ['base','mrp'],
     'data': [
         'views/product_templates.xml',
@@ -12,7 +13,6 @@
         'data/prodcut_sequence.xml',
         'data/prodbom_sequence.xml',        
         'security/ir.model.access.csv',       
-
     ],
     'application': True,
 }

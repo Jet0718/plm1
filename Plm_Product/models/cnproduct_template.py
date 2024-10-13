@@ -59,6 +59,7 @@ class InhtProductModel(models.Model):
 
 class productSpec(models.Model):
     _name="product.spec"
+    _description="Specification for Part"
 
     prd_id=fields.Many2one('product.template',"product",required=True)
 

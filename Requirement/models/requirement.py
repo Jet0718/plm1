@@ -87,3 +87,22 @@ class TestModel(models.Model):
     def _compute_lead_count(self):
         for record in self:
             record.lead_count = len(record.lead_ids)
+
+    def require_project_filter_action(self):
+        return {
+            'type': 'ir.actions.act_window',
+            'name': 'project',
+            'view_mode': 'tree,form',
+            'res_model': 'project.project',
+            'domain': [('requirement_id', '=', self.id) ],
+            'context': {'default_requirement_id': self.id},
+        }    
+    def require_leads_filter_action(self):
+        return {
+            'type': 'ir.actions.act_window',
+            'name': 'lead',
+            'view_mode': 'tree,form',
+            'res_model': 'crm.lead',
+            'domain': [('requirement_id', '=', self.id) ],
+            'context': {'default_requirement_id': self.id},
+        }    

@@ -3,6 +3,7 @@
     'description': 'ebert DEV project_inherit',
     'author': 'BWCS PMO',
     'version': '1.0',
+    'license': 'LGPL-3',
     'category': 'Uncategorized',
     'website': 'http://www.example.com',
     'depends': ['base','project','dms','plm_product'],
