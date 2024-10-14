@@ -10,6 +10,17 @@ class PCOModel(models.Model):
     @api.depends("issue_ids")
     def _compute_issue_count(self):
         for record in self:
-            record.issue_count = len(record.issue_ids)
+            try: 
+                record.issue_count = len(record.issue_ids)                
+            except Exception as e:                
+                record.issue_count =self.env['issue'].search_count([('dco_id', '=', record.id)])
 
-
+    def issue_model_action(self):
+        return {
+            'type': 'ir.actions.act_window',
+            'name': 'issue',
+            'view_mode': 'tree,form',
+            'res_model': 'issue',
+            'domain': [('dco_id', '=', self.id) ],
+            'context': {'default_dco_id': self.id},
+        }

@@ -31,7 +31,11 @@ class PCOModel(models.Model):
     #ebert 
     new_affected_bom_id =fields.Many2one('mrp.bom',string='新版物料清单')
     new_affected_product_id =fields.Many2one('product.template',string='新版審批产品')  
-
+    #添加显示版本
+    affected_product_version = fields.Integer('产品旧版本',  related='affected_product_id.version', readonly=True)
+    affected_bom_version = fields.Integer('物料清单旧版本',  related='affected_bom_id.version', readonly=True)
+    new_affected_product_version = fields.Integer('产品新版本',  related='new_affected_product_id.version', readonly=True)
+    new_affected_bom_version = fields.Integer('物料清单新版本',  related='new_affected_bom_id.version', readonly=True)
     #ebert end 
 
     # #上传单个档案写法
@@ -62,15 +66,15 @@ class PCOModel(models.Model):
                     fields = self.env['product.template']._fields
                     #for fld in fields :
                     copyitem.write({'cn_configid': self.affected_product_id.cn_configid})
-                    copyitem.write({'cnis_current': True})
-                    copyitem.write({'active': True})
+                    copyitem.write({'cnis_current': False})
+                    copyitem.write({'active': False})
                     copyitem.write({'name': self.affected_product_id.name})
                     copyitem.write({'version': self.affected_product_id.version+1})                 
                     copyitem.write({'state': "Draft"})
                     self.write ({'new_affected_product_id':copyitem.id})  
                     self.affected_product_id.write({'state':'InChange'}) 
-                    self.affected_product_id.write({'active':False})
-                    self.affected_product_id.write({'cnis_current':False})     
+                    self.affected_product_id.write({'active':True})
+                    self.affected_product_id.write({'cnis_current':True})     
                     
                 else :
                     self.affected_product_id.write({'state':'Review'})
@@ -85,11 +89,12 @@ class PCOModel(models.Model):
                     if not self.new_affected_bom_id:
                         self.new_affected_bom_id = self.affected_bom_id.sudo().copy(default={
                             'version': self.affected_bom_id.version + 1,
-                            'active': True,
+                            'active': False,
+                            'cnis_current': False,
                         })
-                        self.affected_bom_id.write ({'active':False}) 
+                        self.affected_bom_id.write ({'active':True}) 
                         self.affected_bom_id.write({'state':'InChange'}) 
-                        self.affected_bom_id.write({'cnis_current':False})
+                        self.affected_bom_id.write({'cnis_current':True})
                         self.write({'new_affected_bom_id':self.new_affected_bom_id.id})   
                     
                 else :
@@ -125,8 +130,10 @@ class PCOModel(models.Model):
                 if self.affected_product_id.version !=1  or self.affected_product_id.state == 'InChange':
                     self.affected_product_id.write({'state':'Superseded'}) 
                     self.affected_product_id.write({'active':False}) 
+                    self.affected_product_id.write({'cnis_current':False}) 
                     self.new_affected_product_id.write({'active':True}) 
                     self.new_affected_product_id.write({'state':'Released'}) 
+                    self.new_affected_product_id.write({'cnis_current':True}) 
                 else :
                     self.affected_product_id.write({'state':'Released'})
             else :
@@ -137,8 +144,10 @@ class PCOModel(models.Model):
                     if self.affected_bom_id.version !=1  or self.affected_bom_id.state == 'InChange':
                         self.affected_bom_id.write({'state':'Superseded'}) 
                         self.affected_bom_id.write({'active':False}) 
+                        self.affected_bom_id.write({'cnis_current':False})
                         self.new_affected_bom_id.write({'active':True}) 
                         self.new_affected_bom_id.write({'state':'Released'}) 
+                        self.new_affected_bom_id.write({'cnis_current':True}) 
                     else :
                         self.new_affected_bom_id.write({'state':'Released'})
 
@@ -221,4 +230,21 @@ class PCOModel(models.Model):
                 },
         }
     
-   
+    #ebert show version
+    def _comput_show_version(self) :
+         for record in self:
+            if self.affected_product_id :
+                record.affected_product_version = record.affected_product_id.version
+            
+            if self.new_affected_product_id :
+                record.new_affected_product_version = record.new_affected_product_id.version
+           
+
+    def _comput_show_version_p(self) :
+        for record in self:
+            if self.affected_bom_id :
+                raise UserError('test,')
+                record.affected_bom_version = record.affected_bom_id.version
+            # if self.new_affected_bom_id :
+            #     record.new_affected_bom_version = record.new_affected_bom_id.version
+

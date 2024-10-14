@@ -22,7 +22,7 @@ class InhtProductModel(models.Model):
         'product.template', 'product_template',
         ondelete='cascade', required=False)
     cn_pdt2version_ship = fields.One2many('product.template', 'pdt2pdt_id', '历程记录')
-    version=fields.Integer("version",default="0",copy=False,readonly=True)
+    version=fields.Integer("version",default=1,copy=False,readonly=True)
 
 
 
