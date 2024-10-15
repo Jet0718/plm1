@@ -40,11 +40,25 @@ class InhtProjectModel(models.Model):
             new_vals_list.append(vals)
         return super().create(new_vals_list)
     
+<<<<<<< HEAD
+    #ebert按钮跳转页面    
+    def action_openfileversions(self): 
+         return {
+            'name': '历程记录',
+            'res_model': 'dms.file', 
+            'view_mode': 'tree,form',
+            #'view_id': self.env.ref('product.template.product_template_tree_view').id,   
+            'domain': [('active', '=', False),('cn_configid', '=', self.cn_configid)],  
+            #'context': {'search_default_group': 'my_group'},
+            'type': 'ir.actions.act_window',
+        }
+=======
 # class InhtProjectModel_indms(models.Model):
 #     _inherit = "project.project" 
 
 
 #     cn_prj2file = fields.Many2one('dms.file',  string= '文件')
+>>>>>>> dbc8a95025e00e02717bd9748717216622145e8e
   
 
 

@@ -5,17 +5,32 @@
             <field name="name">dms_file.form</field>
             <field name="model">dms.file</field>
             <field name="inherit_id" ref="dms.view_dms_file_form" />
+<<<<<<< HEAD
+            <field name="arch" type="xml">             
+                <xpath expr="//header" position="inside">
+                    <field name="state" widget="statusbar" statusbar_visible="Draft,Review,Released,InChange,Superseded" />
+                </xpath> 
+                             
+=======
             <field name="arch" type="xml">
                 <xpath expr="//header" position="attributes">
                     <field name="state" widget="statusbar" statusbar_visible="Draft,Review,Released,InChange,Superseded" />
                 </xpath>                
+>>>>>>> dbc8a95025e00e02717bd9748717216622145e8e
                 <field name="storage_id" position="after">   
                         <field name="item_number"  />
                         <field name="version"  />
                         <field name="active"  />
                         <field name="owner"  />
                 </field>
+<<<<<<< HEAD
+                <!-- ebert button_box 顶部添加按钮 -->    
+                <div name="button_box" position="inside">
+                    <button string="versions"  icon="fa-sitemap" class="oe_stat_button" type="object"   name="action_openfileversions"/>                  
+                </div> 
+=======
 
+>>>>>>> dbc8a95025e00e02717bd9748717216622145e8e
                  <xpath expr="//notebook" position="inside">    
                     <page string="项目">
                         <field name="cn_file2prj" >
