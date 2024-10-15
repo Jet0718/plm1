@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="product_template_only_form_inherit_itemnumber" model="ir.ui.view">
+            <field name="name">product.template.form</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_form_view" />
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='action_open_label_layout']" position="after"> 
+                    <field name="state" widget="statusbar" statusbar_visible="New,Review,Released,InChange,Superseded"/>
+                </xpath>              
+                <field name="product_tooltip" position="after">
+                    <!-- 横向显示 -->
+                    <span style="width: 5% !important; display: inline-block;"/>
+                        <label for="item_number" string ="編號:" class="oe_inline fw-bold" style="width: 20% !important; margin: 0;"/>                    
+                        <field name="item_number" class="oe_inline" style="width: 20% !important;" />  
+
+                        <label for="version" string ="版本:" class="oe_inline fw-bold" style="width: 20% !important; margin: 0;"/>
+                        <field name="version" nolabel="1" class="oe_inline" style="width: 20% !important;"/>
+
+                        <label for="cnis_current" string ="is_current:" class="oe_inline fw-bold" style="width: 20% !important; margin: 0;"/>
+                        <field name="cnis_current" nolabel="1" class="oe_inline" style="width: 20% !important;"/>
+                        
+                         <!-- <field name="state" nolabel="1" class="oe_inline" style="width: 20% !important;"/> -->
+                </field>
+                
+                <!-- ebert button_box 顶部添加按钮 -->    
+                <div name="button_box" position="inside">
+                    <button string="versions"  icon="fa-sitemap" class="oe_stat_button" type="object"   name="action_open_versions"/>                  
+                </div>
+                <notebook >                    
+                    <page string="規格特性">
+                        <field name="xspec" >
+                            <tree> 
+                                <field name="name" />
+                                <field name="description" />
+                                </tree> 
+                        </field>
+                    </page>                   
+                </notebook>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="product_template_view_tree">
+            <field name="name">product.template.view.tree.inherit.website_sale</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_tree_view"/>
+            <field name="arch" type="xml">
+                <field name="name" position="before">
+                    <field name="item_number" />
+                </field>
+                <field name="name" position="after">
+                    <field name="version" />
+                    <field name="state" />
+                </field>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -2,7 +2,11 @@ from odoo import api,fields, models,_
 
 # from dms_file import InhtProjectModel
 
+<<<<<<< HEAD
 from odoo.exceptions import UserError, ValidationError
+=======
+
+>>>>>>> dbc8a95025e00e02717bd9748717216622145e8e
 class InhtProjectModel(models.Model):
     _inherit = "dms.file"    
     
@@ -55,6 +59,7 @@ class InhtProjectTaskModel(models.Model):
 
 
 
+<<<<<<< HEAD
     cnprjtask_file = fields.Many2many('dms.file', string= '工程文件',ondelete ='cascade')
 
 
@@ -117,3 +122,16 @@ class InhtProjectTaskModel(models.Model):
                 if f :      
                    f.write({'cn_file2prj': [(3, self.project_id.id)]})   
         
+=======
+    cnprjtask_file = fields.Many2many('dms.file', string= '工程文件')
+
+
+
+  
+
+
+
+
+            
+
+>>>>>>> dbc8a95025e00e02717bd9748717216622145e8e
