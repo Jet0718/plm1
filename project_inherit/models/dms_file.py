@@ -40,7 +40,6 @@ class InhtProjectModel(models.Model):
             new_vals_list.append(vals)
         return super().create(new_vals_list)
     
-<<<<<<< HEAD
     #ebert按钮跳转页面    
     def action_openfileversions(self): 
          return {
@@ -52,13 +51,12 @@ class InhtProjectModel(models.Model):
             #'context': {'search_default_group': 'my_group'},
             'type': 'ir.actions.act_window',
         }
-=======
 # class InhtProjectModel_indms(models.Model):
 #     _inherit = "project.project" 
 
 
 #     cn_prj2file = fields.Many2one('dms.file',  string= '文件')
->>>>>>> dbc8a95025e00e02717bd9748717216622145e8e
+
   
 
 
