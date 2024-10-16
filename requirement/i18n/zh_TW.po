@@ -1,0 +1,586 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* requirement
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0-20240813\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-10-13 15:27+0000\n"
+"PO-Revision-Date: 2024-10-13 23:30+0800\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.5\n"
+
+#. module: requirement
+#: model:ir.model.fields,field_description:requirement.field_requirement__message_needaction
+#: model:ir.model.fields,field_description:requirement.field_requirement_purpose__message_needaction
+#: model:ir.model.fields,field_description:requirement.field_requirement_spec__message_needaction
+msgid "Action Needed"
+msgstr "需採取行動"
+
+#. module: requirement
+#: model:ir.model.fields,field_description:requirement.field_requirement__activity_ids
+#: model:ir.model.fields,field_description:requirement.field_requirement_purpose__activity_ids
+#: model:ir.model.fields,field_description:requirement.field_requirement_spec__activity_ids
+msgid "Activities"
+msgstr "活動"
+
+#. module: requirement
+#: model:ir.model.fields,field_description:requirement.field_requirement__activity_exception_decoration
+#: model:ir.model.fields,field_description:requirement.field_requirement_purpose__activity_exception_decoration
+#: model:ir.model.fields,field_description:requirement.field_requirement_spec__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "活動異常圖示"
+
+#. module: requirement
+#: model:ir.model.fields,field_description:requirement.field_requirement__activity_state
+#: model:ir.model.fields,field_description:requirement.field_requirement_purpose__activity_state
+#: model:ir.model.fields,field_description:requirement.field_requirement_spec__activity_state
+msgid "Activity State"
+msgstr "活動狀態"
+
+#. module: requirement
+#: model:ir.model.fields,field_description:requirement.field_requirement__activity_type_icon
+#: model:ir.model.fields,field_description:requirement.field_requirement_purpose__activity_type_icon
+#: model:ir.model.fields,field_description:requirement.field_requirement_spec__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "活動類型圖示"
+
+#. module: requirement
+#: model:ir.model.fields,field_description:requirement.field_requirement__message_attachment_count
+#: model:ir.model.fields,field_description:requirement.field_requirement_purpose__message_attachment_count
+#: model:ir.model.fields,field_description:requirement.field_requirement_spec__message_attachment_count
+msgid "Attachment Count"
+msgstr "附件數量"
+
+#. module: requirement
+#: model:ir.model.fields,field_description:requirement.field_requirement__create_uid
+#: model:ir.model.fields,field_description:requirement.field_requirement_purpose__create_uid
+#: model:ir.model.fields,field_description:requirement.field_requirement_spec__create_uid
+msgid "Created by"
+msgstr "建立者"
+
+#. module: requirement
+#: model:ir.model.fields,field_description:requirement.field_requirement__create_date
+#: model:ir.model.fields,field_description:requirement.field_requirement_purpose__create_date
+#: model:ir.model.fields,field_description:requirement.field_requirement_spec__create_date
+msgid "Created on"
+msgstr "建立時間"
+
+#. module: requirement
+#: model:ir.model.fields,field_description:requirement.field_requirement__display_name
+#: model:ir.model.fields,field_description:requirement.field_requirement_purpose__display_name
+#: model:ir.model.fields,field_description:requirement.field_requirement_spec__display_name
+msgid "Display Name"
+msgstr "顯示名稱"
+
+#. module: requirement
+#: model:ir.model.fields,field_description:requirement.field_requirement__message_follower_ids
+#: model:ir.model.fields,field_description:requirement.field_requirement_purpose__message_follower_ids
+#: model:ir.model.fields,field_description:requirement.field_requirement_spec__message_follower_ids
+msgid "Followers"
+msgstr "追蹤者"
+
+#. module: requirement
+#: model:ir.model.fields,field_description:requirement.field_requirement__message_partner_ids
+#: model:ir.model.fields,field_description:requirement.field_requirement_purpose__message_partner_ids
+#: model:ir.model.fields,field_description:requirement.field_requirement_spec__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "追蹤者(客戶)"
+
+#. module: requirement
+#: model:ir.model.fields,help:requirement.field_requirement__activity_type_icon
+#: model:ir.model.fields,help:requirement.field_requirement_purpose__activity_type_icon
+#: model:ir.model.fields,help:requirement.field_requirement_spec__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: requirement
+#: model:ir.model.fields,field_description:requirement.field_requirement__has_message
+#: model:ir.model.fields,field_description:requirement.field_requirement_purpose__has_message
+#: model:ir.model.fields,field_description:requirement.field_requirement_spec__has_message
+msgid "Has Message"
+msgstr "有訊息"
+
+#. module: requirement
+#: model:ir.model.fields,field_description:requirement.field_requirement__id
+#: model:ir.model.fields,field_description:requirement.field_requirement_purpose__id
+#: model:ir.model.fields,field_description:requirement.field_requirement_spec__id
+msgid "ID"
+msgstr ""
+
+#. module: requirement
+#: model:ir.model.fields,field_description:requirement.field_requirement__activity_exception_icon
+#: model:ir.model.fields,field_description:requirement.field_requirement_purpose__activity_exception_icon
+#: model:ir.model.fields,field_description:requirement.field_requirement_spec__activity_exception_icon
+msgid "Icon"
+msgstr "圖示"
+
+#. module: requirement
+#: model:ir.model.fields,help:requirement.field_requirement__activity_exception_icon
+#: model:ir.model.fields,help:requirement.field_requirement_purpose__activity_exception_icon
+#: model:ir.model.fields,help:requirement.field_requirement_spec__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "用於顯示異常活動的圖示"
+
+#. module: requirement
+#: model:ir.model.fields,help:requirement.field_requirement__message_needaction
+#: model:ir.model.fields,help:requirement.field_requirement_purpose__message_needaction
+#: model:ir.model.fields,help:requirement.field_requirement_spec__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "如果核選,新訊息需要你的關注."
+
+#. module: requirement
+#: model:ir.model.fields,help:requirement.field_requirement__message_has_error
+#: model:ir.model.fields,help:requirement.field_requirement__message_has_sms_error
+#: model:ir.model.fields,help:requirement.field_requirement_purpose__message_has_error
+#: model:ir.model.fields,help:requirement.field_requirement_purpose__message_has_sms_error
+#: model:ir.model.fields,help:requirement.field_requirement_spec__message_has_error
+#: model:ir.model.fields,help:requirement.field_requirement_spec__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "如果核選,會收到一些發佈錯誤的訊息."
+
+#. module: requirement
+#: model:ir.model.fields,field_description:requirement.field_requirement__message_is_follower
+#: model:ir.model.fields,field_description:requirement.field_requirement_purpose__message_is_follower
+#: model:ir.model.fields,field_description:requirement.field_requirement_spec__message_is_follower
+msgid "Is Follower"
+msgstr "是跟蹤者"
+
+#. module: requirement
+#: model:ir.model.fields,field_description:requirement.field_requirement__write_uid
+#: model:ir.model.fields,field_description:requirement.field_requirement_purpose__write_uid
+#: model:ir.model.fields,field_description:requirement.field_requirement_spec__write_uid
+msgid "Last Updated by"
+msgstr "最近更新者"
+
+#. module: requirement
+#: model:ir.model.fields,field_description:requirement.field_requirement__write_date
+#: model:ir.model.fields,field_description:requirement.field_requirement_purpose__write_date
+#: model:ir.model.fields,field_description:requirement.field_requirement_spec__write_date
+msgid "Last Updated on"
+msgstr "最近更新時間"
+
+#. module: requirement
+#: model:ir.model.fields,field_description:requirement.field_requirement__lead_ids
+msgid "Lead"
+msgstr "潛在商機"
+
+#. module: requirement
+#: model:ir.model,name:requirement.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr "潛在商機/商機"
+
+#. module: requirement
+#: model:ir.model.fields,field_description:requirement.field_requirement__message_has_error
+#: model:ir.model.fields,field_description:requirement.field_requirement_purpose__message_has_error
+#: model:ir.model.fields,field_description:requirement.field_requirement_spec__message_has_error
+msgid "Message Delivery error"
+msgstr "分佈錯誤訊息"
+
+#. module: requirement
+#: model:ir.model.fields,field_description:requirement.field_requirement__message_ids
+#: model:ir.model.fields,field_description:requirement.field_requirement_purpose__message_ids
+#: model:ir.model.fields,field_description:requirement.field_requirement_spec__message_ids
+msgid "Messages"
+msgstr "訊息"
+
+#. module: requirement
+#: model:ir.model.fields,field_description:requirement.field_requirement__binary_fields
+msgid "Multi Files Upload"
+msgstr "多檔案上傳"
+
+#. module: requirement
+#: model:ir.model.fields,field_description:requirement.field_requirement__my_activity_date_deadline
+#: model:ir.model.fields,field_description:requirement.field_requirement_purpose__my_activity_date_deadline
+#: model:ir.model.fields,field_description:requirement.field_requirement_spec__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "我的活動截止日"
+
+#. module: requirement
+#: model:ir.model.fields,field_description:requirement.field_requirement__activity_calendar_event_id
+#: model:ir.model.fields,field_description:requirement.field_requirement_purpose__activity_calendar_event_id
+#: model:ir.model.fields,field_description:requirement.field_requirement_spec__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr "下一個活動日曆事件"
+
+#. module: requirement
+#: model:ir.model.fields,field_description:requirement.field_requirement__activity_date_deadline
+#: model:ir.model.fields,field_description:requirement.field_requirement_purpose__activity_date_deadline
+#: model:ir.model.fields,field_description:requirement.field_requirement_spec__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "下一個活動截止日"
+
+#. module: requirement
+#: model:ir.model.fields,field_description:requirement.field_requirement__activity_summary
+#: model:ir.model.fields,field_description:requirement.field_requirement_purpose__activity_summary
+#: model:ir.model.fields,field_description:requirement.field_requirement_spec__activity_summary
+msgid "Next Activity Summary"
+msgstr "下一個活動匯總"
+
+#. module: requirement
+#: model:ir.model.fields,field_description:requirement.field_requirement__activity_type_id
+#: model:ir.model.fields,field_description:requirement.field_requirement_purpose__activity_type_id
+#: model:ir.model.fields,field_description:requirement.field_requirement_spec__activity_type_id
+msgid "Next Activity Type"
+msgstr "下一個活動類型"
+
+#. module: requirement
+#: model:ir.model.fields,field_description:requirement.field_requirement__message_needaction_counter
+#: model:ir.model.fields,field_description:requirement.field_requirement_purpose__message_needaction_counter
+#: model:ir.model.fields,field_description:requirement.field_requirement_spec__message_needaction_counter
+msgid "Number of Actions"
+msgstr "操作數量"
+
+#. module: requirement
+#: model:ir.model.fields,field_description:requirement.field_requirement__message_has_error_counter
+#: model:ir.model.fields,field_description:requirement.field_requirement_purpose__message_has_error_counter
+#: model:ir.model.fields,field_description:requirement.field_requirement_spec__message_has_error_counter
+msgid "Number of errors"
+msgstr "錯誤數量"
+
+#. module: requirement
+#: model:ir.model.fields,help:requirement.field_requirement__message_needaction_counter
+#: model:ir.model.fields,help:requirement.field_requirement_purpose__message_needaction_counter
+#: model:ir.model.fields,help:requirement.field_requirement_spec__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "需要操作的訊息數量"
+
+#. module: requirement
+#: model:ir.model.fields,help:requirement.field_requirement__message_has_error_counter
+#: model:ir.model.fields,help:requirement.field_requirement_purpose__message_has_error_counter
+#: model:ir.model.fields,help:requirement.field_requirement_spec__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "錯誤訊息數量"
+
+#. module: requirement
+#: model_terms:ir.ui.view,arch_db:requirement.requirement_view_form
+msgid "Pipelines"
+msgstr "商機"
+
+#. module: requirement
+#: model:ir.model,name:requirement.model_project_project
+#: model:ir.model.fields,field_description:requirement.field_requirement__project_ids
+#: model_terms:ir.ui.view,arch_db:requirement.requirement_view_form
+msgid "Project"
+msgstr "專案"
+
+#. module: requirement
+#: model_terms:ir.ui.view,arch_db:requirement.requirement_view_form
+msgid "Projects"
+msgstr "專案"
+
+#. module: requirement
+#: model:ir.model.fields,field_description:requirement.field_requirement__rating_ids
+#: model:ir.model.fields,field_description:requirement.field_requirement_purpose__rating_ids
+#: model:ir.model.fields,field_description:requirement.field_requirement_spec__rating_ids
+msgid "Ratings"
+msgstr "比率"
+
+#. module: requirement
+#: model:ir.actions.act_window,name:requirement.requirement_project_action
+msgid "Rel Projects"
+msgstr "關聯的專案"
+
+#. module: requirement
+#: model:ir.model,name:requirement.model_requirement
+msgid "Require management main model for OpenPLM."
+msgstr "需要 OpenPLM 的管理主要模型。"
+
+#. module: requirement
+#: model:ir.model.fields,field_description:requirement.field_requirement__activity_user_id
+#: model:ir.model.fields,field_description:requirement.field_requirement_purpose__activity_user_id
+#: model:ir.model.fields,field_description:requirement.field_requirement_spec__activity_user_id
+msgid "Responsible User"
+msgstr "回應的使用者"
+
+#. module: requirement
+#: model:ir.model.fields,field_description:requirement.field_requirement__message_has_sms_error
+#: model:ir.model.fields,field_description:requirement.field_requirement_purpose__message_has_sms_error
+#: model:ir.model.fields,field_description:requirement.field_requirement_spec__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "SMS分佈錯誤"
+
+#. module: requirement
+#: model:ir.model.fields,field_description:requirement.field_requirement__spec_ids
+msgid "Spec"
+msgstr "規格"
+
+#. module: requirement
+#: model:ir.model.fields,help:requirement.field_requirement__activity_state
+#: model:ir.model.fields,help:requirement.field_requirement_purpose__activity_state
+#: model:ir.model.fields,help:requirement.field_requirement_spec__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"根據活動的狀態 \n"
+" 逾期：已經超過截止日期 \n"
+" 今日：活動日期是當天 \n"
+" 已計劃：未來活動。"
+
+#. module: requirement
+#: model:ir.model.fields,help:requirement.field_requirement__activity_exception_decoration
+#: model:ir.model.fields,help:requirement.field_requirement_purpose__activity_exception_decoration
+#: model:ir.model.fields,help:requirement.field_requirement_spec__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "記錄的異常活動的類型."
+
+#. module: requirement
+#: model:ir.model.fields,field_description:requirement.field_requirement__website_message_ids
+#: model:ir.model.fields,field_description:requirement.field_requirement_purpose__website_message_ids
+#: model:ir.model.fields,field_description:requirement.field_requirement_spec__website_message_ids
+msgid "Website Messages"
+msgstr "網站訊息"
+
+#. module: requirement
+#: model:ir.model.fields,help:requirement.field_requirement__website_message_ids
+#: model:ir.model.fields,help:requirement.field_requirement_purpose__website_message_ids
+#: model:ir.model.fields,help:requirement.field_requirement_spec__website_message_ids
+msgid "Website communication history"
+msgstr "網站交談歷程"
+
+#. module: requirement
+#: model_terms:ir.ui.view,arch_db:requirement.requirement_view_form
+msgid "lead"
+msgstr "線索/商機"
+
+#. module: requirement
+#: model:ir.model,name:requirement.model_requirement_purpose
+msgid "purpose lib model for require management."
+msgstr "目的 lib 模型。"
+
+#. module: requirement
+#: model:ir.model,name:requirement.model_requirement_spec
+msgid "spec lib model for require management. "
+msgstr "spec lib 模型用於需求管理。"
+
+#. module: requirement
+#: model:ir.model.fields.selection,name:requirement.selection__requirement__state__abort
+#: model_terms:ir.ui.view,arch_db:requirement.requirement_view_form
+msgid "中止"
+msgstr ""
+
+#. module: requirement
+#: model:ir.ui.menu,name:requirement.requirement_first_level_menu
+msgid "主目录"
+msgstr "主目錄"
+
+#. module: requirement
+#: model:ir.actions.act_window,name:requirement.requirement_purpose_action
+#: model:ir.ui.menu,name:requirement.requirement_purpose_setting_action
+#: model_terms:ir.ui.view,arch_db:requirement.requirement_purpose_view_form
+#: model_terms:ir.ui.view,arch_db:requirement.requirement_purpose_view_tree
+msgid "产品用途"
+msgstr "產品用途"
+
+#. module: requirement
+#: model_terms:ir.ui.view,arch_db:requirement.requirement_purpose_view_search
+msgid "产品用途搜寻"
+msgstr "搜尋產品用途"
+
+#. module: requirement
+#: model:ir.model.fields,field_description:requirement.field_crm_lead__requirement_id
+#: model:ir.model.fields,field_description:requirement.field_project_project__requirement_id
+#: model_terms:ir.ui.view,arch_db:requirement.req_lead_form_view
+#: model_terms:ir.ui.view,arch_db:requirement.req_project_form_view
+#: model_terms:ir.ui.view,arch_db:requirement.requirement_spec_view_form
+#: model_terms:ir.ui.view,arch_db:requirement.requirement_spec_view_tree
+msgid "关联需求"
+msgstr "關聯需求"
+
+#. module: requirement
+#: model:ir.model.fields,field_description:requirement.field_requirement__ref_product
+#: model_terms:ir.ui.view,arch_db:requirement.requirement_view_form
+#: model_terms:ir.ui.view,arch_db:requirement.requirement_view_tree
+msgid "參考產品"
+msgstr ""
+
+#. module: requirement
+#: model:ir.model.fields,field_description:requirement.field_requirement_spec__name
+#: model_terms:ir.ui.view,arch_db:requirement.requirement_spec_view_form
+#: model_terms:ir.ui.view,arch_db:requirement.requirement_spec_view_search
+#: model_terms:ir.ui.view,arch_db:requirement.requirement_spec_view_tree
+msgid "名称"
+msgstr "名稱"
+
+#. module: requirement
+#: model:ir.model.fields,field_description:requirement.field_requirement__active
+msgid "啟用"
+msgstr "啟用"
+
+#. module: requirement
+#: model:ir.model.fields,field_description:requirement.field_requirement__partner_id
+#: model_terms:ir.ui.view,arch_db:requirement.requirement_view_form
+#: model_terms:ir.ui.view,arch_db:requirement.requirement_view_tree
+msgid "客戶"
+msgstr "客戶"
+
+#. module: requirement
+#: model:ir.model.fields,field_description:requirement.field_requirement__lead_count
+#: model:ir.model.fields,field_description:requirement.field_requirement__project_count
+msgid "数量"
+msgstr "數量"
+
+#. module: requirement
+#: model:ir.model.fields,field_description:requirement.field_requirement__quotation
+#: model_terms:ir.ui.view,arch_db:requirement.requirement_view_form
+#: model_terms:ir.ui.view,arch_db:requirement.requirement_view_tree
+msgid "是否報價"
+msgstr ""
+
+#. module: requirement
+#: model:ir.model.fields,field_description:requirement.field_requirement__sample
+#: model_terms:ir.ui.view,arch_db:requirement.requirement_view_form
+#: model_terms:ir.ui.view,arch_db:requirement.requirement_view_tree
+msgid "是否打樣"
+msgstr ""
+
+#. module: requirement
+#: model:ir.model.fields.selection,name:requirement.selection__requirement__state__approved
+#: model_terms:ir.ui.view,arch_db:requirement.requirement_view_form
+msgid "核准"
+msgstr ""
+
+#. module: requirement
+#: model:ir.ui.menu,name:requirement.requirement_setting_menu
+msgid "次目录"
+msgstr "設定"
+
+#. module: requirement
+#: model:ir.model.fields,field_description:requirement.field_requirement__speical_req
+#: model_terms:ir.ui.view,arch_db:requirement.requirement_view_form
+#: model_terms:ir.ui.view,arch_db:requirement.requirement_view_tree
+msgid "特殊要求"
+msgstr ""
+
+#. module: requirement
+#: model:ir.model.fields,field_description:requirement.field_requirement__state
+#: model_terms:ir.ui.view,arch_db:requirement.requirement_view_tree
+msgid "状态"
+msgstr "狀態"
+
+#. module: requirement
+#: model:ir.model.fields,field_description:requirement.field_requirement__prd_purpose_id
+#: model_terms:ir.ui.view,arch_db:requirement.requirement_view_form
+#: model_terms:ir.ui.view,arch_db:requirement.requirement_view_tree
+msgid "產品用途"
+msgstr ""
+
+#. module: requirement
+#: model:ir.model.fields,field_description:requirement.field_requirement_purpose__name
+#: model_terms:ir.ui.view,arch_db:requirement.requirement_purpose_view_form
+#: model_terms:ir.ui.view,arch_db:requirement.requirement_purpose_view_search
+#: model_terms:ir.ui.view,arch_db:requirement.requirement_purpose_view_tree
+msgid "用途名称"
+msgstr "用途名稱"
+
+#. module: requirement
+#: model:ir.model.fields,field_description:requirement.field_requirement__item_number
+#: model_terms:ir.ui.view,arch_db:requirement.requirement_view_form
+#: model_terms:ir.ui.view,arch_db:requirement.requirement_view_search
+#: model_terms:ir.ui.view,arch_db:requirement.requirement_view_tree
+msgid "編號"
+msgstr ""
+
+#. module: requirement
+#: model:ir.model.fields,field_description:requirement.field_requirement__contract_name
+#: model_terms:ir.ui.view,arch_db:requirement.requirement_view_form
+#: model_terms:ir.ui.view,arch_db:requirement.requirement_view_tree
+msgid "聯絡人"
+msgstr ""
+
+#. module: requirement
+#: model:ir.model.fields.selection,name:requirement.selection__requirement__state__draft
+msgid "草稿"
+msgstr ""
+
+#. module: requirement
+#: model_terms:ir.ui.view,arch_db:requirement.requirement_view_form
+msgid "規格要求"
+msgstr ""
+
+#. module: requirement
+#: model:ir.actions.act_window,name:requirement.requirement_spec_action
+#: model:ir.ui.menu,name:requirement.requirement_spec_setting_action
+#: model_terms:ir.ui.view,arch_db:requirement.requirement_spec_view_form
+#: model_terms:ir.ui.view,arch_db:requirement.requirement_spec_view_tree
+msgid "规格要求"
+msgstr "規格要求"
+
+#. module: requirement
+#: model_terms:ir.ui.view,arch_db:requirement.requirement_spec_view_search
+msgid "规格要求搜寻"
+msgstr "搜索規格要求"
+
+#. module: requirement
+#: model:ir.model.fields.selection,name:requirement.selection__requirement__state__evaluting
+#: model_terms:ir.ui.view,arch_db:requirement.requirement_view_form
+msgid "评价"
+msgstr "評價"
+
+#. module: requirement
+#: model:ir.model.fields,field_description:requirement.field_requirement_spec__description
+#: model_terms:ir.ui.view,arch_db:requirement.requirement_spec_view_form
+#: model_terms:ir.ui.view,arch_db:requirement.requirement_spec_view_search
+#: model_terms:ir.ui.view,arch_db:requirement.requirement_spec_view_tree
+msgid "说明"
+msgstr "說明"
+
+#. module: requirement
+#: model:ir.model.fields,field_description:requirement.field_requirement__owner_id
+#: model_terms:ir.ui.view,arch_db:requirement.requirement_view_form
+#: model_terms:ir.ui.view,arch_db:requirement.requirement_view_tree
+msgid "負責人"
+msgstr ""
+
+#. module: requirement
+#: model_terms:ir.ui.view,arch_db:requirement.requirement_view_form
+msgid "附件"
+msgstr ""
+
+#. module: requirement
+#: model:ir.ui.menu,name:requirement.requirement_model_menu_action
+msgid "需求"
+msgstr ""
+
+#. module: requirement
+#: model:ir.model.fields,field_description:requirement.field_requirement__name
+#: model_terms:ir.ui.view,arch_db:requirement.requirement_view_form
+#: model_terms:ir.ui.view,arch_db:requirement.requirement_view_search
+#: model_terms:ir.ui.view,arch_db:requirement.requirement_view_tree
+msgid "需求名称"
+msgstr "需求名稱"
+
+#. module: requirement
+#: model:ir.model.fields,field_description:requirement.field_requirement__prd_type_id
+#: model_terms:ir.ui.view,arch_db:requirement.requirement_view_form
+#: model_terms:ir.ui.view,arch_db:requirement.requirement_view_tree
+msgid "需求產品類型"
+msgstr ""
+
+#. module: requirement
+#: model:ir.actions.act_window,name:requirement.requirement_model_action
+#: model_terms:ir.ui.view,arch_db:requirement.requirement_view_form
+#: model_terms:ir.ui.view,arch_db:requirement.requirement_view_tree
+msgid "需求評估"
+msgstr ""
+
+#. module: requirement
+#: model_terms:ir.ui.view,arch_db:requirement.requirement_view_search
+msgid "需求評估搜寻"
+msgstr "搜索需求評估"
+
+#. module: requirement
+#: model:ir.model.fields,field_description:requirement.field_requirement_spec__requirement_id
+#: model:ir.ui.menu,name:requirement.requirement_menu_root
+msgid "需求评估"
+msgstr "需求評估"
