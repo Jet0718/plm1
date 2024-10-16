@@ -11,6 +11,11 @@
                     <field name="xbom_type" />
                     <field name="cnis_current" />                    
                 </field>
+                <xpath expr="//sheet" position="before">
+                    <header>
+                        <field name="state" widget="statusbar" statusbar_visible="Draft,Review,Released,InChange,Superseded" />
+                    </header>                    
+                </xpath>
                 <!-- ebert button_box 顶部添加按钮 -->    
                 <div name="button_box" position="inside">
                     <button string="versions"  icon="fa-sitemap" class="oe_stat_button" type="object"   name="action_open_versions"/>                  

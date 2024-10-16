@@ -6,6 +6,7 @@
     <menuitem id="pco_model_menu_action" name="Product Approval"  parent="pco_first_level_menu" action="pco_model_action"/>
     <menuitem id="pco_setting_menu" name="Setting" parent="pco_menu_root" sequence="2"/>   
     <menuitem id="pco_tag_setting_action" name="Tag" parent="pco_setting_menu" action="pco_tag_action"/>
+    <menuitem id="pco_product_setting_action" name="pco_product" parent="pco_setting_menu" action="pco_product_model_action"/>
     <menuitem
         id="menu_pco_master_data"
         name="Master Data"

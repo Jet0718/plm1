@@ -3,4 +3,4 @@
 
 from . import pco
 from . import pco_tag
-# from . import requirement_spec
+from . import pco_product

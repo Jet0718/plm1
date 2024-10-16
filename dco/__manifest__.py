@@ -13,6 +13,7 @@
         'views/dco_view.xml',
         'views/dco_tag_view.xml',
         'views/dco_menus.xml',
+        'views/dco_file_view.xml',
         'data/dco_sequence.xml'     
     ]
 }

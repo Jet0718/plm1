@@ -3,4 +3,4 @@
 
 from . import dco
 from . import dco_tag
-# from . import requirement_spec
+from . import dco_file
