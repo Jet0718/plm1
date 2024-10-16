@@ -87,7 +87,6 @@ class TestModel(models.Model):
     def _compute_lead_count(self):
         for record in self:
             record.lead_count = len(record.lead_ids)
-
     def require_project_filter_action(self):
         return {
             'type': 'ir.actions.act_window',
