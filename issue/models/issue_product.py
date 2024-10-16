@@ -11,3 +11,13 @@ class ProductTemplate(models.Model):
     def _compute_issue_count(self):
         for record in self:
             record.issue_count = len(record.issue_ids)
+
+    def issue_model_action(self):
+        return {
+            'type': 'ir.actions.act_window',
+            'name': 'issue',
+            'view_mode': 'tree,form',
+            'res_model': 'issue',
+            'domain': [('issue_product_id', '=', self.id) ],
+            'context': {'default_issue_product_id': self.id},
+        }

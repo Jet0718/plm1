@@ -14,7 +14,7 @@
                 <!-- 在最上面显示按钮的写法 -->
                 <xpath expr="//sheet" position="inside">
                     <div class="oe_button_box" name="button_box">             
-                        <button name="%(issue_model_action)d" string="Issue" class="oe_stat_button" icon="fa-question-circle-o" type="action" border="1">
+                        <button name="issue_model_action" string="Issue" class="oe_stat_button" icon="fa-question-circle-o" type="object" border="1">
                             <field name="issue_count"  widget="statinfo" string=" Issue" />
                         </button>
                     </div>

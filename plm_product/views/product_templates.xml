@@ -7,7 +7,7 @@
             <field name="inherit_id" ref="product.product_template_form_view" />
             <field name="arch" type="xml">
                 <xpath expr="//button[@name='action_open_label_layout']" position="after"> 
-                    <field name="state" widget="statusbar" statusbar_visible="New,Review,Released,InChange,Superseded"/>
+                    <field name="state" widget="statusbar" statusbar_visible="Draft,Review,Released,InChange,Superseded"/>
                 </xpath>              
                 <field name="product_tooltip" position="after">
                     <!-- 横向显示 -->

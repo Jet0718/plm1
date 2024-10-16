@@ -13,8 +13,8 @@
                 </xpath> -->
                 <!-- 在最上面显示按钮的写法 -->
                 <field name="company_id" position="after"/>
-                    <div class="oe_button_box" name="button_box">             
-                        <button name="%(issue_model_action)d" string="Issue" class="oe_stat_button" icon="fa-question-circle-o" type="action" border="1">
+                   <div class="oe_button_box" name="button_box">             
+                        <button name="issue_model_action" string="Issue" class="oe_stat_button" icon="fa-question-circle-o" type="object" border="1">
                             <field name="issue_count"  widget="statinfo" string=" Issue" />
                         </button>
                     </div>

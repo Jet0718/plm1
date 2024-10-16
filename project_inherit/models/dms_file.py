@@ -51,12 +51,6 @@ class InhtProjectModel(models.Model):
             #'context': {'search_default_group': 'my_group'},
             'type': 'ir.actions.act_window',
         }
-# class InhtProjectModel_indms(models.Model):
-#     _inherit = "project.project" 
-
-
-#     cn_prj2file = fields.Many2one('dms.file',  string= '文件')
-
   
 
 

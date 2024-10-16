@@ -33,9 +33,9 @@
                     <!-- <button string="版本变更" name="action_new_revision" type="object"
                             class="oe_highlight" invisible="state != 'New'"/> -->
                     <!-- #增加状态按钮                   -->
-                    <button name="action_set_Review" string="审核中" type="object"/>
-                    <button name="action_set_Review_after" string="变更后审核" type="object"  invisible="new_affected_product_id or new_affected_bom_id" />
-                    <button name="action_set_Approved" string="核准" type="object"/>
+                    <button name="action_set_Review" string="审核中" type="object" invisible="state !='New'"/>
+                    <button name="action_set_Review_after" string="变更后审核" type="object"  invisible="(not new_affected_product_id and not new_affected_bom_id) or state !='Review' or affected_product_id.version ==1" />
+                    <button name="action_set_Approved" string="核准" type="object" invisible="state !='Review'"/>
                     <button name="action_set_Cancel" string="取消" type="object"/>
                     <!-- #将状态改成管道状态列 -->
                     <field name="state" widget="statusbar" statusbar_visible="New,Review,Approved,Cancel"/>
@@ -46,8 +46,8 @@
                         <!-- 产品显示 按钮 --><!-- 产品显示 按钮 -->
                         <!-- <button name="open_new_product" icon="fa-flask" string="产品修订" type="object" invisible="prd_is_invisible == True"   class="oe_stat_button"/>                   
                         <button name="open_new_bom"     icon="fa-flask" string="BOM修订"  type="object" invisible="bom_invisible == False"   class="oe_stat_button"/>                    -->
-                        <button name="open_new_product" icon="fa-flask" string="产品修订" type="object" invisible="flow_class != 'Product' and state !='New' and affected_product_id.version !=1"   class="oe_stat_button"/>                   
-                        <button name="open_new_bom"     icon="fa-flask" string="BOM修订"  type="object" invisible="flow_class != 'Bom' and state !='New' and affected_bom_id.version !=1"   class="oe_stat_button"/>                       
+                        <button name="open_new_product" icon="fa-flask" string="产品修订" type="object" invisible="flow_class != 'Product' or state !='New' or affected_product_id.version ==1"   class="oe_stat_button"/>                   
+                        <button name="open_new_bom"     icon="fa-flask" string="BOM修订"  type="object" invisible="flow_class != 'Bom' or state !='New' or affected_bom_id.version ==1"   class="oe_stat_button"/>                       
                     </div>   
                     <group>
                         <group>
@@ -62,10 +62,15 @@
                         <group>
                             <field name="flow_class" string="審批類別" widget ="radio"/>   <!--下拉变成radio单选模式-->
                             <field name="affected_product_id" string="審批产品"/>
-                            <field name="affected_bom_id" string="审批物料清单" invisible="flow_class == 'Product'"/>                            
+                            <field name="affected_product_version" string="審批产品版本" invisible="flow_class == 'Bom' or not affected_product_id"/>                            
+                            <field name="affected_bom_id" string="审批物料清单" invisible="flow_class == 'Product'"/> 
+                            <field name="affected_bom_version" string="审批物料清单版本" invisible="flow_class == 'Product'  or not affected_product_id"/>                           
+                            
                             <field name="tag_ids" string="Tags" widget="many2many_tags"/> 
                             <field name="new_affected_product_id" string="新版产品" invisible="flow_class == 'Bom'"/>
-                            <field name="new_affected_bom_id" string="新版物料清单" invisible="flow_class == 'Product'"/>                                                       
+                            <field name="new_affected_product_version" string="新版产品版本" invisible="flow_class == 'Bom' or not new_affected_product_id"/>
+                            <field name="new_affected_bom_id" string="新版物料清单" invisible="flow_class == 'Product'"/>                             
+                            <field name="new_affected_bom_version" string="新版物料清单版本" invisible="flow_class == 'Product'  or not new_affected_bom_id"/>                                                      
                         </group>
                     </group>
                     <notebook>

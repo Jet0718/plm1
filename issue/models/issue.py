@@ -44,16 +44,23 @@ class IssueModel(models.Model):
     )
     #关联其他表单2024.9.25 Herbert增加
     project_id =fields.Many2one('project.project',string='关联专案')
-    dco_id =fields.Many2one('dco',string='关联DCO')
-    pco_id =fields.Many2one('pco',string='关联PCO')
+    dco_id =fields.Many2many('dco',string='关联DCO')
+    pco_id =fields.Many2many('pco',string='关联PCO')
     #增加栏位 2024.9.25 Herbert增加
     solution =fields.Text("解决方案")
     vresults =fields.Selection(
         string="验证结果",
         selection=[('Acceptable','可接受'),('Observed','待观察')]
-    )
-   
+    ) 
 
+    #增加欄位 2024.10.12 Herbert增加
+    d3 =fields.Text("D3抑制措施")
+    d4 =fields.Text("D4原因分析")
+    d5 =fields.Text("D5纠正措施")
+    d6 =fields.Text("D6执行问题改善")
+    d7 =fields.Text("D7预防再发")
+    team_id =fields.Many2many('res.users',string='团队人员')
+    
     # #上传单个档案写法
     # binary_field = fields.Binary("档案")
     # binary_file_name =fields.Char("档案名称")
