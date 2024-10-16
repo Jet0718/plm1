@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="dco_file_model_action" model="ir.actions.act_window">
+        <field name="name">送審文件</field>
+        <field name="res_model">dco.file</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <record id="dco_file_view_tree" model="ir.ui.view">
+        <field name="name">dco.file.tree</field>
+        <field name="model">dco.file</field>
+        <field name="arch" type="xml">
+            <tree string="送審物件">
+                <field name="affected_item_id" string="審批文件"/>
+                <field name="affected_item_version" string="審批文件版本" /> 
+                <field name="new_affected_item_id" string="新版審批文件"/>
+                <field name="new_affected_item_version" string="新版審批文件版本"/>                      
+            </tree>
+        </field>
+    </record>
+    <record id="dco_file_view_form" model="ir.ui.view">
+        <field name="name">dco.file.form"</field>
+        <field name="model">dco.file</field>
+        <field name="arch" type="xml">
+            <form string="送審文件">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="affected_item_id" string="審批文件" options="{'no_create': True}"/>   <!-- no_create 不让新增-->   
+                            <field name="affected_item_version" string="審批文件版本" /> 
+                            <field name="new_affected_item_id" string="新版審批文件" options="{'no_create': True}"/>
+                            <field name="new_affected_item_version" string="新版審批文件版本"/>       
+                        </group>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" groups="base.group_user"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+        </field>
+    </record>
+    <record id="dco_file_view_search" model="ir.ui.view">
+        <field name="name">dco.file.search"</field>
+        <field name="model">dco.file</field>
+        <field name="arch" type="xml">
+            <search string="送審物件">
+                <field name="affected_item_id" string="審批文件"/>
+                <field name="affected_item_version" string="審批文件版本" /> 
+                <field name="new_affected_item_id" string="新版審批文件" />
+                <field name="new_affected_item_version" string="新版審批文件版本"/>                     
+            </search>
+        </field>
+    </record>
+</odoo>

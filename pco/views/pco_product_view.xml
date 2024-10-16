@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <record id="pco_product_model_action" model="ir.actions.act_window">
+        <field name="name">送審物件</field>
+        <field name="res_model">pco.product</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <record id="pco_product_view_tree" model="ir.ui.view">
+        <field name="name">pco.product.tree</field>
+        <field name="model">pco.product</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="affected_product_id" string="審批产品"/>
+                <field name="affected_product_version" string="产品旧版本"/>
+                <field name="new_affected_product_id" string="新版審批产品"/>
+                <field name="new_affected_product_version" string="产品新版本"/>
+
+                <field name="affected_bom_id" string="审批物料清单"/>
+                <field name="affected_bom_version" string="物料清单旧版本"/>
+                <field name="new_affected_bom_id" string="新版物料清单"/>   
+                <field name="new_affected_bom_version" string="物料清单新版本"/>                
+            </tree>
+        </field>
+    </record>
+    <record id="pco_product_view_form" model="ir.ui.view">
+        <field name="name">pco.product.form"</field>
+        <field name="model">pco.product</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="affected_product_id" string="審批产品"/>
+                            <field name="affected_product_version" string="審批产品版本" invisible="not affected_product_id"/>                            
+                            <field name="affected_bom_id" string="审批物料清单" /> 
+                            <field name="affected_bom_version" string="审批物料清单版本" invisible="not affected_product_id"/>                           
+                        </group>
+                        <group>  
+                            <field name="new_affected_product_id" string="新版产品" />
+                            <field name="new_affected_product_version" string="新版产品版本" invisible="not new_affected_product_id"/>
+                            <field name="new_affected_bom_id" string="新版物料清单" />                             
+                            <field name="new_affected_bom_version" string="新版物料清单版本" invisible="not new_affected_bom_id"/>                                                      
+                        </group>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" groups="base.group_user"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+        </field>
+    </record>
+    <record id="pco_product_view_search" model="ir.ui.view">
+        <field name="name">pco.product.search"</field>
+        <field name="model">pco.product</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="affected_product_id" string="審批产品" domain="[('active', '=', True)]" />
+                <field name="affected_product_version" string="产品旧版本"/>
+                <field name="new_affected_product_id" string="新版審批产品"/>
+                <field name="new_affected_product_version" string="产品新版本"/>
+
+                <field name="affected_bom_id" string="审批物料清单"/>
+                <field name="affected_bom_version" string="物料清单旧版本"/>
+                <field name="new_affected_bom_id" string="新版物料清单"/>   
+                <field name="new_affected_bom_version" string="物料清单新版本"/>                        
+            </search>
+        </field>
+    </record>
+</odoo>
