@@ -231,20 +231,20 @@ class PCOModel(models.Model):
         }
     
     #ebert show version
-    def _comput_show_version(self) :
-         for record in self:
-            if self.affected_product_id :
-                record.affected_product_version = record.affected_product_id.version
+    # def _comput_show_version(self) :
+    #      for record in self:
+    #         if self.affected_product_id :
+    #             record.affected_product_version = record.affected_product_id.version
             
-            if self.new_affected_product_id :
-                record.new_affected_product_version = record.new_affected_product_id.version
+    #         if self.new_affected_product_id :
+    #             record.new_affected_product_version = record.new_affected_product_id.version
            
 
-    def _comput_show_version_p(self) :
-        for record in self:
-            if self.affected_bom_id :
-                raise UserError('test,')
-                record.affected_bom_version = record.affected_bom_id.version
+    # def _comput_show_version_p(self) :
+    #     for record in self:
+    #         if self.affected_bom_id :
+    #             raise UserError('test,')
+    #             record.affected_bom_version = record.affected_bom_id.version
             # if self.new_affected_bom_id :
             #     record.new_affected_bom_version = record.new_affected_bom_id.version
 

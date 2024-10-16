@@ -118,12 +118,12 @@ class DCOModel(models.Model):
             raise UserError('已核准,不能被取消')
 
     #ebert show version
-    def _comput_show_version(self) :
-         for record in self:
-            if self.affected_item_id :
-                record.affected_item_version = record.affected_item_id.version
-            if self.new_affected_item_id :
-                record.new_affected_item_version = record.new_affected_item_id.version
+    # def _comput_show_version(self) :
+    #      for record in self:
+    #         if self.affected_item_id :
+    #             record.affected_item_version = record.affected_item_id.version
+    #         if self.new_affected_item_id :
+    #             record.new_affected_item_version = record.new_affected_item_id.version
             # if self.new_affected_product_id :
             #     record.new_affected_product_id_version = record.new_affected_product_id.version
             # if self.new_affected_bom_id :
