@@ -12,8 +12,13 @@
         'security/ir.model.access.csv',
         'views/pco_view.xml',
         'views/pco_tag_view.xml',
-        'views/pco_product_view.xml',
+        'views/pco_product_view.xml', 
+        'views/pco_bom_view.xml',        
+        'views/pco_type_view.xml',
         'views/pco_menus.xml',
         'data/pco_sequence.xml'     
-    ]
+    ],
+    'demo': [
+        "demo/pco_type.xml",       
+    ],
 }

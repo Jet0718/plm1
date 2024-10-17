@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+
+    Copyright 2017-2019 MuK IT GmbH
+    License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl).
+
+  -->
+<odoo noupdate="1">
+    <record id="pcotype_01_demo" model="pco.type">
+        <field name="name">Product产品</field>
+    </record>
+    <record id="pcotype_02_demo" model="pco.type">
+        <field name="name">Bom物料清单</field>       
+    </record>    
+</odoo>

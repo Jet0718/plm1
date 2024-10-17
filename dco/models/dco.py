@@ -44,7 +44,7 @@ class DCOModel(models.Model):
     new_affected_item_version = fields.Integer('新版本',related='new_affected_item_id.version',   readonly=True)
     #ebert end 
 
-    dco_file_ids =fields.Many2many('dco.file',string='送審文件')
+    dco_file_ids =fields.One2many('dco.file','dco_id',string=' ')
 
     btnflog=fields.Integer(default=1)
 

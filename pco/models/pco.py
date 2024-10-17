@@ -12,9 +12,14 @@ class PCOModel(models.Model):
     description=fields.Char("說明")
     flow_class =fields.Selection(
         string="審批類別",
-        selection=[('Product','产品'),('Bom','物料清单')],
-        required=True
+        selection=[('Product','产品'),('Bom','物料清单')]
     )
+    #  required=True
+    # flow_class_bom =fields.Selection(
+    #     string="Bom審批",
+    #     selection=[('Product','产品'),('Bom','物料清单')],
+    #     required=True
+    # )
     owner_id =fields.Many2one('res.users',string='責任人',default=lambda self: self.env.user)
     contactor_id =fields.Many2one('res.users',string='核決者',required=True)  
     tag_ids = fields.Many2many('pco.tag', string='Tags')
@@ -24,7 +29,9 @@ class PCOModel(models.Model):
         default="New",readonly=True,tracking=1
     )
     active =fields.Boolean("啟用",default=True) 
-    pco_product_id =fields.Many2many('pco.product',string='送審物件')
+    pco_product_id =fields.One2many('pco.product','pco_id_prd',string=' ')
+
+    classstr = fields.Many2many('pco.type', string='審批類別',required=True)
 
 
     # #上传单个档案写法
@@ -33,6 +40,12 @@ class PCOModel(models.Model):
     # #上传多个档案写法
     binary_fields =fields.Many2many("dms.file",string="Multi Files Upload")
     btnflog=fields.Integer(string="顯示",default=1)
+
+
+    showproduct=fields.Integer(string="顯示part",default=1)
+    showbom=fields.Integer(string="顯示bom",default=1)
+    pco_bom_ids =fields.One2many('pco.bom','pco_id_bom',string=' ')
+    
     # Seqence 自动领号写法
     @api.model_create_multi
     def create(self, vals_list):
@@ -52,48 +65,56 @@ class PCOModel(models.Model):
             # raise UserError(names)
             
             #ebert version item 换版 条件判断送审物件的版本是否是1， 是则送审发布，否则换版
-                if self.flow_class =='Product':
-                    
-                    if record.affected_product_id.version !=1  or record.affected_product_id.state == 'Released':
-                        copyitem=record.affected_product_id.copy()
-                        fields = record.env['product.template']._fields
-                        #for fld in fields :
-                        copyitem.write({'cn_configid': record.affected_product_id.cn_configid})
-                        copyitem.write({'cnis_current': False})
-                        copyitem.write({'active': False})
-                        copyitem.write({'name': record.affected_product_id.name})
-                        copyitem.write({'version': record.affected_product_id.version+1})                 
-                        copyitem.write({'state': "Draft"})
-                        record.write ({'new_affected_product_id':copyitem.id})  
-                        record.affected_product_id.write({'state':'InChange'}) 
-                        record.affected_product_id.write({'active':True})
-                        record.affected_product_id.write({'cnis_current':True})     
+                if record.affected_product_id.version !=1  or record.affected_product_id.state == 'Released':
+                    copyitem=record.affected_product_id.copy()
+                    fields = record.env['product.template']._fields
+                    #for fld in fields :
+                    copyitem.write({'cn_configid': record.affected_product_id.cn_configid})
+                    copyitem.write({'cnis_current': False})
+                    copyitem.write({'active': False})
+                    copyitem.write({'name': record.affected_product_id.name})
+                    copyitem.write({'version': record.affected_product_id.version+1})                 
+                    copyitem.write({'state': "Draft"})
+                    #抄写内部参考号 编号-版本
+                    default_code = str(record.affected_product_id.version+1)
+                    copyitem.write({'default_code': record.affected_product_id.item_number+"-"+default_code})
+                    record.write ({'new_affected_product_id':copyitem.id})  
+                    record.affected_product_id.write({'state':'InChange'}) 
+                    record.affected_product_id.write({'active':True})
+                    record.affected_product_id.write({'cnis_current':True})     
+                        
+                else :
+                    default_code = str(record.affected_product_id.version)
+                    record.affected_product_id.write({'state':'Review'})
+                    record.affected_product_id.write({'default_code':default_code})
+                    record.write({'new_affected_product_id':record.affected_product_id.id})   
+
+            for record in self.pco_bom_ids: 
+                if record.affected_bom_id != False :
+                    #if self.producaffected_product_idtion_id:
+                    # This ECO was generated from a MO. Uses it MO as base for the revision.
+
+
+                    if record.affected_bom_id.version !=1  or record.affected_bom_id.state == 'Released':
+                        if not record.new_affected_bom_id:
+                            code = str(record.affected_bom_id.version+1)
+                            record.new_affected_bom_id = record.affected_bom_id.sudo().copy(default={
+                                'version': record.affected_bom_id.version + 1,
+                                'active': False,
+                                'cnis_current': False,
+                                'code': record.affected_product_id.item_number+"-"+code,
+                            })
+                            #抄写内部参考号 编号-版本
+                            record.affected_bom_id.write ({'active':True}) 
+                            record.affected_bom_id.write({'state':'InChange'}) 
+                            record.affected_bom_id.write({'cnis_current':True})
+                            record.write({'new_affected_bom_id':record.new_affected_bom_id.id})   
                         
                     else :
-                        record.affected_product_id.write({'state':'Review'})
-                        record.write({'new_affected_product_id':record.affected_product_id.id}) 
-                else :
-                    if self.flow_class =='Bom' and record.affected_bom_id != False :
-                        #if self.producaffected_product_idtion_id:
-                        # This ECO was generated from a MO. Uses it MO as base for the revision.
-
-
-                        if record.affected_bom_id.version !=1  or record.affected_bom_id.state == 'Released':
-                            if not record.new_affected_bom_id:
-                                record.new_affected_bom_id = record.affected_bom_id.sudo().copy(default={
-                                    'version': record.affected_bom_id.version + 1,
-                                    'active': False,
-                                    'cnis_current': False,
-                                })
-                                record.affected_bom_id.write ({'active':True}) 
-                                record.affected_bom_id.write({'state':'InChange'}) 
-                                record.affected_bom_id.write({'cnis_current':True})
-                                record.write({'new_affected_bom_id':record.new_affected_bom_id.id})   
-                            
-                        else :
-                            record.affected_bom_id.write({'state':'Review'})
-                            record.write({'new_affected_bom_id':record.affected_bom_id.id}) 
-                        
+                        code = str(record.affected_bom_id.version+1)
+                        record.affected_bom_id.write({'state':'Review'})                        
+                        record.affected_bom_id.write({'code':code})
+                        record.write({'new_affected_bom_id':record.affected_bom_id.id})                        
                    
                     
             # ebert end             
@@ -105,9 +126,11 @@ class PCOModel(models.Model):
    
     def action_set_Review_after(self):
         for record in self.pco_product_id: 
-            if self.flow_class =='Product':                
+            if record.new_affected_product_id:                
                 record.new_affected_product_id.write({'state':'Review'})  
-            elif self.flow_class =='Bom' and record.affected_bom_id != False :                
+
+        for record in self.pco_bom_ids: 
+            if record.affected_bom_id != False :                
                 record.affected_bom_id.write({'state':'Review'}) 
         # elif self.state =='Review':
         #     raise UserError('已是"变更后审核"状态')
@@ -120,8 +143,7 @@ class PCOModel(models.Model):
 
     #          #ebert 发布 Released
             for record in self.pco_product_id:
-                if self.flow_class =='Product':
-                    
+                if record.affected_product_id :                    
                     if record.affected_product_id.version !=1  or record.affected_product_id.state == 'InChange':
                         record.affected_product_id.write({'state':'Superseded'}) 
                         record.affected_product_id.write({'active':False}) 
@@ -131,8 +153,8 @@ class PCOModel(models.Model):
                         record.new_affected_product_id.write({'cnis_current':True}) 
                     else :
                         record.affected_product_id.write({'state':'Released'})
-                else :
-                    if self.flow_class =='Bom' and record.affected_bom_id != False  :
+            for record in self.pco_bom_ids:
+                    if record.affected_bom_id :
                         #if self.producaffected_product_idtion_id:
                         # This ECO was generated from a MO. Uses it MO as base for the revision.
 
@@ -171,8 +193,25 @@ class PCOModel(models.Model):
    
     @api.onchange('pco_product_id')
     def _compute_pco_product_id(self):
+       
+        # raise UserError(typestr)
         self.write({'btnflog':1})
         for record in self:
             for nd in record.pco_product_id:
-                if self.state =='Review' and (nd.new_affected_product_id.version !=1 or nd.new_affected_bom_id.version !=1):
+                if self.state =='Review' and nd.new_affected_product_id.version !=1:
                     self.write({'btnflog':0})
+            for nd in record.pco_bom_ids:
+                if self.state =='Review' and nd.new_affected_bom_id.version !=1:
+                    self.write({'btnflog':0})
+
+    @api.onchange('classstr')
+    def _compute_classstr(self):
+        self.write({'showproduct':1})
+        self.write({'showbom':1})
+        for r in self.classstr:
+            if r.name=="Product":
+                self.write({'showproduct':0})
+            if r.name=="Bom":
+                self.write({'showbom':0})
+        
+

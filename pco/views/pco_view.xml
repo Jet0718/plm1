@@ -42,12 +42,7 @@
                 </header>
                 <sheet>
                     <!-- ebert update -->
-                    <div class="oe_button_box" name="button_box">                        
-                        <!-- 产品显示 按钮 --><!-- 产品显示 按钮 -->
-                        <!-- <button name="open_new_product" icon="fa-flask" string="产品修订" type="object" invisible="prd_is_invisible == True"   class="oe_stat_button"/>                   
-                        <button name="open_new_bom"     icon="fa-flask" string="BOM修订"  type="object" invisible="bom_invisible == False"   class="oe_stat_button"/>                    -->
-                        <!-- <button name="open_new_product" icon="fa-flask" string="产品修订" type="object" invisible="flow_class != 'Product' or state !='New' or pco_product_id.affected_product_id.version ==1"   class="oe_stat_button"/>                   
-                        <button name="open_new_bom"     icon="fa-flask" string="BOM修订"  type="object" invisible="flow_class != 'Bom' or state !='New' or pco_product_id.affected_bom_id.version ==1"   class="oe_stat_button"/>                        -->
+                    <div class="oe_button_box" name="button_box">      
                     </div>   
                     <group>
                         <group>
@@ -60,45 +55,44 @@
                             <field name="prd_is_invisible" invisible="1"/> -->
                         </group>
                         <group>
-                            <field name="flow_class" string="審批類別" widget ="radio"/>     <!--下拉变成radio单选模式-->
+                            <!--<field name="flow_class" string="審批類別" widget ="radio"/>-->     <!--下拉变成radio单选模式-->
+                            <field name="classstr" string="審批類別" widget ="many2many_tags" options="{'no_create': True}"/>
                             <field name="tag_ids" string="Tags" widget="many2many_tags"/> 
-                            <field name="btnflog" invisible="1"/> 
-                            <!-- <field name="affected_product_id" string="審批产品"/>
-                            <field name="affected_product_version" string="審批产品版本" invisible="flow_class == 'Bom' or not affected_product_id"/>                            
-                            <field name="affected_bom_id" string="审批物料清单" invisible="flow_class == 'Product'"/> 
-                            <field name="affected_bom_version" string="审批物料清单版本" invisible="flow_class == 'Product'  or not affected_product_id"/>                            -->
-                            <!-- <field name="new_affected_product_id" string="新版产品" invisible="flow_class == 'Bom'"/>
-                            <field name="new_affected_product_version" string="新版产品版本" invisible="flow_class == 'Bom' or not new_affected_product_id"/>
-                            <field name="new_affected_bom_id" string="新版物料清单" invisible="flow_class == 'Product'"/>                             
-                            <field name="new_affected_bom_version" string="新版物料清单版本" invisible="flow_class == 'Product'  or not new_affected_bom_id"/>                                                       -->
+                            <field name="btnflog" invisible="1"/>
+                            <field name="showproduct" invisible="1"/>
+                            <field name="showbom" invisible="1"/> 
                         </group>
                     </group>
-                    <notebook>
-                        <page string="附件">
-                             <group>
-                                <!-- 上传单个档案显示写法 -->
-                                <!-- <field name="binary_field" string="档案" filename="binary_file_name"/>                            
-                                <field name="binary_file_name" string="档案名称" invisible="1"/> -->                               
+                    <notebook> 
+                    <!-- invisible="('Product','not in', classstr)" -->
+                        <page string="送審產品" invisible="showproduct ==1" >
+                            <group>
+                                <field name="pco_product_id">
+                                    <tree> 
+                                        <field name="affected_product_id" string="審批产品" />
+                                        <field name="affected_product_version" string="審批产品版本" /> 
+                                        <field name="new_affected_product_id" string="新版产品" readonly="1"/>
+                                        <field name="new_affected_product_version" string="新版产品版本"/>
+                                    </tree>
+                                </field>                                                   
                             </group>
+                        </page> 
+                        <page string="送審BOM" invisible="showbom ==1" >
+                            <group>
+                                <field name="pco_bom_ids">
+                                    <tree> 
+                                        <field name="affected_bom_id" string="审批物料清单" />
+                                        <field name="affected_bom_version" string="物料清单旧版本" /> 
+                                        <field name="new_affected_bom_id" string="新版物料清单" readonly="1"/>
+                                        <field name="new_affected_bom_version" string="物料清单新版本"/>
+                                    </tree>
+                                </field>                                                   
+                            </group>
+                        </page>  
+                        <page string="附件">                             
                             <!-- 上传多个档案显示写法 -->
                             <field name="binary_fields" widget="many2mnay_binary"/>
-                        </page> 
-                        <page string="送審產品">
-                            <group>
-                                <field name="pco_product_id" >
-                                    <!-- <field name="is_editing" invisible="1"/> -->
-                                    <!-- <div attrs="{'invisible': [('is_editing', '=', False)]}"></div> -->
-                                </field>
-                                <!-- <field name="affected_product_id" string="審批产品" />
-                                <field name="affected_product_version" string="審批产品版本" invisible="flow_class == 'Bom' or not affected_product_id"/>                            
-                                <field name="affected_bom_id" string="审批物料清单" invisible="flow_class == 'Product'"/> 
-                                <field name="affected_bom_version" string="审批物料清单版本" invisible="flow_class == 'Product'  or not affected_product_id"/>                           
-                                <field name="new_affected_product_id" string="新版产品" invisible="flow_class == 'Bom'"/>
-                                <field name="new_affected_product_version" string="新版产品版本" invisible="flow_class == 'Bom' or not new_affected_product_id"/>
-                                <field name="new_affected_bom_id" string="新版物料清单" invisible="flow_class == 'Product'"/>                             
-                                <field name="new_affected_bom_version" string="新版物料清单版本" invisible="flow_class == 'Product'  or not new_affected_bom_id"/>                                                       -->
-                            </group>
-                        </page>                                            
+                        </page>                                          
                     </notebook>
                 </sheet>
                 <div class="oe_chatter">
@@ -109,6 +103,8 @@
             </form>
         </field>
     </record>
+
+    
     <record id="pco_view_search" model="ir.ui.view">
         <field name="name">pco.search"</field>
         <field name="model">pco</field>

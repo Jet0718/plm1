@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="pco_bom_model_action" model="ir.actions.act_window">
+        <field name="name">送審物件</field>
+        <field name="res_model">pco.bom</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <record id="pco_bom_view_tree" model="ir.ui.view">
+        <field name="name">pco.bom.tree</field>
+        <field name="model">pco.bom</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="affected_bom_id" string="审批物料清单"/>
+                <field name="affected_bom_version" string="物料清单旧版本"/>
+                <field name="new_affected_bom_id" string="新版物料清单"/>   
+                <field name="new_affected_bom_version" string="物料清单新版本"/>  
+            </tree>
+        </field>
+    </record>
+    <record id="pco_bom_view_form" model="ir.ui.view">
+        <field name="name">pco.bom.form"</field>
+        <field name="model">pco.bom</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="affected_bom_id" string="审批物料清单"/>
+                            <field name="affected_bom_version" string="物料清单旧版本"/>
+                            <field name="new_affected_bom_id" string="新版物料清单"/>   
+                            <field name="new_affected_bom_version" string="物料清单新版本"/>                                               
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="pco_bom_view_search" model="ir.ui.view">
+        <field name="name">pco.bom.search"</field>
+        <field name="model">pco.bom</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="affected_bom_id" string="审批物料清单"/>
+                <field name="affected_bom_version" string="物料清单旧版本"/>
+                <field name="new_affected_bom_id" string="新版物料清单" readonly="1" />   
+                <field name="new_affected_bom_version" string="物料清单新版本"/>  
+            </search>
+        </field>
+    </record>
+</odoo>

@@ -7,7 +7,7 @@ class PCOProductModel(models.Model):
     _description = "dco file main model for DCO."
     _inherit = ['mail.thread','mail.activity.mixin']
         
-
+    dco_id=fields.Many2one("dco")
     affected_item_id =fields.Many2one('dms.file',string='審批文件',options={'no_create': True}, ondelete='cascade', auto_join=True, copy=False)
      #添加显示版本 ,related='new_affected_item_id.version' ,related='affected_item_id.version'
     affected_item_version = fields.Integer('旧版本', readonly=True,default=False,related='affected_item_id.version')

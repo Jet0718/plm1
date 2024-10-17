@@ -4,3 +4,5 @@
 from . import pco
 from . import pco_tag
 from . import pco_product
+from . import pco_bom
+from . import pco_type
