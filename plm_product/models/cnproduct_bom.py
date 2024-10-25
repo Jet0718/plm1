@@ -39,4 +39,9 @@ class InhtBOMtModel(models.Model):
         'type': 'ir.actions.act_window',
         }
 
+class InhtBOMlineModel(models.Model):
+    _inherit = 'mrp.bom.line'
 
+    subsgrp = fields.Char('Substitute Group')
+    subsprority = fields.Integer('Substitute Prority')
+    subsscale = fields.Float('Substitute Scale')
