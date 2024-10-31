@@ -22,9 +22,9 @@
                     <button string="versions"  icon="fa-sitemap" class="oe_stat_button" type="object"   name="action_open_versions"/>                  
                 </div>
                 <field name='bom_product_template_attribute_value_ids' position='after'>
-                    <field name="subsgrp" class="oe_inline oe_right" optional="hide" colum_invisible='True'/>
-                    <field name="subsprority"  colum_invisible="{'subsgrp' : True}"/>
-                    <field name="subsscale"  colum_invisible="{'subsgrp':True}" default="{'subsgrp':'1.0'}"/>
+                    <field name="subsgrp" optional="hide"/>
+                    <field name="subsprority" optional="hide"/>
+                    <field name="subsscale" optional="hide">
                 </field>
             </field>
         </record>
