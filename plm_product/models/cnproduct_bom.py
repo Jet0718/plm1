@@ -19,15 +19,19 @@ class InhtBOMtModel(models.Model):
             copy=False, default='Draft', readonly=True, required=True, index=True)
 
     @api.model_create_multi
-    def create(self,vals_list):
+    def create(self, vals_list):
         for vals in vals_list:
-            if vals.get('item_number',_('no'))== _('no'):
-                vals['item_number'] =self.env['ir.sequence'].next_by_code('mrpbom')
-                #return super().create(vals_list)
-                res = super(InhtBOMtModel, self).create(vals_list)
-                if  res.cn_configid =="0"  :
-                    res.write({'cn_configid': res.id})
-                return res
+            if vals.get('item_number', _('no')) == _('no'):
+                vals['item_number'] = self.env['ir.sequence'].next_by_code('mrpbom')
+
+        templates = super().create(vals_list)
+
+        if templates:
+            for record in templates:
+                if record.cn_configid == "0":
+                    record.write({'cn_configid': record.id})
+
+        return templates
     
     #ebert按钮跳转页面    
     def action_open_versions(self): 

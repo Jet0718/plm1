@@ -24,7 +24,7 @@
                 <field name='bom_product_template_attribute_value_ids' position='after'>
                     <field name="subsgrp" optional="hide"/>
                     <field name="subsprority" optional="hide"/>
-                    <field name="subsscale" optional="hide">
+                    <field name="subsscale" optional="hide"/>
                 </field>
             </field>
         </record>
