@@ -6,11 +6,13 @@
     'license': 'LGPL-3',
     'category': 'Uncategorized',
     'website': 'http://www.example.com',
-    'depends': ['base','project','dms','plm_product'],
-    'data': [
+    'depends': ['base','project','plm_product','plm'],
+    'data': [               
+        'data/irattachmen_seq.xml', 
         'views/project_project.xml',
         'views/project_task.xml',
-        'views/dms_file.xml', 
+        'views/ir_attachment_view.xml',
+        'views/ir_attachment_relations.xml', 
     ],
     'application': True,
 }

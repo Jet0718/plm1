@@ -38,7 +38,7 @@ class PCOModel(models.Model):
     # binary_field = fields.Binary("档案")
     # binary_file_name =fields.Char("档案名称")
     # #上传多个档案写法
-    binary_fields =fields.Many2many("dms.file",string="Multi Files Upload")
+    binary_fields =fields.Many2many("ir.attachment",string="Multi Files Upload")
     btnflog=fields.Integer(string="顯示",default=1)
 
 
@@ -53,7 +53,7 @@ class PCOModel(models.Model):
          for vals in vals_list:
                if vals.get('item_number', _('New')) == _('New'):
                       vals['item_number'] = self.env['ir.sequence'].next_by_code('pco')
-                      return super().create(vals_list)     
+               return super().create(vals_list)     
     
     #定义按钮
     def action_set_Review(self):
@@ -65,28 +65,53 @@ class PCOModel(models.Model):
             # raise UserError(names)
             
             #ebert version item 换版 条件判断送审物件的版本是否是1， 是则送审发布，否则换版
-                if record.affected_product_id.version !=1  or record.affected_product_id.state == 'Released':
-                    copyitem=record.affected_product_id.copy()
-                    fields = record.env['product.template']._fields
-                    #for fld in fields :
-                    copyitem.write({'cn_configid': record.affected_product_id.cn_configid})
-                    copyitem.write({'cnis_current': False})
-                    copyitem.write({'active': False})
-                    copyitem.write({'name': record.affected_product_id.name})
-                    copyitem.write({'version': record.affected_product_id.version+1})                 
-                    copyitem.write({'state': "Draft"})
-                    #抄写内部参考号 编号-版本
-                    default_code = str(record.affected_product_id.version+1)
-                    copyitem.write({'default_code': record.affected_product_id.item_number+"-"+default_code})
-                    record.write ({'new_affected_product_id':copyitem.id})  
-                    record.affected_product_id.write({'state':'InChange'}) 
-                    record.affected_product_id.write({'active':True})
-                    record.affected_product_id.write({'cnis_current':True})     
+                if record.affected_product_id.engineering_revision !=0  or record.affected_product_id.engineering_state == 'released':
+                    # copyitem=record.affected_product_id.copy()
+                    # fields = record.env['product.template']._fields
+                    # #for fld in fields :
+                    # copyitem.write({'cn_configid': record.affected_product_id.cn_configid})
+                    # copyitem.write({'cnis_current': False})
+                    # copyitem.write({'active': False})
+                    # copyitem.write({'name': record.affected_product_id.name})
+                    # copyitem.write({'engineering_revision': record.affected_product_id.engineering_revision+1})                 
+                    # copyitem.write({'state': "Draft"})
+                    # #抄写内部参考号 编号-版本
+                    # default_code = str(record.affected_product_id.engineering_revision+1)
+                    # copyitem.write({'default_code': record.affected_product_id.item_number+"-"+default_code})
+                    # record.write ({'new_affected_product_id':copyitem.id})  
+                    # record.affected_product_id.write({'state':'InChange'}) 
+                    # record.affected_product_id.write({'active':True})
+                    # record.affected_product_id.write({'cnis_current':True})  
+                    # 用对应的product进行 plm的方法变更送审
+                    product = self.env['product.product'].search([('engineering_code', "=", record.affected_product_id.engineering_code),
+                                                                  ('engineering_revision','=',record.affected_product_id.engineering_revision),
+                                                                  ('default_code','=',record.affected_product_id.engineering_code +'_01_'+
+                                                                   str(record.affected_product_id.engineering_revision))])
+                    
+                    product_id = product.id
+                    active_model = 'product.product'
+                    old_product_product_id = self.env[active_model].browse(product_id)
+                    old_product_template_id = old_product_product_id.product_tmpl_id
+                    old_product_template_id.new_version()
+                    new_product_template_id = old_product_product_id.product_tmpl_id.get_next_version()         
+                        
+                    new_product_id = self.env['product.product'].search([('product_tmpl_id','=', new_product_template_id.id)], limit=1)
+                    
+                    # raise UserError(product.engineering_code)
+                    ecode = record.affected_product_id.engineering_code
+                    eversion = record.affected_product_id.engineering_revision+1
+
+                    newrecord = self.env['product.template'].search([('engineering_code', '=' ,ecode ),('engineering_revision', '=' ,eversion)])
+                    newrecord.write({'cn_configid': record.affected_product_id.cn_configid,'cnis_current': True})
+                    record.affected_product_id.write({'cnis_current': False,'active':False})
+                    record.write({'new_affected_product_id': newrecord.id})
                         
                 else :
-                    default_code = str(record.affected_product_id.version)
-                    record.affected_product_id.write({'state':'Review'})
-                    record.affected_product_id.write({'default_code':default_code})
+                    # default_code = str(record.affected_product_id.engineering_revision)
+                    product = self.env['product.product'].search([('engineering_code', "=", record.affected_product_id.engineering_code),('engineering_revision','=',record.affected_product_id.engineering_revision),('default_code','=',record.affected_product_id.engineering_code +'_01_'+str(record.affected_product_id.engineering_revision))])
+                    product.action_confirm()
+                    record.affected_product_id.write({'state':'confirmed'})
+                    # record.affected_product_id.write({'default_code':default_code})
                     record.write({'new_affected_product_id':record.affected_product_id.id})   
 
             for record in self.pco_bom_ids: 
@@ -95,7 +120,7 @@ class PCOModel(models.Model):
                     # This ECO was generated from a MO. Uses it MO as base for the revision.
 
 
-                    if record.affected_bom_id.version !=1  or record.affected_bom_id.state == 'Released':
+                    if record.affected_bom_id.version !=0  or record.affected_bom_id.state == 'Released':
                         if not record.new_affected_bom_id:
                             code = str(record.affected_bom_id.version+1)
                             record.new_affected_bom_id = record.affected_bom_id.sudo().copy(default={
@@ -127,7 +152,9 @@ class PCOModel(models.Model):
     def action_set_Review_after(self):
         for record in self.pco_product_id: 
             if record.new_affected_product_id:                
-                record.new_affected_product_id.write({'state':'Review'})  
+                record.new_affected_product_id.write({'state':'confirmed'})  
+                product = self.env['product.product'].search([('engineering_code', "=", record.new_affected_product_id.engineering_code),('engineering_revision','=',record.new_affected_product_id.engineering_revision),('default_code','=',record.new_affected_product_id.engineering_code +'_01_'+str(record.new_affected_product_id.engineering_revision))])
+                product.action_confirm()
 
         for record in self.pco_bom_ids: 
             if record.affected_bom_id != False :                
@@ -144,15 +171,27 @@ class PCOModel(models.Model):
     #          #ebert 发布 Released
             for record in self.pco_product_id:
                 if record.affected_product_id :                    
-                    if record.affected_product_id.version !=1  or record.affected_product_id.state == 'InChange':
-                        record.affected_product_id.write({'state':'Superseded'}) 
+                    if record.affected_product_id.engineering_revision !=1  or record.affected_product_id.state == 'undermodify':
+                        record.affected_product_id.write({'state':'obsoleted'}) 
                         record.affected_product_id.write({'active':False}) 
                         record.affected_product_id.write({'cnis_current':False}) 
                         record.new_affected_product_id.write({'active':True}) 
-                        record.new_affected_product_id.write({'state':'Released'}) 
+                        record.new_affected_product_id.write({'state':'released'}) 
                         record.new_affected_product_id.write({'cnis_current':True}) 
+
+
+                        product = self.env['product.product'].search([('engineering_code', "=", record.new_affected_product_id.engineering_code),
+                                                                      ('engineering_revision','=',record.new_affected_product_id.engineering_revision),
+                                                                      ('default_code','=',record.new_affected_product_id.engineering_code +'_01_'
+                                                                    +str(record.new_affected_product_id.engineering_revision))])
+                        product.action_release()
                     else :
-                        record.affected_product_id.write({'state':'Released'})
+                        product = self.env['product.product'].search([('engineering_code', "=", record.new_affected_product_id.engineering_code),
+                                                                      ('engineering_revision','=',record.new_affected_product_id.engineering_revision),
+                                                                      ('default_code','=',record.new_affected_product_id.engineering_code +'_01_'
+                                                                    +str(record.new_affected_product_id.engineering_revision))])
+                        product.action_release()
+                        # record.affected_product_id.write({'state':'Released'})
             for record in self.pco_bom_ids:
                     if record.affected_bom_id :
                         #if self.producaffected_product_idtion_id:
@@ -189,7 +228,18 @@ class PCOModel(models.Model):
             raise UserError('已核准,不能被取消')
         
 
-    
+    def product_create_new_revision_by_server(self):
+        product_id = self.id
+        active_model = 'product.product'
+        if product_id and active_model:
+            old_product_product_id = self.env[active_model].browse(product_id)
+            old_product_template_id = old_product_product_id.product_tmpl_id
+            old_product_template_id.new_version()
+            new_product_template_id = old_product_product_id.product_tmpl_id.get_next_version()         
+            
+            new_product_id = self.env['product.product'].search([('product_tmpl_id','=', new_product_template_id.id)], limit=1)
+            return new_product_id  
+            
    
     @api.onchange('pco_product_id')
     def _compute_pco_product_id(self):

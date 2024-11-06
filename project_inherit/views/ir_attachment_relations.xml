@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+        <record id="plm_docbom_form_view_v2" model="ir.ui.view">
+            <field name="name">plm.doc.relation.formV2</field>
+            <field name="model">ir.attachment.relation</field>
+            <field name="inherit_id" ref="plm.plm_docbom_form_view" />
+            <field name="arch" type="xml">
+                <!-- <form string="Show Document Relation">
+					<sheet> -->
+						<xpath expr="//newline" position="after">					  
+							<notebook>    
+								<page string="子阶预览">
+									<field name="ir_attachment_relations" >
+										<tree> 										
+											<field name="child_id" readonly="True" domain="[('is_plm', '=', True)]"/>
+											<field name="child_revision" readonly="True"/>
+											<field name="child_type" readonly="True"/>
+											<field name="child_state"/>
+										
+										</tree> 
+									</field>
+								</page>       
+							</notebook> 
+						</xpath> 
+					<!-- </sheet> 
+               </form> -->
+            </field>
+        </record>  
+	</data>
+</odoo>

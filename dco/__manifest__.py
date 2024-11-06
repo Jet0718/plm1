@@ -1,7 +1,7 @@
 {
     'name': "DCO",
     'version': '1.0',
-    'depends': ['base','product','mrp','project_inherit'],
+    'depends': ['base','product','mrp','project_inherit','plm'],
     'author': "BWCS PMO",
     'category': 'Category',
     'license' : 'LGPL-3',

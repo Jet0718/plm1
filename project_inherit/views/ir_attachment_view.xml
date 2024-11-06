@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_attachfileprj_form_inherit" model="ir.ui.view">
+            <field name="name">ir.attachment_plm.form</field>
+            <field name="model">ir.attachment</field>
+            <field name="type">form</field>
+            <field name="inherit_id" ref="plm.view_attachment_form_plm_hinerit" />
+            <field name="arch" type="xml">             
+                <!-- <xpath expr="//header" position="inside">
+                    <field name="state" widget="statusbar" statusbar_visible="Draft,Review,Released,InChange,Superseded" />
+                </xpath>  -->
+                             
+                <field name="preview" position="after">   
+                        <!-- <field name="item_number"  /> --> 
+                        <p/>  
+                        <field name="owner"  />
+                        <field name="active"  />
+                         <field name="cnis_current"  />
+                </field>
+                <!-- ebert button_box 顶部添加按钮 -->    
+                <div name="button_box" position="inside">
+                    <button string="versions"  icon="fa-sitemap" class="oe_stat_button" type="object"   name="action_openfileversions"/>                  
+                </div> 
+                 <xpath expr="//notebook" position="inside">    
+                    <page string="项目">
+                        <field name="cn_file2prj" >
+                            <tree> 
+                                <field name="name" />
+                            </tree> 
+                        </field>
+                    </page> 
+                    <page string="产品">
+                        <field name="cn_file2prd" >
+                            <tree> 
+                                <field name="item_number" />
+                                <field name="name" />
+                            </tree> 
+                        </field>
+                    </page>        
+                </xpath>                
+            </field> 
+        </record>
+    </data>
+</odoo>
+
+

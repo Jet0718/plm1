@@ -13,5 +13,5 @@ class PCOProductModel(models.Model):
     #ebert 
     new_affected_product_id =fields.Many2one('product.template',string='新版審批产品')  
     #添加显示版本
-    affected_product_version = fields.Integer('产品旧版本',  related='affected_product_id.version', readonly=True)
-    new_affected_product_version = fields.Integer('产品新版本',  related='new_affected_product_id.version', readonly=True)
+    affected_product_version = fields.Integer('产品旧版本',  related='affected_product_id.engineering_revision', readonly=True)
+    new_affected_product_version = fields.Integer('产品新版本',  related='new_affected_product_id.engineering_revision', readonly=True)

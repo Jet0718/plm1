@@ -6,7 +6,7 @@
     'category': 'Uncategorized',
     'license' : 'LGPL-3',
     'website': 'http://www.openplm.com.tw',
-    'depends': ['base','mrp'],
+    'depends': ['base','mrp','plm','plm_auto_engcode'],
     'data': [
         'views/product_templates.xml',
         'views/mrp_bom_views.xml',
