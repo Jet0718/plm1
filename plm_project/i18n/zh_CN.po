@@ -1,0 +1,137 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* plm_project
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0-20240820\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-10-28 08:46+0000\n"
+"PO-Revision-Date: 2024-11-07 15:57+0800\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.5\n"
+
+#. module: plm_project
+#: model:ir.model,name:plm_project.model_mail_activity
+msgid "Activity"
+msgstr "活动"
+
+#. module: plm_project
+#. odoo-python
+#: code:addons/plm_project/models/product.py:0
+#: model:ir.model.fields,field_description:plm_project.field_product_product__activity_task_id
+#, python-format
+msgid "Activity Task"
+msgstr "活动任务"
+
+#. module: plm_project
+#. odoo-python
+#: code:addons/plm_project/models/project.py:0
+#: model:ir.model.fields,help:plm_project.field_project_project__plm_use_plm
+#, python-format
+msgid "Check this box to manage plm data into project"
+msgstr "选中此框可将plm数据管理到项目中"
+
+#. module: plm_project
+#. odoo-python
+#: code:addons/plm_project/models/project.py:0
+#: model:ir.model.fields,field_description:plm_project.field_project_project__plm_product_count
+#, python-format
+msgid "Number of product related"
+msgstr "相关产品数量"
+
+#. module: plm_project
+#: model_terms:ir.ui.view,arch_db:plm_project.plm_edit_project
+msgid "PLM"
+msgstr "PLM"
+
+#. module: plm_project
+#. odoo-python
+#: code:addons/plm_project/models/project.py:0
+#: model:ir.model.fields,field_description:plm_project.field_project_project__plm_completed
+#, python-format
+msgid "Plm Complete"
+msgstr "plm完成"
+
+#. module: plm_project
+#: model:mail.activity.type,name:plm_project.mail_activity_product_confirmed
+msgid "Product Confirmed"
+msgstr "产品已确认"
+
+#. module: plm_project
+#. odoo-python
+#: code:addons/plm_project/models/project_task.py:0
+#: model:ir.model.fields,field_description:plm_project.field_project_task__activity_product_ids
+#, python-format
+msgid "Product Ids"
+msgstr "产品ID"
+
+#. module: plm_project
+#: model:ir.model,name:plm_project.model_product_product
+msgid "Product Product"
+msgstr "产品变体"
+
+#. module: plm_project
+#. odoo-python
+#: code:addons/plm_project/models/project.py:0
+#: model:ir.model.fields,field_description:plm_project.field_project_project__plm_product_ids
+#, python-format
+msgid "Products"
+msgstr "产品"
+
+#. module: plm_project
+#: model:ir.model,name:plm_project.model_project_project
+#: model_terms:ir.ui.view,arch_db:plm_project.plm_product_product_normal_form_view_inherit_plm_project
+#: model_terms:ir.ui.view,arch_db:plm_project.plm_project_product_extend
+msgid "Project"
+msgstr "项目"
+
+#. module: plm_project
+#. odoo-python
+#: code:addons/plm_project/models/product.py:0
+#: model:ir.model.fields,field_description:plm_project.field_product_product__project_ids
+#, python-format
+msgid "Projects"
+msgstr "项目"
+
+#. module: plm_project
+#: model:ir.model,name:plm_project.model_project_task
+msgid "Task"
+msgstr "任务"
+
+#. module: plm_project
+#: model:ir.model.fields,field_description:plm_project.field_project_project__plm_use_plm
+msgid "Use PLM"
+msgstr "使用PLM"
+
+#. module: plm_project
+#. odoo-python
+#: code:addons/plm_project/models/mail_activity.py:0
+#, python-format
+msgid ""
+"You cannot edit a \"Product Confirmed\" activity if is not assigned to you."
+msgstr "如果未分配给您，则无法编辑“产品确认”活动。"
+
+#. module: plm_project
+#. odoo-python
+#: code:addons/plm_project/models/mail_activity.py:0
+#, python-format
+msgid ""
+"You cannot mark as done a \"Product Confirmed\" activity if is not assigned "
+"to you."
+msgstr "如果未分配给您，则无法将“产品确认”活动标记为已完成。"
+
+#. module: plm_project
+#. odoo-python
+#: code:addons/plm_project/models/mail_activity.py:0
+#, python-format
+msgid ""
+"You cannot unlink a \"Product Confirmed\" activity if is not assigned to "
+"you."
+msgstr "如果未分配给您，则无法将“产品确认”活动标记为已完成。"

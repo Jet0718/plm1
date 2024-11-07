@@ -1,0 +1,312 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* plm_breakages
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0-20240820\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-10-28 03:12+0000\n"
+"PO-Revision-Date: 2024-11-07 15:47+0800\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.5\n"
+
+#. module: plm_breakages
+#: model:ir.model.fields,field_description:plm_breakages.field_mrp_bom__breakages_count
+#: model:ir.model.fields,field_description:plm_breakages.field_mrp_bom_line__breakages_count
+#: model:ir.model.fields,field_description:plm_breakages.field_mrp_production__breakages_count
+#: model:ir.model.fields,field_description:plm_breakages.field_product_product__breakages_count
+msgid "# Breakages"
+msgstr "# 破损"
+
+#. module: plm_breakages
+#: model:ir.model.fields,field_description:plm_breakages.field_plm_breakages__message_needaction
+msgid "Action Needed"
+msgstr "需进行作业"
+
+#. module: plm_breakages
+#: model:ir.model.fields,field_description:plm_breakages.field_plm_breakages__message_attachment_count
+msgid "Attachment Count"
+msgstr "附件数"
+
+#. module: plm_breakages
+#: model:ir.model,name:plm_breakages.model_mrp_bom
+msgid "Bill of Material"
+msgstr "物料清单"
+
+#. module: plm_breakages
+#: model:ir.model,name:plm_breakages.model_mrp_bom_line
+msgid "Bill of Material Line"
+msgstr "物料清单行"
+
+#. module: plm_breakages
+#: model_terms:ir.ui.view,arch_db:plm_breakages.plm_mrp_bom_form_view_inherit
+#: model_terms:ir.ui.view,arch_db:plm_breakages.plm_product_product_normal_form_view_inherit
+msgid "Breakages"
+msgstr "破损"
+
+#. module: plm_breakages
+#: model_terms:ir.ui.view,arch_db:plm_breakages.breakages_form_view
+msgid "Breakages Form"
+msgstr "破损表格"
+
+#. module: plm_breakages
+#: model_terms:ir.ui.view,arch_db:plm_breakages.breakages_tree_view
+msgid "Breakages Tree"
+msgstr "破损树"
+
+#. module: plm_breakages
+#: model_terms:ir.ui.view,arch_db:plm_breakages.breakages_search
+msgid "Changed by"
+msgstr "更改人"
+
+#. module: plm_breakages
+#: model:ir.model.fields,field_description:plm_breakages.field_plm_breakages__create_uid
+#: model_terms:ir.ui.view,arch_db:plm_breakages.breakages_search
+msgid "Created by"
+msgstr "创建者"
+
+#. module: plm_breakages
+#: model:ir.model.fields,field_description:plm_breakages.field_plm_breakages__create_date
+msgid "Created on"
+msgstr "创建时间"
+
+#. module: plm_breakages
+#: model:ir.model.fields,field_description:plm_breakages.field_plm_breakages__partner_id
+msgid "Customer"
+msgstr "客户"
+
+#. module: plm_breakages
+#: model:ir.model.fields,field_description:plm_breakages.field_plm_breakages__date
+msgid "Date"
+msgstr "日期"
+
+#. module: plm_breakages
+#: model:ir.model.fields,field_description:plm_breakages.field_plm_breakages__display_name
+msgid "Display Name"
+msgstr "显示名称"
+
+#. module: plm_breakages
+#: model:ir.model.fields,help:plm_breakages.field_plm_breakages__tracking
+msgid "Ensure the traceability of a storable product in your warehouse."
+msgstr "确保可以追溯您仓库中的库存产品。"
+
+#. module: plm_breakages
+#: model:ir.model.fields,field_description:plm_breakages.field_plm_breakages__message_follower_ids
+msgid "Followers"
+msgstr "关注者"
+
+#. module: plm_breakages
+#: model:ir.model.fields,field_description:plm_breakages.field_plm_breakages__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "关注者(合作伙伴)"
+
+#. module: plm_breakages
+#: model_terms:ir.ui.view,arch_db:plm_breakages.breakages_search
+msgid "For Date"
+msgstr "适用于日期"
+
+#. module: plm_breakages
+#: model_terms:ir.ui.view,arch_db:plm_breakages.breakages_search
+msgid "For Product"
+msgstr "适用于产品"
+
+#. module: plm_breakages
+#: model_terms:ir.ui.view,arch_db:plm_breakages.breakages_graph_view
+msgid "Graph"
+msgstr "图表"
+
+#. module: plm_breakages
+#: model_terms:ir.ui.view,arch_db:plm_breakages.breakages_search
+msgid "Group By..."
+msgstr "分组依据..."
+
+#. module: plm_breakages
+#: model:ir.model.fields,field_description:plm_breakages.field_plm_breakages__has_message
+msgid "Has Message"
+msgstr "有消息"
+
+#. module: plm_breakages
+#: model:ir.model.fields,field_description:plm_breakages.field_plm_breakages__id
+msgid "ID"
+msgstr "ID"
+
+#. module: plm_breakages
+#: model:ir.model.fields,help:plm_breakages.field_plm_breakages__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "如果选中，新消息需要您注意。"
+
+#. module: plm_breakages
+#: model:ir.model.fields,help:plm_breakages.field_plm_breakages__message_has_error
+#: model:ir.model.fields,help:plm_breakages.field_plm_breakages__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "如果选中，则某些邮件存在传递错误。"
+
+#. module: plm_breakages
+#: model:ir.model.fields,field_description:plm_breakages.field_plm_breakages__message_is_follower
+msgid "Is Follower"
+msgstr "是关注者"
+
+#. module: plm_breakages
+#: model_terms:ir.ui.view,arch_db:plm_breakages.breakages_search
+msgid "Last Month"
+msgstr "上个月"
+
+#. module: plm_breakages
+#: model:ir.model.fields,field_description:plm_breakages.field_plm_breakages__write_uid
+msgid "Last Updated by"
+msgstr "最后更新者"
+
+#. module: plm_breakages
+#: model:ir.model.fields,field_description:plm_breakages.field_plm_breakages__write_date
+msgid "Last Updated on"
+msgstr "最后更新于"
+
+#. module: plm_breakages
+#: model_terms:ir.ui.view,arch_db:plm_breakages.breakages_search
+msgid "Last Week"
+msgstr "上周"
+
+#. module: plm_breakages
+#: model_terms:ir.ui.view,arch_db:plm_breakages.breakages_search
+msgid "Last Year"
+msgstr "去年"
+
+#. module: plm_breakages
+#: model:ir.model.fields,field_description:plm_breakages.field_plm_breakages__lot_number
+msgid "Lot/Serial Number"
+msgstr "批号/序号"
+
+#. module: plm_breakages
+#: model:ir.model.fields,field_description:plm_breakages.field_plm_breakages__message_has_error
+msgid "Message Delivery error"
+msgstr "邮件传递错误"
+
+#. module: plm_breakages
+#: model:ir.model.fields,field_description:plm_breakages.field_plm_breakages__message_ids
+msgid "Messages"
+msgstr "讯息"
+
+#. module: plm_breakages
+#: model:ir.model.fields,field_description:plm_breakages.field_plm_breakages__name
+msgid "Name"
+msgstr "名称"
+
+#. module: plm_breakages
+#: model:ir.model.fields,field_description:plm_breakages.field_plm_breakages__notes
+msgid "Notes"
+msgstr "备注"
+
+#. module: plm_breakages
+#: model:ir.model.fields,field_description:plm_breakages.field_plm_breakages__message_needaction_counter
+msgid "Number of Actions"
+msgstr "操作次数"
+
+#. module: plm_breakages
+#: model:ir.model.fields,field_description:plm_breakages.field_plm_breakages__message_has_error_counter
+msgid "Number of errors"
+msgstr "错误数"
+
+#. module: plm_breakages
+#: model:ir.model.fields,help:plm_breakages.field_plm_breakages__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "需要采取行动的消息数量"
+
+#. module: plm_breakages
+#: model:ir.model.fields,help:plm_breakages.field_plm_breakages__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "传递错误的邮件数"
+
+#. module: plm_breakages
+#: model_terms:ir.ui.view,arch_db:plm_breakages.plm_breackage_plm_bom_form_view_inherit
+msgid "Open Brackages"
+msgstr "开放式破损"
+
+#. module: plm_breakages
+#: model_terms:ir.ui.view,arch_db:plm_breakages.plm_mrp_bom_form_view_inherit
+#: model_terms:ir.ui.view,arch_db:plm_breakages.plm_mrp_production_form_view_inherit
+#: model_terms:ir.ui.view,arch_db:plm_breakages.plm_product_product_normal_form_view_inherit
+msgid "Open Breakages"
+msgstr "开放式破损"
+
+#. module: plm_breakages
+#: model:ir.model,name:plm_breakages.model_plm_breakages
+msgid "PLM Breakages"
+msgstr "PLM破损"
+
+#. module: plm_breakages
+#: model:ir.model.fields,field_description:plm_breakages.field_plm_breakages__parent_id
+msgid "Parent"
+msgstr "父阶"
+
+#. module: plm_breakages
+#: model_terms:ir.ui.view,arch_db:plm_breakages.breakages_pivot_view
+msgid "Pivot"
+msgstr "枢轴"
+
+#. module: plm_breakages
+#: model:ir.model.fields,field_description:plm_breakages.field_plm_breakages__product_id
+msgid "Product"
+msgstr "产品"
+
+#. module: plm_breakages
+#: model:ir.actions.act_window,name:plm_breakages.breakages_menu_action
+#: model:ir.ui.menu,name:plm_breakages.breakages_menu
+msgid "Product Breakages"
+msgstr "产品破损"
+
+#. module: plm_breakages
+#: model:ir.model,name:plm_breakages.model_product_product
+msgid "Product Product"
+msgstr "产品变体"
+
+#. module: plm_breakages
+#: model:ir.model,name:plm_breakages.model_mrp_production
+msgid "Production Order"
+msgstr "制造订单"
+
+#. module: plm_breakages
+#. odoo-python
+#: code:addons/plm_breakages/models/mrp_bom.py:0
+#: code:addons/plm_breakages/models/mrp_bom_line.py:0
+#: code:addons/plm_breakages/models/mrp_production.py:0
+#: code:addons/plm_breakages/models/product_product.py:0
+#, python-format
+msgid "Products"
+msgstr "产品"
+
+#. module: plm_breakages
+#: model:ir.model.fields,field_description:plm_breakages.field_plm_breakages__rating_ids
+msgid "Ratings"
+msgstr "评级"
+
+#. module: plm_breakages
+#: model:ir.model.fields,field_description:plm_breakages.field_plm_breakages__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "简讯传递错误"
+
+#. module: plm_breakages
+#: model_terms:ir.ui.view,arch_db:plm_breakages.plm_mrp_production_form_view_inherit
+msgid "There are some brakages on your manufactory order click in order to see it"
+msgstr "您的工厂订单上有一些瑕疵，点击查看"
+
+#. module: plm_breakages
+#: model:ir.model.fields,field_description:plm_breakages.field_plm_breakages__tracking
+msgid "Tracking"
+msgstr "追迹"
+
+#. module: plm_breakages
+#: model:ir.model.fields,field_description:plm_breakages.field_plm_breakages__website_message_ids
+msgid "Website Messages"
+msgstr "网站留言"
+
+#. module: plm_breakages
+#: model:ir.model.fields,help:plm_breakages.field_plm_breakages__website_message_ids
+msgid "Website communication history"
+msgstr "网站通信历史"

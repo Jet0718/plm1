@@ -1,0 +1,137 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* plm_engineering
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0-20240820\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-10-28 07:57+0000\n"
+"PO-Revision-Date: 2024-11-07 15:53+0800\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.5\n"
+
+#. module: plm_engineering
+#: model:ir.model,name:plm_engineering.model_mrp_bom
+msgid "Bill of Material"
+msgstr "物料清单"
+
+#. module: plm_engineering
+#: model:ir.model,name:plm_engineering.model_mrp_bom_line
+msgid "Bill of Material Line"
+msgstr "物料清单行"
+
+#. module: plm_engineering
+#: model:ir.model.fields,field_description:plm_engineering.field_mrp_bom__type
+msgid "BoM Type"
+msgstr "物料清单 BoM 类型"
+
+#. module: plm_engineering
+#. odoo-python
+#: code:addons/plm_engineering/models/product_product.py:0
+#, python-format
+msgid "Could not convert source bom to %r"
+msgstr "无法将源bom转换为%r"
+
+#. module: plm_engineering
+#: model:ir.actions.act_window,name:plm_engineering.act_create_normalBom
+msgid "Create Normal Bom"
+msgstr "创建普通Bom"
+
+#. module: plm_engineering
+#. odoo-python
+#: code:addons/plm_engineering/models/product_product.py:0
+#, python-format
+msgid "Created %r"
+msgstr "已创建%r"
+
+#. module: plm_engineering
+#: model_terms:ir.ui.view,arch_db:plm_engineering.plm_temporary_message_form
+msgid "Creation Report"
+msgstr "创建报告"
+
+#. module: plm_engineering
+#: model:ir.model.fields.selection,name:plm_engineering.selection__mrp_bom__type__ebom
+msgid "Engineering BoM"
+msgstr "工程BoM"
+
+#. module: plm_engineering
+#: model:ir.actions.act_window,name:plm_engineering.plm_action_ebom_form
+msgid "Engineering BoMs"
+msgstr "工程BoM"
+
+#. module: plm_engineering
+#. odoo-python
+#: code:addons/plm_engineering/models/plm_temporary.py:0
+#, python-format
+msgid "Normal BoM for Part '%s' and revision '%s' already exists."
+msgstr "零件“%s”和修订版“%s”的正常物料清单已存在。"
+
+#. module: plm_engineering
+#: model_terms:ir.ui.view,arch_db:plm_engineering.plm_temporary_message_form
+msgid "Ok"
+msgstr "Ok"
+
+#. module: plm_engineering
+#: model:ir.model,name:plm_engineering.model_product_product
+msgid "Product Product"
+msgstr "产品变体"
+
+#. module: plm_engineering
+#: model:ir.model,name:plm_engineering.model_mrp_production
+msgid "Production Order"
+msgstr "制造订单"
+
+#. module: plm_engineering
+#. odoo-python
+#: code:addons/plm_engineering/models/product_product_kanban.py:0
+#, python-format
+msgid "Related Boms"
+msgstr "相关Boms"
+
+#. module: plm_engineering
+#. odoo-python
+#: code:addons/plm_engineering/models/plm_temporary.py:0
+#, python-format
+msgid "Result"
+msgstr "结果"
+
+#. module: plm_engineering
+#: model:ir.ui.menu,name:plm_engineering.menu_relation_ebom
+msgid "Search on Engineering Bill of Materials"
+msgstr "工程材料清单检索"
+
+#. module: plm_engineering
+#. odoo-python
+#: code:addons/plm_engineering/models/plm_temporary.py:0
+#, python-format
+msgid "Select a product before to continue"
+msgstr "在继续之前选择一个产品"
+
+#. module: plm_engineering
+#: model:ir.model.fields,field_description:plm_engineering.field_mrp_bom_line__ebom_source_id
+msgid "Source E-Bom ID"
+msgstr "来源电子BomID"
+
+#. module: plm_engineering
+#: model:ir.model.fields,field_description:plm_engineering.field_mrp_bom__ebom_source_id
+msgid "Source Ebom ID"
+msgstr "来源电子BomID"
+
+#. module: plm_engineering
+#: model:ir.model,name:plm_engineering.model_plm_temporary
+msgid "Temporary Class"
+msgstr "临时类"
+
+#. module: plm_engineering
+#. odoo-python
+#: code:addons/plm_engineering/models/plm_temporary.py:0
+#, python-format
+msgid "The creation of the normalBom works only on product_product object"
+msgstr "普通Bom的创建仅适用于产品变体对象"

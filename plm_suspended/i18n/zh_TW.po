@@ -1,0 +1,120 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* plm_suspended
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0-20240820\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-10-25 08:19+0000\n"
+"PO-Revision-Date: 2024-11-07 15:46+0800\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.5\n"
+
+#. module: plm_suspended
+#: model:ir.model.fields.selection,name:plm_suspended.selection__ir_attachment__engineering_state__confirmed
+msgid "Confirmed"
+msgstr "已確認"
+
+#. module: plm_suspended
+#: model:ir.model.fields.selection,name:plm_suspended.selection__ir_attachment__engineering_state__draft
+msgid "Draft"
+msgstr "草稿"
+
+#. module: plm_suspended
+#: model:ir.model.fields,field_description:plm_suspended.field_product_product__engineering_state
+#: model:ir.model.fields,field_description:plm_suspended.field_product_template__engineering_state
+msgid "Engineering Status"
+msgstr "工程狀態"
+
+#. module: plm_suspended
+#: model:ir.model,name:plm_suspended.model_ir_attachment
+msgid "Ir Attachment"
+msgstr "附件"
+
+#. module: plm_suspended
+#: model:ir.model.fields.selection,name:plm_suspended.selection__ir_attachment__engineering_state__obsoleted
+msgid "Obsoleted"
+msgstr "已廢除"
+
+#. module: plm_suspended
+#: model:ir.model.fields,field_description:plm_suspended.field_ir_attachment__old_state
+#: model:ir.model.fields,field_description:plm_suspended.field_mrp_document__old_state
+#: model:ir.model.fields,field_description:plm_suspended.field_product_document__old_state
+#: model:ir.model.fields,field_description:plm_suspended.field_product_product__old_state
+#: model:ir.model.fields,field_description:plm_suspended.field_product_template__old_state
+msgid "Old State"
+msgstr "舊狀態"
+
+#. module: plm_suspended
+#. odoo-python
+#: code:addons/plm_suspended/models/ir_attachment.py:0
+#: code:addons/plm_suspended/models/product_template.py:0
+#, python-format
+msgid "Old Status"
+msgstr "舊狀態"
+
+#. module: plm_suspended
+#: model:ir.model,name:plm_suspended.model_product_product
+msgid "Product Product"
+msgstr "產品變體"
+
+#. module: plm_suspended
+#: model:ir.model,name:plm_suspended.model_product_template
+msgid "Product Template"
+msgstr "產品範本"
+
+#. module: plm_suspended
+#: model:ir.model.fields.selection,name:plm_suspended.selection__ir_attachment__engineering_state__released
+msgid "Released"
+msgstr "釋放"
+
+#. module: plm_suspended
+#: model:ir.model.fields,field_description:plm_suspended.field_ir_attachment__engineering_state
+#: model:ir.model.fields,field_description:plm_suspended.field_mrp_document__engineering_state
+#: model:ir.model.fields,field_description:plm_suspended.field_product_document__engineering_state
+msgid "Status"
+msgstr "狀態"
+
+#. module: plm_suspended
+#: model_terms:ir.ui.view,arch_db:plm_suspended.ir_attachment_spare_extension
+#: model_terms:ir.ui.view,arch_db:plm_suspended.view_ir_attachment_suspended
+msgid "Suspend"
+msgstr "暫停"
+
+#. module: plm_suspended
+#. odoo-python
+#: code:addons/plm_suspended/models/ir_attachment.py:0
+#: code:addons/plm_suspended/models/product_template.py:0
+#: model:ir.model.fields.selection,name:plm_suspended.selection__ir_attachment__engineering_state__suspended
+#: model:ir.model.fields.selection,name:plm_suspended.selection__product_template__engineering_state__suspended
+#, python-format
+msgid "Suspended"
+msgstr "暫停的"
+
+#. module: plm_suspended
+#. odoo-python
+#: code:addons/plm_suspended/models/ir_attachment.py:0
+#: model:ir.model.fields,help:plm_suspended.field_ir_attachment__engineering_state
+#: model:ir.model.fields,help:plm_suspended.field_mrp_document__engineering_state
+#: model:ir.model.fields,help:plm_suspended.field_product_document__engineering_state
+#, python-format
+msgid "The status of the product."
+msgstr "產品的狀態."
+
+#. module: plm_suspended
+#: model_terms:ir.ui.view,arch_db:plm_suspended.ir_attachment_spare_extension
+#: model_terms:ir.ui.view,arch_db:plm_suspended.view_ir_attachment_suspended
+msgid "Un-Suspend"
+msgstr "取消暫停"
+
+#. module: plm_suspended
+#: model:ir.model.fields.selection,name:plm_suspended.selection__ir_attachment__engineering_state__undermodify
+msgid "UnderModify"
+msgstr "在修改下"

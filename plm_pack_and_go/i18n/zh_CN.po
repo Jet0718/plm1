@@ -1,0 +1,578 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* plm_pack_and_go
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0-20240820\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-10-25 01:49+0000\n"
+"PO-Revision-Date: 2024-11-07 15:38+0800\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.5\n"
+
+#. module: plm_pack_and_go
+#: model:ir.model.fields,help:plm_pack_and_go.field_pack_and_go__file_name_computation
+msgid ""
+"\n"
+"                                  File name inside zip folder\n"
+"                                  * File name -> <ir_attachment.name>."
+"exte \n"
+"                                  * File name and revision -> "
+"<ir_attachment.name>_<ir_attachment.engineering_revision>.exte\n"
+"                                  * Product engineering Code -> "
+"<product_product.engineering_code>.exte\n"
+"                                  * Product engineering name and revision "
+"-> <product_product.engineering_code>_<eproduct_product."
+"engineering_revision>.exte\n"
+"                                  * Product engineering name description -"
+"> <product_product.engineering_code>_<product_product.name>.exte\n"
+"                                  * Product engineering name revision and "
+"descriprion - > <product_product.engineering_code>_<product_product."
+"engineering_revision>_<product_product.name>.exte\n"
+"                                  * Product internal reference' - > "
+"<product_product.default_code>.exte\n"
+"                                  * Product internal reference and "
+"description' - > <product_product.default_code>_<product_product.name>."
+"exte\n"
+"                                  REMARK: This function only work for the "
+"non CAD native files [es. it work for (pdf,dxf,stp)]\n"
+"                                      Native file must keep the original "
+"name in order to be reopened without any problem\n"
+"                                  "
+msgstr ""
+"\n"
+"                                  zip文件夹中的文件名\n"
+"                                  * 文件名-><ir_attachment.name>.exte \n"
+"                                  * 文件名和修订版-><ir_attachment."
+"name>_<ir_attechment.engineering_revision>.exte\n"
+"                                  * 产品工程规范-><产品工程规范>.exte\n"
+"                                  * 产品工程名称及版次-><产品工程编码>_<产"
+"品工程版次>\n"
+"                                  * 产品工程名称描述-><产品工程编码>_<产品"
+"名称>\n"
+"                                  * 产品工程名称修订和描述-"
+"><Product_Product.engineering_code>_<Product_produc."
+"engineering_revision>_<Product_Product.name>.exte\n"
+"                                  * 产品内部参考'-><Product_Product."
+"default_code>.exte\n"
+"                                  * 产品内部参考和描述><Product_Product."
+"default_code>_<Product_produc.name>.exte\n"
+"                                  备注：此函数仅适用于非CAD本机文件[适用于"
+"（pdf、dxf、stp）]\n"
+"                                      本机文件必须保留原始名称，才能毫无问"
+"题地重新打开\n"
+"                                  "
+
+#. module: plm_pack_and_go
+#: model:ir.model.fields,help:plm_pack_and_go.field_pack_and_go__create_subfolder_by_category
+msgid ""
+"\n"
+"    Create inside the zip a folder structure that is equal to the product "
+"category assing to each product\n"
+"    "
+msgstr ""
+"\n"
+"    在zip中创建一个文件夹结构，该结构等于分配给每个产品的产品类别\n"
+"    "
+
+#. module: plm_pack_and_go
+#. odoo-python
+#: code:addons/plm_pack_and_go/wizard/pack_and_go_wizard.py:0
+#: model:ir.model.fields.selection,name:plm_pack_and_go.selection__pack_and_go__export_type__2d
+#: model:ir.model.fields.selection,name:plm_pack_and_go.selection__pack_and_go_view__doc_type__2d
+#: model_terms:ir.ui.view,arch_db:plm_pack_and_go.act_plm_pack_and_go
+#, python-format
+msgid "2D"
+msgstr "2D"
+
+#. module: plm_pack_and_go
+#. odoo-python
+#: code:addons/plm_pack_and_go/wizard/pack_and_go_wizard.py:0
+#: model:ir.model.fields.selection,name:plm_pack_and_go.selection__pack_and_go__export_type__all
+#, python-format
+msgid "2D + 3D + PDF"
+msgstr "2D + 3D + PDF"
+
+#. module: plm_pack_and_go
+#. odoo-python
+#: code:addons/plm_pack_and_go/wizard/pack_and_go_wizard.py:0
+#: model:ir.model.fields.selection,name:plm_pack_and_go.selection__pack_and_go__export_type__2dpdf
+#, python-format
+msgid "2D + PDF"
+msgstr "2D + PDF"
+
+#. module: plm_pack_and_go
+#. odoo-python
+#: code:addons/plm_pack_and_go/wizard/pack_and_go_wizard.py:0
+#: model:ir.model.fields.selection,name:plm_pack_and_go.selection__pack_and_go__export_type__3d
+#: model:ir.model.fields.selection,name:plm_pack_and_go.selection__pack_and_go_view__doc_type__3d
+#: model_terms:ir.ui.view,arch_db:plm_pack_and_go.act_plm_pack_and_go
+#, python-format
+msgid "3D"
+msgstr "3D"
+
+#. module: plm_pack_and_go
+#. odoo-python
+#: code:addons/plm_pack_and_go/wizard/pack_and_go_wizard.py:0
+#: model:ir.model.fields.selection,name:plm_pack_and_go.selection__pack_and_go__export_type__3d2d
+#, python-format
+msgid "3D + 2D"
+msgstr "3D + 2D"
+
+#. module: plm_pack_and_go
+#. odoo-python
+#: code:addons/plm_pack_and_go/wizard/pack_and_go_wizard.py:0
+#: model:ir.model.fields.selection,name:plm_pack_and_go.selection__pack_and_go__export_type__3dpdf
+#, python-format
+msgid "3D + PDF"
+msgstr "3D + PDF"
+
+#. module: plm_pack_and_go
+#: model:ir.model.fields.selection,name:plm_pack_and_go.selection__pack_and_go__bom_computation__all_level
+msgid "All Level"
+msgstr "所有级别"
+
+#. module: plm_pack_and_go
+#: model:ir.model.fields,field_description:plm_pack_and_go.field_pack_and_go__name
+msgid "Attachment Name"
+msgstr "附件名称"
+
+#. module: plm_pack_and_go
+#. odoo-python
+#: code:addons/plm_pack_and_go/wizard/pack_and_go_wizard.py:0
+#: model:ir.model.fields,field_description:plm_pack_and_go.field_pack_and_go__bom_computation
+#, python-format
+msgid "Bom computation mode"
+msgstr "Bom计算模式"
+
+#. module: plm_pack_and_go
+#: model_terms:ir.ui.view,arch_db:plm_pack_and_go.act_plm_pack_and_go
+msgid "Cancel"
+msgstr "取消"
+
+#. module: plm_pack_and_go
+#: model:ir.model.fields,help:plm_pack_and_go.field_pack_and_go__bom_version
+msgid "Chose the status of the document that you would like to extract"
+msgstr "选择要提取的文档的状态"
+
+#. module: plm_pack_and_go
+#: model_terms:ir.ui.view,arch_db:plm_pack_and_go.act_plm_pack_and_go
+msgid "Clear"
+msgstr "清除"
+
+#. module: plm_pack_and_go
+#: model:ir.model.fields,field_description:plm_pack_and_go.field_pack_and_go_view__comp_description
+msgid "Comp Description"
+msgstr "组件描述"
+
+#. module: plm_pack_and_go
+#. odoo-python
+#: code:addons/plm_pack_and_go/wizard/pack_and_go_wizard.py:0
+#: model:ir.model.fields,field_description:plm_pack_and_go.field_pack_and_go__component_id
+#: model:ir.model.fields,field_description:plm_pack_and_go.field_pack_and_go_view__component_id
+#, python-format
+msgid "Component"
+msgstr "组件"
+
+#. module: plm_pack_and_go
+#. odoo-python
+#: code:addons/plm_pack_and_go/wizard/pack_and_go_wizard.py:0
+#: model:ir.model.fields,field_description:plm_pack_and_go.field_pack_and_go_view__comp_rev
+#, python-format
+msgid "Component Revision"
+msgstr "组件修订"
+
+#. module: plm_pack_and_go
+#: model_terms:ir.ui.view,arch_db:plm_pack_and_go.act_plm_pack_and_go
+msgid "Compute Bom"
+msgstr "输出BOM"
+
+#. module: plm_pack_and_go
+#. odoo-python
+#: code:addons/plm_pack_and_go/wizard/pack_and_go_wizard.py:0
+#: model:ir.model.fields,field_description:plm_pack_and_go.field_pack_and_go__convertion_server_available
+#, python-format
+msgid "Conversion server available"
+msgstr "转换服务器可用"
+
+#. module: plm_pack_and_go
+#. odoo-python
+#: code:addons/plm_pack_and_go/wizard/pack_and_go_wizard.py:0
+#: model:ir.model.fields,field_description:plm_pack_and_go.field_pack_and_go__create_subfolder_by_category
+#, python-format
+msgid "Create subfolder by category"
+msgstr "按类别创建子文件夹"
+
+#. module: plm_pack_and_go
+#: model_terms:ir.ui.view,arch_db:plm_pack_and_go.act_plm_pack_and_go
+msgid "Create zip archive"
+msgstr "创建zip存档"
+
+#. module: plm_pack_and_go
+#: model:ir.model.fields,field_description:plm_pack_and_go.field_pack_and_go__create_uid
+#: model:ir.model.fields,field_description:plm_pack_and_go.field_pack_and_go_types__create_uid
+#: model:ir.model.fields,field_description:plm_pack_and_go.field_pack_and_go_view__create_uid
+msgid "Created by"
+msgstr "创建者"
+
+#. module: plm_pack_and_go
+#: model:ir.model.fields,field_description:plm_pack_and_go.field_pack_and_go__create_date
+#: model:ir.model.fields,field_description:plm_pack_and_go.field_pack_and_go_types__create_date
+#: model:ir.model.fields,field_description:plm_pack_and_go.field_pack_and_go_view__create_date
+msgid "Created on"
+msgstr "创建于"
+
+#. module: plm_pack_and_go
+#: model:ir.model,name:plm_pack_and_go.model_pack_and_go_types
+msgid "Description of pack and go"
+msgstr "包装和包装说明"
+
+#. module: plm_pack_and_go
+#: model:ir.model.fields,field_description:plm_pack_and_go.field_pack_and_go__display_name
+#: model:ir.model.fields,field_description:plm_pack_and_go.field_pack_and_go_types__display_name
+#: model:ir.model.fields,field_description:plm_pack_and_go.field_pack_and_go_view__display_name
+msgid "Display Name"
+msgstr "显示名称"
+
+#. module: plm_pack_and_go
+#: model:ir.model.fields,field_description:plm_pack_and_go.field_pack_and_go_view__doc_file_name
+msgid "Doc File Name"
+msgstr "文档文件名"
+
+#. module: plm_pack_and_go
+#. odoo-python
+#: code:addons/plm_pack_and_go/wizard/pack_and_go_wizard.py:0
+#: model:ir.model.fields,field_description:plm_pack_and_go.field_pack_and_go_view__document_id
+#, python-format
+msgid "Document"
+msgstr "文件"
+
+#. module: plm_pack_and_go
+#: model:ir.model.fields,field_description:plm_pack_and_go.field_pack_and_go_view__document_description
+msgid "Document Description"
+msgstr "文件说明"
+
+#. module: plm_pack_and_go
+#. odoo-python
+#: code:addons/plm_pack_and_go/wizard/pack_and_go_wizard.py:0
+#: model:ir.model.fields,field_description:plm_pack_and_go.field_pack_and_go_view__doc_rev
+#, python-format
+msgid "Document Revision"
+msgstr "文件修订"
+
+#. module: plm_pack_and_go
+#. odoo-python
+#: code:addons/plm_pack_and_go/wizard/pack_and_go_wizard.py:0
+#: model:ir.model.fields,field_description:plm_pack_and_go.field_pack_and_go_view__doc_type
+#, python-format
+msgid "Document Type"
+msgstr "文档类型"
+
+#. module: plm_pack_and_go
+#: model:ir.model.fields,field_description:plm_pack_and_go.field_pack_and_go__datas
+msgid "Download"
+msgstr "下载"
+
+#. module: plm_pack_and_go
+#: model_terms:ir.ui.view,arch_db:plm_pack_and_go.act_plm_pack_and_go
+msgid "Export Form"
+msgstr "导出表格"
+
+#. module: plm_pack_and_go
+#. odoo-python
+#: code:addons/plm_pack_and_go/wizard/pack_and_go_wizard.py:0
+#: model:ir.model.fields,field_description:plm_pack_and_go.field_pack_and_go__export_type
+#, python-format
+msgid "Export Type"
+msgstr "导出类型"
+
+#. module: plm_pack_and_go
+#: model:ir.model.fields.selection,name:plm_pack_and_go.selection__pack_and_go__type__binary
+msgid "File"
+msgstr "文件"
+
+#. module: plm_pack_and_go
+#: model:ir.model.fields,field_description:plm_pack_and_go.field_pack_and_go__datas_fname
+msgid "File Name"
+msgstr "文件名"
+
+#. module: plm_pack_and_go
+#: model_terms:ir.ui.view,arch_db:plm_pack_and_go.act_plm_pack_and_go
+msgid "File Options"
+msgstr "文件选项"
+
+#. module: plm_pack_and_go
+#: model:ir.model.fields.selection,name:plm_pack_and_go.selection__pack_and_go__file_name_computation__file_name
+msgid "File name"
+msgstr "文件名"
+
+#. module: plm_pack_and_go
+#: model:ir.model.fields.selection,name:plm_pack_and_go.selection__pack_and_go__file_name_computation__file_name_rev
+msgid "File name and revision"
+msgstr "文件名和修订"
+
+#. module: plm_pack_and_go
+#. odoo-python
+#: code:addons/plm_pack_and_go/wizard/pack_and_go_wizard.py:0
+#: model:ir.model.fields,field_description:plm_pack_and_go.field_pack_and_go__file_name_computation
+#, python-format
+msgid "File name computation"
+msgstr "文件名计算"
+
+#. module: plm_pack_and_go
+#: model:ir.model.fields.selection,name:plm_pack_and_go.selection__pack_and_go__bom_computation__first_level
+msgid "First Level"
+msgstr "第一级"
+
+#. module: plm_pack_and_go
+#. odoo-python
+#: code:addons/plm_pack_and_go/wizard/pack_and_go_wizard.py:0
+#: model:ir.model.fields,field_description:plm_pack_and_go.field_pack_and_go__force_types_2d
+#, python-format
+msgid "Force 2D Types"
+msgstr "强制2D类型"
+
+#. module: plm_pack_and_go
+#. odoo-python
+#: code:addons/plm_pack_and_go/wizard/pack_and_go_wizard.py:0
+#: model:ir.model.fields,field_description:plm_pack_and_go.field_pack_and_go__force_types_3d
+#, python-format
+msgid "Force 3D Types"
+msgstr "强制3D类型"
+
+#. module: plm_pack_and_go
+#: model_terms:ir.ui.view,arch_db:plm_pack_and_go.act_plm_pack_and_go
+msgid "Force Types"
+msgstr "力类型"
+
+#. module: plm_pack_and_go
+#: model:ir.model.fields,field_description:plm_pack_and_go.field_pack_and_go__id
+#: model:ir.model.fields,field_description:plm_pack_and_go.field_pack_and_go_types__id
+#: model:ir.model.fields,field_description:plm_pack_and_go.field_pack_and_go_view__id
+msgid "ID"
+msgstr "ID"
+
+#. module: plm_pack_and_go
+#: model:ir.model.fields,field_description:plm_pack_and_go.field_pack_and_go__write_uid
+#: model:ir.model.fields,field_description:plm_pack_and_go.field_pack_and_go_types__write_uid
+#: model:ir.model.fields,field_description:plm_pack_and_go.field_pack_and_go_view__write_uid
+msgid "Last Updated by"
+msgstr "最后更新时间"
+
+#. module: plm_pack_and_go
+#: model:ir.model.fields,field_description:plm_pack_and_go.field_pack_and_go__write_date
+#: model:ir.model.fields,field_description:plm_pack_and_go.field_pack_and_go_types__write_date
+#: model:ir.model.fields,field_description:plm_pack_and_go.field_pack_and_go_view__write_date
+msgid "Last Updated on"
+msgstr "最后更新于"
+
+#. module: plm_pack_and_go
+#. odoo-python
+#: code:addons/plm_pack_and_go/wizard/pack_and_go_wizard.py:0
+#: model:ir.model.fields.selection,name:plm_pack_and_go.selection__pack_and_go__bom_version__latest
+#, python-format
+msgid "Latest"
+msgstr "最新的"
+
+#. module: plm_pack_and_go
+#: model:ir.model.fields.selection,name:plm_pack_and_go.selection__pack_and_go__bom_computation__leaf
+msgid "Leaf"
+msgstr "叶状结构"
+
+#. module: plm_pack_and_go
+#: model:ir.model,name:plm_pack_and_go.model_pack_and_go
+msgid "Main wizard collector for pack and go"
+msgstr "打包及下载的主向导收集器"
+
+#. module: plm_pack_and_go
+#: model:ir.model,name:plm_pack_and_go.model_pack_and_go_view
+msgid "Manage pack view for exporting"
+msgstr "管理导出包视图"
+
+#. module: plm_pack_and_go
+#. odoo-python
+#: code:addons/plm_pack_and_go/wizard/pack_and_go_wizard.py:0
+#: model:ir.model.fields,field_description:plm_pack_and_go.field_pack_and_go_types__name
+#, python-format
+msgid "Name"
+msgstr "名称"
+
+#. module: plm_pack_and_go
+#. odoo-python
+#: code:addons/plm_pack_and_go/wizard/pack_and_go_wizard.py:0
+#: model:ir.model.fields.selection,name:plm_pack_and_go.selection__pack_and_go_view__doc_type__other
+#: model_terms:ir.ui.view,arch_db:plm_pack_and_go.act_plm_pack_and_go
+#, python-format
+msgid "Other"
+msgstr "其他"
+
+#. module: plm_pack_and_go
+#. odoo-python
+#: code:addons/plm_pack_and_go/wizard/pack_and_go_wizard.py:0
+#: model:ir.model.fields.selection,name:plm_pack_and_go.selection__pack_and_go__export_type__pdf
+#: model:ir.model.fields.selection,name:plm_pack_and_go.selection__pack_and_go_view__doc_type__pdf
+#: model_terms:ir.ui.view,arch_db:plm_pack_and_go.act_plm_pack_and_go
+#, python-format
+msgid "PDF"
+msgstr "PDF"
+
+#. module: plm_pack_and_go
+#: model:ir.model.fields,field_description:plm_pack_and_go.field_pack_and_go_types__pack_and_go_view_id
+msgid "Pack And Go View"
+msgstr "查看打包及下载"
+
+#. module: plm_pack_and_go
+#. odoo-python
+#: code:addons/plm_pack_and_go/wizard/pack_and_go_wizard.py:0
+#: model:ir.actions.act_window,name:plm_pack_and_go.act_pack_and_go_action
+#, python-format
+msgid "Pack and Go"
+msgstr "打包及下载"
+
+#. module: plm_pack_and_go
+#. odoo-python
+#: code:addons/plm_pack_and_go/wizard/pack_and_go_wizard.py:0
+#: model:ir.model.fields,field_description:plm_pack_and_go.field_pack_and_go_view__pack_and_go_id
+#, python-format
+msgid "Pack and go id"
+msgstr "打包及下载id"
+
+#. module: plm_pack_and_go
+#. odoo-python
+#: code:addons/plm_pack_and_go/wizard/pack_and_go_wizard.py:0
+#: model:ir.model.fields,field_description:plm_pack_and_go.field_pack_and_go_view__preview
+#, python-format
+msgid "Preview Content"
+msgstr "预览内容"
+
+#. module: plm_pack_and_go
+#: model:ir.model,name:plm_pack_and_go.model_product_product
+msgid "Product Product"
+msgstr "产品变体"
+
+#. module: plm_pack_and_go
+#: model:ir.model.fields.selection,name:plm_pack_and_go.selection__pack_and_go__file_name_computation__product_engineering_code
+msgid "Product engineering Code"
+msgstr "产品工程规范"
+
+#. module: plm_pack_and_go
+#: model:ir.model.fields.selection,name:plm_pack_and_go.selection__pack_and_go__file_name_computation__product_engineering_desccriprion
+msgid "Product engineering name and description"
+msgstr "产品工程名称及说明"
+
+#. module: plm_pack_and_go
+#: model:ir.model.fields.selection,name:plm_pack_and_go.selection__pack_and_go__file_name_computation__product_engineering_rev
+msgid "Product engineering name and revision"
+msgstr "产品工程名称和修订"
+
+#. module: plm_pack_and_go
+#: model:ir.model.fields.selection,name:plm_pack_and_go.selection__pack_and_go__file_name_computation__product_engineering_rev_desccriprion
+msgid "Product engineering name revision and descriprion"
+msgstr "产品工程名称修订和说明"
+
+#. module: plm_pack_and_go
+#: model:ir.model.fields.selection,name:plm_pack_and_go.selection__pack_and_go__file_name_computation__internal_reference
+msgid "Product internal reference"
+msgstr "产品内部参考"
+
+#. module: plm_pack_and_go
+#: model:ir.model.fields.selection,name:plm_pack_and_go.selection__pack_and_go__file_name_computation__internal_reference_description
+msgid "Product internal reference and description"
+msgstr "产品内部参考和描述"
+
+#. module: plm_pack_and_go
+#. odoo-python
+#: code:addons/plm_pack_and_go/wizard/pack_and_go_wizard.py:0
+#: model:ir.model.fields,field_description:plm_pack_and_go.field_pack_and_go__bom_version
+#, python-format
+msgid "Product-Document version"
+msgstr "产品文档版本"
+
+#. module: plm_pack_and_go
+#. odoo-python
+#: code:addons/plm_pack_and_go/wizard/pack_and_go_wizard.py:0
+#: model:ir.model.fields.selection,name:plm_pack_and_go.selection__pack_and_go__bom_version__only_released
+#, python-format
+msgid "Released"
+msgstr "发行"
+
+#. module: plm_pack_and_go
+#. odoo-python
+#: code:addons/plm_pack_and_go/wizard/pack_and_go_wizard.py:0
+#: model:ir.model.fields,field_description:plm_pack_and_go.field_pack_and_go__export_2d
+#, python-format
+msgid "Select 2D Rows to export"
+msgstr "选择要导出的2D行"
+
+#. module: plm_pack_and_go
+#. odoo-python
+#: code:addons/plm_pack_and_go/wizard/pack_and_go_wizard.py:0
+#: model:ir.model.fields,field_description:plm_pack_and_go.field_pack_and_go__export_3d
+#, python-format
+msgid "Select 3D Rows to export"
+msgstr "选择要导出的3D行"
+
+#. module: plm_pack_and_go
+#. odoo-python
+#: code:addons/plm_pack_and_go/wizard/pack_and_go_wizard.py:0
+#: model:ir.model.fields,field_description:plm_pack_and_go.field_pack_and_go__export_pdf
+#, python-format
+msgid "Select PDF Rows to export"
+msgstr "选择要导出的PDF行"
+
+#. module: plm_pack_and_go
+#. odoo-python
+#: code:addons/plm_pack_and_go/wizard/pack_and_go_wizard.py:0
+#: model:ir.model.fields,field_description:plm_pack_and_go.field_pack_and_go__export_other
+#, python-format
+msgid "Select Rows to export"
+msgstr "选择要导出的行"
+
+#. module: plm_pack_and_go
+#: model:ir.model.fields.selection,name:plm_pack_and_go.selection__pack_and_go__bom_computation__only_product
+msgid "Selected product"
+msgstr "选定产品"
+
+#. module: plm_pack_and_go
+#: model:ir.model.fields,field_description:plm_pack_and_go.field_pack_and_go__show_create_zip
+msgid "Service field to show crete zip button"
+msgstr "显示创建zip按钮的服务字段"
+
+#. module: plm_pack_and_go
+#: model:ir.model.fields,field_description:plm_pack_and_go.field_pack_and_go__type
+msgid "Type"
+msgstr "类型"
+
+#. module: plm_pack_and_go
+#. odoo-python
+#: code:addons/plm_pack_and_go/wizard/pack_and_go_wizard.py:0
+#: model:ir.model.fields,field_description:plm_pack_and_go.field_pack_and_go_view__available_types
+#, python-format
+msgid "Types"
+msgstr "类型"
+
+#. module: plm_pack_and_go
+#: model:ir.model.fields.selection,name:plm_pack_and_go.selection__pack_and_go__type__url
+msgid "URL"
+msgstr "URL"
+
+#. module: plm_pack_and_go
+#: model:ir.model.fields,help:plm_pack_and_go.field_pack_and_go__type
+msgid ""
+"You can either upload a file from your computer or copy/paste an internet "
+"link to your file"
+msgstr "您可以从计算机上传文件，也可以复制/粘贴互联网链接到您的文件"
+
+#. module: plm_pack_and_go
+#. odoo-python
+#: code:addons/plm_pack_and_go/wizard/pack_and_go_wizard.py:0
+#, python-format
+msgid "You have to select a force type before clicking."
+msgstr "在单击之前，您必须选择一种力类型"

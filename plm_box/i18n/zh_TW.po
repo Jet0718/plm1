@@ -1,0 +1,565 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* plm_box
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0-20240820\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-10-28 05:49+0000\n"
+"PO-Revision-Date: 2024-11-07 15:49+0800\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.5\n"
+
+#. module: plm_box
+#: model:ir.model.fields,field_description:plm_box.field_plm_box__message_needaction
+msgid "Action Needed"
+msgstr "需要採取行動"
+
+#. module: plm_box
+#: model:ir.model.fields,field_description:plm_box.field_plm_box__activity_ids
+msgid "Activities"
+msgstr "活動"
+
+#. module: plm_box
+#: model:ir.model.fields,field_description:plm_box.field_plm_box__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "活動異常標示"
+
+#. module: plm_box
+#: model:ir.model.fields,field_description:plm_box.field_plm_box__activity_state
+msgid "Activity State"
+msgstr "活動狀態"
+
+#. module: plm_box
+#: model:ir.model.fields,field_description:plm_box.field_plm_box__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "活動類型圖示"
+
+#. module: plm_box
+#. odoo-python
+#: code:addons/plm_box/models/settings.py:0
+#: model:ir.model.fields,help:plm_box.field_res_config_settings__module_plm_box_widget
+#: model:ir.model.fields,help:plm_box.field_res_config_settings__module_stock_plm_box
+#, python-format
+msgid "Adds plm_box relation to Warehouse."
+msgstr "將plm_box關係添加到倉庫."
+
+#. module: plm_box
+#. odoo-python
+#: code:addons/plm_box/models/settings.py:0
+#: model:ir.model.fields,field_description:plm_box.field_res_config_settings__module_stock_plm_box
+#, python-format
+msgid "Allow plm_box relation"
+msgstr "允許plm_box關係"
+
+#. module: plm_box
+#: model:ir.model.fields,field_description:plm_box.field_plm_box__message_attachment_count
+msgid "Attachment Count"
+msgstr "附件數"
+
+#. module: plm_box
+#. odoo-python
+#: code:addons/plm_box/models/ir_attachment.py:0
+#: model:ir.model.fields,field_description:plm_box.field_ir_attachment__name
+#: model:ir.model.fields,field_description:plm_box.field_mrp_document__name
+#: model:ir.model.fields,field_description:plm_box.field_product_document__name
+#, python-format
+msgid "Attachment Name"
+msgstr "附件名稱"
+
+#. module: plm_box
+#. odoo-python
+#: code:addons/plm_box/models/plm_box.py:0
+#: model:ir.model.fields,field_description:plm_box.field_plm_box__bom_id
+#, python-format
+msgid "Bill Of Material"
+msgstr "物料清單"
+
+#. module: plm_box
+#: model_terms:ir.ui.view,arch_db:plm_box.plm_box_form_view
+msgid "Boms"
+msgstr "Boms"
+
+#. module: plm_box
+#. odoo-python
+#: code:addons/plm_box/models/plm_box.py:0
+#: model:ir.model.fields,field_description:plm_box.field_plm_box__box_id
+#, python-format
+msgid "Box ID"
+msgstr "盒子ID"
+
+#. module: plm_box
+#. odoo-python
+#: code:addons/plm_box/models/plm_box.py:0
+#: model:ir.model.fields,field_description:plm_box.field_plm_box__plm_box_rel
+#, python-format
+msgid "Children Box"
+msgstr "子階盒子"
+
+#. module: plm_box
+#: model:ir.model,name:plm_box.model_res_config_settings
+msgid "Config Settings"
+msgstr "配置設置"
+
+#. module: plm_box
+#: model_terms:ir.ui.view,arch_db:plm_box.plm_box_form_view
+msgid "Confirm Box"
+msgstr "確認框"
+
+#. module: plm_box
+#: model_terms:ir.ui.view,arch_db:plm_box.plm_box_form_view
+msgid "Correct Box"
+msgstr "正確框"
+
+#. module: plm_box
+#: model:ir.model.fields,field_description:plm_box.field_plm_box__create_uid
+msgid "Created by"
+msgstr "創建者"
+
+#. module: plm_box
+#. odoo-python
+#: code:addons/plm_box/models/plm_box.py:0
+#: model:ir.model.fields,field_description:plm_box.field_plm_box__create_date
+#, python-format
+msgid "Date Created"
+msgstr "創建日期"
+
+#. module: plm_box
+#. odoo-python
+#: code:addons/plm_box/models/plm_box.py:0
+#: model:ir.model.fields,field_description:plm_box.field_plm_box__write_date
+#, python-format
+msgid "Date Modified"
+msgstr "修改日期"
+
+#. module: plm_box
+#: model:ir.model.fields,field_description:plm_box.field_plm_box__engineering_revision_date
+msgid "Datetime Revision"
+msgstr "修訂日期時間"
+
+#. module: plm_box
+#. odoo-python
+#: code:addons/plm_box/models/plm_box.py:0
+#: model:ir.model.fields,field_description:plm_box.field_plm_box__description
+#, python-format
+msgid "Description"
+msgstr "說明"
+
+#. module: plm_box
+#: model:ir.model.fields,field_description:plm_box.field_plm_box__display_name
+msgid "Display Name"
+msgstr "顯示名稱"
+
+#. module: plm_box
+#. odoo-python
+#: code:addons/plm_box/models/plm_box.py:0
+#, python-format
+msgid "Document %r of box %r is in check-in state, so could not delete"
+msgstr "框%r的文檔%r處於簽入狀態，因此無法刪除"
+
+#. module: plm_box
+#: model:ir.model,name:plm_box.model_plm_checkout
+msgid "Document that are locked from someone"
+msgstr "被某人鎖定的文檔"
+
+#. module: plm_box
+#. odoo-python
+#: code:addons/plm_box/models/plm_box.py:0
+#: model:ir.model.fields,field_description:plm_box.field_plm_box__document_rel
+#, python-format
+msgid "Documents"
+msgstr "文檔"
+
+#. module: plm_box
+#: model:ir.model.fields,field_description:plm_box.field_plm_box__engineering_branch_revision
+msgid "Engineering Branch index"
+msgstr "工程分部索引"
+
+#. module: plm_box
+#: model:ir.model.fields,field_description:plm_box.field_plm_box__engineering_code
+msgid "Engineering Code"
+msgstr "工程編號"
+
+#. module: plm_box
+#: model:ir.model.fields,field_description:plm_box.field_plm_box__engineering_code_editable
+msgid "Engineering Code Editable"
+msgstr "可編輯工程編號"
+
+#. module: plm_box
+#: model:ir.model.fields,field_description:plm_box.field_plm_box__engineering_revision_count
+msgid "Engineering Revision Count"
+msgstr "工程修訂計數"
+
+#. module: plm_box
+#: model:ir.model.fields,field_description:plm_box.field_plm_box__engineering_revision
+msgid "Engineering Revision index"
+msgstr "工程修訂索引"
+
+#. module: plm_box
+#: model:ir.model.fields,field_description:plm_box.field_plm_box__engineering_revision_letter
+msgid "Engineering Revision letter"
+msgstr "工程修訂信件"
+
+#. module: plm_box
+#: model:ir.model.fields,field_description:plm_box.field_plm_box__engineering_state
+msgid "Engineering Status"
+msgstr "工程狀態"
+
+#. module: plm_box
+#: model:ir.model.fields,field_description:plm_box.field_plm_box__engineering_branch_revision_letter
+msgid "Engineering Sub Revision letter"
+msgstr "工程子階修訂信件"
+
+#. module: plm_box
+#: model:ir.model.fields,field_description:plm_box.field_plm_box__message_follower_ids
+msgid "Followers"
+msgstr "關注者"
+
+#. module: plm_box
+#: model:ir.model.fields,field_description:plm_box.field_plm_box__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "關注者（合作夥伴）"
+
+#. module: plm_box
+#: model:ir.model.fields,help:plm_box.field_plm_box__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "字體很棒的圖示，例如fa任務"
+
+#. module: plm_box
+#. odoo-python
+#: code:addons/plm_box/models/plm_box.py:0
+#: model:ir.model.fields,field_description:plm_box.field_plm_box__groups_rel
+#, python-format
+msgid "Groups Allowed"
+msgstr "允許的組"
+
+#. module: plm_box
+#: model:ir.model.fields,field_description:plm_box.field_plm_box__has_message
+msgid "Has Message"
+msgstr "有消息"
+
+#. module: plm_box
+#: model:ir.model.fields,field_description:plm_box.field_plm_box__id
+msgid "ID"
+msgstr "ID"
+
+#. module: plm_box
+#: model:ir.model.fields,field_description:plm_box.field_plm_box__activity_exception_icon
+msgid "Icon"
+msgstr "圖示"
+
+#. module: plm_box
+#: model:ir.model.fields,help:plm_box.field_plm_box__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "指示異常活動的圖示."
+
+#. module: plm_box
+#: model:ir.model.fields,help:plm_box.field_plm_box__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "如果選中，新消息需要您注意."
+
+#. module: plm_box
+#: model:ir.model.fields,help:plm_box.field_plm_box__message_has_error
+#: model:ir.model.fields,help:plm_box.field_plm_box__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "如果選中，則某些郵件存在傳遞錯誤."
+
+#. module: plm_box
+#: model:ir.model,name:plm_box.model_ir_attachment
+msgid "Ir Attachment"
+msgstr "附件"
+
+#. module: plm_box
+#: model:ir.model.fields,field_description:plm_box.field_plm_box__message_is_follower
+msgid "Is Follower"
+msgstr "關注者為"
+
+#. module: plm_box
+#: model:ir.model.fields,field_description:plm_box.field_plm_box__write_uid
+msgid "Last Updated by"
+msgstr "最後更新者"
+
+#. module: plm_box
+#: model:ir.model.fields,field_description:plm_box.field_plm_box__message_has_error
+msgid "Message Delivery error"
+msgstr "郵件傳遞錯誤"
+
+#. module: plm_box
+#: model:ir.model.fields,field_description:plm_box.field_plm_box__message_ids
+msgid "Messages"
+msgstr "信息"
+
+#. module: plm_box
+#: model:ir.model,name:plm_box.model_plm_box
+msgid "Model to manage a box inside the plm module"
+msgstr "用於管理plm模組內盒子的模型"
+
+#. module: plm_box
+#: model:ir.model.fields,field_description:plm_box.field_plm_box__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "我的活動截止日期"
+
+#. module: plm_box
+#: model:ir.model.fields,field_description:plm_box.field_plm_box__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr "下一個活動日曆事件"
+
+#. module: plm_box
+#: model:ir.model.fields,field_description:plm_box.field_plm_box__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "下次活動截止日期"
+
+#. module: plm_box
+#: model:ir.model.fields,field_description:plm_box.field_plm_box__activity_summary
+msgid "Next Activity Summary"
+msgstr "下一個活動摘要"
+
+#. module: plm_box
+#: model:ir.model.fields,field_description:plm_box.field_plm_box__activity_type_id
+msgid "Next Activity Type"
+msgstr "下一個活動類型"
+
+#. module: plm_box
+#: model:ir.actions.act_window,name:plm_box.action_non_cad_doc
+#: model_terms:ir.ui.view,arch_db:plm_box.plm_box_tree
+msgid "Non CAD Document Relations"
+msgstr "非CAD文檔關係"
+
+#. module: plm_box
+#: model:ir.model.fields,field_description:plm_box.field_plm_box__message_needaction_counter
+msgid "Number of Actions"
+msgstr "行動次數"
+
+#. module: plm_box
+#: model:ir.model.fields,field_description:plm_box.field_plm_box__message_has_error_counter
+msgid "Number of errors"
+msgstr "錯誤數"
+
+#. module: plm_box
+#: model:ir.model.fields,help:plm_box.field_plm_box__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "需要採取行動的消息數量"
+
+#. module: plm_box
+#: model:ir.model.fields,help:plm_box.field_plm_box__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "傳遞錯誤的郵件數"
+
+#. module: plm_box
+#: model:ir.model.fields,field_description:plm_box.field_plm_box__engineering_branch_parent_id
+msgid "Parent branch"
+msgstr "父階分支"
+
+#. module: plm_box
+#. odoo-python
+#: code:addons/plm_box/models/settings.py:0
+#: model:ir.model.fields,field_description:plm_box.field_res_config_settings__module_plm_box_widget
+#, python-format
+msgid "Plm Widget"
+msgstr "Plm小部件"
+
+#. module: plm_box
+#. odoo-python
+#: code:addons/plm_box/models/plm_box.py:0
+#: model:ir.model.fields,field_description:plm_box.field_plm_box__product_id
+#, python-format
+msgid "Product"
+msgstr "產品"
+
+#. module: plm_box
+#: model_terms:ir.ui.view,arch_db:plm_box.plm_box_form_view
+msgid "Products"
+msgstr "產品"
+
+#. module: plm_box
+#. odoo-python
+#: code:addons/plm_box/models/plm_box.py:0
+#: model:ir.model.fields,field_description:plm_box.field_plm_box__project_id
+#, python-format
+msgid "Project"
+msgstr "項目"
+
+#. module: plm_box
+#: model_terms:ir.ui.view,arch_db:plm_box.plm_box_form_view
+msgid "Projects"
+msgstr "項目"
+
+#. module: plm_box
+#: model:ir.model.fields,field_description:plm_box.field_plm_box__rating_ids
+msgid "Ratings"
+msgstr "評級"
+
+#. module: plm_box
+#: model_terms:ir.ui.view,arch_db:plm_box.plm_box_form_view
+msgid "Release Box"
+msgstr "已發行盒子"
+
+#. module: plm_box
+#: model:ir.model.fields,field_description:plm_box.field_plm_box__engineering_release_user
+msgid "Release User"
+msgstr "發佈用戶"
+
+#. module: plm_box
+#: model:ir.model.fields,field_description:plm_box.field_plm_box__engineering_release_date
+msgid "Release date"
+msgstr "發佈日期"
+
+#. module: plm_box
+#: model:ir.model.fields,field_description:plm_box.field_plm_box__activity_user_id
+msgid "Responsible User"
+msgstr "負責用戶"
+
+#. module: plm_box
+#: model:ir.model.fields,field_description:plm_box.field_plm_box__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "短信傳遞錯誤"
+
+#. module: plm_box
+#. odoo-python
+#: code:addons/plm_box/models/plm_box.py:0
+#: model:ir.model.fields,field_description:plm_box.field_plm_box__sale_ord_id
+#, python-format
+msgid "Sale Order"
+msgstr "銷售訂單"
+
+#. module: plm_box
+#: model_terms:ir.ui.view,arch_db:plm_box.plm_box_form_view
+msgid "Sale Orders"
+msgstr "銷售訂單"
+
+#. module: plm_box
+#: model:ir.ui.menu,name:plm_box.menu_non_cad_doc_relations
+msgid "Search on Non CAD Document Relations"
+msgstr "非CAD文檔關係檢索"
+
+#. module: plm_box
+#: model_terms:ir.ui.view,arch_db:plm_box.plm_box_form_view
+msgid "Show Non CAD Document Relation"
+msgstr "顯示非CAD文檔關係"
+
+#. module: plm_box
+#: model:ir.model.fields,help:plm_box.field_plm_box__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"基於活動的狀態\n"
+"逾期：到期日已過\n"
+"今天：活動日期為今天\n"
+"計畫：未來的活動。"
+
+#. module: plm_box
+#: model:ir.model.fields,field_description:plm_box.field_plm_box__engineering_sub_revision_letter
+msgid "Sub revision path"
+msgstr "子階修訂路徑"
+
+#. module: plm_box
+#. odoo-python
+#: code:addons/plm_box/models/plm_box.py:0
+#: model:ir.model.fields,field_description:plm_box.field_plm_box__task_id
+#, python-format
+msgid "Task"
+msgstr "任務"
+
+#. module: plm_box
+#: model_terms:ir.ui.view,arch_db:plm_box.plm_box_form_view
+msgid "Tasks"
+msgstr "任務"
+
+#. module: plm_box
+#: model:ir.model.fields,help:plm_box.field_plm_box__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "記錄中的異常活動類型."
+
+#. module: plm_box
+#. odoo-python
+#: code:addons/plm_box/models/plm_box.py:0
+#: model:ir.model.fields,field_description:plm_box.field_plm_box__user_rel_id
+#, python-format
+msgid "User"
+msgstr "用戶"
+
+#. module: plm_box
+#: model:ir.model.fields,field_description:plm_box.field_plm_box__engineering_revision_user
+msgid "User Revision"
+msgstr "用戶修訂"
+
+#. module: plm_box
+#: model_terms:ir.ui.view,arch_db:plm_box.plm_box_form_view
+msgid "Users"
+msgstr "用戶"
+
+#. module: plm_box
+#. odoo-python
+#: code:addons/plm_box/models/plm_box.py:0
+#: model:ir.model.fields,field_description:plm_box.field_plm_box__version
+#, python-format
+msgid "Version"
+msgstr "版本"
+
+#. module: plm_box
+#: model:ir.actions.act_window,name:plm_box.act_acc_an_acc_boxis
+#: model:ir.actions.act_window,name:plm_box.act_bom_boxis
+#: model:ir.actions.act_window,name:plm_box.act_product_boxis
+#: model:ir.actions.act_window,name:plm_box.act_project_boxis
+#: model:ir.actions.act_window,name:plm_box.act_sale_order_boxis
+#: model:ir.actions.act_window,name:plm_box.act_task_boxis
+#: model:ir.actions.act_window,name:plm_box.act_users_boxis
+#: model:ir.actions.act_window,name:plm_box.act_wc_boxis
+msgid "View Reated Boxis"
+msgstr "查看關係盒子"
+
+#. module: plm_box
+#: model:ir.model.fields,field_description:plm_box.field_plm_box__website_message_ids
+msgid "Website Messages"
+msgstr "網站留言"
+
+#. module: plm_box
+#: model:ir.model.fields,help:plm_box.field_plm_box__website_message_ids
+msgid "Website communication history"
+msgstr "網站通信歷史"
+
+#. module: plm_box
+#. odoo-python
+#: code:addons/plm_box/models/plm_box.py:0
+#: model:ir.model.fields,field_description:plm_box.field_plm_box__wc_id
+#, python-format
+msgid "Work Center"
+msgstr "工作中心"
+
+#. module: plm_box
+#: model_terms:ir.ui.view,arch_db:plm_box.plm_box_form_view
+msgid "Workcenters"
+msgstr "工作中心"
+
+#. module: plm_box
+#: model:ir.model.fields,field_description:plm_box.field_plm_box__engineering_workflow_user
+msgid "Workflow User"
+msgstr "工作流用戶"
+
+#. module: plm_box
+#: model:ir.model.fields,field_description:plm_box.field_plm_box__engineering_workflow_date
+msgid "Workflow date"
+msgstr "工作流日期"
+
+#. module: plm_box
+#: model:ir.model.fields,field_description:plm_box.field_plm_box__engineering_writable
+msgid "Writable"
+msgstr "可書寫"
+
+#. module: plm_box
+#. odoo-python
+#: code:addons/plm_box/models/plm_checkout.py:0
+#: model:ir.model.fields,field_description:plm_box.field_plm_checkout__write_uid
+#, python-format
+msgid "Write User Id"
+msgstr "寫入用戶Id"

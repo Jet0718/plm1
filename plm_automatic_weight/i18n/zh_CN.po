@@ -1,0 +1,118 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* plm_automatic_weight
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0-20240820\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-10-25 07:15+0000\n"
+"PO-Revision-Date: 2024-11-07 15:42+0800\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.5\n"
+
+#. module: plm_automatic_weight
+#. odoo-python
+#: code:addons/plm_automatic_weight/models/product_product.py:0
+#: model:ir.model.fields,field_description:plm_automatic_weight.field_product_product__weight_additional
+#, python-format
+msgid "Additional Weight"
+msgstr "附加重量"
+
+#. module: plm_automatic_weight
+#: model:ir.model,name:plm_automatic_weight.model_mrp_bom
+msgid "Bill of Material"
+msgstr "物料清单"
+
+#. module: plm_automatic_weight
+#. odoo-python
+#: code:addons/plm_automatic_weight/models/product_product.py:0
+#: model:ir.model.fields,field_description:plm_automatic_weight.field_product_product__weight_cad
+#, python-format
+msgid "CAD Weight"
+msgstr "CAD重量"
+
+#. module: plm_automatic_weight
+#: model:ir.actions.server,name:plm_automatic_weight.action_force_bom_weight_calculation
+msgid "Calculate Bom Weight"
+msgstr "计算BOM重量"
+
+#. module: plm_automatic_weight
+#: model:ir.actions.server,name:plm_automatic_weight.action_bom_weight_computed
+msgid "Compute Bom Weight"
+msgstr "计算BOM重量"
+
+#. module: plm_automatic_weight
+#. odoo-python
+#: code:addons/plm_automatic_weight/models/product_product.py:0
+#: model:ir.model.fields,field_description:plm_automatic_weight.field_product_product__weight_n_bom_computed
+#, python-format
+msgid "NBOM Weight Computed"
+msgstr "NBOM重量计算"
+
+#. module: plm_automatic_weight
+#: model:ir.model,name:plm_automatic_weight.model_product_product
+msgid "Product Product"
+msgstr "产品变体"
+
+#. module: plm_automatic_weight
+#. odoo-python
+#: code:addons/plm_automatic_weight/models/product_product.py:0
+#: model:ir.model.fields,help:plm_automatic_weight.field_product_product__automatic_compute_selection
+#, python-format
+msgid ""
+"Set \"Use Net Weight\" to use only gross weight. \n"
+"\n"
+"               Set \"Use CAD Weight\" to use CAD weight + Additional Weight as gross weight. \n"
+"\n"
+"               Set \"Use Normal Bom\" to use NBOM Weight Computed + Additional weight as gross weight."
+msgstr ""
+"将“使用净重”设置为仅使用总重。 \n"
+"\n"
+"               设置“使用CAD重量”以使用CAD重量+附加重量作为总重 \n"
+"\n"
+"               设置“使用普通BOM”以使用NBOM计算重量+额外重量作为总重."
+
+#. module: plm_automatic_weight
+#. odoo-python
+#: code:addons/plm_automatic_weight/models/product_product.py:0
+#: model:ir.model.fields.selection,name:plm_automatic_weight.selection__product_product__automatic_compute_selection__use_cad
+#, python-format
+msgid "Use CAD Weight"
+msgstr "使用CAD重量"
+
+#. module: plm_automatic_weight
+#. odoo-python
+#: code:addons/plm_automatic_weight/models/product_product.py:0
+#: model:ir.model.fields.selection,name:plm_automatic_weight.selection__product_product__automatic_compute_selection__use_net
+#, python-format
+msgid "Use Net Weight"
+msgstr "使用净重"
+
+#. module: plm_automatic_weight
+#. odoo-python
+#: code:addons/plm_automatic_weight/models/product_product.py:0
+#: model:ir.model.fields.selection,name:plm_automatic_weight.selection__product_product__automatic_compute_selection__use_normal_bom
+#, python-format
+msgid "Use Normal Bom"
+msgstr "使用普通BOM"
+
+#. module: plm_automatic_weight
+#: model_terms:ir.ui.view,arch_db:plm_automatic_weight.plm_component_base_form_extended_weight
+#: model_terms:ir.ui.view,arch_db:plm_automatic_weight.plm_product_product_normal_form_view_inherit_extended_weight
+msgid "Weight"
+msgstr "重量"
+
+#. module: plm_automatic_weight
+#. odoo-python
+#: code:addons/plm_automatic_weight/models/product_product.py:0
+#: model:ir.model.fields,field_description:plm_automatic_weight.field_product_product__automatic_compute_selection
+#, python-format
+msgid "Weight compute mode"
+msgstr "重量计算模式"

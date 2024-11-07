@@ -1,0 +1,260 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* plm_cutted_parts
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0-20240820\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-10-28 08:19+0000\n"
+"PO-Revision-Date: 2024-11-07 15:54+0800\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.5\n"
+
+#. module: plm_cutted_parts
+#. odoo-python
+#: code:addons/plm_cutted_parts/models/product_product.py:0
+#, python-format
+msgid "\"Raw Material x length\" cannot have zero value."
+msgstr "“原材料x长度”不能为零值。"
+
+#. module: plm_cutted_parts
+#. odoo-python
+#: code:addons/plm_cutted_parts/models/product_product.py:0
+#, python-format
+msgid "\"Raw Material y length\" cannot have zero value."
+msgstr "“原材料y长度”不能为零值。"
+
+#. module: plm_cutted_parts
+#: model_terms:ir.ui.view,arch_db:plm_cutted_parts.plm_product_product_normal_form_view_inherit_cutted
+#: model_terms:ir.ui.view,arch_db:plm_cutted_parts.product_product_cutted_parts
+msgid ""
+"BOM line quantity will be computed with this formula\n"
+" {\n"
+"  [(X Raw Material length * X Percent Wastage) + X Material Wastage] * \n"
+"     [(Y Raw Material length * Y Percent Wastage) + Y Material Wastage]\n"
+" } * Raw Material Conversion Factor"
+msgstr ""
+"BOM行数量将使用此公式计算\n"
+"{\n"
+"[（X原材料长度*X浪费百分比）+X材料浪费]*\n"
+"[（Y原材料长度*Y浪费百分比）+Y材料浪费]\n"
+"}*原材料转换系数"
+
+#. module: plm_cutted_parts
+#: model:ir.model,name:plm_cutted_parts.model_mrp_bom_line
+msgid "Bill of Material Line"
+msgstr "物料清单行"
+
+#. module: plm_cutted_parts
+#. odoo-python
+#: code:addons/plm_cutted_parts/models/plm_temporary.py:0
+#: model:ir.model.fields,field_description:plm_cutted_parts.field_plm_temporary__cutted_part_explosion
+#, python-format
+msgid "Cutted Part Action"
+msgstr "切割零件动作"
+
+#. module: plm_cutted_parts
+#: model:ir.actions.report,name:plm_cutted_parts.report_bom_structure_all_cutted
+msgid "Cutted Parts"
+msgstr "切割零件"
+
+#. module: plm_cutted_parts
+#: model:ir.model.fields,field_description:plm_cutted_parts.field_mrp_bom_line__cutted_qty
+msgid "Cutted Qty"
+msgstr "切割零件"
+
+#. module: plm_cutted_parts
+#: model_terms:ir.ui.view,arch_db:plm_cutted_parts.bom_structure_all_cutted
+msgid "Description"
+msgstr "说明"
+
+#. module: plm_cutted_parts
+#: model:ir.model.fields.selection,name:plm_cutted_parts.selection__plm_temporary__cutted_part_explosion__explode
+msgid "Explode"
+msgstr "推翻"
+
+#. module: plm_cutted_parts
+#. odoo-python
+#: code:addons/plm_cutted_parts/models/product_template.py:0
+#: model:ir.model.fields,field_description:plm_cutted_parts.field_product_product__is_row_material
+#: model:ir.model.fields,field_description:plm_cutted_parts.field_product_template__is_row_material
+#, python-format
+msgid "Is Raw Material"
+msgstr "是原材料"
+
+#. module: plm_cutted_parts
+#: model_terms:ir.ui.view,arch_db:plm_cutted_parts.bom_structure_all_cutted
+msgid "Lenght"
+msgstr "长度"
+
+#. module: plm_cutted_parts
+#: model_terms:ir.ui.view,arch_db:plm_cutted_parts.bom_structure_all_cutted
+msgid "Name"
+msgstr "名称"
+
+#. module: plm_cutted_parts
+#: model:ir.model.fields.selection,name:plm_cutted_parts.selection__plm_temporary__cutted_part_explosion__none
+msgid "None"
+msgstr "无"
+
+#. module: plm_cutted_parts
+#: model:ir.model,name:plm_cutted_parts.model_product_product
+msgid "Product Product"
+msgstr "产品变体"
+
+#. module: plm_cutted_parts
+#. odoo-python
+#: code:addons/plm_cutted_parts/models/product_template.py:0
+#: model:ir.model.fields,field_description:plm_cutted_parts.field_product_product__bom_rounding
+#: model:ir.model.fields,field_description:plm_cutted_parts.field_product_template__bom_rounding
+#, python-format
+msgid "Product Rounding"
+msgstr "产品取整"
+
+#. module: plm_cutted_parts
+#: model:ir.model,name:plm_cutted_parts.model_product_template
+msgid "Product Template"
+msgstr "产品模板"
+
+#. module: plm_cutted_parts
+#: model_terms:ir.ui.view,arch_db:plm_cutted_parts.bom_structure_all_cutted
+msgid "Quantity"
+msgstr "数量"
+
+#. module: plm_cutted_parts
+#: model_terms:ir.ui.view,arch_db:plm_cutted_parts.plm_product_product_normal_form_view_inherit_cutted
+#: model_terms:ir.ui.view,arch_db:plm_cutted_parts.product_product_cutted_parts
+msgid "Raw Material"
+msgstr "原材料"
+
+#. module: plm_cutted_parts
+#: model:ir.model.fields,field_description:plm_cutted_parts.field_product_product__row_material_factor
+#: model:ir.model.fields,field_description:plm_cutted_parts.field_product_template__row_material_factor
+msgid "Raw Material Conversion Factor"
+msgstr "原材料转换系数"
+
+#. module: plm_cutted_parts
+#. odoo-python
+#: code:addons/plm_cutted_parts/models/product_template.py:0
+#: model:ir.model.fields,field_description:plm_cutted_parts.field_product_product__row_material
+#: model:ir.model.fields,field_description:plm_cutted_parts.field_product_template__row_material
+#, python-format
+msgid "Raw Material Product"
+msgstr "原材料产品"
+
+#. module: plm_cutted_parts
+#: model:ir.model.fields.selection,name:plm_cutted_parts.selection__plm_temporary__cutted_part_explosion__replace
+msgid "Replace"
+msgstr "更换"
+
+#. module: plm_cutted_parts
+#: model:ir.model,name:plm_cutted_parts.model_report_plm_cutted_parts_bom_structure_all_cutted
+msgid "Report PLM cutted parts bom structure all cutted"
+msgstr "报告PLM切割零件bom结构全部切割"
+
+#. module: plm_cutted_parts
+#: model_terms:ir.ui.view,arch_db:plm_cutted_parts.bom_structure_all_cutted
+msgid "Revision"
+msgstr "修订"
+
+#. module: plm_cutted_parts
+#: model:ir.model,name:plm_cutted_parts.model_plm_temporary
+msgid "Temporary Class"
+msgstr "临时类"
+
+#. module: plm_cutted_parts
+#: model_terms:ir.ui.view,arch_db:plm_cutted_parts.bom_structure_all_cutted
+msgid "U.M."
+msgstr "U.M."
+
+#. module: plm_cutted_parts
+#: model_terms:ir.ui.view,arch_db:plm_cutted_parts.bom_structure_all_cutted
+msgid "Width"
+msgstr "宽度"
+
+#. module: plm_cutted_parts
+#: model:ir.model.fields,field_description:plm_cutted_parts.field_mrp_bom_line__client_x_length
+msgid "X Cutted Qty"
+msgstr "X切割数量"
+
+#. module: plm_cutted_parts
+#. odoo-python
+#: code:addons/plm_cutted_parts/models/mrp_bom_line.py:0
+#: model:ir.model.fields,field_description:plm_cutted_parts.field_mrp_bom_line__x_length
+#, python-format
+msgid "X Length"
+msgstr "X长度"
+
+#. module: plm_cutted_parts
+#. odoo-python
+#: code:addons/plm_cutted_parts/models/product_template.py:0
+#: model:ir.model.fields,field_description:plm_cutted_parts.field_product_product__material_added
+#: model:ir.model.fields,field_description:plm_cutted_parts.field_product_template__material_added
+#, python-format
+msgid "X Material Wastage"
+msgstr "X材料浪费"
+
+#. module: plm_cutted_parts
+#. odoo-python
+#: code:addons/plm_cutted_parts/models/product_template.py:0
+#: model:ir.model.fields,field_description:plm_cutted_parts.field_product_product__wastage_percent
+#: model:ir.model.fields,field_description:plm_cutted_parts.field_product_template__wastage_percent
+#, python-format
+msgid "X Percent Wastage"
+msgstr "X浪费百分比"
+
+#. module: plm_cutted_parts
+#. odoo-python
+#: code:addons/plm_cutted_parts/models/product_template.py:0
+#: model:ir.model.fields,field_description:plm_cutted_parts.field_product_product__row_material_x_length
+#: model:ir.model.fields,field_description:plm_cutted_parts.field_product_template__row_material_x_length
+#, python-format
+msgid "X Raw Material length"
+msgstr "X原材料长度"
+
+#. module: plm_cutted_parts
+#: model:ir.model.fields,field_description:plm_cutted_parts.field_mrp_bom_line__client_y_length
+msgid "Y Cutted Qty"
+msgstr "Y切割数量"
+
+#. module: plm_cutted_parts
+#. odoo-python
+#: code:addons/plm_cutted_parts/models/mrp_bom_line.py:0
+#: model:ir.model.fields,field_description:plm_cutted_parts.field_mrp_bom_line__y_length
+#, python-format
+msgid "Y Length"
+msgstr "Y长度"
+
+#. module: plm_cutted_parts
+#. odoo-python
+#: code:addons/plm_cutted_parts/models/product_template.py:0
+#: model:ir.model.fields,field_description:plm_cutted_parts.field_product_product__material_added_y
+#: model:ir.model.fields,field_description:plm_cutted_parts.field_product_template__material_added_y
+#, python-format
+msgid "Y Material Wastage"
+msgstr "Y材料浪费"
+
+#. module: plm_cutted_parts
+#. odoo-python
+#: code:addons/plm_cutted_parts/models/product_template.py:0
+#: model:ir.model.fields,field_description:plm_cutted_parts.field_product_product__wastage_percent_y
+#: model:ir.model.fields,field_description:plm_cutted_parts.field_product_template__wastage_percent_y
+#, python-format
+msgid "Y Percent Wastage"
+msgstr "Y浪费百分比"
+
+#. module: plm_cutted_parts
+#. odoo-python
+#: code:addons/plm_cutted_parts/models/product_template.py:0
+#: model:ir.model.fields,field_description:plm_cutted_parts.field_product_product__row_material_y_length
+#: model:ir.model.fields,field_description:plm_cutted_parts.field_product_template__row_material_y_length
+#, python-format
+msgid "Y Raw Material length"
+msgstr "Y原材料长度"

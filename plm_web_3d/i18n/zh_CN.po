@@ -1,0 +1,185 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* plm_web_3d
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0-20240820\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-10-28 08:40+0000\n"
+"PO-Revision-Date: 2024-11-07 15:55+0800\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.5\n"
+
+#. module: plm_web_3d
+#: model_terms:ir.ui.view,arch_db:plm_web_3d.main_treejs_view
+msgid "<b>Document Information</b>"
+msgstr "<b>文件信息</b>"
+
+#. module: plm_web_3d
+#: model_terms:ir.ui.view,arch_db:plm_web_3d.main_treejs_view
+msgid "<b>Document Structure</b>"
+msgstr "<b>文档结构</b>"
+
+#. module: plm_web_3d
+#: model_terms:ir.ui.view,arch_db:plm_web_3d.main_treejs_view
+msgid "<b>Product Information</b>"
+msgstr "<b>产品信息</b>"
+
+#. module: plm_web_3d
+#: model_terms:ir.ui.view,arch_db:plm_web_3d.plm_web_3d_plm_document_kanban_view
+msgid "<i class=\"fa fa-cube\"/> WebGl"
+msgstr "<i class=“fa-fa-cube”/>WebGl"
+
+#. module: plm_web_3d
+#: model_terms:ir.ui.view,arch_db:plm_web_3d.main_treejs_view
+msgid "<i class=\"fa fa-home\"/>Fit"
+msgstr "<i class=“fa-fa-home”/>适合"
+
+#. module: plm_web_3d
+#: model_terms:ir.ui.view,arch_db:plm_web_3d.main_treejs_view
+msgid "<i class=\"fa fa-save\"/>Save"
+msgstr "<i class=“fa-fa-save”/>保存"
+
+#. module: plm_web_3d
+#: model_terms:ir.ui.view,arch_db:plm_web_3d.main_treejs_view
+msgid ""
+"<select name=\"webgl_background\" id=\"webgl_background\">\n"
+"                                <option value=\"tecnical\">Tecnical</option>\n"
+"                                <option value=\"room1\">Room 1</option>\n"
+"                                <option value=\"room2\">Room 2</option>\n"
+"                                <option value=\"outdoor\">Outdoor 1</option>\n"
+"                                <option value=\"workshop1\">WorkShop 1</option>\n"
+"                                <option value=\"workshop2\">WorkShop 2</option>\n"
+"                                <option value=\"workshop3\">WorkShop 3</option>\n"
+"                            </select>"
+msgstr ""
+"<选择name=“webgl_background”id=“webgl_background“>\n"
+"<选项值=“技术”>技术</option>\n"
+"<选项值=“房间1”>房间1</option>\n"
+"<选项值=“房间2”>房间2</option>\n"
+"<选项值=“室外”>室外1</option>\n"
+"<选项值=“车间1”>车间1</option>\n"
+"<选项值=“车间2”>车间2</option>\n"
+"<选项值=“车间3”>车间3</option>\n"
+"</选择>"
+
+#. module: plm_web_3d
+#: model_terms:ir.ui.view,arch_db:plm_web_3d.plm_web_3d_plm_view_attachment_form_plm_hinerit
+msgid "<span>WebGl</span>"
+msgstr "<span>WebGl</span>"
+
+#. module: plm_web_3d
+#: model_terms:ir.ui.view,arch_db:plm_web_3d.main_treejs_view
+msgid "BackGround:"
+msgstr "背景:"
+
+#. module: plm_web_3d
+#: model:ir.model.fields,help:plm_web_3d.field_ir_attachment__has_web3d
+#: model:ir.model.fields,help:plm_web_3d.field_mrp_document__has_web3d
+#: model:ir.model.fields,help:plm_web_3d.field_product_document__has_web3d
+msgid "Check if this document has related 3d web document"
+msgstr "检查此文档是否有相关的3d web文档"
+
+#. module: plm_web_3d
+#: model:ir.model.fields,help:plm_web_3d.field_plm_component_document_rel__has_web3d
+msgid "Check if this document has releted 3d web document"
+msgstr "检查此文档是否已发布3d web文档"
+
+#. module: plm_web_3d
+#: model_terms:ir.ui.view,arch_db:plm_web_3d.main_treejs_view
+msgid "Color:"
+msgstr "颜色："
+
+#. module: plm_web_3d
+#: model:ir.model,name:plm_web_3d.model_plm_component_document_rel
+msgid "Component Document Relations"
+msgstr "组件文档关系"
+
+#. module: plm_web_3d
+#: model_terms:ir.ui.view,arch_db:plm_web_3d.main_treejs_view
+msgid "Explosion:"
+msgstr "突增:"
+
+#. module: plm_web_3d
+#: model:ir.model.fields,field_description:plm_web_3d.field_ir_attachment__has_web3d
+#: model:ir.model.fields,field_description:plm_web_3d.field_mrp_document__has_web3d
+#: model:ir.model.fields,field_description:plm_web_3d.field_product_document__has_web3d
+msgid "Has 3d Web link"
+msgstr "具有3d Web链接"
+
+#. module: plm_web_3d
+#: model:ir.model.fields,field_description:plm_web_3d.field_plm_component_document_rel__has_web3d
+msgid "Has Web3d"
+msgstr "拥有Web3d"
+
+#. module: plm_web_3d
+#: model_terms:ir.ui.view,arch_db:plm_web_3d.main_treejs_view
+msgid "Hide"
+msgstr "隐藏"
+
+#. module: plm_web_3d
+#: model:ir.model,name:plm_web_3d.model_ir_attachment
+msgid "Ir Attachment"
+msgstr "附件"
+
+#. module: plm_web_3d
+#: model_terms:ir.ui.view,arch_db:plm_web_3d.main_treejs_view
+msgid "OdooPLM"
+msgstr "OdooPLM"
+
+#. module: plm_web_3d
+#: model_terms:ir.ui.view,arch_db:plm_web_3d.main_treejs_view
+msgid "Search Here !!"
+msgstr "在这里搜索！！"
+
+#. module: plm_web_3d
+#: model_terms:ir.ui.view,arch_db:plm_web_3d.main_treejs_view
+msgid "ThreeJs"
+msgstr "ThreeJs"
+
+#. module: plm_web_3d
+#: model_terms:ir.ui.view,arch_db:plm_web_3d.main_treejs_view
+msgid "Transparency:"
+msgstr "透明度："
+
+#. module: plm_web_3d
+#: model_terms:ir.ui.view,arch_db:plm_web_3d.main_treejs_view
+msgid "Un-Hide"
+msgstr "取消隐藏"
+
+#. module: plm_web_3d
+#: model_terms:ir.ui.view,arch_db:plm_web_3d.main_treejs_view
+msgid "back"
+msgstr "返回"
+
+#. module: plm_web_3d
+#: model_terms:ir.ui.view,arch_db:plm_web_3d.main_treejs_view
+msgid "bottom"
+msgstr "底部"
+
+#. module: plm_web_3d
+#: model_terms:ir.ui.view,arch_db:plm_web_3d.main_treejs_view
+msgid "front"
+msgstr "前面"
+
+#. module: plm_web_3d
+#: model_terms:ir.ui.view,arch_db:plm_web_3d.main_treejs_view
+msgid "left"
+msgstr "左边"
+
+#. module: plm_web_3d
+#: model_terms:ir.ui.view,arch_db:plm_web_3d.main_treejs_view
+msgid "right"
+msgstr "右边"
+
+#. module: plm_web_3d
+#: model_terms:ir.ui.view,arch_db:plm_web_3d.main_treejs_view
+msgid "top"
+msgstr "顶部"

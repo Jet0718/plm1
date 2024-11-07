@@ -1,0 +1,28 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* plm_auto_internalref
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0-20240820\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-10-25 08:03+0000\n"
+"PO-Revision-Date: 2024-11-07 15:46+0800\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.5\n"
+
+#. module: plm_auto_internalref
+#: model:ir.model,name:plm_auto_internalref.model_product_product
+msgid "Product Product"
+msgstr "产品变体"
+
+#. module: plm_auto_internalref
+#: model:ir.model,name:plm_auto_internalref.model_product_template
+msgid "Product Template"
+msgstr "产品模板"

@@ -1,0 +1,204 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* plm_spare
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0-20240820\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-10-28 07:41+0000\n"
+"PO-Revision-Date: 2024-11-07 15:51+0800\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.5\n"
+
+#. module: plm_spare
+#: model_terms:ir.ui.view,arch_db:plm_spare.bom_spare_header
+msgid "<b>Spare Parts Report</b>"
+msgstr "<b>備品報告</b>"
+
+#. module: plm_spare
+#: model_terms:ir.ui.view,arch_db:plm_spare.plm_component_manage_spare_bom
+msgid "Are you sure you want to create a new Spare Bom?"
+msgstr "您確定要創建新的備用Bom嗎？"
+
+#. module: plm_spare
+#: model:ir.model,name:plm_spare.model_mrp_bom
+msgid "Bill of Material"
+msgstr "物料清单"
+
+#. module: plm_spare
+#. odoo-python
+#: code:addons/plm_spare/models/plm_temporary.py:0
+#, python-format
+msgid "Bill of Materials"
+msgstr "物料清单"
+
+#. module: plm_spare
+#: model:ir.model.fields,field_description:plm_spare.field_mrp_bom__type
+msgid "BoM Type"
+msgstr "物料清单 BoM 类型"
+
+#. module: plm_spare
+#. odoo-python
+#: code:addons/plm_spare/models/plm_temporary.py:0
+#, python-format
+msgid "BoM for Part {} already exists."
+msgstr "物料清單中的物料{}已存在."
+
+#. module: plm_spare
+#: model_terms:ir.ui.view,arch_db:plm_spare.plm_component_manage_spare_bom
+msgid "Cancel"
+msgstr "取消"
+
+#. module: plm_spare
+#. odoo-python
+#: code:addons/plm_spare/models/plm_description.py:0
+#: model:ir.model.fields,field_description:plm_spare.field_plm_description__bom_tmpl
+#, python-format
+msgid "Choose a BoM"
+msgstr "选择BoM"
+
+#. module: plm_spare
+#: model_terms:ir.ui.view,arch_db:plm_spare.plm_description_spare_form_view
+msgid "Choose the Reference Object:"
+msgstr "选择参考对象："
+
+#. module: plm_spare
+#: model:ir.actions.act_window,name:plm_spare.act_manage_spare_bom
+#: model_terms:ir.ui.view,arch_db:plm_spare.plm_component_manage_spare_bom
+msgid "Create Spare Bom"
+msgstr "创建备用Bom"
+
+#. module: plm_spare
+#. odoo-python
+#: code:addons/plm_spare/models/plm_temporary.py:0
+#, python-format
+msgid "Creating a new Spare Bom Error."
+msgstr "创建新的备用BOM错误."
+
+#. module: plm_spare
+#: model_terms:ir.ui.view,arch_db:plm_spare.plm_component_manage_spare_bom
+msgid "Creation of Spare Bom"
+msgstr "创建备用Bom"
+
+#. module: plm_spare
+#. odoo-python
+#: code:addons/plm_spare/models/ir_attachment.py:0
+#: model:ir.model.fields,help:plm_spare.field_ir_attachment__used_for_spare
+#: model:ir.model.fields,help:plm_spare.field_mrp_document__used_for_spare
+#: model:ir.model.fields,help:plm_spare.field_product_document__used_for_spare
+#, python-format
+msgid "Drawings marked here will be used printing Spare Part Manual report."
+msgstr "此处标记的图纸将用于打印备件手册报告."
+
+#. module: plm_spare
+#: model:ir.model,name:plm_spare.model_ir_attachment
+msgid "Ir Attachment"
+msgstr "附件"
+
+#. module: plm_spare
+#: model_terms:ir.ui.view,arch_db:plm_spare.spare_plm_document_kanban_view
+msgid "Is A Spare Drawing"
+msgstr "是备用图纸"
+
+#. module: plm_spare
+#: model_terms:ir.ui.view,arch_db:plm_spare.plm_description_spare_form_view
+msgid "Object"
+msgstr "物件"
+
+#. module: plm_spare
+#: model:ir.model,name:plm_spare.model_plm_description
+msgid "PLM Descriptions"
+msgstr "PLM说明"
+
+#. module: plm_spare
+#: model:ir.actions.report,name:plm_spare.report_product_product_spare_header
+msgid "Print Spare Header"
+msgstr "打印备用首标"
+
+#. module: plm_spare
+#: model:ir.actions.report,name:plm_spare.report_product_product_spare_parts_pdf
+msgid "Print Spare Parts Manual"
+msgstr "打印备件手册"
+
+#. module: plm_spare
+#: model:ir.actions.report,name:plm_spare.report_product_product_spare_parts_pdf_one
+msgid "Print Spare Parts Manual One Level"
+msgstr "打印备件手册一阶"
+
+#. module: plm_spare
+#: model:ir.model,name:plm_spare.model_product_product
+msgid "Product Product"
+msgstr "产品变体"
+
+#. module: plm_spare
+#. odoo-python
+#: code:addons/plm_spare/models/product_product.py:0
+#, python-format
+msgid "Related Boms"
+msgstr "相关Boms"
+
+#. module: plm_spare
+#: model:ir.model,name:plm_spare.model_report_plm_spare_bom_spare_header
+msgid "Report Spare Parts Headers"
+msgstr "报告备件标题"
+
+#. module: plm_spare
+#: model:ir.model,name:plm_spare.model_report_plm_spare_pdf_all
+msgid "Report Spare Pdf All"
+msgstr "报告备用Pdf全部"
+
+#. module: plm_spare
+#: model:ir.model,name:plm_spare.model_report_plm_spare_pdf_one
+msgid "Report Spare parts Document One"
+msgstr "报告备件文件一"
+
+#. module: plm_spare
+#: model:ir.ui.menu,name:plm_spare.menu_relation_spare
+msgid "Search on Spare Bill of Materials"
+msgstr "备件物料清单查询"
+
+#. module: plm_spare
+#. odoo-python
+#: code:addons/plm_spare/models/plm_description.py:0
+#: model:ir.model.fields,help:plm_spare.field_plm_description__bom_tmpl
+#, python-format
+msgid "Select a  BoM as template to drive building Spare BoM."
+msgstr "选择物料清单作为模板，以驱动构建备用物料清单。"
+
+#. module: plm_spare
+#: model:ir.model.fields.selection,name:plm_spare.selection__mrp_bom__type__spbom
+msgid "Spare BoM"
+msgstr "备用物料清单"
+
+#. module: plm_spare
+#: model:ir.actions.act_window,name:plm_spare.plm_action_spare_form
+msgid "Spare BoMs"
+msgstr "备用物料清单"
+
+#. module: plm_spare
+#: model_terms:ir.ui.view,arch_db:plm_spare.ir_attachment_spare_extension
+#: model_terms:ir.ui.view,arch_db:plm_spare.spare_plm_document_kanban_view
+msgid "Spare Part"
+msgstr "备件"
+
+#. module: plm_spare
+#: model:ir.model,name:plm_spare.model_plm_temporary
+msgid "Temporary Class"
+msgstr "临时类"
+
+#. module: plm_spare
+#. odoo-python
+#: code:addons/plm_spare/models/ir_attachment.py:0
+#: model:ir.model.fields,field_description:plm_spare.field_ir_attachment__used_for_spare
+#: model:ir.model.fields,field_description:plm_spare.field_mrp_document__used_for_spare
+#: model:ir.model.fields,field_description:plm_spare.field_product_document__used_for_spare
+#, python-format
+msgid "Used for Spare"
+msgstr "用于备用"
