@@ -8,10 +8,10 @@ class InhtProjectModel(models.Model):
     dmsfile_count =fields.Integer("数量" ,compute='_compute_dmsfile_count')
 
     #计算关联dmsfile的数量
-    # @api.depends("dmsfile_ids")
-    # def _compute_dmsfile_count(self):
-    #     for record in self:
-    #         record.dmsfile_count = len(record.dmsfile_ids)
+    @api.depends("dmsfile_ids")
+    def _compute_dmsfile_count(self):
+        for record in self:
+            record.dmsfile_count = len(record.dmsfile_ids)
     #按钮开启反查页面        
     def open_dmsfile_btn(self):
         return {
