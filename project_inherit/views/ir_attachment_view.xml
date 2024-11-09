@@ -10,7 +10,10 @@
                 <!-- <xpath expr="//header" position="inside">
                     <field name="state" widget="statusbar" statusbar_visible="Draft,Review,Released,InChange,Superseded" />
                 </xpath>  -->
-                             
+                  <!-- #将状态改成管道状态列 -->
+                <xpath expr="//header" position="inside">
+                    <field name="engineering_state" widget="statusbar" statusbar_visible="draft,confirmed,released,undermodify,obsoleted"/>   
+                </xpath>      
                 <field name="preview" position="after">   
                         <!-- <field name="item_number"  /> --> 
                         <p/>  

@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 17.0-20240820\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-10-22 05:50+0000\n"
-"PO-Revision-Date: 2024-10-25 17:07+0800\n"
+"PO-Revision-Date: 2024-11-07 23:25+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: zh_TW\n"
@@ -319,7 +319,7 @@ msgstr ""
 #: code:addons/plm/models/res_config_settings.py:0 model:ir.model.fields,field_description:plm.field_res_config_settings__module_plm_automate_normal_bom
 #, python-format
 msgid "Allow to create normal BOM if not exists and product are released."
-msgstr "如果不存在並且產品已發佈，則允許創建正常的BOM"
+msgstr "如果不存在並且產品已發佈，則允許創建正常的BOM."
 
 #. module: plm
 #. odoo-python
@@ -986,7 +986,7 @@ msgstr "配置名稱"
 #: model_terms:ir.ui.view,arch_db:plm.plm_component_base_form model_terms:ir.ui.view,arch_db:plm.plm_product_product_normal_form_view_inherit
 #: model_terms:ir.ui.view,arch_db:plm.view_product_client_workflow
 msgid "Confirm Component"
-msgstr "確認組件"
+msgstr "檢核組件"
 
 #. module: plm
 #: model_terms:ir.ui.view,arch_db:plm.view_attachment_client_workflow model_terms:ir.ui.view,arch_db:plm.view_attachment_form_plm_hinerit
@@ -1352,7 +1352,7 @@ msgstr "簽入文檔無法保存！"
 #: code:addons/plm/models/ir_attachment.py:0
 #, python-format
 msgid "Document is Check-Out from User %r"
-msgstr "文檔已從用戶簽出"
+msgstr "文檔已從用戶簽出 %r"
 
 #. module: plm
 #. odoo-python
@@ -1568,7 +1568,7 @@ msgstr "工程修訂"
 #: code:addons/plm/models/product_product.py:0
 #, python-format
 msgid "Error during component creation with values:\n"
-msgstr "使用值創建元件時出錯："
+msgstr "使用值創建元件時出錯:\n"
 
 #. module: plm
 #: model:ir.model.fields,field_description:plm.field_plm_dbthread__error_message
@@ -2656,7 +2656,7 @@ msgstr "父子產品必須不同！"
 #: code:addons/plm/models/product_product.py:0
 #, python-format
 msgid "Part %r cannot be updated"
-msgstr "無法更新部件"
+msgstr "無法更新部件%r"
 
 #. module: plm
 #: model:ir.model.fields,field_description:plm.field_product_template__engineering_code
@@ -3026,12 +3026,12 @@ msgstr "用於cad檔結構的文檔之間的關係"
 #: model_terms:ir.ui.view,arch_db:plm.plm_component_base_form model_terms:ir.ui.view,arch_db:plm.plm_product_product_normal_form_view_inherit
 #: model_terms:ir.ui.view,arch_db:plm.view_product_client_workflow
 msgid "Release Component"
-msgstr "發佈檔"
+msgstr "發行組件"
 
 #. module: plm
 #: model_terms:ir.ui.view,arch_db:plm.view_attachment_client_workflow model_terms:ir.ui.view,arch_db:plm.view_attachment_form_plm_hinerit
 msgid "Release Document"
-msgstr "發佈檔"
+msgstr "發行文件"
 
 #. module: plm
 #. odoo-python
@@ -3043,7 +3043,7 @@ msgstr "發佈檔"
 #: model:ir.model.fields,field_description:plm.field_revision_plm_mixin__engineering_release_user
 #, python-format
 msgid "Release User"
-msgstr "發佈用戶"
+msgstr "發行用戶"
 
 #. module: plm
 #. odoo-python
@@ -3055,7 +3055,7 @@ msgstr "發佈用戶"
 #: model:ir.model.fields,field_description:plm.field_revision_plm_mixin__engineering_release_date
 #, python-format
 msgid "Release date"
-msgstr "發佈日期"
+msgstr "發行日期"
 
 #. module: plm
 #. odoo-python
@@ -3067,7 +3067,7 @@ msgstr "發佈日期"
 #: model_terms:ir.ui.view,arch_db:plm.ir_attachment_search model_terms:ir.ui.view,arch_db:plm.plm_component_base_search
 #, python-format
 msgid "Released"
-msgstr "釋放"
+msgstr "發行"
 
 #. module: plm
 #. odoo-python
@@ -3089,7 +3089,7 @@ msgstr "報告Bom所有結構匯總"
 #. module: plm
 #: model:ir.model,name:plm.model_report_plm_bom_structure_leaves
 msgid "Report Bom Leavs"
-msgstr "報告炸彈結構"
+msgstr "報告BOM結構"
 
 #. module: plm
 #: model:ir.model,name:plm.model_report_plm_bom_structure_flat
@@ -3252,12 +3252,12 @@ msgstr "搜索已簽出的文件"
 #. module: plm
 #: model:ir.ui.menu,name:plm.menu_document_relations model_terms:ir.ui.view,arch_db:plm.plm_docbom_search
 msgid "Search on Document Relations"
-msgstr "文檔關係搜索"
+msgstr "文件關係搜索"
 
 #. module: plm
 #: model:ir.ui.menu,name:plm.menu_document_files
 msgid "Search on Documents"
-msgstr "搜索文檔"
+msgstr "搜索文件"
 
 #. module: plm
 #: model:ir.ui.menu,name:plm.menu_base_component
@@ -3777,7 +3777,7 @@ msgstr ""
 #: code:addons/plm/models/ir_attachment.py:0
 #, python-format
 msgid "Unable to check-Out a document that is already checked IN by user %r"
-msgstr "無法簽出已被用戶簽入的文檔"
+msgstr "無法簽出已被用戶%r 簽入的文件 "
 
 #. module: plm
 #. odoo-python
@@ -3830,7 +3830,7 @@ msgstr ""
 #: code:addons/plm/models/plm_mixin.py:0
 #, python-format
 msgid "Unable to revise a %s in status %s that different from released"
-msgstr "無法修改與已發佈狀態不同的狀態"
+msgstr "無法修改%s 於已發佈狀態不同的 %s 狀態"
 
 #. module: plm
 #. odoo-python

@@ -241,18 +241,31 @@ class PCOModel(models.Model):
             return new_product_id  
             
    
-    @api.onchange('pco_product_id')
-    def _compute_pco_product_id(self):
-       
+    # @api.onchange('pco_product_id')
+    # def _compute_pco_product_id(self):
+    def write(self, vals):
+        
         # raise UserError(typestr)
-        self.write({'btnflog':1})
+        # self.write({'btnflog':1})        
+        # for record in self:
+        #     for nd in record.pco_product_id:
+        #         if res.state =='Review' and nd.new_affected_product_id.version !=1:
+        #             self.write({'btnflog':0})
+        #     for nd in record.pco_bom_ids:
+        #         if res.state =='Review' and nd.new_affected_bom_id.version !=1:
+        #             self.write({'btnflog':0})
+        btnflog= True
         for record in self:
             for nd in record.pco_product_id:
-                if self.state =='Review' and nd.new_affected_product_id.version !=1:
-                    self.write({'btnflog':0})
+                if record.state =='Review' and nd.new_affected_product_id.version !=0:
+                    btnflog= False
             for nd in record.pco_bom_ids:
-                if self.state =='Review' and nd.new_affected_bom_id.version !=1:
-                    self.write({'btnflog':0})
+                if record.state =='Review' and nd.new_affected_bom_id.version !=0:
+                    btnflog= False
+        vals['btnflog'] =btnflog
+        res =  super(PCOModel, self).write(vals)
+
+        return res
 
     @api.onchange('classstr')
     def _compute_classstr(self):
@@ -263,5 +276,20 @@ class PCOModel(models.Model):
                 self.write({'showproduct':0})
             if r.name=="Bom":
                 self.write({'showbom':0})
+
+    
+    # def _getpco_status_counts(self):
+        
+    #     new_count=self.search_count([('state', '=', 'New')])
+    #     review_count=self.search_count([('state', '=', 'Review')])
+    #     approved_count= self.search_count([('state', '=', 'Approved')])
+    #     cancel_count= self.search_count([('state', '=', 'Cancel')])
+    #     return {
+    #         'new_count': new_count,
+    #         'review_count': review_count,
+    #         'approved_count': approved_count,
+    #         'cancel_count':  cancel_count,
+    #     }
+
         
 

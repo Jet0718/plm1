@@ -10,6 +10,7 @@
     """,    
     'data': [
         'security/ir.model.access.csv',
+        'demo/pco_type.xml',
         'views/pco_view.xml',
         'views/pco_tag_view.xml',
         'views/pco_product_view.xml', 

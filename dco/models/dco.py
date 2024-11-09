@@ -82,9 +82,9 @@ class DCOModel(models.Model):
                     # raise UserError( record.affected_item_id.engineering_revision)
                     newrecord = self.env['ir.attachment'].search([('engineering_code', '=' ,ecode ),('engineering_revision', '=' ,eversion)])
                     # raise UserError( newrecord.engineering_revision)
-                    newrecord.write({'cn_configid': record.affected_item_id.cn_configid,'cnis_current': True})
+                    newrecord.write({'cn_configid': record.affected_item_id.cn_configid,'cnis_current': True, 'active': False})
                     record.affected_item_id.write({'cnis_current': False })
-                    record.write({'new_affected_item_id': newrecord.id , 'active': False})
+                    record.write({'new_affected_item_id': newrecord.id })
                     # record.write ({'new_affected_item_id':newrecord.id})  
                     # record.affected_item_id.write({'engineering_state':'undermodify'}) 
                     # record.affected_item_id.write({'active':True})
@@ -143,12 +143,30 @@ class DCOModel(models.Model):
         else:
             raise UserError('已核准,不能被取消')
 
-    @api.onchange('dco_file_ids','state')
-    def _onchange_dco_file_ids(self):
-        for record in self.dco_file_ids:
-            # (not affected_item_id and not new_affected_item_id) or state !='Review' or affected_item_id.version ==1
-            if  record.affected_item_id.engineering_revision !=0 or record.new_affected_item_id.engineering_revision !=0:
-                self.write({'btnflog':0})
+    # @api.onchange('dco_file_ids','state')
+    # def _onchange_dco_file_ids(self):
+    #     for record in self.dco_file_ids:
+    #         # (not affected_item_id and not new_affected_item_id) or state !='Review' or affected_item_id.version ==1
+    #         if  record.affected_item_id.engineering_revision !=0 or record.new_affected_item_id.engineering_revision !=0:
+    #             self.write({'btnflog':0})
+    def write(self, vals):        
+        # raise UserError(typestr)
+        # self.write({'btnflog':1})        
+        # for record in self:
+        #     for nd in record.pco_product_id:
+        #         if res.state =='Review' and nd.new_affected_product_id.version !=1:
+        #             self.write({'btnflog':0})
+        #     for nd in record.pco_bom_ids:
+        #         if res.state =='Review' and nd.new_affected_bom_id.version !=1:
+        #             self.write({'btnflog':0})
+        btnflog= True
+        for record in self:
+            for nd in record.dco_file_ids:
+                if record.state =='Review' and (nd.affected_item_id.engineering_revision !=0  or nd.new_affected_item_id.engineering_revision !=0):
+                    btnflog= False
+        vals['btnflog'] =btnflog
+        res =  super(DCOModel, self).write(vals)
 
+        return res
 
 

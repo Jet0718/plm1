@@ -31,14 +31,14 @@ class PlmDocumentRelations(models.Model):
     # _inherit = ['ir.attachment.relation'] 
     
    
-    ir_attachment_relations       = fields.One2many('ir_attachment_relation.ship', 'prd_id', '規格特性')
+    ir_attachment_relations       = fields.One2many('iratracr.ship', 'prd_id', '关联图纸')
 
 
 
 
 class irattachmentrelationShip(models.Model):
-    _name="ir_attachment_relation.ship"
-    _description="ir.attachment.relations ship"
+    _name="iratracr.ship"
+    _description="irattachmentrelations ship"
 
     prd_id=fields.Many2one('ir.attachment.relation',"relation Doc",required=True)
 

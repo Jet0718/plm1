@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 17.0-20240820\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-10-22 05:50+0000\n"
-"PO-Revision-Date: 2024-10-25 16:43+0800\n"
+"PO-Revision-Date: 2024-11-07 23:30+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: zh_CN\n"
@@ -1352,7 +1352,7 @@ msgstr "签入文档无法保存！"
 #: code:addons/plm/models/ir_attachment.py:0
 #, python-format
 msgid "Document is Check-Out from User %r"
-msgstr "文档已从用户签出"
+msgstr "文档已从用户%s签出"
 
 #. module: plm
 #. odoo-python
@@ -1568,7 +1568,7 @@ msgstr "工程修订"
 #: code:addons/plm/models/product_product.py:0
 #, python-format
 msgid "Error during component creation with values:\n"
-msgstr "使用值创建组件时出错："
+msgstr "使用值创建组件时出错:\n"
 
 #. module: plm
 #: model:ir.model.fields,field_description:plm.field_plm_dbthread__error_message
@@ -2656,7 +2656,7 @@ msgstr "父子产品必须不同！"
 #: code:addons/plm/models/product_product.py:0
 #, python-format
 msgid "Part %r cannot be updated"
-msgstr "无法更新部件"
+msgstr "无法更新部件%r"
 
 #. module: plm
 #: model:ir.model.fields,field_description:plm.field_product_template__engineering_code
@@ -3067,7 +3067,7 @@ msgstr "发布日期"
 #: model_terms:ir.ui.view,arch_db:plm.ir_attachment_search model_terms:ir.ui.view,arch_db:plm.plm_component_base_search
 #, python-format
 msgid "Released"
-msgstr "释放"
+msgstr "发布"
 
 #. module: plm
 #. odoo-python
@@ -3777,7 +3777,7 @@ msgstr ""
 #: code:addons/plm/models/ir_attachment.py:0
 #, python-format
 msgid "Unable to check-Out a document that is already checked IN by user %r"
-msgstr "无法签出已被用户签入的文档"
+msgstr "无法签出已被用户%r签入的文档"
 
 #. module: plm
 #. odoo-python
@@ -3830,7 +3830,7 @@ msgstr ""
 #: code:addons/plm/models/plm_mixin.py:0
 #, python-format
 msgid "Unable to revise a %s in status %s that different from released"
-msgstr "无法修改与已发布状态不同的状态"
+msgstr "无法修改%s与已发布状态不同的%s状态"
 
 #. module: plm
 #. odoo-python

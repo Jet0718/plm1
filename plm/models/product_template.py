@@ -127,7 +127,7 @@ class ProductTemplate(models.Model):
             else:
                 productBrws.is_engcode_editable = False
         #ebert 设置engineering_code只读 202410
-        productBrws.engineering_code =True
+        productBrws.is_engcode_editable =False
 
     def engineering_products_open(self):
         product_id = False
