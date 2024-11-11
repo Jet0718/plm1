@@ -84,7 +84,9 @@ class DCOModel(models.Model):
                     # raise UserError( newrecord.engineering_revision)
                     newrecord.write({'cn_configid': record.affected_item_id.cn_configid,'cnis_current': True, 'active': False})
                     record.affected_item_id.write({'cnis_current': False })
-                    record.write({'new_affected_item_id': newrecord.id })
+                    record.write({'new_affected_item_id': newrecord.id})
+                    self.write({'btnflog': False})
+                    
                     # record.write ({'new_affected_item_id':newrecord.id})  
                     # record.affected_item_id.write({'engineering_state':'undermodify'}) 
                     # record.affected_item_id.write({'active':True})
@@ -105,8 +107,9 @@ class DCOModel(models.Model):
     def action_set_Review_after(self): 
         for record in self.dco_file_ids:                    
             # record.new_affected_item_id.write({'engineering_state':'confirmed'})  
-            record.new_affected_item_id.action_confirm()
-        
+            if record.new_affected_item_id.engineering_state == 'draft' :
+                record.new_affected_item_id.action_confirm()
+        self.write({'btnflog': True})
           
     def action_set_Approved(self):
         if self.state =='Review':
@@ -159,11 +162,17 @@ class DCOModel(models.Model):
         #     for nd in record.pco_bom_ids:
         #         if res.state =='Review' and nd.new_affected_bom_id.version !=1:
         #             self.write({'btnflog':0})
+        
+        for record in self.dco_file_ids: 
+            if record.new_affected_item_id and  record.new_affected_item_id.engineering_state == 'confirmed':
+               res =  super(DCOModel, self).write(vals)                
+               return res
+            
         btnflog= True
         for record in self:
             for nd in record.dco_file_ids:
                 if record.state =='Review' and (nd.affected_item_id.engineering_revision !=0  or nd.new_affected_item_id.engineering_revision !=0):
-                    btnflog= False
+                    btnflog= False                    
         vals['btnflog'] =btnflog
         res =  super(DCOModel, self).write(vals)
 

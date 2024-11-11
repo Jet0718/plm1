@@ -105,6 +105,7 @@ class PCOModel(models.Model):
                     newrecord.write({'cn_configid': record.affected_product_id.cn_configid,'cnis_current': True})
                     record.affected_product_id.write({'cnis_current': False,'active':False})
                     record.write({'new_affected_product_id': newrecord.id})
+                    self.write({'btnflog': False})
                         
                 else :
                     # default_code = str(record.affected_product_id.engineering_revision)
@@ -133,7 +134,7 @@ class PCOModel(models.Model):
                             record.affected_bom_id.write ({'active':True}) 
                             record.affected_bom_id.write({'state':'InChange'}) 
                             record.affected_bom_id.write({'cnis_current':True})
-                            record.write({'new_affected_bom_id':record.new_affected_bom_id.id})   
+                            record.write({'new_affected_bom_id':record.new_affected_bom_id.id,'btnflog': False})   
                         
                     else :
                         code = str(record.affected_bom_id.version+1)
@@ -154,11 +155,15 @@ class PCOModel(models.Model):
             if record.new_affected_product_id:                
                 record.new_affected_product_id.write({'state':'confirmed'})  
                 product = self.env['product.product'].search([('engineering_code', "=", record.new_affected_product_id.engineering_code),('engineering_revision','=',record.new_affected_product_id.engineering_revision),('default_code','=',record.new_affected_product_id.engineering_code +'_01_'+str(record.new_affected_product_id.engineering_revision))])
-                product.action_confirm()
+                if product.engineering_state == 'draft':
+                    product.action_confirm()
 
         for record in self.pco_bom_ids: 
-            if record.affected_bom_id != False :                
-                record.affected_bom_id.write({'state':'Review'}) 
+            if record.new_affected_bom_id != False  :                
+                record.new_affected_bom_id.write({'state':'Review'}) 
+        for record in self :
+            
+            record.write({'btnflog': True})
         # elif self.state =='Review':
         #     raise UserError('已是"变更后审核"状态')
         # else:
@@ -254,14 +259,31 @@ class PCOModel(models.Model):
         #     for nd in record.pco_bom_ids:
         #         if res.state =='Review' and nd.new_affected_bom_id.version !=1:
         #             self.write({'btnflog':0})
+
+        is_setflog =False
+        for record in self.pco_product_id: 
+            if record.new_affected_product_id and  record.new_affected_product_id.state == 'confirmed':                
+               is_setflog= True
+            
+        for record in self.pco_bom_ids: 
+            if record.new_affected_bom_id != False and  record.new_affected_product_id.state == 'Review'  :                
+               is_setflog= True
+        if is_setflog :
+            res =  super(PCOModel, self).write(vals)
+            return res   
+            
+
+
         btnflog= True
         for record in self:
             for nd in record.pco_product_id:
                 if record.state =='Review' and nd.new_affected_product_id.version !=0:
                     btnflog= False
+                    # self.write({'btnflog':False})
             for nd in record.pco_bom_ids:
                 if record.state =='Review' and nd.new_affected_bom_id.version !=0:
                     btnflog= False
+                    # self.write({'btnflog':False})
         vals['btnflog'] =btnflog
         res =  super(PCOModel, self).write(vals)
 

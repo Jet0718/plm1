@@ -312,7 +312,7 @@ msgstr "项目"
 #. module: plm_box
 #: model_terms:ir.ui.view,arch_db:plm_box.plm_box_form_view
 msgid "Release Box"
-msgstr "释放盒"
+msgstr "发行盒"
 
 #. module: plm_box
 #: code:addons/plm_box/models/plm_box.py:0

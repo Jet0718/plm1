@@ -28,7 +28,7 @@ msgstr "“您确定要创建一个新的修订版吗？”"
 #: code:addons/plm_web_revision/models/product_product.py:0
 #, python-format
 msgid "%s cannot be revised because the state isn't released!"
-msgstr "%s 无法修改，因为状态未释放！"
+msgstr "%s 无法改版，因为状态非发行！"
 
 #. module: plm_web_revision
 #: model_terms:ir.ui.view,arch_db:plm_web_revision.ir_attachment_new_revision

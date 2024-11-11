@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 17.0-20240820\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-10-22 05:50+0000\n"
-"PO-Revision-Date: 2024-11-07 23:25+0800\n"
+"PO-Revision-Date: 2024-11-11 17:28+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: zh_TW\n"
@@ -267,7 +267,7 @@ msgstr "活動類型圖示"
 #. module: plm
 #: model_terms:ir.ui.view,arch_db:plm.view_plm_settings
 msgid "Add a progress bar to check the progress of the project based on the status of the products"
-msgstr ""
+msgstr "新增進度條，根據產品狀態查看專案進度"
 
 #. module: plm
 #: model:ir.model.fields,field_description:plm.field_res_config_settings__module_plm_sale_fix
@@ -282,6 +282,10 @@ msgid ""
 "                                        ATTENTION !! This module depends on plm_mrp_bom_update from:\n"
 "                                        git clone -b 16.0 https://github.com/OmniaSolutions/odooAddons.git</b>"
 msgstr ""
+"新增根據修訂後的 BOM 更新製造訂單的功能\n"
+" <b>\n"
+" 注意! 該模組依賴 plm_mrp_bom_update：\n"
+" git clone -b 16.0 https://github.com/OmniaSolutions/odooAddons.git</b>"
 
 #. module: plm
 #: model_terms:ir.ui.view,arch_db:plm.view_plm_settings
@@ -306,6 +310,8 @@ msgid ""
 "Advanced way to save and synchronise PLM document to improve open and save operation for pour connection bandwidth\n"
 "                                    To make it work you need to install a file server application   \"mirror_document_server\""
 msgstr ""
+"儲存和同步 PLM 文件的高級方法可改善連線頻寬的開啟和儲存操作\n"
+" 要使其工作，您需要安裝檔案伺服器應用程式“mirror_document_server”"
 
 #. module: plm
 #: model_terms:ir.ui.view,arch_db:plm.view_plm_settings
@@ -313,6 +319,8 @@ msgid ""
 "Allow converting files in different format. \n"
 "                                    In order to make it run you will need the conversion server provided by OmniaSolutions."
 msgstr ""
+"允許轉換不同格式的檔案。\n"
+" 為了使其運行，您將需要 OmniaSolutions 提供的轉換伺服器。"
 
 #. module: plm
 #. odoo-python
@@ -326,7 +334,7 @@ msgstr "如果不存在並且產品已發佈，則允許創建正常的BOM."
 #: code:addons/plm/models/plm_descriptions.py:0 model:ir.model.fields,help:plm.field_plm_description__fmtend
 #, python-format
 msgid "Allow to represent a normalized composition of technical features : %s%s allows to build chained values."
-msgstr ""
+msgstr "允許表示技術特徵的規範化組合：%s%s 允許建立鍊式值。"
 
 #. module: plm
 #. odoo-python
@@ -334,43 +342,43 @@ msgstr ""
 #: model:ir.model.fields,help:plm.field_plm_description__fmt2 model:ir.model.fields,help:plm.field_plm_description__fmt3
 #, python-format
 msgid "Allow to represent the measure: %s%s allow to build um and value, %s builds only value, none builds only value."
-msgstr ""
+msgstr "允許表示度量：%s%s 允許建構 um 和 value，%s 僅建構值，none 僅建構值。"
 
 #. module: plm
 #: model_terms:ir.ui.view,arch_db:plm.view_plm_settings
 msgid "Allow to select only product that have engineering_code and is in the latest revision for Manufacturing"
-msgstr ""
+msgstr "允許僅選擇具有 Engineering_code 且處於最新製造版本的產品"
 
 #. module: plm
 #: model_terms:ir.ui.view,arch_db:plm.view_plm_settings
 msgid "Allow to select only product that have engineering_code and is in the latest revision for Purchase"
-msgstr ""
+msgstr "允許僅選擇具有 Engineering_code 且處於最新版本的產品進行購買"
 
 #. module: plm
 #: model_terms:ir.ui.view,arch_db:plm.view_plm_settings
 msgid "Allow to select only product that have not engineering_code or is in the latest revision for Purchase"
-msgstr ""
+msgstr "允許僅選擇沒有 Engineering_code 或處於最新版本的產品購買"
 
 #. module: plm
 #. odoo-python
 #: code:addons/plm/models/product_product.py:0 model:ir.model.fields,help:plm.field_product_product__std_umc3
 #, python-format
 msgid "Allow to specifiy a unit measure for the third feature."
-msgstr "允許為第三個特徵指定單位度量"
+msgstr "允許為第三個特徵指定單位度量."
 
 #. module: plm
 #. odoo-python
 #: code:addons/plm/models/product_product.py:0 model:ir.model.fields,help:plm.field_product_product__std_umc1
 #, python-format
 msgid "Allow to specify a unit measure for the first feature."
-msgstr "允許為第一個特徵指定單位度量"
+msgstr "允許為第一個特徵指定單位度量."
 
 #. module: plm
 #. odoo-python
 #: code:addons/plm/models/product_product.py:0 model:ir.model.fields,help:plm.field_product_product__std_umc2
 #, python-format
 msgid "Allow to specify a unit measure for the second feature."
-msgstr "允許為第二個特徵指定單位度量"
+msgstr "允許為第二個特徵指定單位度量."
 
 #. module: plm
 #. odoo-python
@@ -378,7 +386,7 @@ msgstr "允許為第二個特徵指定單位度量"
 #: model:ir.model.fields,help:plm.field_plm_description__umc2 model:ir.model.fields,help:plm.field_plm_description__umc3
 #, python-format
 msgid "Allow to specify a unit measure or a label for the feature."
-msgstr "允許為特徵指定單位度量或標籤"
+msgstr "允許為特徵指定單位度量或標籤."
 
 #. module: plm
 #. odoo-python
@@ -390,7 +398,7 @@ msgstr "允許使用工程BOM"
 #. module: plm
 #: model_terms:ir.ui.view,arch_db:plm.view_plm_settings
 msgid "Allows view and/or update obsoleted components in a Normal Bill Of Materials using released components."
-msgstr ""
+msgstr "允許使用已發布的組件查看和/或更新普通物料清單中廢棄的組件。"
 
 #. module: plm
 #: model_terms:ir.ui.view,arch_db:plm.plm_component_create_normal_bom
@@ -402,14 +410,14 @@ msgstr "您確定要創建新的普通BOM嗎？"
 #: code:addons/plm/models/plm_descriptions.py:0 model:ir.model.fields,help:plm.field_plm_description__sequence
 #, python-format
 msgid "Assign the sequence order when displaying a list of product categories."
-msgstr ""
+msgstr "顯示產品類別清單時指定順序。"
 
 #. module: plm
 #. odoo-python
 #: code:addons/plm/models/product_product.py:0 model:ir.model.fields,help:plm.field_product_product__std_value1
 #, python-format
 msgid "Assign value to the first characteristic."
-msgstr "為第一個特徵賦值"
+msgstr "為第一個特徵賦值."
 
 #. module: plm
 #. odoo-python
@@ -417,7 +425,7 @@ msgstr "為第一個特徵賦值"
 #: model:ir.model.fields,help:plm.field_product_product__std_value3
 #, python-format
 msgid "Assign value to the second characteristic."
-msgstr "為第二個特徵賦值"
+msgstr "為第二個特徵賦值."
 
 #. module: plm
 #: model:ir.model.fields,field_description:plm.field_mrp_bom__att_count
@@ -441,7 +449,7 @@ msgstr "附件計數"
 #: code:addons/plm/models/ir_attachment.py:0
 #, python-format
 msgid "Attachment Relations."
-msgstr "附件關係"
+msgstr "附件關係."
 
 #. module: plm
 #: model:ir.model.fields,field_description:plm.field_ir_attachment__attachment_revision_count
@@ -455,7 +463,7 @@ msgstr "附件修訂計數"
 #: code:addons/plm/models/ir_attachment.py:0
 #, python-format
 msgid "Attachment Revs."
-msgstr "附件修訂版"
+msgstr "附件修訂版."
 
 #. module: plm
 #. odoo-python
@@ -551,7 +559,7 @@ msgstr "BOM只留下總結"
 #. module: plm
 #: model_terms:ir.ui.view,arch_db:plm.plm_bom_form_view
 msgid "BOM Rev."
-msgstr "物料清單版本"
+msgstr "物料清單版本."
 
 #. module: plm
 #: model:ir.model,name:plm.model_plm_backupdoc_wizard
@@ -700,14 +708,14 @@ msgstr "取消"
 #: code:addons/plm/models/ir_attachment.py:0
 #, python-format
 msgid "Cannot restore previous document Engineering Name = %r   Engineering Revision = %r   Id = %r"
-msgstr ""
+msgstr "無法復原先前的文件 工程名稱 = %r 工程修訂 = %r ID = %r"
 
 #. module: plm
 #. odoo-python
 #: code:addons/plm/models/product_product.py:0
 #, python-format
 msgid "Cannot restore previous product Engineering Code = %r   Engineering Revision = %r   Document Id = %r"
-msgstr ""
+msgstr "無法恢復先前的產品 工程代碼 = %r 工程修訂版 = %r 文件 ID = %r"
 
 #. module: plm
 #: model_terms:ir.ui.view,arch_db:plm.plm_component_base_form
@@ -1031,7 +1039,7 @@ msgstr "成本"
 #. module: plm
 #: model:ir.model.fields,help:plm.field_product_template__standard_price
 msgid "Cost of the product, in the default unit of measure of the product."
-msgstr "產品成本，以產品的預設計量單位表示"
+msgstr "產品成本，以產品的預設計量單位表示."
 
 #. module: plm
 #. odoo-python
@@ -1074,14 +1082,14 @@ msgstr "從WEB創建新版本"
 #: code:addons/plm/models/ir_attachment.py:0 code:addons/plm/models/product_product.py:0
 #, python-format
 msgid "Created : New Revision."
-msgstr "已創建：新修訂"
+msgstr "已創建：新修訂."
 
 #. module: plm
 #. odoo-python
 #: code:addons/plm/models/product_product.py:0
 #, python-format
 msgid "Created Normal Bom."
-msgstr "已創建普通Bom"
+msgstr "已創建普通Bom."
 
 #. module: plm
 #: model:ir.model.fields,field_description:plm.field_ir_attachment_relation__create_uid
@@ -1300,7 +1308,7 @@ msgstr "修訂版為%r的文檔%r正在簽出中，無法創建變體。"
 #: code:addons/plm/models/ir_attachment.py:0
 #, python-format
 msgid "Document %r with revision %r not present in Odoo."
-msgstr "Odoo中不存在修訂版%r的文件%r"
+msgstr "Odoo中不存在修訂版%r的文件%r."
 
 #. module: plm
 #. odoo-python
@@ -1398,7 +1406,7 @@ msgstr "文檔在簽出"
 #. module: plm
 #: model_terms:ir.ui.view,arch_db:plm.view_plm_settings
 msgid "Download a zip file containing all documents/and printout attached to a product or BOM."
-msgstr ""
+msgstr "下載包含產品或 BOM 附加的所有文件/和列印輸出的 zip 檔案。"
 
 #. module: plm
 #. odoo-python
@@ -1590,7 +1598,7 @@ msgstr "示例結果"
 #. module: plm
 #: model_terms:ir.ui.view,arch_db:plm.view_plm_description
 msgid "Example Values:<br/>"
-msgstr "示例值："
+msgstr "示例值：<br/>"
 
 #. module: plm
 #: model_terms:ir.ui.view,arch_db:plm.view_plm_description
@@ -1702,17 +1710,17 @@ msgstr "篩選有錯誤的文檔"
 #. module: plm
 #: model_terms:ir.ui.view,arch_db:plm.view_plm_description
 msgid "Final Description:  Standard Description + Format Feature Composed + Normative Rule<br/><b>    STD 1 Title n°2-3 UNI</b>"
-msgstr ""
+msgstr "最終描述：標準描述+格式特徵組成+規範規則<br/><b> STD 1 Title n°2-3 UNI</b>"
 
 #. module: plm
 #: model_terms:ir.ui.view,arch_db:plm.view_plm_description
 msgid "Final Description:  Standard Description + Format Feature Composed + Normative Rule<br/><b>    STD 1 Title n°B-2-C/3 UNI</b>"
-msgstr ""
+msgstr "最終描述：標準描述+格式特徵組成+規範規則<br/><b>STD 1標題n°B-2-C/3 UNI</b>"
 
 #. module: plm
 #: model_terms:ir.ui.view,arch_db:plm.view_plm_description
 msgid "Final Description:  Standard Description + Format Feature Composed + Normative Rule<br/><b>    STD A 1 Title n°B-2-C/3 UNI</b>"
-msgstr ""
+msgstr "最終描述：標準描述+格式特徵組成+規範規則<br/><b>STD A 1標題n°B-2-C/3 UNI</b>"
 
 #. module: plm
 #: model_terms:ir.ui.view,arch_db:plm.view_plm_finishing
@@ -1818,7 +1826,7 @@ msgstr "生成自"
 #: model:ir.model.fields,help:plm.field_plm_treatment__sequence
 #, python-format
 msgid "Gives the sequence order when displaying a list of product categories."
-msgstr "顯示產品類別清單時給出序列順序"
+msgstr "顯示產品類別清單時給出序列順序."
 
 #. module: plm
 #: model_terms:ir.ui.view,arch_db:plm.document_graph_view
@@ -1916,7 +1924,7 @@ msgstr "指示異常活動的圖示。"
 #. module: plm
 #: model_terms:ir.ui.view,arch_db:plm.view_plm_description
 msgid "If Normative Rule is defined, it will be added at the end of the description."
-msgstr ""
+msgstr "如果定義了規範性規則，則將其新增至描述的末尾。"
 
 #. module: plm
 #: model:ir.model.fields,help:plm.field_ir_attachment__message_needaction model:ir.model.fields,help:plm.field_product_template__message_needaction
@@ -1935,7 +1943,7 @@ msgstr "如果勾選此項， 某些消息將出現發送錯誤。"
 #. module: plm
 #: model:ir.model.fields,help:plm.field_plm_temporary__summarize
 msgid "If set as true, when a Bom line comes from EBOM was in the old normal BOM two lines where been summarized."
-msgstr ""
+msgstr "如果設定為 true，當 BOM 行來自 EBOM 時，舊的普通 BOM 中的兩行已被匯總。"
 
 #. module: plm
 #. odoo-python
@@ -1943,7 +1951,7 @@ msgstr ""
 #: model:ir.model.fields,help:plm.field_mrp_document__is_plm model:ir.model.fields,help:plm.field_product_document__is_plm
 #, python-format
 msgid "If the flag is set, the document is managed by the plm module, and imply its backup at each save and the visibility on some views."
-msgstr ""
+msgstr "如果設定了該標誌，則文件由 plm 模組管理，並且表示每次儲存時都會進行備份以及某些視圖上的可見性。"
 
 #. module: plm
 #. odoo-python
@@ -1953,6 +1961,7 @@ msgid ""
 "If the user adds custom BOM lines in the revision 0 BOM, than makes the revision 1, creates it's engineering BOM and than create the new Normal BOM "
 "form EBOM your revision 0 custom BOM lines are created in the new BOM"
 msgstr ""
+"如果使用者在修訂版 0 BOM 中新增自訂 BOM 行，則將修訂版設為 1，建立其工程 BOM，然後建立新的普通 BOM 表單 EBOM，您的修訂版 0 自訂 BOM 行將在新 BOM 中建立"
 
 #. module: plm
 #: model:ir.model.fields,field_description:plm.field_mrp_bom_line__product_tumbnail
@@ -2073,7 +2082,7 @@ msgstr "上個月"
 #: model:ir.model.fields,field_description:plm.field_plm_temporary_message__write_uid
 #: model:ir.model.fields,field_description:plm.field_plm_treatment__write_uid
 msgid "Last Updated by"
-msgstr "最後更新時間："
+msgstr "最後更新時間: "
 
 #. module: plm
 #: model:ir.model.fields,field_description:plm.field_ir_attachment_relation__write_date
@@ -2311,7 +2320,7 @@ msgstr "我的活動截止時間"
 #. module: plm
 #: model_terms:ir.ui.view,arch_db:plm.view_attachment_form_plm_hinerit
 msgid "N.Rev."
-msgstr "N.Rev"
+msgstr "N.Rev."
 
 #. module: plm
 #. odoo-python
@@ -2419,7 +2428,7 @@ msgstr "備註"
 #. module: plm
 #: model:ir.model.fields,field_description:plm.field_ir_attachment_relation__notes
 msgid "Notes: "
-msgstr "備註"
+msgstr "備註: "
 
 #. module: plm
 #: model:ir.model.fields,field_description:plm.field_ir_attachment__message_needaction_counter
@@ -2673,7 +2682,7 @@ msgstr "零件"
 #: code:addons/plm/models/ir_attachment.py:0
 #, python-format
 msgid "Permission denied for folder %r."
-msgstr "資料夾%r的許可權被拒絕"
+msgstr "資料夾%r的許可權被拒絕 ."
 
 #. module: plm
 #. odoo-python
@@ -2711,7 +2720,7 @@ msgstr "用工程零件號填充內部參考"
 #. module: plm
 #: model_terms:ir.ui.view,arch_db:plm.bom_structure_all
 msgid "Pos."
-msgstr "POS"
+msgstr "POS."
 
 #. module: plm
 #: model_terms:ir.ui.view,arch_db:plm.plm_bom_tree_structure
@@ -2754,7 +2763,7 @@ msgstr "預覽內容"
 #: model:ir.model.fields,help:plm.field_mrp_document__printout model:ir.model.fields,help:plm.field_product_document__printout
 #, python-format
 msgid "Print PDF content."
-msgstr "列印PDF內容"
+msgstr "列印PDF內容."
 
 #. module: plm
 #: model:ir.actions.report,name:plm.report_ir_attachment_pdf
@@ -2926,7 +2935,7 @@ msgstr "原材料必須是獨一無二的！"
 #: model:ir.model.fields,help:plm.field_product_template__engineering_material
 #, python-format
 msgid "Raw material for current product, only description for titleblock."
-msgstr "當前產品的原材料，僅標題列的描述"
+msgstr "當前產品的原材料，僅標題列的描述."
 
 #. module: plm
 #: model_terms:ir.ui.view,arch_db:plm.view_attachment_form_plm_hinerit
@@ -3074,7 +3083,7 @@ msgstr "發行"
 #: code:addons/plm/models/ir_attachment.py:0 code:addons/plm/models/product_product.py:0
 #, python-format
 msgid "Removed : Latest Revision."
-msgstr "已刪除：最新版本"
+msgstr "已刪除：最新版本."
 
 #. module: plm
 #: model:ir.model,name:plm.model_report_plm_bom_structure_all
@@ -3172,12 +3181,12 @@ msgstr "還原此文檔"
 #. module: plm
 #: model_terms:ir.ui.view,arch_db:plm.product_template_form_view_plm_custom
 msgid "Rev."
-msgstr "Rev"
+msgstr "Rev."
 
 #. module: plm
 #: model_terms:ir.ui.view,arch_db:plm.plm_product_product_normal_form_view_inherit
 msgid "Rev.s."
-msgstr "Rev.s"
+msgstr "Rev.s."
 
 #. module: plm
 #: model_terms:ir.ui.view,arch_db:plm.view_plm_settings
@@ -3373,14 +3382,14 @@ msgstr "規範"
 #. module: plm
 #: model:ir.model.fields,help:plm.field_product_product__sale_ok model:ir.model.fields,help:plm.field_product_template__sale_ok
 msgid "Specify if the product can be selected in a sales order line."
-msgstr "指定是否可以在銷售訂單行中選擇產品"
+msgstr "指定是否可以在銷售訂單行中選擇產品."
 
 #. module: plm
 #. odoo-python
 #: code:addons/plm/models/plm_descriptions.py:0 model:ir.model.fields,help:plm.field_plm_description__unitab
 #, python-format
 msgid "Specify normative rule (UNI, ISO, DIN...). It will be queued to build the product description."
-msgstr ""
+msgstr "指定規範規則（UNI、ISO、DIN...）。它將排隊以建立產品描述。"
 
 #. module: plm
 #. odoo-python
@@ -3441,7 +3450,7 @@ msgstr ""
 #: code:addons/plm/models/product_product.py:0
 #, python-format
 msgid "Status moved to: %s by %s."
-msgstr "狀態移動到：%s by%s"
+msgstr "狀態移動到：%s by %s."
 
 #. module: plm
 #: model_terms:ir.ui.view,arch_db:plm.document_search_button
@@ -3468,7 +3477,7 @@ msgstr "子修訂路徑"
 #. module: plm
 #: model:ir.model.fields,field_description:plm.field_plm_temporary__summarize
 msgid "Summarise Bom Lines if needed."
-msgstr "如果需要，總結Bom線"
+msgstr "如果需要，總結Bom線."
 
 #. module: plm
 #. odoo-python
@@ -3491,7 +3500,7 @@ msgstr "表面處理必須獨一無二！"
 #: model:ir.model.fields,help:plm.field_product_template__engineering_surface
 #, python-format
 msgid "Surface finishing for current product, only description for titleblock."
-msgstr ""
+msgstr "目前產品的表面處理，僅標題列的描述。"
 
 #. module: plm
 #: model_terms:ir.ui.view,arch_db:plm.plm_bom_tree_structure model_terms:ir.ui.view,arch_db:plm.plm_grp_by_parent
@@ -3571,7 +3580,7 @@ msgstr "文檔ID必須是唯一的！"
 #: model:ir.model.fields,help:plm.field_mrp_bom_line__engineering_revision
 #, python-format
 msgid "The revision of the product."
-msgstr "產品的修訂"
+msgstr "產品的修訂."
 
 #. module: plm
 #. odoo-python
@@ -3586,7 +3595,7 @@ msgstr "產品在其生命週期中的狀態。"
 #: code:addons/plm/models/mrp_bom_line.py:0
 #, python-format
 msgid "There aren't related boms to this line."
-msgstr "這條線沒有相關的bom"
+msgstr "這條線沒有相關的bom."
 
 #. module: plm
 #. odoo-python
@@ -3614,17 +3623,17 @@ msgstr "對當前產品進行熱處理，僅對標題列進行說明。"
 #. module: plm
 #: model_terms:ir.ui.view,arch_db:plm.view_plm_settings
 msgid "This Module extend the capability of the activity adding a workflow and validation process similar to the EC0/ECR"
-msgstr ""
+msgstr "此模組擴展了活動的功能，並添加了類似於 EC0/ECR 的工作流程和驗證過程"
 
 #. module: plm
 #: model_terms:ir.ui.view,arch_db:plm.view_plm_settings
 msgid "This Module extend the capability of the standard automated action based on the workflow action"
-msgstr ""
+msgstr "此模組基於工作流程操作擴展了標準自動化操作的能力"
 
 #. module: plm
 #: model:ir.model.fields,help:plm.field_product_template__engineering_code
 msgid "This is engineering reference to manage a different P/N from item Name."
-msgstr ""
+msgstr "這是管理與專案名稱不同的 P/N 的工程參考。"
 
 #. module: plm
 #. odoo-python
@@ -3632,19 +3641,19 @@ msgstr ""
 #: model:ir.model.fields,help:plm.field_mrp_bom_line__source_id
 #, python-format
 msgid "This is the document object that declares this BoM."
-msgstr "這是聲明此BoM的文檔物件"
+msgstr "這是聲明此BoM的文檔物件."
 
 #. module: plm
 #. odoo-python
 #: code:addons/plm/models/mrp_bom_line.py:0 model:ir.model.fields,help:plm.field_mrp_bom_line__itemnum
 #, python-format
 msgid "This is the item reference position into the CAD document that declares this BoM."
-msgstr ""
+msgstr "這是聲明此 BoM 的 CAD 文件中的項目參考位置。"
 
 #. module: plm
 #: model_terms:ir.ui.view,arch_db:plm.view_plm_settings
 msgid "This module adds permissions to sale module allowing some PLM procedures to work better."
-msgstr ""
+msgstr "此模組為銷售模組添加了權限，允許某些 PLM 程式更好地工作。"
 
 #. module: plm
 #: model_terms:ir.ui.view,arch_db:plm.view_plm_settings
@@ -3777,7 +3786,7 @@ msgstr ""
 #: code:addons/plm/models/ir_attachment.py:0
 #, python-format
 msgid "Unable to check-Out a document that is already checked IN by user %r"
-msgstr "無法簽出已被用戶%r 簽入的文件 "
+msgstr "無法簽出已被用戶%r 簽入的文件 ."
 
 #. module: plm
 #. odoo-python
@@ -3798,7 +3807,7 @@ msgstr "無法簽出所需的文檔（-）"
 #: code:addons/plm/models/ir_attachment.py:0
 #, python-format
 msgid "Unable to find document to check-out. Please save it."
-msgstr "找不到要簽出的文檔。請保存"
+msgstr "找不到要簽出的文檔。請保存."
 
 #. module: plm
 #. odoo-python
@@ -4044,7 +4053,7 @@ msgstr "昨天"
 #: code:addons/plm/models/plm_backup_document.py:0
 #, python-format
 msgid "You can restore only a document at a time."
-msgstr "一次只能還原一個文檔"
+msgstr "一次只能還原一筆文件"
 
 #. module: plm
 #: model_terms:ir.ui.view,arch_db:plm.view_plm_description
@@ -4144,7 +4153,7 @@ msgstr "saveChild.toCompute：父階“%s”指的是他自己"
 #: code:addons/plm/models/product_product_document_rel.py:0
 #, python-format
 msgid "saveChild: Unable to create a link."
-msgstr "saveChild:無法創建連結"
+msgstr "saveChild:無法創建連結."
 
 #. module: plm
 #. odoo-python
@@ -4158,7 +4167,7 @@ msgstr ""
 #: code:addons/plm/models/ir_attachment_relations.py:0
 #, python-format
 msgid "saveChild: Unable to create a relation."
-msgstr "saveChild:無法創建關係"
+msgstr "saveChild:無法創建關係."
 
 #. module: plm
 #. odoo-python

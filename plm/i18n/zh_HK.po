@@ -2073,7 +2073,7 @@ msgstr "PLM"
 #. module: plm
 #: model:res.groups,name:plm.group_plm_release_users
 msgid "PLM / Release Users"
-msgstr "PLM/释放用户"
+msgstr "PLM/发行用户"
 
 #. module: plm
 #: model:ir.model.fields,field_description:plm.field_res_config_settings__module_plm_box
@@ -3284,7 +3284,7 @@ msgstr "用户上次 Wkf"
 #: code:addons/plm/models/ir_attachment.py:0 code:addons/plm/models/product_product.py:0
 #, python-format
 msgid "User Release"
-msgstr "用户释放"
+msgstr "用户发行"
 
 #. module: plm
 #: code:addons/plm/models/ir_attachment.py:0 code:addons/plm/models/product_product.py:0
@@ -3319,7 +3319,7 @@ msgstr "用户评论"
 #: model:ir.model.fields,field_description:plm.field_mrp_document__attachment_release_user
 #: model:ir.model.fields,field_description:plm.field_product_product__release_user
 msgid "Utente Rilascio"
-msgstr "用户释放"
+msgstr "使用者权益"
 
 #. module: plm
 #: model:ir.model.fields,field_description:plm.field_ir_attachment__workflow_user
@@ -3336,12 +3336,12 @@ msgstr "值 1"
 #. module: plm
 #: model:ir.model.fields,field_description:plm.field_product_product__std_value2
 msgid "Valore 2"
-msgstr "价值 2"
+msgstr "值 2"
 
 #. module: plm
 #: model:ir.model.fields,field_description:plm.field_product_product__std_value3
 msgid "Valore 3"
-msgstr "价值 3"
+msgstr "值 3"
 
 #. module: plm
 #: code:addons/plm/models/product_product.py:0
@@ -3353,13 +3353,13 @@ msgstr "值 1"
 #: code:addons/plm/models/product_product.py:0
 #, python-format
 msgid "Value 2"
-msgstr "价值 2"
+msgstr "值 2"
 
 #. module: plm
 #: code:addons/plm/models/product_product.py:0
 #, python-format
 msgid "Value 3"
-msgstr "价值 3"
+msgstr "值 3"
 
 #. module: plm
 #: model_terms:ir.ui.view,arch_db:plm.view_mrp_bom_filter_inherit

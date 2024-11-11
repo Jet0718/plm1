@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 17.0-20240820\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-10-25 08:19+0000\n"
-"PO-Revision-Date: 2024-11-07 15:46+0800\n"
+"PO-Revision-Date: 2024-11-11 17:01+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: zh_TW\n"
@@ -73,7 +73,7 @@ msgstr "產品範本"
 #. module: plm_suspended
 #: model:ir.model.fields.selection,name:plm_suspended.selection__ir_attachment__engineering_state__released
 msgid "Released"
-msgstr "釋放"
+msgstr "發行"
 
 #. module: plm_suspended
 #: model:ir.model.fields,field_description:plm_suspended.field_ir_attachment__engineering_state

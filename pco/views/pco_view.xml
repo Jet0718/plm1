@@ -34,7 +34,7 @@
                             class="oe_highlight" invisible="state != 'New'"/> -->
                     <!-- #增加状态按钮                   -->
                     <button name="action_set_Review" string="审核中" type="object" invisible="state !='New'"/>
-                    <button name="action_set_Review_after" string="变更后审核" type="object"  invisible="btnflog ==1" />
+                    <button name="action_set_Review_after" string="变更后审核" type="object"  invisible="btnflog ==1 or state !='Review'" />
                     <button name="action_set_Approved" string="核准" type="object" invisible="state !='Review'"/>
                     <button name="action_set_Cancel" string="取消" type="object"/>
                     <!-- #将状态改成管道状态列 -->
