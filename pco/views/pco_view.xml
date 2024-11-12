@@ -14,7 +14,11 @@
                 <field name="item_number"  string="編號"/>
                 <field name="title"  string="主旨"/>
                 <field name="description" string="說明"/>
-                <field name="flow_class" string="審批類別"/>
+                <field name="classstr" string="審批類別" widget="many2many_tags" >
+                    <!-- <tree>
+                        <field name="name"/>
+                    </tree> -->
+                </field>
                 <field name="owner_id" string="責任人"/>
                 <field name="contactor_id" string="核決者"/>
                 <field name="tag_ids" string="Tags"/>
@@ -68,7 +72,7 @@
                         <page string="送審產品" invisible="showproduct ==1" >
                             <group>
                                 <field name="pco_product_id">
-                                    <tree> 
+                                    <tree editable="bottom">  
                                         <field name="affected_product_id" string="審批产品" />
                                         <field name="affected_product_version" string="審批产品版本" /> 
                                         <field name="new_affected_product_id" string="新版产品" readonly="1"/>
@@ -80,7 +84,7 @@
                         <page string="送審BOM" invisible="showbom ==1" >
                             <group>
                                 <field name="pco_bom_ids">
-                                    <tree> 
+                                    <tree editable="bottom"> 
                                         <field name="affected_bom_id" string="审批物料清单" />
                                         <field name="affected_bom_version" string="物料清单旧版本" /> 
                                         <field name="new_affected_bom_id" string="新版物料清单" readonly="1"/>

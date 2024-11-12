@@ -10,9 +10,9 @@
     
 
     <menuitem id="dco_menu_root_sec" name="DCO.图文签审单"  parent="plm.plm_menu"    sequence="50"/>
-    <menuitem id="dco_first_level_menu_sec" name="主目录" parent="dco_menu_root_sec" sequence="1"/> 
-    <menuitem id="dco_model_menu_action_sec" name="图文签审"  parent="dco_first_level_menu_sec" action="dco.dco_model_action"/>
-    <menuitem id="dco_setting_menu_sec" name="次目录" parent="dco_menu_root_sec" sequence="2"/>   
-    <menuitem id="dco_tag_setting_action_sec" name="标签" parent="dco_setting_menu_sec" action="dco.dco_tag_action"/>
+    <!-- <menuitem id="dco_first_level_menu_sec" name="主目录" parent="dco_menu_root_sec" sequence="1"/>  -->
+    <menuitem id="dco_model_menu_action_sec" name="图文签审"  parent="dco_menu_root_sec" action="dco.dco_model_action" sequence="1"/>
+    <!-- <menuitem id="dco_setting_menu_sec" name="次目录" parent="dco_menu_root_sec" sequence="2"/>    -->
+    <menuitem id="dco_tag_setting_action_sec" name="标签" parent="dco_menu_root_sec" action="dco.dco_tag_action" sequence="2"/>
  </odoo>
  
