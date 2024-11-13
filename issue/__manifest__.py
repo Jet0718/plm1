@@ -16,9 +16,21 @@
         'views/issue_menus.xml',
         'views/issue_pco_view.xml',
         'views/issue_dco_view.xml',
+        'views/issue_dashboard_action.xml',
         'views/issue_product_view.xml',
         'views/issue_project_view.xml',
         'data/issue_sequence.xml',  
         'data/issue_code_sequence.xml'  
-    ]
+    ],
+    'demo': [
+    ],
+    'installable': True,
+    'application': True,
+    'assets': {
+        'web.assets_backend': [
+            'issue/static/src/components/**/*.js',
+            'issue/static/src/components/**/*.xml',
+            'issue/static/src/components/**/*.scss',
+        ],
+    },
 }

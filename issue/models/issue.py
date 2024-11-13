@@ -61,6 +61,7 @@ class IssueModel(models.Model):
     d7 =fields.Text("D7预防再发")
     team_id =fields.Many2many('res.users',string='团队人员')
     issue_image = fields.Image('圖片',max_width=128,max_height=128)
+
     
     # #上传单个档案写法
     # binary_field = fields.Binary("档案")
@@ -72,10 +73,12 @@ class IssueModel(models.Model):
     @api.model_create_multi
     def create(self, vals_list):
          """ Create a sequence for the requirement model """
+        
          for vals in vals_list:
                if vals.get('item_number', _('New')) == _('New'):
                       vals['item_number'] = self.env['ir.sequence'].next_by_code('issue')
-                      return super().create(vals_list)     
+        
+         return super().create(vals_list)     
     
     #定义按钮
     def action_set_In_Verification(self):
@@ -114,3 +117,86 @@ class IssueModel(models.Model):
             raise UserError('已是"取消"状态')
         else:
             raise UserError('已关闭,不能被取消')
+
+
+ #增加欄位 2024.11.4 Herbert增加
+    @api.model
+    def get_tiles_data(self):
+        sources =self.search([('owner_id', '=' , self.env.user.id)])
+        source_customer=sources.filtered(lambda r: r.issue_Source == 'Customer')
+        source_internal=sources.filtered(lambda r: r.issue_Source == 'Internal')
+        source_supplier=sources.filtered(lambda r: r.issue_Source == 'Supplier')
+        return {
+            'total_customer': len(source_customer),
+            'total_internal': len(source_internal),
+            'total_supplier': len(source_supplier),
+        }
+    
+    @api.model
+    def getpco_status_counts(self):   
+             
+        new_count=self.env['pco'].search_count([('state', '=', 'New')])
+        review_count=self.env['pco'].search_count([('state', '=', 'Review')])
+        approved_count= self.env['pco'].search_count([('state', '=', 'Approved')])
+        cancel_count= self.env['pco'].search_count([('state', '=', 'Cancel')])
+        return {
+            'new_count': new_count,
+            'review_count': review_count,
+            'approved_count': approved_count,
+            'cancel_count':  cancel_count
+        }
+        # data = [
+        #     {'value': 335, 'name': '直接访问'},
+        #     {'value': 310, 'name': '邮件营销'},
+        #     {'value': 234, 'name': '联盟广告'},
+        #     {'value': 135, 'name': '视频广告'},
+        #     {'value': 1548, 'name': '搜索引擎'}
+        # ]
+        # return data
+    @api.model
+    def getdco_status_counts(self): 
+        new_count=self.env['dco'].search_count([('state', '=', 'New')])
+        review_count=self.env['dco'].search_count([('state', '=', 'Review')])
+        approved_count= self.env['dco'].search_count([('state', '=', 'Approved')])
+        cancel_count= self.env['dco'].search_count([('state', '=', 'Cancel')])
+        return {
+            'new_count': new_count,
+            'review_count': review_count,
+            'approved_count': approved_count,
+            'cancel_count':  cancel_count
+        }
+    # 项目阶段数量统计
+    @api.model
+    def getprj_tag_counts(self):      
+        domain = []  # 定义你的搜索过滤条件
+        ctagids_counts = self.env['project.project'].read_group(
+            domain,
+            ['tag_ids'],  # 分组依据的字段
+            ['tag_ids', 'count(id) as count']  # 要统计的字段
+        )
+        return ctagids_counts
+    
+    # 任务状态数量统计
+    @api.model
+    def gettask_state_counts(self):      
+        domain = []  # 定义你的搜索过滤条件
+        ctagids_counts = self.env['project.task'].read_group(
+            domain,
+            ['state'],  # 分组依据的字段
+            ['state', 'count(id) as count']  # 要统计的字段
+        )
+        return ctagids_counts
+    
+    # 项目阶段数量统计
+    @api.model
+    def getisu_tag_counts(self):      
+        domain = [('issue_code_ids', '!=', False), ('issue_code_ids', '!=', ''), ('issue_code_ids', '!=', (False, '')), ('issue_code_ids', '!=', None)] # 定义你的搜索过滤条件
+        
+        ctagids_counts = self.env['issue'].read_group(
+            domain,
+            ['issue_code_ids'],  # 分组依据的字段
+            ['issue_code_ids', 'count(id) as count']  # 要统计的字段
+        )
+        return ctagids_counts
+
+
