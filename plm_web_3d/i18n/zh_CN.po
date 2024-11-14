@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 17.0-20240820\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-10-28 08:40+0000\n"
-"PO-Revision-Date: 2024-11-07 15:55+0800\n"
+"PO-Revision-Date: 2024-11-14 12:06+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: zh_CN\n"
@@ -78,7 +78,7 @@ msgstr "<span>WebGl</span>"
 #. module: plm_web_3d
 #: model_terms:ir.ui.view,arch_db:plm_web_3d.main_treejs_view
 msgid "BackGround:"
-msgstr "背景:"
+msgstr "背景"
 
 #. module: plm_web_3d
 #: model:ir.model.fields,help:plm_web_3d.field_ir_attachment__has_web3d

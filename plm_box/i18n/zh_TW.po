@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 17.0-20240820\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-10-28 05:49+0000\n"
-"PO-Revision-Date: 2024-11-07 15:49+0800\n"
+"PO-Revision-Date: 2024-11-14 12:00+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: zh_CN\n"
@@ -49,7 +49,7 @@ msgstr "活動類型圖示"
 #: model:ir.model.fields,help:plm_box.field_res_config_settings__module_stock_plm_box
 #, python-format
 msgid "Adds plm_box relation to Warehouse."
-msgstr "將plm_box關係添加到倉庫."
+msgstr "將plm_box關係添加到倉庫"
 
 #. module: plm_box
 #. odoo-python
@@ -258,18 +258,18 @@ msgstr "圖示"
 #. module: plm_box
 #: model:ir.model.fields,help:plm_box.field_plm_box__activity_exception_icon
 msgid "Icon to indicate an exception activity."
-msgstr "指示異常活動的圖示."
+msgstr "指示異常活動的圖示"
 
 #. module: plm_box
 #: model:ir.model.fields,help:plm_box.field_plm_box__message_needaction
 msgid "If checked, new messages require your attention."
-msgstr "如果選中，新消息需要您注意."
+msgstr "如果選中，新消息需要您注意"
 
 #. module: plm_box
 #: model:ir.model.fields,help:plm_box.field_plm_box__message_has_error
 #: model:ir.model.fields,help:plm_box.field_plm_box__message_has_sms_error
 msgid "If checked, some messages have a delivery error."
-msgstr "如果選中，則某些郵件存在傳遞錯誤."
+msgstr "如果選中，則某些郵件存在傳遞錯誤"
 
 #. module: plm_box
 #: model:ir.model,name:plm_box.model_ir_attachment
@@ -478,7 +478,7 @@ msgstr "任務"
 #. module: plm_box
 #: model:ir.model.fields,help:plm_box.field_plm_box__activity_exception_decoration
 msgid "Type of the exception activity on record."
-msgstr "記錄中的異常活動類型."
+msgstr "記錄中的異常活動類型"
 
 #. module: plm_box
 #. odoo-python

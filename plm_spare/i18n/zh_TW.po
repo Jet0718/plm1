@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 17.0-20240820\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-10-28 07:41+0000\n"
-"PO-Revision-Date: 2024-11-07 15:52+0800\n"
+"PO-Revision-Date: 2024-11-14 12:01+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: zh_CN\n"
@@ -20,7 +20,7 @@ msgstr ""
 #. module: plm_spare
 #: model_terms:ir.ui.view,arch_db:plm_spare.bom_spare_header
 msgid "<b>Spare Parts Report</b>"
-msgstr "<b>備品報告</b>"
+msgstr "<b>備件報告</b>"
 
 #. module: plm_spare
 #: model_terms:ir.ui.view,arch_db:plm_spare.plm_component_manage_spare_bom
@@ -49,7 +49,7 @@ msgstr "物料清單 BoM 類型"
 #: code:addons/plm_spare/models/plm_temporary.py:0
 #, python-format
 msgid "BoM for Part {} already exists."
-msgstr "物料清單中的物料{}已存在."
+msgstr "物料清單中的物料{}已存在"
 
 #. module: plm_spare
 #: model_terms:ir.ui.view,arch_db:plm_spare.plm_component_manage_spare_bom
@@ -80,7 +80,7 @@ msgstr "創建備用Bom"
 #: code:addons/plm_spare/models/plm_temporary.py:0
 #, python-format
 msgid "Creating a new Spare Bom Error."
-msgstr "創建新的備用BOM錯誤."
+msgstr "創建新的備用BOM錯誤"
 
 #. module: plm_spare
 #: model_terms:ir.ui.view,arch_db:plm_spare.plm_component_manage_spare_bom
@@ -95,7 +95,7 @@ msgstr "創建備用Bom"
 #: model:ir.model.fields,help:plm_spare.field_product_document__used_for_spare
 #, python-format
 msgid "Drawings marked here will be used printing Spare Part Manual report."
-msgstr "此處標記的圖紙將用於列印備件手冊報告."
+msgstr "此處標記的圖紙將用於列印備件手冊報告"
 
 #. module: plm_spare
 #: model:ir.model,name:plm_spare.model_ir_attachment
