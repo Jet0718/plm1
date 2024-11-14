@@ -1,0 +1,565 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* dco
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-14 04:12+0000\n"
+"PO-Revision-Date: 2024-11-14 12:39+0800\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.5\n"
+
+#. module: dco
+#: model:ir.model.fields,field_description:dco.field_dco__message_needaction
+#: model:ir.model.fields,field_description:dco.field_dco_file__message_needaction
+#: model:ir.model.fields,field_description:dco.field_dco_tag__message_needaction
+msgid "Action Needed"
+msgstr "采取行动"
+
+#. module: dco
+#: model:ir.model.fields,field_description:dco.field_dco__activity_ids
+#: model:ir.model.fields,field_description:dco.field_dco_file__activity_ids
+#: model:ir.model.fields,field_description:dco.field_dco_tag__activity_ids
+msgid "Activities"
+msgstr "活动"
+
+#. module: dco
+#: model:ir.model.fields,field_description:dco.field_dco__activity_exception_decoration
+#: model:ir.model.fields,field_description:dco.field_dco_file__activity_exception_decoration
+#: model:ir.model.fields,field_description:dco.field_dco_tag__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "活动异常标记"
+
+#. module: dco
+#: model:ir.model.fields,field_description:dco.field_dco__activity_state
+#: model:ir.model.fields,field_description:dco.field_dco_file__activity_state
+#: model:ir.model.fields,field_description:dco.field_dco_tag__activity_state
+msgid "Activity State"
+msgstr "活动状态"
+
+#. module: dco
+#: model:ir.model.fields,field_description:dco.field_dco__activity_type_icon
+#: model:ir.model.fields,field_description:dco.field_dco_file__activity_type_icon
+#: model:ir.model.fields,field_description:dco.field_dco_tag__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "活动类型图标"
+
+#. module: dco
+#: model:ir.model.fields,field_description:dco.field_dco__message_attachment_count
+#: model:ir.model.fields,field_description:dco.field_dco_file__message_attachment_count
+#: model:ir.model.fields,field_description:dco.field_dco_tag__message_attachment_count
+msgid "Attachment Count"
+msgstr "附件数"
+
+#. module: dco
+#: model:ir.model.fields,field_description:dco.field_dco__btnflog
+msgid "Btnflog"
+msgstr "Btnflog"
+
+#. module: dco
+#: model:ir.model.fields,field_description:dco.field_dco__create_uid
+#: model:ir.model.fields,field_description:dco.field_dco_file__create_uid
+#: model:ir.model.fields,field_description:dco.field_dco_tag__create_uid
+msgid "Created by"
+msgstr "创造者"
+
+#. module: dco
+#: model:ir.model.fields,field_description:dco.field_dco__create_date
+#: model:ir.model.fields,field_description:dco.field_dco_file__create_date
+#: model:ir.model.fields,field_description:dco.field_dco_tag__create_date
+msgid "Created on"
+msgstr "创建日期"
+
+#. module: dco
+#: model:ir.model,name:dco.model_dco
+msgid "DCO main model for OpenPLM."
+msgstr "OpenPLM 的 DCO 主模型"
+
+#. module: dco
+#: model:ir.ui.menu,name:dco.dco_menu_root_sec
+msgid "DCO.图文签审单"
+msgstr "DCO.图文签审单"
+
+#. module: dco
+#: model:ir.model.fields,field_description:dco.field_dco_file__dco_id
+msgid "Dco"
+msgstr "Dco"
+
+#. module: dco
+#: model:ir.model.fields,field_description:dco.field_dco__display_name
+#: model:ir.model.fields,field_description:dco.field_dco_file__display_name
+#: model:ir.model.fields,field_description:dco.field_dco_tag__display_name
+msgid "Display Name"
+msgstr "显示名称"
+
+#. module: dco
+#: model:ir.model.fields,field_description:dco.field_dco__message_follower_ids
+#: model:ir.model.fields,field_description:dco.field_dco_file__message_follower_ids
+#: model:ir.model.fields,field_description:dco.field_dco_tag__message_follower_ids
+msgid "Followers"
+msgstr "关注者"
+
+#. module: dco
+#: model:ir.model.fields,field_description:dco.field_dco__message_partner_ids
+#: model:ir.model.fields,field_description:dco.field_dco_file__message_partner_ids
+#: model:ir.model.fields,field_description:dco.field_dco_tag__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "关注者(合作伙伴)"
+
+#. module: dco
+#: model:ir.model.fields,help:dco.field_dco__activity_type_icon
+#: model:ir.model.fields,help:dco.field_dco_file__activity_type_icon
+#: model:ir.model.fields,help:dco.field_dco_tag__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "字体很棒的图标，例如fa-任务"
+
+#. module: dco
+#: model:ir.model.fields,field_description:dco.field_dco__has_message
+#: model:ir.model.fields,field_description:dco.field_dco_file__has_message
+#: model:ir.model.fields,field_description:dco.field_dco_tag__has_message
+msgid "Has Message"
+msgstr "有留言"
+
+#. module: dco
+#: model:ir.model.fields,field_description:dco.field_dco__id
+#: model:ir.model.fields,field_description:dco.field_dco_file__id
+#: model:ir.model.fields,field_description:dco.field_dco_tag__id
+msgid "ID"
+msgstr "ID"
+
+#. module: dco
+#: model:ir.model.fields,field_description:dco.field_dco__activity_exception_icon
+#: model:ir.model.fields,field_description:dco.field_dco_file__activity_exception_icon
+#: model:ir.model.fields,field_description:dco.field_dco_tag__activity_exception_icon
+msgid "Icon"
+msgstr "图标"
+
+#. module: dco
+#: model:ir.model.fields,help:dco.field_dco__activity_exception_icon
+#: model:ir.model.fields,help:dco.field_dco_file__activity_exception_icon
+#: model:ir.model.fields,help:dco.field_dco_tag__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "指示异常活动的图标"
+
+#. module: dco
+#: model:ir.model.fields,help:dco.field_dco__message_needaction
+#: model:ir.model.fields,help:dco.field_dco_file__message_needaction
+#: model:ir.model.fields,help:dco.field_dco_tag__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "如果选中，则有新消息需要您注意"
+
+#. module: dco
+#: model:ir.model.fields,help:dco.field_dco__message_has_error
+#: model:ir.model.fields,help:dco.field_dco__message_has_sms_error
+#: model:ir.model.fields,help:dco.field_dco_file__message_has_error
+#: model:ir.model.fields,help:dco.field_dco_file__message_has_sms_error
+#: model:ir.model.fields,help:dco.field_dco_tag__message_has_error
+#: model:ir.model.fields,help:dco.field_dco_tag__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "如果检查，则某些消息存在传送错误"
+
+#. module: dco
+#: model:ir.model.fields,field_description:dco.field_dco__message_is_follower
+#: model:ir.model.fields,field_description:dco.field_dco_file__message_is_follower
+#: model:ir.model.fields,field_description:dco.field_dco_tag__message_is_follower
+msgid "Is Follower"
+msgstr "为关注者"
+
+#. module: dco
+#: model:ir.model.fields,field_description:dco.field_dco__write_uid
+#: model:ir.model.fields,field_description:dco.field_dco_file__write_uid
+#: model:ir.model.fields,field_description:dco.field_dco_tag__write_uid
+msgid "Last Updated by"
+msgstr "最后更新者"
+
+#. module: dco
+#: model:ir.model.fields,field_description:dco.field_dco__write_date
+#: model:ir.model.fields,field_description:dco.field_dco_file__write_date
+#: model:ir.model.fields,field_description:dco.field_dco_tag__write_date
+msgid "Last Updated on"
+msgstr "最后更新时间"
+
+#. module: dco
+#: model:ir.model.fields,field_description:dco.field_dco__message_has_error
+#: model:ir.model.fields,field_description:dco.field_dco_file__message_has_error
+#: model:ir.model.fields,field_description:dco.field_dco_tag__message_has_error
+msgid "Message Delivery error"
+msgstr "消息传递错误"
+
+#. module: dco
+#: model:ir.model.fields,field_description:dco.field_dco__message_ids
+#: model:ir.model.fields,field_description:dco.field_dco_file__message_ids
+#: model:ir.model.fields,field_description:dco.field_dco_tag__message_ids
+msgid "Messages"
+msgstr "留言"
+
+#. module: dco
+#: model:ir.model.fields,field_description:dco.field_dco__binary_fields
+msgid "Multi Files Upload"
+msgstr "多文件上传"
+
+#. module: dco
+#: model:ir.model.fields,field_description:dco.field_dco__my_activity_date_deadline
+#: model:ir.model.fields,field_description:dco.field_dco_file__my_activity_date_deadline
+#: model:ir.model.fields,field_description:dco.field_dco_tag__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "我的活动截止日期"
+
+#. module: dco
+#. odoo-python
+#: code:addons/dco/models/dco.py:0
+#, python-format
+msgid "New"
+msgstr "新的"
+
+#. module: dco
+#: model:ir.model.fields,field_description:dco.field_dco__activity_calendar_event_id
+#: model:ir.model.fields,field_description:dco.field_dco_file__activity_calendar_event_id
+#: model:ir.model.fields,field_description:dco.field_dco_tag__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr "下一个活动日历事件"
+
+#. module: dco
+#: model:ir.model.fields,field_description:dco.field_dco__activity_date_deadline
+#: model:ir.model.fields,field_description:dco.field_dco_file__activity_date_deadline
+#: model:ir.model.fields,field_description:dco.field_dco_tag__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "下一个活动截止日期"
+
+#. module: dco
+#: model:ir.model.fields,field_description:dco.field_dco__activity_summary
+#: model:ir.model.fields,field_description:dco.field_dco_file__activity_summary
+#: model:ir.model.fields,field_description:dco.field_dco_tag__activity_summary
+msgid "Next Activity Summary"
+msgstr "下一步活动总结"
+
+#. module: dco
+#: model:ir.model.fields,field_description:dco.field_dco__activity_type_id
+#: model:ir.model.fields,field_description:dco.field_dco_file__activity_type_id
+#: model:ir.model.fields,field_description:dco.field_dco_tag__activity_type_id
+msgid "Next Activity Type"
+msgstr "下一个活动类型"
+
+#. module: dco
+#: model:ir.model.fields,field_description:dco.field_dco__message_needaction_counter
+#: model:ir.model.fields,field_description:dco.field_dco_file__message_needaction_counter
+#: model:ir.model.fields,field_description:dco.field_dco_tag__message_needaction_counter
+msgid "Number of Actions"
+msgstr "活动数"
+
+#. module: dco
+#: model:ir.model.fields,field_description:dco.field_dco__message_has_error_counter
+#: model:ir.model.fields,field_description:dco.field_dco_file__message_has_error_counter
+#: model:ir.model.fields,field_description:dco.field_dco_tag__message_has_error_counter
+msgid "Number of errors"
+msgstr "错误数"
+
+#. module: dco
+#: model:ir.model.fields,help:dco.field_dco__message_needaction_counter
+#: model:ir.model.fields,help:dco.field_dco_file__message_needaction_counter
+#: model:ir.model.fields,help:dco.field_dco_tag__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "需要采取行动的消息数量"
+
+#. module: dco
+#: model:ir.model.fields,help:dco.field_dco__message_has_error_counter
+#: model:ir.model.fields,help:dco.field_dco_file__message_has_error_counter
+#: model:ir.model.fields,help:dco.field_dco_tag__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "发送错误的消息数"
+
+#. module: dco
+#: model:ir.model.fields,field_description:dco.field_dco__rating_ids
+#: model:ir.model.fields,field_description:dco.field_dco_file__rating_ids
+#: model:ir.model.fields,field_description:dco.field_dco_tag__rating_ids
+msgid "Ratings"
+msgstr "评级"
+
+#. module: dco
+#: model:ir.model.fields,field_description:dco.field_dco__activity_user_id
+#: model:ir.model.fields,field_description:dco.field_dco_file__activity_user_id
+#: model:ir.model.fields,field_description:dco.field_dco_tag__activity_user_id
+msgid "Responsible User"
+msgstr "负责人员"
+
+#. module: dco
+#: model:ir.model.fields,field_description:dco.field_dco__message_has_sms_error
+#: model:ir.model.fields,field_description:dco.field_dco_file__message_has_sms_error
+#: model:ir.model.fields,field_description:dco.field_dco_tag__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "短信发送错误"
+
+#. module: dco
+#: model:ir.model.fields,help:dco.field_dco__activity_state
+#: model:ir.model.fields,help:dco.field_dco_file__activity_state
+#: model:ir.model.fields,help:dco.field_dco_tag__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"基于活动的状态\n"
+"逾期：到期日已过\n"
+"今天：活动日期为今天\n"
+"计划：未来的活动。"
+
+#. module: dco
+#: model:ir.model.fields,field_description:dco.field_dco__tag_ids
+#: model_terms:ir.ui.view,arch_db:dco.dco_view_form
+#: model_terms:ir.ui.view,arch_db:dco.dco_view_tree
+msgid "Tags"
+msgstr "标签"
+
+#. module: dco
+#: model:ir.model.fields,help:dco.field_dco__activity_exception_decoration
+#: model:ir.model.fields,help:dco.field_dco_file__activity_exception_decoration
+#: model:ir.model.fields,help:dco.field_dco_tag__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "记录的异常活动的类型"
+
+#. module: dco
+#: model:ir.model.fields,field_description:dco.field_dco__website_message_ids
+#: model:ir.model.fields,field_description:dco.field_dco_file__website_message_ids
+#: model:ir.model.fields,field_description:dco.field_dco_tag__website_message_ids
+msgid "Website Messages"
+msgstr "网站留言"
+
+#. module: dco
+#: model:ir.model.fields,help:dco.field_dco__website_message_ids
+#: model:ir.model.fields,help:dco.field_dco_file__website_message_ids
+#: model:ir.model.fields,help:dco.field_dco_tag__website_message_ids
+msgid "Website communication history"
+msgstr "网站通讯历史"
+
+#. module: dco
+#: model:ir.model,name:dco.model_dco_file
+msgid "dco file main model for DCO."
+msgstr "dco的dco文件主模型。"
+
+#. module: dco
+#: model:ir.actions.act_window,name:dco.dco_tag_action
+#: model_terms:ir.ui.view,arch_db:dco.dco_tag_view_form
+#: model_terms:ir.ui.view,arch_db:dco.dco_tag_view_tree
+msgid "dco标签"
+msgstr "dco标签"
+
+#. module: dco
+#: model_terms:ir.ui.view,arch_db:dco.dco_tag_view_search
+msgid "dco标签搜寻"
+msgstr "dco标签搜寻"
+
+#. module: dco
+#: model:ir.model,name:dco.model_dco_tag
+msgid "tag model for dco. "
+msgstr "dco 标签模型"
+
+#. module: dco
+#: model:ir.model.fields,field_description:dco.field_dco__title
+#: model_terms:ir.ui.view,arch_db:dco.dco_view_form
+#: model_terms:ir.ui.view,arch_db:dco.dco_view_search
+#: model_terms:ir.ui.view,arch_db:dco.dco_view_tree
+msgid "主旨"
+msgstr "主旨"
+
+#. module: dco
+#: model:ir.model.fields.selection,name:dco.selection__dco__flow_class__system
+msgid "体系文件"
+msgstr "体系文件"
+
+#. module: dco
+#: model:ir.model.fields.selection,name:dco.selection__dco__state__cancel
+#: model_terms:ir.ui.view,arch_db:dco.dco_view_form
+msgid "取消"
+msgstr "取消"
+
+#. module: dco
+#: model_terms:ir.ui.view,arch_db:dco.dco_view_form
+msgid "变更后审核"
+msgstr "变更后审核"
+
+#. module: dco
+#: model:ir.model.fields,field_description:dco.field_dco__active
+msgid "啟用"
+msgstr "启用"
+
+#. module: dco
+#: model:ir.ui.menu,name:dco.dco_model_menu_action_sec
+msgid "图文签审"
+msgstr "图文签审"
+
+#. module: dco
+#: model:ir.actions.act_window,name:dco.dco_model_action
+#: model_terms:ir.ui.view,arch_db:dco.dco_view_form
+#: model_terms:ir.ui.view,arch_db:dco.dco_view_tree
+msgid "图文签审单"
+msgstr "图文签审单"
+
+#. module: dco
+#: model_terms:ir.ui.view,arch_db:dco.dco_view_search
+msgid "图文签审单搜寻"
+msgstr "图文签审单搜寻"
+
+#. module: dco
+#: model:ir.model.fields.selection,name:dco.selection__dco__state__review
+#: model_terms:ir.ui.view,arch_db:dco.dco_view_form
+msgid "审核中"
+msgstr "审核中"
+
+#. module: dco
+#: model:ir.model.fields,field_description:dco.field_dco__affected_item_id
+#: model:ir.model.fields,field_description:dco.field_dco_file__affected_item_id
+#: model_terms:ir.ui.view,arch_db:dco.dco_file_view_form
+#: model_terms:ir.ui.view,arch_db:dco.dco_file_view_search
+#: model_terms:ir.ui.view,arch_db:dco.dco_file_view_tree
+#: model_terms:ir.ui.view,arch_db:dco.dco_view_form
+#: model_terms:ir.ui.view,arch_db:dco.dco_view_tree
+msgid "審批文件"
+msgstr "审批文件"
+
+#. module: dco
+#: model_terms:ir.ui.view,arch_db:dco.dco_file_view_form
+#: model_terms:ir.ui.view,arch_db:dco.dco_file_view_search
+#: model_terms:ir.ui.view,arch_db:dco.dco_file_view_tree
+#: model_terms:ir.ui.view,arch_db:dco.dco_view_form
+msgid "審批文件版本"
+msgstr "审批文件版本"
+
+#. module: dco
+#: model:ir.model.fields,field_description:dco.field_dco__flow_class
+#: model_terms:ir.ui.view,arch_db:dco.dco_view_form
+#: model_terms:ir.ui.view,arch_db:dco.dco_view_tree
+msgid "審批類別"
+msgstr "审批类别"
+
+#. module: dco
+#: model:ir.model.fields.selection,name:dco.selection__dco__flow_class__technical
+msgid "技术文件"
+msgstr "技术文件"
+
+#. module: dco
+#: model:ir.model.fields,field_description:dco.field_dco__new_affected_item_id
+#: model:ir.model.fields,field_description:dco.field_dco_file__new_affected_item_id
+#: model_terms:ir.ui.view,arch_db:dco.dco_file_view_form
+#: model_terms:ir.ui.view,arch_db:dco.dco_file_view_search
+#: model_terms:ir.ui.view,arch_db:dco.dco_file_view_tree
+#: model_terms:ir.ui.view,arch_db:dco.dco_view_form
+msgid "新版審批文件"
+msgstr "新版审批文件"
+
+#. module: dco
+#: model_terms:ir.ui.view,arch_db:dco.dco_file_view_form
+#: model_terms:ir.ui.view,arch_db:dco.dco_file_view_search
+#: model_terms:ir.ui.view,arch_db:dco.dco_file_view_tree
+#: model_terms:ir.ui.view,arch_db:dco.dco_view_form
+msgid "新版審批文件版本"
+msgstr "新版审批文件版本"
+
+#. module: dco
+#: model:ir.model.fields,field_description:dco.field_dco__new_affected_item_version
+#: model:ir.model.fields,field_description:dco.field_dco_file__new_affected_item_version
+msgid "新版本"
+msgstr "新版本"
+
+#. module: dco
+#: model:ir.model.fields,field_description:dco.field_dco__affected_item_version
+#: model:ir.model.fields,field_description:dco.field_dco_file__affected_item_version
+msgid "旧版本"
+msgstr "旧版本"
+
+#. module: dco
+#: model:ir.ui.menu,name:dco.dco_tag_setting_action_sec
+msgid "标签"
+msgstr "标签"
+
+#. module: dco
+#: model:ir.model.fields,field_description:dco.field_dco_tag__name
+#: model_terms:ir.ui.view,arch_db:dco.dco_tag_view_form
+#: model_terms:ir.ui.view,arch_db:dco.dco_tag_view_search
+#: model_terms:ir.ui.view,arch_db:dco.dco_tag_view_tree
+msgid "标签名称"
+msgstr "标签名称"
+
+#. module: dco
+#: model:ir.model.fields,field_description:dco.field_dco_tag__description
+#: model_terms:ir.ui.view,arch_db:dco.dco_tag_view_form
+#: model_terms:ir.ui.view,arch_db:dco.dco_tag_view_search
+#: model_terms:ir.ui.view,arch_db:dco.dco_tag_view_tree
+msgid "标签说明"
+msgstr "标签说明"
+
+#. module: dco
+#: model:ir.model.fields.selection,name:dco.selection__dco__state__approved
+#: model_terms:ir.ui.view,arch_db:dco.dco_view_form
+msgid "核准"
+msgstr "核准"
+
+#. module: dco
+#: model:ir.model.fields,field_description:dco.field_dco__contactor_id
+#: model_terms:ir.ui.view,arch_db:dco.dco_view_form
+#: model_terms:ir.ui.view,arch_db:dco.dco_view_tree
+msgid "核決者"
+msgstr "核決者"
+
+#. module: dco
+#: model:ir.model.fields,field_description:dco.field_dco__state
+msgid "状态"
+msgstr "状态"
+
+#. module: dco
+#: model_terms:ir.ui.view,arch_db:dco.dco_view_tree
+msgid "狀態"
+msgstr "状态"
+
+#. module: dco
+#: model:ir.model.fields,field_description:dco.field_dco__item_number
+#: model_terms:ir.ui.view,arch_db:dco.dco_view_form
+#: model_terms:ir.ui.view,arch_db:dco.dco_view_search
+#: model_terms:ir.ui.view,arch_db:dco.dco_view_tree
+msgid "編號"
+msgstr "编号"
+
+#. module: dco
+#: model:ir.model.fields.selection,name:dco.selection__dco__state__new
+msgid "草稿"
+msgstr "草稿"
+
+#. module: dco
+#: model:ir.model.fields,field_description:dco.field_dco__description
+#: model_terms:ir.ui.view,arch_db:dco.dco_view_form
+#: model_terms:ir.ui.view,arch_db:dco.dco_view_tree
+msgid "說明"
+msgstr "说明"
+
+#. module: dco
+#: model:ir.model.fields,field_description:dco.field_dco__owner_id
+#: model_terms:ir.ui.view,arch_db:dco.dco_view_form
+#: model_terms:ir.ui.view,arch_db:dco.dco_view_tree
+msgid "責任人"
+msgstr "责任人"
+
+#. module: dco
+#: model:ir.actions.act_window,name:dco.dco_file_model_action
+#: model_terms:ir.ui.view,arch_db:dco.dco_file_view_form
+#: model_terms:ir.ui.view,arch_db:dco.dco_view_form
+msgid "送審文件"
+msgstr "送审文件"
+
+#. module: dco
+#: model_terms:ir.ui.view,arch_db:dco.dco_file_view_search
+#: model_terms:ir.ui.view,arch_db:dco.dco_file_view_tree
+msgid "送審物件"
+msgstr "送审物件"
+
+#. module: dco
+#: model_terms:ir.ui.view,arch_db:dco.dco_view_form
+msgid "附件"
+msgstr "附件"

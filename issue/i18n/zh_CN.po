@@ -1,0 +1,856 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* issue
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-14 04:13+0000\n"
+"PO-Revision-Date: 2024-11-14 13:03+0800\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.5\n"
+
+#. module: issue
+#: model:ir.model.fields,field_description:issue.field_issue__message_needaction
+#: model:ir.model.fields,field_description:issue.field_issue_code__message_needaction
+msgid "Action Needed"
+msgstr "采取行动"
+
+#. module: issue
+#: model:ir.model.fields,field_description:issue.field_issue__activity_ids
+#: model:ir.model.fields,field_description:issue.field_issue_code__activity_ids
+msgid "Activities"
+msgstr "活动"
+
+#. module: issue
+#: model:ir.model.fields,field_description:issue.field_issue__activity_exception_decoration
+#: model:ir.model.fields,field_description:issue.field_issue_code__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "活动异常标记"
+
+#. module: issue
+#: model:ir.model.fields,field_description:issue.field_issue__activity_state
+#: model:ir.model.fields,field_description:issue.field_issue_code__activity_state
+msgid "Activity State"
+msgstr "活动状态"
+
+#. module: issue
+#: model:ir.model.fields,field_description:issue.field_issue__activity_type_icon
+#: model:ir.model.fields,field_description:issue.field_issue_code__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "活动类型图标"
+
+#. module: issue
+#: model:ir.model.fields,field_description:issue.field_issue__message_attachment_count
+#: model:ir.model.fields,field_description:issue.field_issue_code__message_attachment_count
+msgid "Attachment Count"
+msgstr "附件数"
+
+#. module: issue
+#: model:ir.model.fields,field_description:issue.field_issue__create_uid
+#: model:ir.model.fields,field_description:issue.field_issue_code__create_uid
+msgid "Created by"
+msgstr "创造者"
+
+#. module: issue
+#: model:ir.model.fields,field_description:issue.field_issue__create_date
+#: model:ir.model.fields,field_description:issue.field_issue_code__create_date
+msgid "Created on"
+msgstr "创建日期"
+
+#. module: issue
+#: model:ir.model.fields,field_description:issue.field_issue__d3
+#: model_terms:ir.ui.view,arch_db:issue.issue_view_form
+#: model_terms:ir.ui.view,arch_db:issue.issue_view_tree
+msgid "D3抑制措施"
+msgstr "D3抑制措施"
+
+#. module: issue
+#: model:ir.model.fields,field_description:issue.field_issue__d4
+#: model_terms:ir.ui.view,arch_db:issue.issue_view_form
+#: model_terms:ir.ui.view,arch_db:issue.issue_view_tree
+msgid "D4原因分析"
+msgstr "D4原因分析"
+
+#. module: issue
+#: model:ir.model.fields,field_description:issue.field_issue__d5
+#: model_terms:ir.ui.view,arch_db:issue.issue_view_form
+#: model_terms:ir.ui.view,arch_db:issue.issue_view_tree
+msgid "D5纠正措施"
+msgstr "D5纠正措施"
+
+#. module: issue
+#: model:ir.model.fields,field_description:issue.field_issue__d6
+#: model_terms:ir.ui.view,arch_db:issue.issue_view_form
+#: model_terms:ir.ui.view,arch_db:issue.issue_view_tree
+msgid "D6执行问题改善"
+msgstr "D6执行问题改善"
+
+#. module: issue
+#: model:ir.model.fields,field_description:issue.field_issue__d7
+#: model_terms:ir.ui.view,arch_db:issue.issue_view_form
+#: model_terms:ir.ui.view,arch_db:issue.issue_view_tree
+msgid "D7预防再发"
+msgstr "D7预防再发"
+
+#. module: issue
+#: model:ir.model,name:issue.model_dco
+msgid "DCO main model for OpenPLM."
+msgstr "OpenPLM 的 DCO 主模型"
+
+#. module: issue
+#: model:ir.model.fields,field_description:issue.field_issue__display_name
+#: model:ir.model.fields,field_description:issue.field_issue_code__display_name
+msgid "Display Name"
+msgstr "显示名称"
+
+#. module: issue
+#: model:ir.model.fields,field_description:issue.field_issue__message_follower_ids
+#: model:ir.model.fields,field_description:issue.field_issue_code__message_follower_ids
+msgid "Followers"
+msgstr "关注者"
+
+#. module: issue
+#: model:ir.model.fields,field_description:issue.field_issue__message_partner_ids
+#: model:ir.model.fields,field_description:issue.field_issue_code__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "关注者(合作伙伴)"
+
+#. module: issue
+#: model:ir.model.fields,help:issue.field_issue__activity_type_icon
+#: model:ir.model.fields,help:issue.field_issue_code__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "字体很棒的图标，例如fa-任务"
+
+#. module: issue
+#: model:ir.model.fields,field_description:issue.field_issue__has_message
+#: model:ir.model.fields,field_description:issue.field_issue_code__has_message
+msgid "Has Message"
+msgstr "有留言"
+
+#. module: issue
+#: model:ir.model.fields.selection,name:issue.selection__issue__priority__2
+msgid "High"
+msgstr "高"
+
+#. module: issue
+#: model:ir.model.fields,field_description:issue.field_issue__id
+#: model:ir.model.fields,field_description:issue.field_issue_code__id
+msgid "ID"
+msgstr "ID"
+
+#. module: issue
+#: model:ir.model,name:issue.model_issue
+msgid "ISSUE main model for OpenPLM."
+msgstr "OpenPLM 的 問題單 主模型"
+
+#. module: issue
+#: model:ir.model.fields,field_description:issue.field_issue__activity_exception_icon
+#: model:ir.model.fields,field_description:issue.field_issue_code__activity_exception_icon
+msgid "Icon"
+msgstr "图标"
+
+#. module: issue
+#: model:ir.model.fields,help:issue.field_issue__activity_exception_icon
+#: model:ir.model.fields,help:issue.field_issue_code__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "指示异常活动的图标"
+
+#. module: issue
+#: model:ir.model.fields,help:issue.field_issue__message_needaction
+#: model:ir.model.fields,help:issue.field_issue_code__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "如果选中，则有新消息需要您注意"
+
+#. module: issue
+#: model:ir.model.fields,help:issue.field_issue__message_has_error
+#: model:ir.model.fields,help:issue.field_issue__message_has_sms_error
+#: model:ir.model.fields,help:issue.field_issue_code__message_has_error
+#: model:ir.model.fields,help:issue.field_issue_code__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "如果检查，则某些消息存在传送错误"
+
+#. module: issue
+#: model:ir.model.fields,field_description:issue.field_issue__message_is_follower
+#: model:ir.model.fields,field_description:issue.field_issue_code__message_is_follower
+msgid "Is Follower"
+msgstr "为关注者"
+
+#. module: issue
+#: model:ir.model.fields,field_description:issue.field_dco__issue_ids
+#: model:ir.model.fields,field_description:issue.field_pco__issue_ids
+#: model:ir.model.fields,field_description:issue.field_product_product__issue_ids
+#: model:ir.model.fields,field_description:issue.field_product_template__issue_ids
+#: model:ir.model.fields,field_description:issue.field_project_project__issue_ids
+#: model_terms:ir.ui.view,arch_db:issue.issue_dco_form_view
+#: model_terms:ir.ui.view,arch_db:issue.issue_pco_form_view
+#: model_terms:ir.ui.view,arch_db:issue.issue_product_form_view
+#: model_terms:ir.ui.view,arch_db:issue.issue_project_form_view
+msgid "Issue"
+msgstr "问题单"
+
+#. module: issue
+#: model:ir.ui.menu,name:issue.issue_menu_root_sec
+msgid "Issue.问题单"
+msgstr "Issue.问题单"
+
+#. module: issue
+#: model:ir.model.fields,field_description:issue.field_issue__write_uid
+#: model:ir.model.fields,field_description:issue.field_issue_code__write_uid
+msgid "Last Updated by"
+msgstr "最后更新者"
+
+#. module: issue
+#: model:ir.model.fields,field_description:issue.field_issue__write_date
+#: model:ir.model.fields,field_description:issue.field_issue_code__write_date
+msgid "Last Updated on"
+msgstr "最后更新时间"
+
+#. module: issue
+#: model:ir.model.fields.selection,name:issue.selection__issue__priority__1
+msgid "Medium"
+msgstr "中等的"
+
+#. module: issue
+#: model:ir.model.fields,field_description:issue.field_issue__message_has_error
+#: model:ir.model.fields,field_description:issue.field_issue_code__message_has_error
+msgid "Message Delivery error"
+msgstr "消息传递错误"
+
+#. module: issue
+#: model:ir.model.fields,field_description:issue.field_issue__message_ids
+#: model:ir.model.fields,field_description:issue.field_issue_code__message_ids
+msgid "Messages"
+msgstr "留言"
+
+#. module: issue
+#: model:ir.model.fields,field_description:issue.field_issue__binary_fields
+msgid "Multi Files Upload"
+msgstr "多文件上传"
+
+#. module: issue
+#: model:ir.model.fields,field_description:issue.field_issue__my_activity_date_deadline
+#: model:ir.model.fields,field_description:issue.field_issue_code__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "我的活动截止日期"
+
+#. module: issue
+#: model:ir.model.fields.selection,name:issue.selection__issue__respond__na
+msgid "N/A"
+msgstr "N/A"
+
+#. module: issue
+#. odoo-python
+#: code:addons/issue/models/issue.py:0 code:addons/issue/models/issue_code.py:0
+#, python-format
+msgid "New"
+msgstr "新的"
+
+#. module: issue
+#: model:ir.model.fields,field_description:issue.field_issue__activity_calendar_event_id
+#: model:ir.model.fields,field_description:issue.field_issue_code__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr "下一个活动日历事件"
+
+#. module: issue
+#: model:ir.model.fields,field_description:issue.field_issue__activity_date_deadline
+#: model:ir.model.fields,field_description:issue.field_issue_code__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "下一个活动截止日期"
+
+#. module: issue
+#: model:ir.model.fields,field_description:issue.field_issue__activity_summary
+#: model:ir.model.fields,field_description:issue.field_issue_code__activity_summary
+msgid "Next Activity Summary"
+msgstr "下一步活动总结"
+
+#. module: issue
+#: model:ir.model.fields,field_description:issue.field_issue__activity_type_id
+#: model:ir.model.fields,field_description:issue.field_issue_code__activity_type_id
+msgid "Next Activity Type"
+msgstr "下一个活动类型"
+
+#. module: issue
+#: model:ir.model.fields.selection,name:issue.selection__issue__respond__n
+msgid "No"
+msgstr "否"
+
+#. module: issue
+#: model:ir.model.fields.selection,name:issue.selection__issue__priority__0
+msgid "Normal"
+msgstr "普通的"
+
+#. module: issue
+#: model:ir.model.fields,field_description:issue.field_issue__message_needaction_counter
+#: model:ir.model.fields,field_description:issue.field_issue_code__message_needaction_counter
+msgid "Number of Actions"
+msgstr "活动数"
+
+#. module: issue
+#: model:ir.model.fields,field_description:issue.field_issue__message_has_error_counter
+#: model:ir.model.fields,field_description:issue.field_issue_code__message_has_error_counter
+msgid "Number of errors"
+msgstr "错误数"
+
+#. module: issue
+#: model:ir.model.fields,help:issue.field_issue__message_needaction_counter
+#: model:ir.model.fields,help:issue.field_issue_code__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "需要采取行动的消息数量"
+
+#. module: issue
+#: model:ir.model.fields,help:issue.field_issue__message_has_error_counter
+#: model:ir.model.fields,help:issue.field_issue_code__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "发送错误的消息数"
+
+#. module: issue
+#: model:ir.model,name:issue.model_pco
+msgid "PCO main model for OpenPLM."
+msgstr "OpenPLM 的 PCO 主模型"
+
+#. module: issue
+#: model:ir.model,name:issue.model_product_template
+msgid "Product Template"
+msgstr "产品模板"
+
+#. module: issue
+#: model:ir.model,name:issue.model_project_project
+msgid "Project"
+msgstr "项目"
+
+#. module: issue
+#: model:ir.model.fields,field_description:issue.field_issue__rating_ids
+#: model:ir.model.fields,field_description:issue.field_issue_code__rating_ids
+msgid "Ratings"
+msgstr "评级"
+
+#. module: issue
+#: model:ir.model.fields,field_description:issue.field_issue__activity_user_id
+#: model:ir.model.fields,field_description:issue.field_issue_code__activity_user_id
+msgid "Responsible User"
+msgstr "负责人员"
+
+#. module: issue
+#: model:ir.model.fields,field_description:issue.field_issue__message_has_sms_error
+#: model:ir.model.fields,field_description:issue.field_issue_code__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "短信发送错误"
+
+#. module: issue
+#: model:ir.model.fields,help:issue.field_issue__activity_state
+#: model:ir.model.fields,help:issue.field_issue_code__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"基于活动的状态\n"
+"逾期：到期日已过\n"
+"今天：活动日期为今天\n"
+"计划：未来的活动。"
+
+#. module: issue
+#: model:ir.model.fields,help:issue.field_issue__activity_exception_decoration
+#: model:ir.model.fields,help:issue.field_issue_code__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "记录的异常活动的类型"
+
+#. module: issue
+#: model:ir.model.fields.selection,name:issue.selection__issue__priority__3
+msgid "Very High"
+msgstr "非常高"
+
+#. module: issue
+#: model:ir.model.fields.selection,name:issue.selection__issue__issue_stage__unique_process
+msgid "V项目独特工艺"
+msgstr "项目独特工艺"
+
+#. module: issue
+#: model:ir.model.fields,field_description:issue.field_issue__website_message_ids
+#: model:ir.model.fields,field_description:issue.field_issue_code__website_message_ids
+msgid "Website Messages"
+msgstr "网站留言"
+
+#. module: issue
+#: model:ir.model.fields,help:issue.field_issue__website_message_ids
+#: model:ir.model.fields,help:issue.field_issue_code__website_message_ids
+msgid "Website communication history"
+msgstr "网站通讯历史"
+
+#. module: issue
+#: model:ir.model.fields.selection,name:issue.selection__issue__respond__y
+msgid "Yes"
+msgstr "是"
+
+#. module: issue
+#: model:ir.model,name:issue.model_issue_code
+msgid "issue code model for Issue. "
+msgstr "问题单的问题编码模型"
+
+#. module: issue
+#: model:ir.model.fields,field_description:issue.field_issue__priority
+#: model_terms:ir.ui.view,arch_db:issue.issue_view_form
+#: model_terms:ir.ui.view,arch_db:issue.issue_view_tree
+msgid "优先级"
+msgstr "优先级"
+
+#. module: issue
+#: model:ir.model.fields.selection,name:issue.selection__issue__issue_stage__in_use
+msgid "使用中"
+msgstr "使用中"
+
+#. module: issue
+#: model:ir.model.fields.selection,name:issue.selection__issue__issue_Source__supplier
+msgid "供应商"
+msgstr "供应商"
+
+#. module: issue
+#: model:ir.model.fields.selection,name:issue.selection__issue_code__class2c__保护镜异常
+msgid "保护镜异常"
+msgstr "保护镜异常"
+
+#. module: issue
+#: model:ir.model.fields,field_description:issue.field_issue__dco_id
+#: model_terms:ir.ui.view,arch_db:issue.issue_view_tree
+msgid "关联DCO"
+msgstr "关联DCO"
+
+#. module: issue
+#: model_terms:ir.ui.view,arch_db:issue.issue_view_form
+msgid "关联DCO.图文送审单"
+msgstr "关联DCO.图文送审单"
+
+#. module: issue
+#: model:ir.model.fields,field_description:issue.field_issue__pco_id
+#: model_terms:ir.ui.view,arch_db:issue.issue_view_tree
+msgid "关联PCO"
+msgstr "关联PCO"
+
+#. module: issue
+#: model_terms:ir.ui.view,arch_db:issue.issue_view_form
+msgid "关联PCO.产品签审单"
+msgstr "关联PCO.产品签审单"
+
+#. module: issue
+#: model:ir.model.fields,field_description:issue.field_issue__project_id
+#: model_terms:ir.ui.view,arch_db:issue.issue_view_form
+#: model_terms:ir.ui.view,arch_db:issue.issue_view_tree
+msgid "关联专案"
+msgstr "关联项目"
+
+#. module: issue
+#: model:ir.model.fields.selection,name:issue.selection__issue__state__closed
+#: model_terms:ir.ui.view,arch_db:issue.issue_view_form
+msgid "关闭"
+msgstr "关闭"
+
+#. module: issue
+#: model:ir.model.fields.selection,name:issue.selection__issue__issue_Source__internal
+msgid "内部"
+msgstr "内部"
+
+#. module: issue
+#: model:ir.model.fields.selection,name:issue.selection__issue_code__class2c__冷水机异常
+msgid "冷水机异常"
+msgstr "冷水机异常"
+
+#. module: issue
+#: model:ir.model.fields.selection,name:issue.selection__issue__state__cancel
+#: model_terms:ir.ui.view,arch_db:issue.issue_view_form
+msgid "取消"
+msgstr "取消"
+
+#. module: issue
+#: model:ir.model.fields,field_description:issue.field_issue__custoomer_id
+#: model_terms:ir.ui.view,arch_db:issue.issue_view_form
+#: model_terms:ir.ui.view,arch_db:issue.issue_view_tree
+msgid "受影响客户"
+msgstr "受影响客户"
+
+#. module: issue
+#: model:ir.model.fields.selection,name:issue.selection__issue__vresults__acceptable
+msgid "可接受"
+msgstr "可接受"
+
+#. module: issue
+#: model:ir.model.fields,field_description:issue.field_issue__active
+msgid "啟用"
+msgstr "启用"
+
+#. module: issue
+#: model:ir.model.fields,field_description:issue.field_issue__respond
+#: model_terms:ir.ui.view,arch_db:issue.issue_view_form
+#: model_terms:ir.ui.view,arch_db:issue.issue_view_tree
+msgid "回应"
+msgstr "回应"
+
+#. module: issue
+#: model:ir.model.fields,field_description:issue.field_issue__team_id
+#: model_terms:ir.ui.view,arch_db:issue.issue_view_form
+msgid "团队人员"
+msgstr "团队人员"
+
+#. module: issue
+#: model:ir.model.fields,field_description:issue.field_issue__issue_image
+msgid "圖片"
+msgstr "图片"
+
+#. module: issue
+#: model:ir.model.fields,field_description:issue.field_issue__external_number
+#: model_terms:ir.ui.view,arch_db:issue.issue_view_form
+#: model_terms:ir.ui.view,arch_db:issue.issue_view_tree
+msgid "外部单号"
+msgstr "外部单号"
+
+#. module: issue
+#: model:ir.model.fields.selection,name:issue.selection__issue__issue_Source__customer
+msgid "客户"
+msgstr "客户"
+
+#. module: issue
+#: model:ir.model.fields.selection,name:issue.selection__issue__issue_stage__hierarchical_structure
+msgid "层次结构"
+msgstr "层次结构"
+
+#. module: issue
+#: model:ir.model.fields.selection,name:issue.selection__issue_code__class2b__工具损坏
+msgid "工具损坏"
+msgstr "工具损坏"
+
+#. module: issue
+#: model:ir.model.fields.selection,name:issue.selection__issue__issue_stage__process_standards
+msgid "工艺标准"
+msgstr "工艺标准"
+
+#. module: issue
+#: model:ir.model.fields.selection,name:issue.selection__issue__state__verified
+#: model_terms:ir.ui.view,arch_db:issue.issue_view_form
+msgid "已验证"
+msgstr "已验证"
+
+#. module: issue
+#: model:ir.model.fields.selection,name:issue.selection__issue__vresults__observed
+msgid "待观察"
+msgstr "待观察"
+
+#. module: issue
+#: model:ir.model.fields.selection,name:issue.selection__issue_code__class2c__控制屏异常
+msgid "控制屏异常"
+msgstr "控制屏异常"
+
+#. module: issue
+#: model:ir.model.fields.selection,name:issue.selection__issue_code__class3c3__控制继电器
+msgid "控制继电器"
+msgstr "控制继电器"
+
+#. module: issue
+#: model:ir.model.fields.selection,name:issue.selection__issue__state__submitted
+msgid "提交"
+msgstr "提交"
+
+#. module: issue
+#: model:ir.model.fields,field_description:issue.field_dco__issue_count
+#: model:ir.model.fields,field_description:issue.field_issue__quantity
+#: model:ir.model.fields,field_description:issue.field_pco__issue_count
+#: model:ir.model.fields,field_description:issue.field_product_product__issue_count
+#: model:ir.model.fields,field_description:issue.field_product_template__issue_count
+#: model:ir.model.fields,field_description:issue.field_project_project__issue_count
+#: model_terms:ir.ui.view,arch_db:issue.issue_view_form
+#: model_terms:ir.ui.view,arch_db:issue.issue_view_tree
+msgid "数量"
+msgstr "数量"
+
+#. module: issue
+#: model:ir.model.fields.selection,name:issue.selection__issue_code__class3c3__时间继电器
+msgid "时间继电器"
+msgstr "时间继电器"
+
+#. module: issue
+#: model:ir.model.fields.selection,name:issue.selection__issue_code__class3c4__朝光纤面损坏
+msgid "朝光纤面损坏"
+msgstr "朝光纤面损坏"
+
+#. module: issue
+#: model:ir.model.fields.selection,name:issue.selection__issue_code__class2a__未按sop操作
+msgid "未按SOP操作"
+msgstr "未按SOP操作"
+
+#. module: issue
+#: model:ir.model.fields.selection,name:issue.selection__issue__issue_stage__build_cycle
+msgid "构建周期"
+msgstr "构建周期"
+
+#. module: issue
+#: model:ir.model.fields.selection,name:issue.selection__issue_code__class3c1__水流开关
+msgid "水流开关"
+msgstr "水流开关"
+
+#. module: issue
+#: model:ir.model.fields.selection,name:issue.selection__issue_code__class2a__治具选择错误
+msgid "治具选择错误"
+msgstr "治具选择错误"
+
+#. module: issue
+#: model:ir.model.fields.selection,name:issue.selection__issue_code__class2f__测试sop错误或不适用
+msgid "测试SOP错误或不适用"
+msgstr "测试SOP错误或不适用"
+
+#. module: issue
+#: model:ir.model.fields.selection,name:issue.selection__issue__issue_stage__during_testing
+msgid "测试中"
+msgstr "测试中"
+
+#. module: issue
+#: model:ir.model.fields.selection,name:issue.selection__issue_code__class2f__测试环境问题
+msgid "测试环境问题"
+msgstr "测试环境问题"
+
+#. module: issue
+#: model:ir.model.fields.selection,name:issue.selection__issue_code__class2e__温湿度超标
+msgid "温湿度超标"
+msgstr "温湿度超标"
+
+#. module: issue
+#: model:ir.model.fields.selection,name:issue.selection__issue_code__class3c1__漏氟
+msgid "漏氟"
+msgstr "漏氟"
+
+#. module: issue
+#: model:ir.model.fields,field_description:issue.field_issue__state
+#: model_terms:ir.ui.view,arch_db:issue.issue_view_tree
+msgid "状态"
+msgstr "状态"
+
+#. module: issue
+#: model:ir.model.fields.selection,name:issue.selection__issue_code__class2e__状态标识问题
+msgid "状态标识问题"
+msgstr "状态标识问题"
+
+#. module: issue
+#: model:ir.model.fields,field_description:issue.field_issue__environmental
+#: model_terms:ir.ui.view,arch_db:issue.issue_view_form
+#: model_terms:ir.ui.view,arch_db:issue.issue_view_tree
+msgid "环境说明"
+msgstr "环境说明"
+
+#. module: issue
+#: model:ir.model.fields.selection,name:issue.selection__issue_code__class2g__硬件设计开发缺陷
+msgid "硬件设计开发缺陷"
+msgstr "硬件设计开发缺陷"
+
+#. module: issue
+#: model:ir.model.fields.selection,name:issue.selection__issue_code__class2a__组装错误
+msgid "组装错误"
+msgstr "组装错误"
+
+#. module: issue
+#: model:ir.model.fields.selection,name:issue.selection__issue_code__class2d__缺少流程类文件
+msgid "缺少流程类文件"
+msgstr "缺少流程类文件"
+
+#. module: issue
+#: model:ir.model.fields.selection,name:issue.selection__issue_code__class2d__缺少记录模版
+msgid "缺少记录模版"
+msgstr "缺少记录模版"
+
+#. module: issue
+#: model:ir.model.fields.selection,name:issue.selection__issue_code__class2b__设备维护保养问题
+msgid "设备维护保养问题"
+msgstr "设备维护保养问题"
+
+#. module: issue
+#: model:ir.model.fields.selection,name:issue.selection__issue__issue_stage__design_fundamentals
+msgid "设计基础"
+msgstr "设计基础"
+
+#. module: issue
+#: model:ir.model.fields.selection,name:issue.selection__issue_code__class1__设计开发
+msgid "设计开发"
+msgstr "设计开发"
+
+#. module: issue
+#: model:ir.model.fields.selection,name:issue.selection__issue__issue_stage__detailed_design
+msgid "详细设计"
+msgstr "详细设计"
+
+#. module: issue
+#: model:ir.model.fields.selection,name:issue.selection__issue_code__class2c__配电板
+msgid "配电板"
+msgstr "配电板"
+
+#. module: issue
+#: model:ir.model.fields,field_description:issue.field_issue__reproduce
+#: model_terms:ir.ui.view,arch_db:issue.issue_view_form
+#: model_terms:ir.ui.view,arch_db:issue.issue_view_tree
+msgid "重现操作顺序"
+msgstr "重现操作顺序"
+
+#. module: issue
+#: model:ir.model.fields,field_description:issue.field_issue__title
+#: model_terms:ir.ui.view,arch_db:issue.issue_view_form
+#: model_terms:ir.ui.view,arch_db:issue.issue_view_search
+#: model_terms:ir.ui.view,arch_db:issue.issue_view_tree
+msgid "问题主旨"
+msgstr "问题主旨"
+
+#. module: issue
+#: model:ir.model.fields,field_description:issue.field_issue__issue_product_id
+#: model_terms:ir.ui.view,arch_db:issue.issue_view_form
+#: model_terms:ir.ui.view,arch_db:issue.issue_view_tree
+msgid "问题产品"
+msgstr "问题产品"
+
+#. module: issue
+#: model:ir.model.fields,field_description:issue.field_issue_code__item_number
+#: model_terms:ir.ui.view,arch_db:issue.issue_code_view_form
+#: model_terms:ir.ui.view,arch_db:issue.issue_code_view_search
+#: model_terms:ir.ui.view,arch_db:issue.issue_code_view_tree
+msgid "问题代码"
+msgstr "问题代码"
+
+#. module: issue
+#: model:ir.actions.act_window,name:issue.issue_model_action
+#: model:ir.ui.menu,name:issue.issue_model_menu_action_sec
+#: model_terms:ir.ui.view,arch_db:issue.issue_view_form
+#: model_terms:ir.ui.view,arch_db:issue.issue_view_tree
+msgid "问题单"
+msgstr "问题单"
+
+#. module: issue
+#: model_terms:ir.ui.view,arch_db:issue.issue_view_search
+msgid "问题单搜寻"
+msgstr "问题单搜寻"
+
+#. module: issue
+#: model:ir.model.fields,field_description:issue.field_issue__issue_stage
+#: model_terms:ir.ui.view,arch_db:issue.issue_view_form
+#: model_terms:ir.ui.view,arch_db:issue.issue_view_tree
+msgid "问题发生阶段"
+msgstr "问题发生阶段"
+
+#. module: issue
+#: model:ir.model.fields,field_description:issue.field_issue__owner_id
+#: model_terms:ir.ui.view,arch_db:issue.issue_view_form
+#: model_terms:ir.ui.view,arch_db:issue.issue_view_tree
+msgid "问题回报人"
+msgstr "问题回报人"
+
+#. module: issue
+#: model:ir.model.fields,field_description:issue.field_issue__description
+#: model_terms:ir.ui.view,arch_db:issue.issue_view_form
+#: model_terms:ir.ui.view,arch_db:issue.issue_view_tree
+msgid "问题描述"
+msgstr "问题描述"
+
+#. module: issue
+#: model:ir.model.fields,field_description:issue.field_issue__issue_Source
+#: model_terms:ir.ui.view,arch_db:issue.issue_view_form
+#: model_terms:ir.ui.view,arch_db:issue.issue_view_tree
+msgid "问题来源"
+msgstr "问题来源"
+
+#. module: issue
+#: model:ir.model.fields,field_description:issue.field_issue__issue_bom_id
+#: model_terms:ir.ui.view,arch_db:issue.issue_view_form
+#: model_terms:ir.ui.view,arch_db:issue.issue_view_tree
+msgid "问题物料清单"
+msgstr "问题物料清单"
+
+#. module: issue
+#: model:ir.model.fields,field_description:issue.field_issue__item_number
+#: model_terms:ir.ui.view,arch_db:issue.issue_view_form
+#: model_terms:ir.ui.view,arch_db:issue.issue_view_search
+#: model_terms:ir.ui.view,arch_db:issue.issue_view_tree
+msgid "问题編號"
+msgstr "问题编号"
+
+#. module: issue
+#: model:ir.actions.act_window,name:issue.issue_code_model_action
+#: model:ir.model.fields,field_description:issue.field_issue__issue_code_ids
+#: model:ir.ui.menu,name:issue.issue_code_setting_action_sec
+#: model_terms:ir.ui.view,arch_db:issue.issue_code_view_form
+#: model_terms:ir.ui.view,arch_db:issue.issue_code_view_tree
+#: model_terms:ir.ui.view,arch_db:issue.issue_view_form
+msgid "问题编码"
+msgstr "问题编码"
+
+#. module: issue
+#: model:ir.model.fields,field_description:issue.field_issue_code__name
+#: model_terms:ir.ui.view,arch_db:issue.issue_code_view_form
+#: model_terms:ir.ui.view,arch_db:issue.issue_code_view_search
+#: model_terms:ir.ui.view,arch_db:issue.issue_code_view_tree
+msgid "问题编码主旨"
+msgstr "问题编码主旨"
+
+#. module: issue
+#: model:ir.model.fields,field_description:issue.field_issue_code__class1
+#: model_terms:ir.ui.view,arch_db:issue.issue_code_view_form
+#: model_terms:ir.ui.view,arch_db:issue.issue_code_view_search
+#: model_terms:ir.ui.view,arch_db:issue.issue_code_view_tree
+msgid "问题编码分类一"
+msgstr "问题编码分类一"
+
+#. module: issue
+#: model:ir.model.fields,field_description:issue.field_issue_code__class3c1
+#: model:ir.model.fields,field_description:issue.field_issue_code__class3c3
+#: model:ir.model.fields,field_description:issue.field_issue_code__class3c4
+#: model_terms:ir.ui.view,arch_db:issue.issue_code_view_form
+msgid "问题编码分类三"
+msgstr "问题编码分类三"
+
+#. module: issue
+#: model:ir.model.fields,field_description:issue.field_issue_code__class2a
+#: model:ir.model.fields,field_description:issue.field_issue_code__class2b
+#: model:ir.model.fields,field_description:issue.field_issue_code__class2c
+#: model:ir.model.fields,field_description:issue.field_issue_code__class2d
+#: model:ir.model.fields,field_description:issue.field_issue_code__class2e
+#: model:ir.model.fields,field_description:issue.field_issue_code__class2f
+#: model:ir.model.fields,field_description:issue.field_issue_code__class2g
+#: model_terms:ir.ui.view,arch_db:issue.issue_code_view_form
+msgid "问题编码分类二"
+msgstr "问题编码分类二"
+
+#. module: issue
+#: model_terms:ir.ui.view,arch_db:issue.issue_code_view_search
+msgid "问题编码搜寻"
+msgstr "问题编码搜寻"
+
+#. module: issue
+#: model:ir.model.fields,field_description:issue.field_issue_code__description
+#: model_terms:ir.ui.view,arch_db:issue.issue_code_view_form
+#: model_terms:ir.ui.view,arch_db:issue.issue_code_view_search
+#: model_terms:ir.ui.view,arch_db:issue.issue_code_view_tree
+msgid "问题编码说明"
+msgstr "问题编码说明"
+
+#. module: issue
+#: model_terms:ir.ui.view,arch_db:issue.issue_view_form
+msgid "附件"
+msgstr "附件"
+
+#. module: issue
+#: model:ir.model.fields.selection,name:issue.selection__issue__issue_stage__request_application
+msgid "需求申请"
+msgstr "需求申请"
+
+#. module: issue
+#: model:ir.model.fields.selection,name:issue.selection__issue__state__in_verification
+#: model_terms:ir.ui.view,arch_db:issue.issue_view_form
+msgid "验证中"
+msgstr "验证中"
+
+#. module: issue
+#: model:ir.model.fields,field_description:issue.field_issue__vresults
+#: model_terms:ir.ui.view,arch_db:issue.issue_view_form
+#: model_terms:ir.ui.view,arch_db:issue.issue_view_tree
+msgid "验证结果"
+msgstr "验证结果"

@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 17.0-20240820\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-10-28 08:19+0000\n"
-"PO-Revision-Date: 2024-11-07 15:53+0800\n"
+"PO-Revision-Date: 2024-11-14 12:05+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: zh_CN\n"
@@ -20,24 +20,24 @@ msgstr ""
 #. module: plm_date_bom
 #: model_terms:ir.ui.view,arch_db:plm_date_bom.plm_mrp_bom_date_compute
 msgid "All Related Boms to Update"
-msgstr "所有相关Boms都要更新"
+msgstr "所有相關Boms都要更新"
 
 #. module: plm_date_bom
 #: model:ir.model,name:plm_date_bom.model_mrp_bom
 msgid "Bill of Material"
-msgstr "物料清单"
+msgstr "物料清單"
 
 #. module: plm_date_bom
 #: model:ir.model,name:plm_date_bom.model_mrp_bom_line
 msgid "Bill of Material Line"
-msgstr "物料清单行"
+msgstr "物料清單行"
 
 #. module: plm_date_bom
 #. odoo-python
 #: code:addons/plm_date_bom/models/mrp_bom.py:0
 #, python-format
 msgid "Bom Computation Type"
-msgstr "Bom计算类型"
+msgstr "Bom計算類型"
 
 #. module: plm_date_bom
 #: model_terms:ir.ui.view,arch_db:plm_date_bom.plm_bom_filter_obsoleted
@@ -52,7 +52,7 @@ msgstr "取消"
 #. module: plm_date_bom
 #: model_terms:ir.ui.view,arch_db:plm_date_bom.plm_bom_date_compute
 msgid "Compute Bom"
-msgstr "计算Bom"
+msgstr "計算Bom"
 
 #. module: plm_date_bom
 #. odoo-python
@@ -60,7 +60,7 @@ msgstr "计算Bom"
 #: model:ir.model.fields,field_description:plm_date_bom.field_plm_temporary_date_compute__compute_type
 #, python-format
 msgid "Compute Type"
-msgstr "计算类型"
+msgstr "計算類型"
 
 #. module: plm_date_bom
 #. odoo-python
@@ -68,22 +68,22 @@ msgstr "计算类型"
 #: model:ir.model.fields.selection,name:plm_date_bom.selection__plm_temporary_date_compute__compute_type__new_bom
 #, python-format
 msgid "Create new bom using last revision of all components."
-msgstr "使用所有组件的最新版本创建新的bom。"
+msgstr "使用所有元件的最新版本創建新的bom。"
 
 #. module: plm_date_bom
 #: model:ir.model.fields,field_description:plm_date_bom.field_plm_temporary_date_compute__create_uid
 msgid "Created by"
-msgstr "创建者"
+msgstr "創建者"
 
 #. module: plm_date_bom
 #: model:ir.model.fields,field_description:plm_date_bom.field_plm_temporary_date_compute__create_date
 msgid "Created on"
-msgstr "创建于"
+msgstr "創建於"
 
 #. module: plm_date_bom
 #: model:ir.model.fields,field_description:plm_date_bom.field_plm_temporary_date_compute__display_name
 msgid "Display Name"
-msgstr "显示名称"
+msgstr "顯示名稱"
 
 #. module: plm_date_bom
 #: model:ir.model.fields,field_description:plm_date_bom.field_plm_temporary_date_compute__id
@@ -93,12 +93,12 @@ msgstr "ID"
 #. module: plm_date_bom
 #: model:ir.model.fields,field_description:plm_date_bom.field_plm_temporary_date_compute__write_uid
 msgid "Last Updated by"
-msgstr "最后更新者"
+msgstr "最後更新者"
 
 #. module: plm_date_bom
 #: model:ir.model.fields,field_description:plm_date_bom.field_plm_temporary_date_compute__write_date
 msgid "Last Updated on"
-msgstr "最后更新于"
+msgstr "最後更新於"
 
 #. module: plm_date_bom
 #. odoo-python
@@ -108,7 +108,7 @@ msgstr "最后更新于"
 #: model:ir.model.fields,field_description:plm_date_bom.field_mrp_production__obsolete_presents
 #, python-format
 msgid "Obsolete presents"
-msgstr "废弃的父阶"
+msgstr "廢棄的父階"
 
 #. module: plm_date_bom
 #. odoo-python
@@ -116,7 +116,7 @@ msgstr "废弃的父阶"
 #: model:ir.model.fields,field_description:plm_date_bom.field_mrp_bom__obsolete_presents_recursive
 #, python-format
 msgid "Obsolete presents Recursive"
-msgstr "递归查询废弃的父阶"
+msgstr "遞迴查詢廢棄的父階"
 
 #. module: plm_date_bom
 #. odoo-python
@@ -124,7 +124,7 @@ msgstr "递归查询废弃的父阶"
 #: model:ir.model.fields,field_description:plm_date_bom.field_mrp_bom__obsolete_presents_computed
 #, python-format
 msgid "Obsolete presents computed"
-msgstr "计算废弃的父阶"
+msgstr "計算廢棄的父階"
 
 #. module: plm_date_bom
 #. odoo-python
@@ -132,44 +132,44 @@ msgstr "计算废弃的父阶"
 #: code:addons/plm_date_bom/models/plm_temporary_date_compute.py:0
 #, python-format
 msgid "Product Engineering"
-msgstr "产品工程"
+msgstr "產品工程"
 
 #. module: plm_date_bom
 #: model:ir.model,name:plm_date_bom.model_product_template
 msgid "Product Template"
-msgstr "产品模板"
+msgstr "產品範本"
 
 #. module: plm_date_bom
 #: model:ir.model,name:plm_date_bom.model_mrp_production
 msgid "Production Order"
-msgstr "制造订单"
+msgstr "製造訂單"
 
 #. module: plm_date_bom
 #: model:ir.model,name:plm_date_bom.model_report_plm_date_bom_plm_bom_obsoleted
 msgid "Report Bom All Structure"
-msgstr "报告Bom所有结构"
+msgstr "報告Bom所有結構"
 
 #. module: plm_date_bom
 #: model_terms:ir.ui.view,arch_db:plm_date_bom.plm_bom_date_compute
 msgid "Select computation type and proceed."
-msgstr "选择计算类型并继续。"
+msgstr "選擇計算類型並繼續。"
 
 #. module: plm_date_bom
 #: model:ir.model,name:plm_date_bom.model_plm_temporary_date_compute
 msgid "Temporary model for computing dates"
-msgstr "计算日期的临时模型"
+msgstr "計算日期的臨時模型"
 
 #. module: plm_date_bom
 #: model_terms:ir.ui.view,arch_db:plm_date_bom.plm_mrp_production_form_view
 msgid "There are obsolete components in manufaturing lines."
-msgstr "生产线上有过时的部件。"
+msgstr "生產線上有過時的部件。"
 
 #. module: plm_date_bom
 #. odoo-python
 #: code:addons/plm_date_bom/models/plm_temporary_date_compute.py:0
 #, python-format
 msgid "This functionality is avaible only for normal bom."
-msgstr "此功能仅适用于普通bom。"
+msgstr "此功能僅適用于普通bom。"
 
 #. module: plm_date_bom
 #: model_terms:ir.ui.view,arch_db:plm_date_bom.plm_mrp_bom_date_compute
@@ -184,21 +184,21 @@ msgstr "更新Bom"
 msgid ""
 "Update Bom replacing obsoleted bom lines with components at the latest "
 "revision."
-msgstr "更新Bom，用最新版本的组件替换过时的Bom线。"
+msgstr "更新Bom，用最新版本的元件替換過時的Bom線。"
 
 #. module: plm_date_bom
 #: model:ir.actions.server,name:plm_date_bom.ir_cron_replace_obsolete_bom_ir_actions_server
 msgid "Update Obsolete BOMs replacing BOM"
-msgstr "更新过时的BOM，替换BOM"
+msgstr "更新過時的BOM，替換BOM"
 
 #. module: plm_date_bom
 #: model:ir.actions.server,name:plm_date_bom.ir_cron_update_obsolete_bom_ir_actions_server
 msgid "Update Obsolete BOMs updating lines"
-msgstr "更新过时的BOM更新行"
+msgstr "更新過時的BOM更新行"
 
 #. module: plm_date_bom
 #. odoo-python
 #: code:addons/plm_date_bom/models/plm_temporary_date_compute.py:0
 #, python-format
 msgid "You must select at least one option!"
-msgstr "您必须至少选择一个选项！"
+msgstr "您必須至少選擇一個選項！"

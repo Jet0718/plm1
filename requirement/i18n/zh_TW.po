@@ -4,10 +4,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 17.0-20240813\n"
+"Project-Id-Version: Odoo Server 17.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-13 15:27+0000\n"
-"PO-Revision-Date: 2024-10-13 23:30+0800\n"
+"POT-Creation-Date: 2024-11-14 04:14+0000\n"
+"PO-Revision-Date: 2024-11-14 13:24+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: zh_TW\n"
@@ -99,7 +99,7 @@ msgstr "追蹤者(客戶)"
 #: model:ir.model.fields,help:requirement.field_requirement_purpose__activity_type_icon
 #: model:ir.model.fields,help:requirement.field_requirement_spec__activity_type_icon
 msgid "Font awesome icon e.g. fa-tasks"
-msgstr ""
+msgstr "字體很棒的圖標，例如fa任務"
 
 #. module: requirement
 #: model:ir.model.fields,field_description:requirement.field_requirement__has_message
@@ -113,7 +113,7 @@ msgstr "有訊息"
 #: model:ir.model.fields,field_description:requirement.field_requirement_purpose__id
 #: model:ir.model.fields,field_description:requirement.field_requirement_spec__id
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #. module: requirement
 #: model:ir.model.fields,field_description:requirement.field_requirement__activity_exception_icon
@@ -204,6 +204,13 @@ msgid "My Activity Deadline"
 msgstr "我的活動截止日"
 
 #. module: requirement
+#. odoo-python
+#: code:addons/requirement/models/requirement.py:0
+#, python-format
+msgid "New"
+msgstr "新的"
+
+#. module: requirement
 #: model:ir.model.fields,field_description:requirement.field_requirement__activity_calendar_event_id
 #: model:ir.model.fields,field_description:requirement.field_requirement_purpose__activity_calendar_event_id
 #: model:ir.model.fields,field_description:requirement.field_requirement_spec__activity_calendar_event_id
@@ -269,7 +276,7 @@ msgstr "商機"
 #: model:ir.model.fields,field_description:requirement.field_requirement__project_ids
 #: model_terms:ir.ui.view,arch_db:requirement.requirement_view_form
 msgid "Project"
-msgstr "專案"
+msgstr "項目"
 
 #. module: requirement
 #: model_terms:ir.ui.view,arch_db:requirement.requirement_view_form
@@ -367,16 +374,11 @@ msgstr "spec lib 模型用於需求管理。"
 #: model:ir.model.fields.selection,name:requirement.selection__requirement__state__abort
 #: model_terms:ir.ui.view,arch_db:requirement.requirement_view_form
 msgid "中止"
-msgstr ""
-
-#. module: requirement
-#: model:ir.ui.menu,name:requirement.requirement_first_level_menu
-msgid "主目录"
-msgstr "主目錄"
+msgstr "中止"
 
 #. module: requirement
 #: model:ir.actions.act_window,name:requirement.requirement_purpose_action
-#: model:ir.ui.menu,name:requirement.requirement_purpose_setting_action
+#: model:ir.ui.menu,name:requirement.requirement_purpose_setting_action_sec
 #: model_terms:ir.ui.view,arch_db:requirement.requirement_purpose_view_form
 #: model_terms:ir.ui.view,arch_db:requirement.requirement_purpose_view_tree
 msgid "产品用途"
@@ -402,7 +404,7 @@ msgstr "關聯需求"
 #: model_terms:ir.ui.view,arch_db:requirement.requirement_view_form
 #: model_terms:ir.ui.view,arch_db:requirement.requirement_view_tree
 msgid "參考產品"
-msgstr ""
+msgstr "參考產品"
 
 #. module: requirement
 #: model:ir.model.fields,field_description:requirement.field_requirement_spec__name
@@ -422,7 +424,7 @@ msgstr "啟用"
 #: model_terms:ir.ui.view,arch_db:requirement.requirement_view_form
 #: model_terms:ir.ui.view,arch_db:requirement.requirement_view_tree
 msgid "客戶"
-msgstr "客戶"
+msgstr "啟用"
 
 #. module: requirement
 #: model:ir.model.fields,field_description:requirement.field_requirement__lead_count
@@ -435,32 +437,27 @@ msgstr "數量"
 #: model_terms:ir.ui.view,arch_db:requirement.requirement_view_form
 #: model_terms:ir.ui.view,arch_db:requirement.requirement_view_tree
 msgid "是否報價"
-msgstr ""
+msgstr "是否報價"
 
 #. module: requirement
 #: model:ir.model.fields,field_description:requirement.field_requirement__sample
 #: model_terms:ir.ui.view,arch_db:requirement.requirement_view_form
 #: model_terms:ir.ui.view,arch_db:requirement.requirement_view_tree
 msgid "是否打樣"
-msgstr ""
+msgstr "是否打樣"
 
 #. module: requirement
 #: model:ir.model.fields.selection,name:requirement.selection__requirement__state__approved
 #: model_terms:ir.ui.view,arch_db:requirement.requirement_view_form
 msgid "核准"
-msgstr ""
-
-#. module: requirement
-#: model:ir.ui.menu,name:requirement.requirement_setting_menu
-msgid "次目录"
-msgstr "設定"
+msgstr "核准"
 
 #. module: requirement
 #: model:ir.model.fields,field_description:requirement.field_requirement__speical_req
 #: model_terms:ir.ui.view,arch_db:requirement.requirement_view_form
 #: model_terms:ir.ui.view,arch_db:requirement.requirement_view_tree
 msgid "特殊要求"
-msgstr ""
+msgstr "特殊要求"
 
 #. module: requirement
 #: model:ir.model.fields,field_description:requirement.field_requirement__state
@@ -473,7 +470,7 @@ msgstr "狀態"
 #: model_terms:ir.ui.view,arch_db:requirement.requirement_view_form
 #: model_terms:ir.ui.view,arch_db:requirement.requirement_view_tree
 msgid "產品用途"
-msgstr ""
+msgstr "產品用途"
 
 #. module: requirement
 #: model:ir.model.fields,field_description:requirement.field_requirement_purpose__name
@@ -489,28 +486,28 @@ msgstr "用途名稱"
 #: model_terms:ir.ui.view,arch_db:requirement.requirement_view_search
 #: model_terms:ir.ui.view,arch_db:requirement.requirement_view_tree
 msgid "編號"
-msgstr ""
+msgstr "編號"
 
 #. module: requirement
 #: model:ir.model.fields,field_description:requirement.field_requirement__contract_name
 #: model_terms:ir.ui.view,arch_db:requirement.requirement_view_form
 #: model_terms:ir.ui.view,arch_db:requirement.requirement_view_tree
 msgid "聯絡人"
-msgstr ""
+msgstr "聯絡人"
 
 #. module: requirement
 #: model:ir.model.fields.selection,name:requirement.selection__requirement__state__draft
 msgid "草稿"
-msgstr ""
+msgstr "草稿"
 
 #. module: requirement
 #: model_terms:ir.ui.view,arch_db:requirement.requirement_view_form
 msgid "規格要求"
-msgstr ""
+msgstr "規格要求"
 
 #. module: requirement
 #: model:ir.actions.act_window,name:requirement.requirement_spec_action
-#: model:ir.ui.menu,name:requirement.requirement_spec_setting_action
+#: model:ir.ui.menu,name:requirement.requirement_spec_setting_action_sec
 #: model_terms:ir.ui.view,arch_db:requirement.requirement_spec_view_form
 #: model_terms:ir.ui.view,arch_db:requirement.requirement_spec_view_tree
 msgid "规格要求"
@@ -540,17 +537,17 @@ msgstr "說明"
 #: model_terms:ir.ui.view,arch_db:requirement.requirement_view_form
 #: model_terms:ir.ui.view,arch_db:requirement.requirement_view_tree
 msgid "負責人"
-msgstr ""
+msgstr "負責人"
 
 #. module: requirement
 #: model_terms:ir.ui.view,arch_db:requirement.requirement_view_form
 msgid "附件"
-msgstr ""
+msgstr "附件"
 
 #. module: requirement
-#: model:ir.ui.menu,name:requirement.requirement_model_menu_action
+#: model:ir.ui.menu,name:requirement.requirement_model_menu_action_sec
 msgid "需求"
-msgstr ""
+msgstr "需求"
 
 #. module: requirement
 #: model:ir.model.fields,field_description:requirement.field_requirement__name
@@ -565,14 +562,14 @@ msgstr "需求名稱"
 #: model_terms:ir.ui.view,arch_db:requirement.requirement_view_form
 #: model_terms:ir.ui.view,arch_db:requirement.requirement_view_tree
 msgid "需求產品類型"
-msgstr ""
+msgstr "需求產品類型"
 
 #. module: requirement
 #: model:ir.actions.act_window,name:requirement.requirement_model_action
 #: model_terms:ir.ui.view,arch_db:requirement.requirement_view_form
 #: model_terms:ir.ui.view,arch_db:requirement.requirement_view_tree
 msgid "需求評估"
-msgstr ""
+msgstr "需求評估"
 
 #. module: requirement
 #: model_terms:ir.ui.view,arch_db:requirement.requirement_view_search
@@ -581,6 +578,6 @@ msgstr "搜索需求評估"
 
 #. module: requirement
 #: model:ir.model.fields,field_description:requirement.field_requirement_spec__requirement_id
-#: model:ir.ui.menu,name:requirement.requirement_menu_root
+#: model:ir.ui.menu,name:requirement.requirement_menu_root_sec
 msgid "需求评估"
 msgstr "需求評估"

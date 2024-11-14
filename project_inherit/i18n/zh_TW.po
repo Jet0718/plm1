@@ -1,0 +1,488 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* project_inherit
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-14 06:52+0000\n"
+"PO-Revision-Date: 2024-11-14 14:57+0800\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.5\n"
+
+#. module: project_inherit
+#: model:ir.model.fields,field_description:project_inherit.field_ir_attachment__message_needaction
+msgid "Action Needed"
+msgstr "所需操作"
+
+#. module: project_inherit
+#: model:ir.model.fields,field_description:project_inherit.field_ir_attachment__activity_ids
+msgid "Activities"
+msgstr "活動"
+
+#. module: project_inherit
+#: model:ir.model.fields,field_description:project_inherit.field_ir_attachment__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "活動異常標示"
+
+#. module: project_inherit
+#: model:ir.model.fields,field_description:project_inherit.field_ir_attachment__activity_state
+msgid "Activity State"
+msgstr "活動狀態"
+
+#. module: project_inherit
+#: model:ir.model.fields,field_description:project_inherit.field_ir_attachment__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "活動類型圖示"
+
+#. module: project_inherit
+#: model:ir.model.fields,field_description:project_inherit.field_ir_attachment__message_attachment_count
+msgid "Attachment Count"
+msgstr "附件計數"
+
+#. module: project_inherit
+#. odoo-python
+#: code:addons/project_inherit/models/ir_attachment_relations.py:0
+#: model:ir.model.fields,field_description:project_inherit.field_iratracr_ship__child_type
+#, python-format
+msgid "Child Document Type"
+msgstr "子階文件類型"
+
+#. module: project_inherit
+#. odoo-python
+#: code:addons/project_inherit/models/ir_attachment_relations.py:0
+#: model:ir.model.fields,field_description:project_inherit.field_iratracr_ship__child_linked
+#, python-format
+msgid "Child Linked Components"
+msgstr "子階連結組件"
+
+#. module: project_inherit
+#. odoo-python
+#: code:addons/project_inherit/models/ir_attachment_relations.py:0
+#: model:ir.model.fields,field_description:project_inherit.field_iratracr_ship__child_preview
+#, python-format
+msgid "Child Preview"
+msgstr "子階預覽"
+
+#. module: project_inherit
+#. odoo-python
+#: code:addons/project_inherit/models/ir_attachment_relations.py:0
+#: model:ir.model.fields,field_description:project_inherit.field_iratracr_ship__child_revision
+#, python-format
+msgid "Child Revision"
+msgstr "子階修訂"
+
+#. module: project_inherit
+#. odoo-python
+#: code:addons/project_inherit/models/ir_attachment_relations.py:0
+#: model:ir.model.fields,field_description:project_inherit.field_iratracr_ship__child_state
+#, python-format
+msgid "Child Status"
+msgstr "子階狀態"
+
+#. module: project_inherit
+#: model:ir.model.fields,field_description:project_inherit.field_iratracr_ship__create_uid
+msgid "Created by"
+msgstr "創建者"
+
+#. module: project_inherit
+#: model:ir.model.fields,field_description:project_inherit.field_iratracr_ship__create_date
+msgid "Created on"
+msgstr "創建日期"
+
+#. module: project_inherit
+#: model:ir.model.fields,field_description:project_inherit.field_ir_attachment__engineering_revision_date
+msgid "Datetime Revision"
+msgstr "日期時間修訂"
+
+#. module: project_inherit
+#: model:ir.model.fields,field_description:project_inherit.field_iratracr_ship__display_name
+msgid "Display Name"
+msgstr "顯示名稱"
+
+#. module: project_inherit
+#: model:ir.model.fields,field_description:project_inherit.field_project_project__dmsfile_ids
+msgid "Dmsfile"
+msgstr "Dms檔案"
+
+#. module: project_inherit
+#: model:ir.model.fields,field_description:project_inherit.field_ir_attachment__engineering_branch_revision
+msgid "Engineering Branch index"
+msgstr "工程分部索引"
+
+#. module: project_inherit
+#: model:ir.model.fields,field_description:project_inherit.field_ir_attachment__engineering_code
+msgid "Engineering Code"
+msgstr "工程碼"
+
+#. module: project_inherit
+#: model:ir.model.fields,field_description:project_inherit.field_ir_attachment__engineering_code_editable
+msgid "Engineering Code Editable"
+msgstr "工程規範可編輯"
+
+#. module: project_inherit
+#: model:ir.model.fields,field_description:project_inherit.field_ir_attachment__engineering_revision_count
+msgid "Engineering Revision Count"
+msgstr "工程修訂計數"
+
+#. module: project_inherit
+#: model:ir.model.fields,field_description:project_inherit.field_ir_attachment__engineering_revision
+msgid "Engineering Revision index"
+msgstr "工程修訂索引"
+
+#. module: project_inherit
+#: model:ir.model.fields,field_description:project_inherit.field_ir_attachment__engineering_revision_letter
+msgid "Engineering Revision letter"
+msgstr "工程修訂函"
+
+#. module: project_inherit
+#: model:ir.model.fields,field_description:project_inherit.field_ir_attachment__engineering_branch_revision_letter
+msgid "Engineering Sub Revision letter"
+msgstr "工程子階修訂函"
+
+#. module: project_inherit
+#: model:ir.model.fields,field_description:project_inherit.field_ir_attachment__message_follower_ids
+msgid "Followers"
+msgstr "關注者"
+
+#. module: project_inherit
+#: model:ir.model.fields,field_description:project_inherit.field_ir_attachment__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "關注者（合作夥伴）"
+
+#. module: project_inherit
+#: model:ir.model.fields,help:project_inherit.field_ir_attachment__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "Font Awesome圖示，例如：fa-tasks"
+
+#. module: project_inherit
+#: model:ir.model.fields,field_description:project_inherit.field_ir_attachment__has_message
+msgid "Has Message"
+msgstr "有消息"
+
+#. module: project_inherit
+#: model:ir.model.fields,field_description:project_inherit.field_iratracr_ship__id
+msgid "ID"
+msgstr "ID"
+
+#. module: project_inherit
+#: model:ir.model.fields,field_description:project_inherit.field_ir_attachment__activity_exception_icon
+msgid "Icon"
+msgstr "圖示"
+
+#. module: project_inherit
+#: model:ir.model.fields,help:project_inherit.field_ir_attachment__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "指示異常活動的圖示。"
+
+#. module: project_inherit
+#: model:ir.model.fields,help:project_inherit.field_ir_attachment__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "如果勾選此項，則需要查看新消息。"
+
+#. module: project_inherit
+#: model:ir.model.fields,help:project_inherit.field_ir_attachment__message_has_error
+#: model:ir.model.fields,help:project_inherit.field_ir_attachment__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "如果勾選此項， 某些消息將出現發送錯誤。"
+
+#. module: project_inherit
+#: model:ir.model,name:project_inherit.model_ir_attachment
+msgid "Ir Attachment"
+msgstr "附件"
+
+#. module: project_inherit
+#: model:ir.model.fields,field_description:project_inherit.field_ir_attachment__message_is_follower
+msgid "Is Follower"
+msgstr "是關注者"
+
+#. module: project_inherit
+#: model:ir.model.fields,field_description:project_inherit.field_iratracr_ship__write_uid
+msgid "Last Updated by"
+msgstr "最後更新者"
+
+#. module: project_inherit
+#: model:ir.model.fields,field_description:project_inherit.field_iratracr_ship__write_date
+msgid "Last Updated on"
+msgstr "最後更新於"
+
+#. module: project_inherit
+#: model:ir.model.fields,field_description:project_inherit.field_ir_attachment__message_has_error
+msgid "Message Delivery error"
+msgstr "消息發送錯誤"
+
+#. module: project_inherit
+#: model:ir.model.fields,field_description:project_inherit.field_ir_attachment__message_ids
+msgid "Messages"
+msgstr "消息"
+
+#. module: project_inherit
+#: model:ir.model.fields,field_description:project_inherit.field_ir_attachment__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "我的活動截止時間"
+
+#. module: project_inherit
+#: model:ir.model.fields,field_description:project_inherit.field_ir_attachment__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr "下一個活動日曆事件"
+
+#. module: project_inherit
+#: model:ir.model.fields,field_description:project_inherit.field_ir_attachment__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "下一活動截止日期"
+
+#. module: project_inherit
+#: model:ir.model.fields,field_description:project_inherit.field_ir_attachment__activity_summary
+msgid "Next Activity Summary"
+msgstr "下一活動摘要"
+
+#. module: project_inherit
+#: model:ir.model.fields,field_description:project_inherit.field_ir_attachment__activity_type_id
+msgid "Next Activity Type"
+msgstr "下一活動類型"
+
+#. module: project_inherit
+#: model:ir.model.fields,field_description:project_inherit.field_ir_attachment__message_needaction_counter
+msgid "Number of Actions"
+msgstr "運算元量"
+
+#. module: project_inherit
+#: model:ir.model.fields,field_description:project_inherit.field_ir_attachment__message_has_error_counter
+msgid "Number of errors"
+msgstr "錯誤數量"
+
+#. module: project_inherit
+#: model:ir.model.fields,help:project_inherit.field_ir_attachment__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "需要採取行動的消息數量"
+
+#. module: project_inherit
+#: model:ir.model.fields,help:project_inherit.field_ir_attachment__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "發送錯誤的消息的數量"
+
+#. module: project_inherit
+#: model:ir.model.fields,field_description:project_inherit.field_ir_attachment__engineering_branch_parent_id
+msgid "Parent branch"
+msgstr "父階分支"
+
+#. module: project_inherit
+#: model:ir.model,name:project_inherit.model_project_project
+msgid "Project"
+msgstr "項目"
+
+#. module: project_inherit
+#: model:ir.model.fields,field_description:project_inherit.field_ir_attachment__rating_ids
+msgid "Ratings"
+msgstr "點評"
+
+#. module: project_inherit
+#. odoo-python
+#: code:addons/project_inherit/models/ir_attachment_relations.py:0
+#: model:ir.model.fields,field_description:project_inherit.field_iratracr_ship__child_id
+#, python-format
+msgid "Related child document"
+msgstr "關聯子階文件"
+
+#. module: project_inherit
+#. odoo-python
+#: code:addons/project_inherit/models/ir_attachment_relations.py:0
+#: model:ir.model.fields,field_description:project_inherit.field_iratracr_ship__parent_id
+#, python-format
+msgid "Related parent document"
+msgstr "關聯父階文件"
+
+#. module: project_inherit
+#: model:ir.model,name:project_inherit.model_ir_attachment_relation
+msgid "Relation between document used for cad file structure"
+msgstr "用於cad檔結構的文件之間的關係"
+
+#. module: project_inherit
+#: model:ir.model.fields,field_description:project_inherit.field_ir_attachment__engineering_release_user
+msgid "Release User"
+msgstr "發佈用戶"
+
+#. module: project_inherit
+#: model:ir.model.fields,field_description:project_inherit.field_ir_attachment__engineering_release_date
+msgid "Release date"
+msgstr "發佈日期"
+
+#. module: project_inherit
+#: model:ir.model.fields,field_description:project_inherit.field_ir_attachment__activity_user_id
+msgid "Responsible User"
+msgstr "責任用戶"
+
+#. module: project_inherit
+#: model:ir.model.fields,field_description:project_inherit.field_ir_attachment__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "短信發送錯誤"
+
+#. module: project_inherit
+#: model:ir.model.fields,field_description:project_inherit.field_ir_attachment__engineering_state
+msgid "Status"
+msgstr "工程狀態"
+
+#. module: project_inherit
+#: model:ir.model.fields,help:project_inherit.field_ir_attachment__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"基於活動的狀態\n"
+"逾期：超出到期日期\n"
+"今天：活動日期是今天\n"
+"計畫：未來活動。"
+
+#. module: project_inherit
+#: model:ir.model.fields,field_description:project_inherit.field_ir_attachment__engineering_sub_revision_letter
+msgid "Sub revision path"
+msgstr "子修訂路徑"
+
+#. module: project_inherit
+#: model:ir.model,name:project_inherit.model_project_task
+msgid "Task"
+msgstr "任務"
+
+#. module: project_inherit
+#: model:ir.model.fields,help:project_inherit.field_ir_attachment__engineering_state
+#: model:ir.model.fields,help:project_inherit.field_iratracr_ship__child_state
+msgid "The status of the product."
+msgstr "產品的狀態"
+
+#. module: project_inherit
+#: model:ir.model.fields,help:project_inherit.field_ir_attachment__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "記錄中異常活動的類型。"
+
+#. module: project_inherit
+#: model:ir.model.fields,field_description:project_inherit.field_ir_attachment__engineering_revision_user
+msgid "User Revision"
+msgstr "用戶修訂"
+
+#. module: project_inherit
+#: model:ir.model.fields,field_description:project_inherit.field_ir_attachment__website_message_ids
+msgid "Website Messages"
+msgstr "網站消息"
+
+#. module: project_inherit
+#: model:ir.model.fields,help:project_inherit.field_ir_attachment__website_message_ids
+msgid "Website communication history"
+msgstr "網站溝通記錄"
+
+#. module: project_inherit
+#: model:ir.model.fields,field_description:project_inherit.field_ir_attachment__engineering_workflow_user
+msgid "Workflow User"
+msgstr "工作流用戶"
+
+#. module: project_inherit
+#: model:ir.model.fields,field_description:project_inherit.field_ir_attachment__engineering_workflow_date
+msgid "Workflow date"
+msgstr "工作流日期"
+
+#. module: project_inherit
+#: model:ir.model.fields,field_description:project_inherit.field_ir_attachment__engineering_writable
+msgid "Writable"
+msgstr "可書寫"
+
+#. module: project_inherit
+#: model:ir.model.fields,field_description:project_inherit.field_ir_attachment__cn_configid
+#: model:ir.model.fields,field_description:project_inherit.field_mrp_document__cn_configid
+#: model:ir.model.fields,field_description:project_inherit.field_product_document__cn_configid
+msgid "configid"
+msgstr "configid"
+
+#. module: project_inherit
+#: model:ir.model,name:project_inherit.model_iratracr_ship
+msgid "irattachmentrelations ship"
+msgstr "檔案關係"
+
+#. module: project_inherit
+#: model:ir.model.fields,field_description:project_inherit.field_ir_attachment__cnis_current
+#: model:ir.model.fields,field_description:project_inherit.field_mrp_document__cnis_current
+#: model:ir.model.fields,field_description:project_inherit.field_product_document__cnis_current
+msgid "isCurrent"
+msgstr "當前版本"
+
+#. module: project_inherit
+#. odoo-python
+#: code:addons/project_inherit/models/dms_file.py:0
+#, python-format
+msgid "no"
+msgstr "號碼"
+
+#. module: project_inherit
+#: model:ir.model.fields,field_description:project_inherit.field_iratracr_ship__prd_id
+msgid "relation Doc"
+msgstr "關係檔案"
+
+#. module: project_inherit
+#: model_terms:ir.ui.view,arch_db:project_inherit.view_attachfileprj_form_inherit
+msgid "versions"
+msgstr "版本"
+
+#. module: project_inherit
+#: model:ir.model.fields,field_description:project_inherit.field_ir_attachment__cn_file2prd
+#: model:ir.model.fields,field_description:project_inherit.field_mrp_document__cn_file2prd
+#: model:ir.model.fields,field_description:project_inherit.field_product_document__cn_file2prd
+#: model:ir.model.fields,field_description:project_inherit.field_project_project__cn_prj2pdt_ship
+#: model_terms:ir.ui.view,arch_db:project_inherit.view_attachfileprj_form_inherit
+msgid "产品"
+msgstr "產品"
+
+#. module: project_inherit
+#: model:ir.model.fields,field_description:project_inherit.field_ir_attachment_relation__ir_attachment_relations
+msgid "关联图纸"
+msgstr "關聯圖紙"
+
+#. module: project_inherit
+#: model:ir.model.fields,field_description:project_inherit.field_ir_attachment__active
+msgid "启用"
+msgstr "啟用"
+
+#. module: project_inherit
+#: model_terms:ir.ui.view,arch_db:project_inherit.plm_docbom_form_view_v2
+msgid "子阶预览"
+msgstr "子階預覽"
+
+#. module: project_inherit
+#: model:ir.model.fields,field_description:project_inherit.field_project_task__cnprjtask_file
+#: model_terms:ir.ui.view,arch_db:project_inherit.view_project_product_form_inherit
+#: model_terms:ir.ui.view,arch_db:project_inherit.view_project_task_form_inherit
+msgid "工程文件"
+msgstr "工程文件"
+
+#. module: project_inherit
+#: model:ir.model.fields,field_description:project_inherit.field_project_project__dmsfile_count
+msgid "数量"
+msgstr "數量"
+
+#. module: project_inherit
+#: model:ir.model.fields,field_description:project_inherit.field_ir_attachment__contactor
+#: model:ir.model.fields,field_description:project_inherit.field_mrp_document__contactor
+#: model:ir.model.fields,field_description:project_inherit.field_product_document__contactor
+msgid "聯絡人"
+msgstr "聯絡人"
+
+#. module: project_inherit
+#: model:ir.model.fields,field_description:project_inherit.field_ir_attachment__owner
+#: model:ir.model.fields,field_description:project_inherit.field_mrp_document__owner
+#: model:ir.model.fields,field_description:project_inherit.field_product_document__owner
+msgid "責任人"
+msgstr "責任人"
+
+#. module: project_inherit
+#: model:ir.model.fields,field_description:project_inherit.field_ir_attachment__cn_file2prj
+#: model:ir.model.fields,field_description:project_inherit.field_mrp_document__cn_file2prj
+#: model:ir.model.fields,field_description:project_inherit.field_product_document__cn_file2prj
+#: model_terms:ir.ui.view,arch_db:project_inherit.view_attachfileprj_form_inherit
+msgid "项目"
+msgstr "專案"

@@ -1,0 +1,664 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* pco
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-14 04:13+0000\n"
+"PO-Revision-Date: 2024-11-14 12:55+0800\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.5\n"
+
+#. module: pco
+#: model:ir.model.fields,field_description:pco.field_pco__message_needaction
+#: model:ir.model.fields,field_description:pco.field_pco_bom__message_needaction
+#: model:ir.model.fields,field_description:pco.field_pco_tag__message_needaction
+msgid "Action Needed"
+msgstr "采取行动"
+
+#. module: pco
+#: model:ir.model.fields,field_description:pco.field_pco__activity_ids
+#: model:ir.model.fields,field_description:pco.field_pco_bom__activity_ids
+#: model:ir.model.fields,field_description:pco.field_pco_tag__activity_ids
+msgid "Activities"
+msgstr "活动"
+
+#. module: pco
+#: model:ir.model.fields,field_description:pco.field_pco__activity_exception_decoration
+#: model:ir.model.fields,field_description:pco.field_pco_bom__activity_exception_decoration
+#: model:ir.model.fields,field_description:pco.field_pco_tag__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "活动异常标记"
+
+#. module: pco
+#: model:ir.model.fields,field_description:pco.field_pco__activity_state
+#: model:ir.model.fields,field_description:pco.field_pco_bom__activity_state
+#: model:ir.model.fields,field_description:pco.field_pco_tag__activity_state
+msgid "Activity State"
+msgstr "活动状态"
+
+#. module: pco
+#: model:ir.model.fields,field_description:pco.field_pco__activity_type_icon
+#: model:ir.model.fields,field_description:pco.field_pco_bom__activity_type_icon
+#: model:ir.model.fields,field_description:pco.field_pco_tag__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "活动类型图标"
+
+#. module: pco
+#: model:ir.model.fields,field_description:pco.field_pco__message_attachment_count
+#: model:ir.model.fields,field_description:pco.field_pco_bom__message_attachment_count
+#: model:ir.model.fields,field_description:pco.field_pco_tag__message_attachment_count
+msgid "Attachment Count"
+msgstr "附件数"
+
+#. module: pco
+#: model:ir.model.fields,field_description:pco.field_pco__create_uid
+#: model:ir.model.fields,field_description:pco.field_pco_bom__create_uid
+#: model:ir.model.fields,field_description:pco.field_pco_product__create_uid
+#: model:ir.model.fields,field_description:pco.field_pco_tag__create_uid
+#: model:ir.model.fields,field_description:pco.field_pco_type__create_uid
+msgid "Created by"
+msgstr "创造者"
+
+#. module: pco
+#: model:ir.model.fields,field_description:pco.field_pco__create_date
+#: model:ir.model.fields,field_description:pco.field_pco_bom__create_date
+#: model:ir.model.fields,field_description:pco.field_pco_product__create_date
+#: model:ir.model.fields,field_description:pco.field_pco_tag__create_date
+#: model:ir.model.fields,field_description:pco.field_pco_type__create_date
+msgid "Created on"
+msgstr "创建日期"
+
+#. module: pco
+#: model:ir.model.fields,field_description:pco.field_pco__display_name
+#: model:ir.model.fields,field_description:pco.field_pco_bom__display_name
+#: model:ir.model.fields,field_description:pco.field_pco_product__display_name
+#: model:ir.model.fields,field_description:pco.field_pco_tag__display_name
+#: model:ir.model.fields,field_description:pco.field_pco_type__display_name
+msgid "Display Name"
+msgstr "显示名称"
+
+#. module: pco
+#: model:ir.model.fields,field_description:pco.field_pco__message_follower_ids
+#: model:ir.model.fields,field_description:pco.field_pco_bom__message_follower_ids
+#: model:ir.model.fields,field_description:pco.field_pco_tag__message_follower_ids
+msgid "Followers"
+msgstr "关注者"
+
+#. module: pco
+#: model:ir.model.fields,field_description:pco.field_pco__message_partner_ids
+#: model:ir.model.fields,field_description:pco.field_pco_bom__message_partner_ids
+#: model:ir.model.fields,field_description:pco.field_pco_tag__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "关注者(合作伙伴)"
+
+#. module: pco
+#: model:ir.model.fields,help:pco.field_pco__activity_type_icon
+#: model:ir.model.fields,help:pco.field_pco_bom__activity_type_icon
+#: model:ir.model.fields,help:pco.field_pco_tag__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "字体很棒的图标，例如fa-任务"
+
+#. module: pco
+#: model:ir.model.fields,field_description:pco.field_pco__has_message
+#: model:ir.model.fields,field_description:pco.field_pco_bom__has_message
+#: model:ir.model.fields,field_description:pco.field_pco_tag__has_message
+msgid "Has Message"
+msgstr "有留言"
+
+#. module: pco
+#: model:ir.model.fields,field_description:pco.field_pco__id
+#: model:ir.model.fields,field_description:pco.field_pco_bom__id
+#: model:ir.model.fields,field_description:pco.field_pco_product__id
+#: model:ir.model.fields,field_description:pco.field_pco_tag__id
+#: model:ir.model.fields,field_description:pco.field_pco_type__id
+msgid "ID"
+msgstr "ID"
+
+#. module: pco
+#: model:ir.model.fields,field_description:pco.field_pco__activity_exception_icon
+#: model:ir.model.fields,field_description:pco.field_pco_bom__activity_exception_icon
+#: model:ir.model.fields,field_description:pco.field_pco_tag__activity_exception_icon
+msgid "Icon"
+msgstr "图标"
+
+#. module: pco
+#: model:ir.model.fields,help:pco.field_pco__activity_exception_icon
+#: model:ir.model.fields,help:pco.field_pco_bom__activity_exception_icon
+#: model:ir.model.fields,help:pco.field_pco_tag__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "指示异常活动的图标"
+
+#. module: pco
+#: model:ir.model.fields,help:pco.field_pco__message_needaction
+#: model:ir.model.fields,help:pco.field_pco_bom__message_needaction
+#: model:ir.model.fields,help:pco.field_pco_tag__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "如果选中，则有新消息需要您注意"
+
+#. module: pco
+#: model:ir.model.fields,help:pco.field_pco__message_has_error
+#: model:ir.model.fields,help:pco.field_pco__message_has_sms_error
+#: model:ir.model.fields,help:pco.field_pco_bom__message_has_error
+#: model:ir.model.fields,help:pco.field_pco_bom__message_has_sms_error
+#: model:ir.model.fields,help:pco.field_pco_tag__message_has_error
+#: model:ir.model.fields,help:pco.field_pco_tag__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "如果检查，则某些消息存在传送错误"
+
+#. module: pco
+#: model:ir.model.fields,field_description:pco.field_pco__message_is_follower
+#: model:ir.model.fields,field_description:pco.field_pco_bom__message_is_follower
+#: model:ir.model.fields,field_description:pco.field_pco_tag__message_is_follower
+msgid "Is Follower"
+msgstr "为关注者"
+
+#. module: pco
+#: model:ir.model.fields,field_description:pco.field_pco__write_uid
+#: model:ir.model.fields,field_description:pco.field_pco_bom__write_uid
+#: model:ir.model.fields,field_description:pco.field_pco_product__write_uid
+#: model:ir.model.fields,field_description:pco.field_pco_tag__write_uid
+#: model:ir.model.fields,field_description:pco.field_pco_type__write_uid
+msgid "Last Updated by"
+msgstr "最后更新者"
+
+#. module: pco
+#: model:ir.model.fields,field_description:pco.field_pco__write_date
+#: model:ir.model.fields,field_description:pco.field_pco_bom__write_date
+#: model:ir.model.fields,field_description:pco.field_pco_product__write_date
+#: model:ir.model.fields,field_description:pco.field_pco_tag__write_date
+#: model:ir.model.fields,field_description:pco.field_pco_type__write_date
+msgid "Last Updated on"
+msgstr "最后更新时间"
+
+#. module: pco
+#: model:ir.model.fields,field_description:pco.field_pco__message_has_error
+#: model:ir.model.fields,field_description:pco.field_pco_bom__message_has_error
+#: model:ir.model.fields,field_description:pco.field_pco_tag__message_has_error
+msgid "Message Delivery error"
+msgstr "消息传递错误"
+
+#. module: pco
+#: model:ir.model.fields,field_description:pco.field_pco__message_ids
+#: model:ir.model.fields,field_description:pco.field_pco_bom__message_ids
+#: model:ir.model.fields,field_description:pco.field_pco_tag__message_ids
+msgid "Messages"
+msgstr "留言"
+
+#. module: pco
+#: model:ir.model.fields,field_description:pco.field_pco__binary_fields
+msgid "Multi Files Upload"
+msgstr "多文件上传"
+
+#. module: pco
+#: model:ir.model.fields,field_description:pco.field_pco__my_activity_date_deadline
+#: model:ir.model.fields,field_description:pco.field_pco_bom__my_activity_date_deadline
+#: model:ir.model.fields,field_description:pco.field_pco_tag__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "我的活动截止日期"
+
+#. module: pco
+#. odoo-python
+#: code:addons/pco/models/pco.py:0
+#, python-format
+msgid "New"
+msgstr "新的"
+
+#. module: pco
+#: model:ir.model.fields,field_description:pco.field_pco__activity_calendar_event_id
+#: model:ir.model.fields,field_description:pco.field_pco_bom__activity_calendar_event_id
+#: model:ir.model.fields,field_description:pco.field_pco_tag__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr "下一个活动日历事件"
+
+#. module: pco
+#: model:ir.model.fields,field_description:pco.field_pco__activity_date_deadline
+#: model:ir.model.fields,field_description:pco.field_pco_bom__activity_date_deadline
+#: model:ir.model.fields,field_description:pco.field_pco_tag__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "下一个活动截止日期"
+
+#. module: pco
+#: model:ir.model.fields,field_description:pco.field_pco__activity_summary
+#: model:ir.model.fields,field_description:pco.field_pco_bom__activity_summary
+#: model:ir.model.fields,field_description:pco.field_pco_tag__activity_summary
+msgid "Next Activity Summary"
+msgstr "下一步活动总结"
+
+#. module: pco
+#: model:ir.model.fields,field_description:pco.field_pco__activity_type_id
+#: model:ir.model.fields,field_description:pco.field_pco_bom__activity_type_id
+#: model:ir.model.fields,field_description:pco.field_pco_tag__activity_type_id
+msgid "Next Activity Type"
+msgstr "下一个活动类型"
+
+#. module: pco
+#: model:ir.model.fields,field_description:pco.field_pco__message_needaction_counter
+#: model:ir.model.fields,field_description:pco.field_pco_bom__message_needaction_counter
+#: model:ir.model.fields,field_description:pco.field_pco_tag__message_needaction_counter
+msgid "Number of Actions"
+msgstr "活动数"
+
+#. module: pco
+#: model:ir.model.fields,field_description:pco.field_pco__message_has_error_counter
+#: model:ir.model.fields,field_description:pco.field_pco_bom__message_has_error_counter
+#: model:ir.model.fields,field_description:pco.field_pco_tag__message_has_error_counter
+msgid "Number of errors"
+msgstr "错误数"
+
+#. module: pco
+#: model:ir.model.fields,help:pco.field_pco__message_needaction_counter
+#: model:ir.model.fields,help:pco.field_pco_bom__message_needaction_counter
+#: model:ir.model.fields,help:pco.field_pco_tag__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "需要采取行动的消息数量"
+
+#. module: pco
+#: model:ir.model.fields,help:pco.field_pco__message_has_error_counter
+#: model:ir.model.fields,help:pco.field_pco_bom__message_has_error_counter
+#: model:ir.model.fields,help:pco.field_pco_tag__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "发送错误的消息数"
+
+#. module: pco
+#: model:ir.model,name:pco.model_pco
+msgid "PCO main model for OpenPLM."
+msgstr "OpenPLM 的 PCO 主模型"
+
+#. module: pco
+#: model:ir.ui.menu,name:pco.pco_menu_root_sec
+msgid "PCO.产品签审单"
+msgstr "PCO.产品签审单"
+
+#. module: pco
+#: model:ir.model,name:pco.model_pco_bom
+msgid "PCO_BOM main model for PCO."
+msgstr "PCO_BOM是PCO的主要模型。"
+
+#. module: pco
+#: model:ir.model,name:pco.model_pco_product
+msgid "PCO_product main model for PCO."
+msgstr "PCO_产品主要型号为PCO。"
+
+#. module: pco
+#: model:ir.model.fields,field_description:pco.field_pco_bom__pco_id_bom
+msgid "Pco Id Bom"
+msgstr "Pco Id Bom"
+
+#. module: pco
+#: model:ir.model.fields,field_description:pco.field_pco_product__pco_id_prd
+msgid "Pco Id Prd"
+msgstr "Pco Id Prd"
+
+#. module: pco
+#: model:ir.ui.menu,name:pco.pco_model_menu_action_sec
+msgid "Product Approval"
+msgstr "产品批准"
+
+#. module: pco
+#: model:ir.model.fields,field_description:pco.field_pco__rating_ids
+#: model:ir.model.fields,field_description:pco.field_pco_bom__rating_ids
+#: model:ir.model.fields,field_description:pco.field_pco_tag__rating_ids
+msgid "Ratings"
+msgstr "评级"
+
+#. module: pco
+#: model:ir.model.fields,field_description:pco.field_pco__activity_user_id
+#: model:ir.model.fields,field_description:pco.field_pco_bom__activity_user_id
+#: model:ir.model.fields,field_description:pco.field_pco_tag__activity_user_id
+msgid "Responsible User"
+msgstr "负责人员"
+
+#. module: pco
+#: model:ir.model.fields,field_description:pco.field_pco__message_has_sms_error
+#: model:ir.model.fields,field_description:pco.field_pco_bom__message_has_sms_error
+#: model:ir.model.fields,field_description:pco.field_pco_tag__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "短信发送错误"
+
+#. module: pco
+#: model:ir.model.fields,help:pco.field_pco__activity_state
+#: model:ir.model.fields,help:pco.field_pco_bom__activity_state
+#: model:ir.model.fields,help:pco.field_pco_tag__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"基于活动的状态\n"
+"逾期：到期日已过\n"
+"今天：活动日期为今天\n"
+"计划：未来的活动。"
+
+#. module: pco
+#: model:ir.ui.menu,name:pco.pco_tag_setting_action_sec
+msgid "Tag"
+msgstr "标签"
+
+#. module: pco
+#: model:ir.model.fields,field_description:pco.field_pco__tag_ids
+#: model_terms:ir.ui.view,arch_db:pco.pco_view_form
+#: model_terms:ir.ui.view,arch_db:pco.pco_view_tree
+msgid "Tags"
+msgstr "标签"
+
+#. module: pco
+#: model:ir.model.fields,help:pco.field_pco__activity_exception_decoration
+#: model:ir.model.fields,help:pco.field_pco_bom__activity_exception_decoration
+#: model:ir.model.fields,help:pco.field_pco_tag__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "记录的异常活动的类型"
+
+#. module: pco
+#: model:ir.model.fields,field_description:pco.field_pco__website_message_ids
+#: model:ir.model.fields,field_description:pco.field_pco_bom__website_message_ids
+#: model:ir.model.fields,field_description:pco.field_pco_tag__website_message_ids
+msgid "Website Messages"
+msgstr "网站留言"
+
+#. module: pco
+#: model:ir.model.fields,help:pco.field_pco__website_message_ids
+#: model:ir.model.fields,help:pco.field_pco_bom__website_message_ids
+#: model:ir.model.fields,help:pco.field_pco_tag__website_message_ids
+msgid "Website communication history"
+msgstr "网站通讯历史"
+
+#. module: pco
+#: model:ir.model,name:pco.model_pco_type
+msgid "pco Selection Option"
+msgstr "pco选择选项"
+
+#. module: pco
+#: model:ir.ui.menu,name:pco.pco_product_setting_action_sec
+msgid "pco_product"
+msgstr "pco产品"
+
+#. module: pco
+#: model:ir.ui.menu,name:pco.pco_type_setting_action_sec
+msgid "pco_type"
+msgstr "pco类型"
+
+#. module: pco
+#: model:ir.actions.act_window,name:pco.pco_tag_action
+#: model_terms:ir.ui.view,arch_db:pco.pco_tag_view_form
+#: model_terms:ir.ui.view,arch_db:pco.pco_tag_view_tree
+msgid "pco标签"
+msgstr "pco标签"
+
+#. module: pco
+#: model_terms:ir.ui.view,arch_db:pco.pco_tag_view_search
+msgid "pco标签搜寻"
+msgstr "pco标签搜寻"
+
+#. module: pco
+#: model:ir.model,name:pco.model_pco_tag
+msgid "tag model for pco. "
+msgstr "pco 标签模型"
+
+#. module: pco
+#: model:ir.model.fields,field_description:pco.field_pco__title
+#: model_terms:ir.ui.view,arch_db:pco.pco_view_form
+#: model_terms:ir.ui.view,arch_db:pco.pco_view_search
+#: model_terms:ir.ui.view,arch_db:pco.pco_view_tree
+msgid "主旨"
+msgstr "主旨"
+
+#. module: pco
+#: model:ir.model.fields.selection,name:pco.selection__pco__flow_class__product
+#: model:ir.model.fields.selection,name:pco.selection__pco_type__name__product
+msgid "产品"
+msgstr "产品"
+
+#. module: pco
+#: model:ir.model.fields,field_description:pco.field_pco_product__new_affected_product_version
+#: model_terms:ir.ui.view,arch_db:pco.pco_product_view_search
+#: model_terms:ir.ui.view,arch_db:pco.pco_product_view_tree
+msgid "产品新版本"
+msgstr "产品新版本"
+
+#. module: pco
+#: model:ir.model.fields,field_description:pco.field_pco_product__affected_product_version
+#: model_terms:ir.ui.view,arch_db:pco.pco_product_view_search
+#: model_terms:ir.ui.view,arch_db:pco.pco_product_view_tree
+msgid "产品旧版本"
+msgstr "产品旧版本"
+
+#. module: pco
+#: model:ir.actions.act_window,name:pco.pco_model_action
+#: model_terms:ir.ui.view,arch_db:pco.pco_view_form
+#: model_terms:ir.ui.view,arch_db:pco.pco_view_tree
+msgid "产品签审单"
+msgstr "产品签审单"
+
+#. module: pco
+#: model_terms:ir.ui.view,arch_db:pco.pco_view_search
+msgid "产品签审单搜寻"
+msgstr "产品签审单搜寻"
+
+#. module: pco
+#: model:ir.model.fields.selection,name:pco.selection__pco__state__cancel
+#: model_terms:ir.ui.view,arch_db:pco.pco_view_form
+msgid "取消"
+msgstr "取消"
+
+#. module: pco
+#: model_terms:ir.ui.view,arch_db:pco.pco_view_form
+msgid "变更后审核"
+msgstr "变更后审核"
+
+#. module: pco
+#: model:ir.model.fields,field_description:pco.field_pco__active
+#: model:ir.model.fields,field_description:pco.field_pco_bom__active
+#: model:ir.model.fields,field_description:pco.field_pco_product__active
+msgid "啟用"
+msgstr "启用"
+
+#. module: pco
+#: model:ir.model.fields,field_description:pco.field_pco_bom__affected_bom_id
+#: model_terms:ir.ui.view,arch_db:pco.pco_bom_view_form
+#: model_terms:ir.ui.view,arch_db:pco.pco_bom_view_search
+#: model_terms:ir.ui.view,arch_db:pco.pco_bom_view_tree
+#: model_terms:ir.ui.view,arch_db:pco.pco_view_form
+msgid "审批物料清单"
+msgstr "审批物料清单"
+
+#. module: pco
+#: model:ir.model.fields.selection,name:pco.selection__pco__state__review
+#: model_terms:ir.ui.view,arch_db:pco.pco_view_form
+msgid "审核中"
+msgstr "审核中"
+
+#. module: pco
+#: model:ir.model.fields,field_description:pco.field_pco_product__affected_product_id
+#: model_terms:ir.ui.view,arch_db:pco.pco_product_view_form
+#: model_terms:ir.ui.view,arch_db:pco.pco_product_view_search
+#: model_terms:ir.ui.view,arch_db:pco.pco_product_view_tree
+#: model_terms:ir.ui.view,arch_db:pco.pco_type_view_tree
+#: model_terms:ir.ui.view,arch_db:pco.pco_view_form
+msgid "審批产品"
+msgstr "审批产品"
+
+#. module: pco
+#: model_terms:ir.ui.view,arch_db:pco.pco_product_view_form
+#: model_terms:ir.ui.view,arch_db:pco.pco_view_form
+msgid "審批产品版本"
+msgstr "审批产品版本"
+
+#. module: pco
+#: model:ir.model.fields,field_description:pco.field_pco__classstr
+#: model:ir.model.fields,field_description:pco.field_pco__flow_class
+#: model:ir.model.fields,field_description:pco.field_pco_type__name
+#: model_terms:ir.ui.view,arch_db:pco.pco_view_form
+#: model_terms:ir.ui.view,arch_db:pco.pco_view_tree
+msgid "審批類別"
+msgstr "审批类别"
+
+#. module: pco
+#: model_terms:ir.ui.view,arch_db:pco.pco_product_view_form
+#: model_terms:ir.ui.view,arch_db:pco.pco_view_form
+msgid "新版产品"
+msgstr "新版产品"
+
+#. module: pco
+#: model_terms:ir.ui.view,arch_db:pco.pco_product_view_form
+#: model_terms:ir.ui.view,arch_db:pco.pco_view_form
+msgid "新版产品版本"
+msgstr "新版产品版本"
+
+#. module: pco
+#: model:ir.model.fields,field_description:pco.field_pco_product__new_affected_product_id
+#: model_terms:ir.ui.view,arch_db:pco.pco_product_view_search
+#: model_terms:ir.ui.view,arch_db:pco.pco_product_view_tree
+msgid "新版審批产品"
+msgstr "新版审批产品"
+
+#. module: pco
+#: model:ir.model.fields,field_description:pco.field_pco_bom__new_affected_bom_id
+#: model_terms:ir.ui.view,arch_db:pco.pco_bom_view_form
+#: model_terms:ir.ui.view,arch_db:pco.pco_bom_view_search
+#: model_terms:ir.ui.view,arch_db:pco.pco_bom_view_tree
+#: model_terms:ir.ui.view,arch_db:pco.pco_view_form
+msgid "新版物料清单"
+msgstr "新版物料清单"
+
+#. module: pco
+#: model:ir.model.fields,field_description:pco.field_pco_tag__name
+#: model_terms:ir.ui.view,arch_db:pco.pco_tag_view_form
+#: model_terms:ir.ui.view,arch_db:pco.pco_tag_view_search
+#: model_terms:ir.ui.view,arch_db:pco.pco_tag_view_tree
+msgid "标签名称"
+msgstr "标签名称"
+
+#. module: pco
+#: model:ir.model.fields,field_description:pco.field_pco_tag__description
+#: model_terms:ir.ui.view,arch_db:pco.pco_tag_view_form
+#: model_terms:ir.ui.view,arch_db:pco.pco_tag_view_search
+#: model_terms:ir.ui.view,arch_db:pco.pco_tag_view_tree
+msgid "标签说明"
+msgstr "标签说明"
+
+#. module: pco
+#: model:ir.model.fields.selection,name:pco.selection__pco__state__approved
+#: model_terms:ir.ui.view,arch_db:pco.pco_view_form
+msgid "核准"
+msgstr "核准"
+
+#. module: pco
+#: model:ir.model.fields,field_description:pco.field_pco__contactor_id
+#: model_terms:ir.ui.view,arch_db:pco.pco_view_form
+#: model_terms:ir.ui.view,arch_db:pco.pco_view_tree
+msgid "核決者"
+msgstr "核決者"
+
+#. module: pco
+#: model:ir.model.fields.selection,name:pco.selection__pco__flow_class__bom
+#: model:ir.model.fields.selection,name:pco.selection__pco_type__name__bom
+msgid "物料清单"
+msgstr "物料清单"
+
+#. module: pco
+#: model:ir.model.fields,field_description:pco.field_pco_bom__new_affected_bom_version
+#: model_terms:ir.ui.view,arch_db:pco.pco_bom_view_form
+#: model_terms:ir.ui.view,arch_db:pco.pco_bom_view_search
+#: model_terms:ir.ui.view,arch_db:pco.pco_bom_view_tree
+#: model_terms:ir.ui.view,arch_db:pco.pco_view_form
+msgid "物料清单新版本"
+msgstr "物料清单新版本"
+
+#. module: pco
+#: model:ir.model.fields,field_description:pco.field_pco_bom__affected_bom_version
+#: model_terms:ir.ui.view,arch_db:pco.pco_bom_view_form
+#: model_terms:ir.ui.view,arch_db:pco.pco_bom_view_search
+#: model_terms:ir.ui.view,arch_db:pco.pco_bom_view_tree
+#: model_terms:ir.ui.view,arch_db:pco.pco_view_form
+msgid "物料清单旧版本"
+msgstr "物料清单旧版本"
+
+#. module: pco
+#: model:ir.model.fields,field_description:pco.field_pco__state
+msgid "状态"
+msgstr "状态"
+
+#. module: pco
+#: model_terms:ir.ui.view,arch_db:pco.pco_view_tree
+msgid "狀態"
+msgstr "状态"
+
+#. module: pco
+#: model:ir.actions.act_window,name:pco.pco_type_model_action
+#: model_terms:ir.ui.view,arch_db:pco.pco_type_view_form
+#: model_terms:ir.ui.view,arch_db:pco.pco_type_view_search
+msgid "类型"
+msgstr "类型"
+
+#. module: pco
+#: model:ir.model.fields,field_description:pco.field_pco__item_number
+#: model_terms:ir.ui.view,arch_db:pco.pco_view_form
+#: model_terms:ir.ui.view,arch_db:pco.pco_view_search
+#: model_terms:ir.ui.view,arch_db:pco.pco_view_tree
+msgid "編號"
+msgstr "编号"
+
+#. module: pco
+#: model:ir.model.fields.selection,name:pco.selection__pco__state__new
+msgid "草稿"
+msgstr "草稿"
+
+#. module: pco
+#: model:ir.model.fields,field_description:pco.field_pco__description
+#: model_terms:ir.ui.view,arch_db:pco.pco_view_form
+#: model_terms:ir.ui.view,arch_db:pco.pco_view_tree
+msgid "說明"
+msgstr "说明"
+
+#. module: pco
+#: model:ir.model.fields,field_description:pco.field_pco__owner_id
+#: model_terms:ir.ui.view,arch_db:pco.pco_view_form
+#: model_terms:ir.ui.view,arch_db:pco.pco_view_tree
+msgid "責任人"
+msgstr "责任人"
+
+#. module: pco
+#: model_terms:ir.ui.view,arch_db:pco.pco_view_form
+msgid "送審BOM"
+msgstr "送审BOM"
+
+#. module: pco
+#: model:ir.actions.act_window,name:pco.pco_bom_model_action
+#: model:ir.actions.act_window,name:pco.pco_product_model_action
+msgid "送審物件"
+msgstr "送审物件"
+
+#. module: pco
+#: model_terms:ir.ui.view,arch_db:pco.pco_view_form
+msgid "送審產品"
+msgstr "送审产品"
+
+#. module: pco
+#: model_terms:ir.ui.view,arch_db:pco.pco_view_form
+msgid "附件"
+msgstr "附件"
+
+#. module: pco
+#: model:ir.model.fields,field_description:pco.field_pco__btnflog
+msgid "顯示"
+msgstr "显示"
+
+#. module: pco
+#: model:ir.model.fields,field_description:pco.field_pco__showbom
+msgid "顯示bom"
+msgstr "显示bom"
+
+#. module: pco
+#: model:ir.model.fields,field_description:pco.field_pco__showproduct
+msgid "顯示part"
+msgstr "显示part"

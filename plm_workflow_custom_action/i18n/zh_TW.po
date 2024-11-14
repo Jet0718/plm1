@@ -1,0 +1,188 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* plm_workflow_custom_action
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0-20240820\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-10-25 06:47+0000\n"
+"PO-Revision-Date: 2024-11-14 11:55+0800\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.5\n"
+
+#. module: plm_workflow_custom_action
+#: model:ir.model.fields,field_description:plm_workflow_custom_action.field_plm_automatedwfaction__name
+msgid "Action Name"
+msgstr "動作名稱"
+
+#. module: plm_workflow_custom_action
+#: model:ir.model.fields.selection,name:plm_workflow_custom_action.selection__plm_automatedwfaction__before_after__after
+msgid "After"
+msgstr "之後"
+
+#. module: plm_workflow_custom_action
+#: model:ir.model.fields,field_description:plm_workflow_custom_action.field_plm_automatedwfaction__apply_to
+msgid "Apply To"
+msgstr "申請"
+
+#. module: plm_workflow_custom_action
+#: model:ir.model.fields,help:plm_workflow_custom_action.field_plm_automatedwfaction__apply_to
+msgid "Apply this action to the workflow model"
+msgstr "將此操作應用於工作流模型"
+
+#. module: plm_workflow_custom_action
+#: model:ir.model.fields.selection,name:plm_workflow_custom_action.selection__plm_automatedwfaction__apply_to__ir_attachment
+msgid "Attachment"
+msgstr "附件"
+
+#. module: plm_workflow_custom_action
+#: model:ir.model.fields.selection,name:plm_workflow_custom_action.selection__plm_automatedwfaction__before_after__before
+msgid "Before"
+msgstr "之前"
+
+#. module: plm_workflow_custom_action
+#: model:ir.model.fields,field_description:plm_workflow_custom_action.field_plm_automatedwfaction__child_ids
+msgid "Child Actions"
+msgstr "子階活動"
+
+#. module: plm_workflow_custom_action
+#: model:ir.model.fields,help:plm_workflow_custom_action.field_plm_automatedwfaction__child_ids
+msgid ""
+"Child server actions that will be executed. Note that the last return "
+"returned action value will be used as global return value."
+msgstr ""
+"將要執行的子伺服器操作。請注意，最後一次返回返回的操作值將用作全域返回"
+"值."
+
+#. module: plm_workflow_custom_action
+#: model:ir.model.fields.selection,name:plm_workflow_custom_action.selection__plm_automatedwfaction__from_state__confirmed
+#: model:ir.model.fields.selection,name:plm_workflow_custom_action.selection__plm_automatedwfaction__to_state__confirmed
+msgid "Confirmed"
+msgstr "已確認"
+
+#. module: plm_workflow_custom_action
+#: model:ir.model.fields,field_description:plm_workflow_custom_action.field_plm_automatedwfaction__create_uid
+msgid "Created by"
+msgstr "創建者"
+
+#. module: plm_workflow_custom_action
+#: model:ir.model.fields,field_description:plm_workflow_custom_action.field_plm_automatedwfaction__create_date
+msgid "Created on"
+msgstr "創建於"
+
+#. module: plm_workflow_custom_action
+#: model:ir.model.fields,field_description:plm_workflow_custom_action.field_plm_automatedwfaction__display_name
+msgid "Display Name"
+msgstr "顯示名稱"
+
+#. module: plm_workflow_custom_action
+#: model:ir.model.fields,field_description:plm_workflow_custom_action.field_plm_automatedwfaction__domain
+msgid "Domain"
+msgstr "功能變數名稱"
+
+#. module: plm_workflow_custom_action
+#: model:ir.model.fields.selection,name:plm_workflow_custom_action.selection__plm_automatedwfaction__from_state__draft
+#: model:ir.model.fields.selection,name:plm_workflow_custom_action.selection__plm_automatedwfaction__to_state__draft
+msgid "Draft"
+msgstr "草稿"
+
+#. module: plm_workflow_custom_action
+#: model:ir.model.fields,field_description:plm_workflow_custom_action.field_plm_automatedwfaction__from_state
+msgid "From Stare"
+msgstr "從…狀態"
+
+#. module: plm_workflow_custom_action
+#: model:ir.model.fields,field_description:plm_workflow_custom_action.field_plm_automatedwfaction__id
+msgid "ID"
+msgstr "ID"
+
+#. module: plm_workflow_custom_action
+#: model:ir.model,name:plm_workflow_custom_action.model_ir_attachment
+msgid "Ir Attachment"
+msgstr "附件"
+
+#. module: plm_workflow_custom_action
+#: model:ir.model.fields,field_description:plm_workflow_custom_action.field_plm_automatedwfaction__write_uid
+msgid "Last Updated by"
+msgstr "向…提供最新資訊"
+
+#. module: plm_workflow_custom_action
+#: model:ir.model.fields,field_description:plm_workflow_custom_action.field_plm_automatedwfaction__write_date
+msgid "Last Updated on"
+msgstr "最後更新於"
+
+#. module: plm_workflow_custom_action
+#: model:ir.model.fields.selection,name:plm_workflow_custom_action.selection__plm_automatedwfaction__from_state__obsoleted
+#: model:ir.model.fields.selection,name:plm_workflow_custom_action.selection__plm_automatedwfaction__to_state__obsoleted
+msgid "Obsoleted"
+msgstr "已廢除"
+
+#. module: plm_workflow_custom_action
+#: model:ir.model.fields,field_description:plm_workflow_custom_action.field_plm_automatedwfaction__before_after
+msgid "Perform"
+msgstr "執行"
+
+#. module: plm_workflow_custom_action
+#: model:ir.model,name:plm_workflow_custom_action.model_plm_automatedwfaction
+msgid "Plm Automated Work Flow Actions"
+msgstr "Plm自動化工作流操作"
+
+#. module: plm_workflow_custom_action
+#: model_terms:ir.ui.view,arch_db:plm_workflow_custom_action.plm_automatedwfaction_form
+msgid "Plm Workflow Actions"
+msgstr "Plm工作流操作"
+
+#. module: plm_workflow_custom_action
+#: model:ir.model.fields.selection,name:plm_workflow_custom_action.selection__plm_automatedwfaction__apply_to__product_product
+msgid "Product"
+msgstr "產品"
+
+#. module: plm_workflow_custom_action
+#: model:ir.model,name:plm_workflow_custom_action.model_product_template
+msgid "Product Template"
+msgstr "產品範本"
+
+#. module: plm_workflow_custom_action
+#: model:ir.model.fields.selection,name:plm_workflow_custom_action.selection__plm_automatedwfaction__from_state__released
+#: model:ir.model.fields.selection,name:plm_workflow_custom_action.selection__plm_automatedwfaction__to_state__released
+msgid "Released"
+msgstr "已發行"
+
+#. module: plm_workflow_custom_action
+#: model:ir.model.fields,field_description:plm_workflow_custom_action.field_plm_automatedwfaction__to_state
+msgid "To State"
+msgstr "到…狀態"
+
+#. module: plm_workflow_custom_action
+#: model:ir.model.fields.selection,name:plm_workflow_custom_action.selection__plm_automatedwfaction__from_state__undermodify
+#: model:ir.model.fields.selection,name:plm_workflow_custom_action.selection__plm_automatedwfaction__to_state__undermodify
+msgid "UnderModify"
+msgstr "在修改下"
+
+#. module: plm_workflow_custom_action
+#: model:ir.actions.act_window,name:plm_workflow_custom_action.plm_action_workflow_action
+msgid "WorkFlow Actions"
+msgstr "工作流操作"
+
+#. module: plm_workflow_custom_action
+#: model:ir.ui.menu,name:plm_workflow_custom_action.plm_wf_actions
+msgid "Workflow Actions"
+msgstr "工作流操作"
+
+#. module: plm_workflow_custom_action
+#: model:ir.model.fields,help:plm_workflow_custom_action.field_plm_automatedwfaction__domain
+msgid "specifie the domain of the action"
+msgstr "指定操作的域"
+
+#. module: plm_workflow_custom_action
+#: model:ir.model.fields,help:plm_workflow_custom_action.field_plm_automatedwfaction__before_after
+msgid ""
+"you can choose to perform the action before or after the workflow action"
+msgstr "您可以選擇在工作流操作之前或之後執行該操作"
