@@ -128,14 +128,14 @@ class PCOModel(models.Model):
                                 'version': record.affected_bom_id.version + 1,
                                 'active': False,
                                 'cnis_current': False,
-                                'code': record.affected_product_id.item_number+"-"+code,
+                                'code': record.affected_bom_id.item_number+"-"+code,
                             })
                             #抄写内部参考号 编号-版本
                             record.affected_bom_id.write ({'active':True}) 
                             record.affected_bom_id.write({'state':'InChange'}) 
                             record.affected_bom_id.write({'cnis_current':True})
-                            record.write({'new_affected_bom_id':record.new_affected_bom_id.id,'btnflog': False})   
-                        
+                            record.write({'new_affected_bom_id':record.new_affected_bom_id.id})   
+                            self.write({'btnflog': False})
                     else :
                         code = str(record.affected_bom_id.version+1)
                         record.affected_bom_id.write({'state':'Review'})                        
@@ -266,7 +266,7 @@ class PCOModel(models.Model):
                is_setflog= True
             
         for record in self.pco_bom_ids: 
-            if record.new_affected_bom_id != False and  record.new_affected_product_id.state == 'Review'  :                
+            if record.new_affected_bom_id != False and  record.new_affected_bom_id.state == 'Review'  :                
                is_setflog= True
         if is_setflog :
             res =  super(PCOModel, self).write(vals)

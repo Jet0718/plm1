@@ -3,12 +3,12 @@ from odoo import api,fields, models,_
 class InhtBOMtModel(models.Model):
     _inherit = 'mrp.bom'
 
-    item_number = fields.Char(string="編號",default=lambda self:_("no"),copy=False,readonly=True)
+    item_number = fields.Char(string="編號",default=lambda self:_("no"),readonly=True)
     xbom_type   = fields.Selection([('E', 'EBOM'), ('M', 'MBOM')], string='BOM類型')
 
     cnis_current = fields.Boolean('isCurrent', default=True,readonly=True)
     cn_configid = fields.Char(string='configid',default="0",readonly=True)
-    version = fields.Integer('Version', default=1, readonly=True)
+    version = fields.Integer('Version', default=0, readonly=True)
 
     state = fields.Selection([
             ('Draft', 'Draft'),

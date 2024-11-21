@@ -40,7 +40,23 @@
                                 <field name="name" />
                             </tree> 
                         </field>
-                    </page>        
+                    </page>  
+                    <page string="子阶工程图">
+                        <field name="cn_cadfile_ships" >
+                            <tree  editable="bottom"> 
+                                <field name="preview"
+	                    	       widget="image"
+	                    	       options="{'zoom': true, 'zoom_delay': 200}"
+	                    	       nolabel="1"
+	                    	       readonly="True"/>
+                                <field name="irattachment_id" />
+                                <field name="engineering_code" />
+                                <field name="engineering_revision" />
+                                <field name="name" />
+                                <field name="type" />
+                            </tree> 
+                        </field>
+                    </page>       
                 </xpath>                
             </field> 
         </record>

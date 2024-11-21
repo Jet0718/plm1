@@ -3,5 +3,3 @@ ezdxf
 matplotlib
 cadquery
 numpy-stl
-numpy
-

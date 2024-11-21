@@ -10,15 +10,19 @@
                 <field name="weight" invisible="1"/>
             </xpath>
             <xpath expr="//group[@name='technical_infos_group']" position="after">
-                <group name="weight" string="Weight" colspan="4" col="4">
-                    <field name="automatic_compute_selection" widget='radio'/>
-                    <field name="weight"
-                           readonly="engineering_state in ['released', 'obsoleted']"/>
-                    <field name="weight_additional"
-                           readonly="engineering_state in ['released', 'obsoleted'] or automatic_compute_selection not in ['use_normal_bom', 'use_cad']"/>
-                    <field name="weight_cad"
-                           invisible="automatic_compute_selection in ['use_normal_bom']"/>
-                    <field name="weight_n_bom_computed" invisible="automatic_compute_selection != 'use_normal_bom'"/>
+                <group name="weight" string="Weight">
+                    <group>
+                        <field name="automatic_compute_selection" widget='radio'/>
+                    </group>
+                    <group>                    
+                        <field name="weight"
+                            readonly="engineering_state in ['released', 'obsoleted']"/>
+                        <field name="weight_additional"
+                            readonly="engineering_state in ['released', 'obsoleted'] or automatic_compute_selection not in ['use_normal_bom', 'use_cad']"/>
+                        <field name="weight_cad"
+                            invisible="automatic_compute_selection in ['use_normal_bom']"/>
+                        <field name="weight_n_bom_computed" invisible="automatic_compute_selection != 'use_normal_bom'"/>
+                    </group>
                 </group>
             </xpath>
         </field>
@@ -31,14 +35,18 @@
         <field name="type">form</field>
         <field name="arch" type="xml">
             <xpath expr="//group[@name='technical_infos_group']" position="after">
-                <group name="weight" string="Weight" colspan="4" col="4">
-                    <field name="automatic_compute_selection" widget='radio'/>
-                    <field name="weight_additional"
-                           readonly="engineering_state in ['released', 'obsoleted'] or automatic_compute_selection not in ['use_normal_bom', 'use_cad']"/>
-                    <field name="weight_cad"
-                           invisible="automatic_compute_selection in ['use_normal_bom']"/>
-                    <field name="weight_n_bom_computed"
-                           invisible="automatic_compute_selection!='use_normal_bom'"/>
+                <group name="weight" string="Weight" >
+                    <group>
+                        <field name="automatic_compute_selection" widget='radio'/>
+                    </group>
+                    <group>
+                        <field name="weight_additional"
+                            readonly="engineering_state in ['released', 'obsoleted'] or automatic_compute_selection not in ['use_normal_bom', 'use_cad']"/>
+                        <field name="weight_cad"
+                            invisible="automatic_compute_selection in ['use_normal_bom']"/>
+                        <field name="weight_n_bom_computed"
+                            invisible="automatic_compute_selection!='use_normal_bom'"/>
+                    </group>
                 </group>
             </xpath>
         </field>

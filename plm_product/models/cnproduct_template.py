@@ -27,7 +27,7 @@ class InhtProducttmpModel(models.Model):
     cn_pdt2version_ship = fields.One2many('product.template', 'pdt2pdt_id', '历程记录')
     version=fields.Integer("version",default=1,copy=False,readonly=True)
 
-    # engineering_code = fields.Char(string="Engineering Code",readonly=True)
+    engineering_code = fields.Char(string="Engineering Code",readonly=True)
     # default_code = fields.Char(string="Internal Reference",readonly=True)
     # is_engcode_editable = fields.Boolean('Engineering Editable', default=True, compute=lambda self: self._compute_eng_code_editable1())
 
@@ -60,7 +60,9 @@ class InhtProducttmpModel(models.Model):
         return res
 
 
-
+    @api.onchange("categ_id")
+    def onchange_categ_id(self):
+        return self
          
     #ebert按钮跳转页面    
     def action_open_versions(self): 

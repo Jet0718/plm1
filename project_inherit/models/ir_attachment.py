@@ -29,6 +29,7 @@ class InhtProjectModel(models.Model):
 
 
     # cn_file2prj = fields.One2many('project.project','cn_prj2file1',string='项目')
+    cn_cadfile_ships = fields.One2many('ir.attachment.ships','iship_id','子阶图纸')
 
 
 

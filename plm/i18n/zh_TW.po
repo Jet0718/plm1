@@ -4,10 +4,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 17.0-20240820\n"
+"Project-Id-Version: Odoo Server 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-22 05:50+0000\n"
-"PO-Revision-Date: 2024-11-11 17:28+0800\n"
+"POT-Creation-Date: 2024-11-15 03:16+0000\n"
+"PO-Revision-Date: 2024-11-15 11:28+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: zh_TW\n"
@@ -42,7 +42,7 @@ msgid ""
 msgstr ""
 "\n"
 "\n"
-"簽入所有文檔以便繼續！！"
+"簽入所有文件以便繼續！！"
 
 #. module: plm
 #. odoo-python
@@ -61,7 +61,7 @@ msgstr "#文件"
 #. module: plm
 #: model:ir.actions.report,print_report_name:plm.action_report_doc_structure
 msgid "'Bom Doc Structure - %s' % object.display_name"
-msgstr "Bom 文檔結構 -%s' % object.display_name"
+msgstr "Bom 文件結構 -%s' % object.display_name"
 
 #. module: plm
 #: model:ir.actions.report,print_report_name:plm.action_report_prod_structure
@@ -73,14 +73,14 @@ msgstr "Bom-prod結構- %s' % object.display_name"
 #: code:addons/plm/models/ir_attachment.py:0 model:ir.model.fields.selection,name:plm.selection__ir_attachment__document_type__2d
 #, python-format
 msgid "2D"
-msgstr "2D"
+msgstr ""
 
 #. module: plm
 #. odoo-python
 #: code:addons/plm/models/ir_attachment.py:0 model:ir.model.fields.selection,name:plm.selection__ir_attachment__document_type__3d
 #, python-format
 msgid "3D"
-msgstr "3D"
+msgstr ""
 
 #. module: plm
 #: model_terms:ir.ui.view,arch_db:plm.document_search_tooltip
@@ -95,7 +95,7 @@ msgstr "<b>創建用戶：</b>"
 #. module: plm
 #: model_terms:ir.ui.view,arch_db:plm.document_search_tooltip
 msgid "<b>Document Information</b>"
-msgstr "<b>檔資訊</b>"
+msgstr "<b>文件資訊</b>"
 
 #. module: plm
 #: model_terms:ir.ui.view,arch_db:plm.document_search_tooltip
@@ -124,15 +124,15 @@ msgid ""
 "                    </p>"
 msgstr ""
 "<p class=\"o_view_nocontent_smiling_face\">\n"
-"                        將檔上傳到您的產品\n"
+"                        將檔案上傳到您的產品\n"
 "                    </p><p>\n"
-"                        使用此功能可以存儲任何檔，如圖形或規範。\n"
+"                        使用此功能可以存儲任何檔案，如圖形或規範。\n"
 "                    </p>"
 
 #. module: plm
 #: model_terms:ir.ui.view,arch_db:plm.view_attachment_form_plm_hinerit
 msgid "<span style=\"color:orange\">Not.Update</span>"
-msgstr "<span style=\\“顏色：橘色”>不更新</span>"
+msgstr "<span style=\"\\“顏色：橘色”\">不更新</span>"
 
 #. module: plm
 #: model_terms:ir.ui.view,arch_db:plm.view_attachment_form_plm_hinerit
@@ -202,7 +202,7 @@ msgstr "<strong>狀態：</strong>"
 #. module: plm
 #: model:ir.model,name:plm.model_res_groups
 msgid "Access Groups"
-msgstr "訪問組"
+msgstr "存取組"
 
 #. module: plm
 #: model:ir.model.fields,field_description:plm.field_ir_attachment__message_needaction
@@ -302,7 +302,7 @@ msgstr "管理員"
 #. module: plm
 #: model_terms:ir.ui.view,arch_db:plm.view_plm_settings
 msgid "Advanced linking and organise your document with virtual box"
-msgstr "使用虛擬框高級連結和組織文檔"
+msgstr "使用虛擬框高級連結和組織文件"
 
 #. module: plm
 #: model_terms:ir.ui.view,arch_db:plm.view_plm_settings
@@ -327,7 +327,7 @@ msgstr ""
 #: code:addons/plm/models/res_config_settings.py:0 model:ir.model.fields,field_description:plm.field_res_config_settings__module_plm_automate_normal_bom
 #, python-format
 msgid "Allow to create normal BOM if not exists and product are released."
-msgstr "如果不存在並且產品已發佈，則允許創建正常的BOM."
+msgstr "如果不存在並且產品已發佈，則允許創建正常的BOM"
 
 #. module: plm
 #. odoo-python
@@ -364,21 +364,21 @@ msgstr "允許僅選擇沒有 Engineering_code 或處於最新版本的產品購
 #: code:addons/plm/models/product_product.py:0 model:ir.model.fields,help:plm.field_product_product__std_umc3
 #, python-format
 msgid "Allow to specifiy a unit measure for the third feature."
-msgstr "允許為第三個特徵指定單位度量."
+msgstr "允許為第三個特徵指定單位度量"
 
 #. module: plm
 #. odoo-python
 #: code:addons/plm/models/product_product.py:0 model:ir.model.fields,help:plm.field_product_product__std_umc1
 #, python-format
 msgid "Allow to specify a unit measure for the first feature."
-msgstr "允許為第一個特徵指定單位度量."
+msgstr "允許為第一個特徵指定單位度量"
 
 #. module: plm
 #. odoo-python
 #: code:addons/plm/models/product_product.py:0 model:ir.model.fields,help:plm.field_product_product__std_umc2
 #, python-format
 msgid "Allow to specify a unit measure for the second feature."
-msgstr "允許為第二個特徵指定單位度量."
+msgstr "允許為第二個特徵指定單位度量"
 
 #. module: plm
 #. odoo-python
@@ -386,7 +386,7 @@ msgstr "允許為第二個特徵指定單位度量."
 #: model:ir.model.fields,help:plm.field_plm_description__umc2 model:ir.model.fields,help:plm.field_plm_description__umc3
 #, python-format
 msgid "Allow to specify a unit measure or a label for the feature."
-msgstr "允許為特徵指定單位度量或標籤."
+msgstr "允許為特徵指定單位度量或標籤"
 
 #. module: plm
 #. odoo-python
@@ -417,7 +417,7 @@ msgstr "顯示產品類別清單時指定順序。"
 #: code:addons/plm/models/product_product.py:0 model:ir.model.fields,help:plm.field_product_product__std_value1
 #, python-format
 msgid "Assign value to the first characteristic."
-msgstr "為第一個特徵賦值."
+msgstr "為第一個特徵賦值"
 
 #. module: plm
 #. odoo-python
@@ -425,7 +425,7 @@ msgstr "為第一個特徵賦值."
 #: model:ir.model.fields,help:plm.field_product_product__std_value3
 #, python-format
 msgid "Assign value to the second characteristic."
-msgstr "為第二個特徵賦值."
+msgstr "為第二個特徵賦值"
 
 #. module: plm
 #: model:ir.model.fields,field_description:plm.field_mrp_bom__att_count
@@ -449,7 +449,7 @@ msgstr "附件計數"
 #: code:addons/plm/models/ir_attachment.py:0
 #, python-format
 msgid "Attachment Relations."
-msgstr "附件關係."
+msgstr "附件關係"
 
 #. module: plm
 #: model:ir.model.fields,field_description:plm.field_ir_attachment__attachment_revision_count
@@ -463,7 +463,7 @@ msgstr "附件修訂計數"
 #: code:addons/plm/models/ir_attachment.py:0
 #, python-format
 msgid "Attachment Revs."
-msgstr "附件修訂版."
+msgstr "附件修訂版"
 
 #. module: plm
 #. odoo-python
@@ -507,19 +507,19 @@ msgstr "B.O.M.線"
 #: code:addons/plm/models/mrp_bom.py:0
 #, python-format
 msgid "B.O.M.S"
-msgstr "B.O.M.S"
+msgstr ""
 
 #. module: plm
 #. odoo-python
 #: code:addons/plm/models/mrp_bom_line.py:0
 #, python-format
 msgid "B.o.M."
-msgstr "B.o.M."
+msgstr ""
 
 #. module: plm
 #: model_terms:ir.ui.view,arch_db:plm.view_plm_settings
 msgid "BOM"
-msgstr "BOM"
+msgstr ""
 
 #. module: plm
 #: model:ir.actions.report,name:plm.report_plm_bom_structure_all
@@ -559,12 +559,12 @@ msgstr "BOM只留下總結"
 #. module: plm
 #: model_terms:ir.ui.view,arch_db:plm.plm_bom_form_view
 msgid "BOM Rev."
-msgstr "物料清單版本."
+msgstr "物料清單版本"
 
 #. module: plm
 #: model:ir.model,name:plm.model_plm_backupdoc_wizard
 msgid "Back up document wizard"
-msgstr "備份文檔嚮導"
+msgstr "備份文件嚮導"
 
 #. module: plm
 #: model:ir.actions.act_window,name:plm.action_plm_backupdoc
@@ -575,17 +575,17 @@ msgstr "備份資料集"
 #: model:ir.model.fields,field_description:plm.field_plm_cad_open__plm_backup_doc_id
 #: model:ir.model.fields,field_description:plm.field_plm_cad_open_bck__plm_backup_doc_id
 msgid "Backup Document Reference"
-msgstr "備份文檔參考"
+msgstr "備份文件參考"
 
 #. module: plm
 #: model_terms:ir.ui.view,arch_db:plm.plm_backupdoc_search
 msgid "Backup Document Set"
-msgstr "備份文檔集"
+msgstr "備份文件集"
 
 #. module: plm
 #: model:ir.model,name:plm.model_base
 msgid "Base"
-msgstr "基數"
+msgstr "計稅基數"
 
 #. module: plm
 #: model:ir.model,name:plm.model_mrp_bom
@@ -595,7 +595,7 @@ msgstr "物料清單"
 #. module: plm
 #: model:ir.model,name:plm.model_mrp_bom_line
 msgid "Bill of Material Line"
-msgstr "物料清單行"
+msgstr "BOM明細"
 
 #. module: plm
 #: model_terms:ir.ui.view,arch_db:plm.plm_bom_tree_structure
@@ -619,7 +619,7 @@ msgstr "BoM層次結構"
 #. module: plm
 #: model:ir.model.fields,field_description:plm.field_mrp_bom__type model:ir.model.fields,field_description:plm.field_mrp_bom_line__type
 msgid "BoM Type"
-msgstr "物料清單 BoM 類型"
+msgstr "BoM類型"
 
 #. module: plm
 #: model:ir.actions.report,name:plm.report_all_product_product_pdf
@@ -696,7 +696,7 @@ msgstr "Cad熱處理"
 #. module: plm
 #: model:ir.model.fields,field_description:plm.field_product_product__sale_ok model:ir.model.fields,field_description:plm.field_product_template__sale_ok
 msgid "Can be Sold"
-msgstr "可以出售"
+msgstr "可用於銷售"
 
 #. module: plm
 #: model_terms:ir.ui.view,arch_db:plm.plm_component_create_normal_bom model_terms:ir.ui.view,arch_db:plm.restore_document_button_view
@@ -708,14 +708,14 @@ msgstr "取消"
 #: code:addons/plm/models/ir_attachment.py:0
 #, python-format
 msgid "Cannot restore previous document Engineering Name = %r   Engineering Revision = %r   Id = %r"
-msgstr "無法復原先前的文件 工程名稱 = %r 工程修訂 = %r ID = %r"
+msgstr ""
 
 #. module: plm
 #. odoo-python
 #: code:addons/plm/models/product_product.py:0
 #, python-format
 msgid "Cannot restore previous product Engineering Code = %r   Engineering Revision = %r   Document Id = %r"
-msgstr "無法恢復先前的產品 工程代碼 = %r 工程修訂版 = %r 文件 ID = %r"
+msgstr ""
 
 #. module: plm
 #: model_terms:ir.ui.view,arch_db:plm.plm_component_base_form
@@ -883,7 +883,7 @@ msgstr "子階確認"
 #: code:addons/plm/models/ir_attachment_relations.py:0 model:ir.model.fields,field_description:plm.field_ir_attachment_relation__child_type
 #, python-format
 msgid "Child Document Type"
-msgstr "子階文檔類型"
+msgstr "子階文件類型"
 
 #. module: plm
 #. odoo-python
@@ -946,7 +946,7 @@ msgstr "BOM比對工具"
 #. module: plm
 #: model:ir.model,name:plm.model_plm_component_document_rel
 msgid "Component Document Relations"
-msgstr "組件文檔關係"
+msgstr "組件文件關係"
 
 #. module: plm
 #: model_terms:ir.ui.view,arch_db:plm.mrp_bom_tree_view_where model_terms:ir.ui.view,arch_db:plm.plm_bom_tree_structure
@@ -976,7 +976,7 @@ msgstr "計算正常BOM計算產品重量，使用CAD重量或設置自訂重量
 #. module: plm
 #: model:ir.model,name:plm.model_res_config_settings
 msgid "Config Settings"
-msgstr "配置設置"
+msgstr "配置設定"
 
 #. module: plm
 #: model:ir.ui.menu,name:plm.plm_menu_dictionaries
@@ -994,7 +994,7 @@ msgstr "配置名稱"
 #: model_terms:ir.ui.view,arch_db:plm.plm_component_base_form model_terms:ir.ui.view,arch_db:plm.plm_product_product_normal_form_view_inherit
 #: model_terms:ir.ui.view,arch_db:plm.view_product_client_workflow
 msgid "Confirm Component"
-msgstr "檢核組件"
+msgstr "確認組件"
 
 #. module: plm
 #: model_terms:ir.ui.view,arch_db:plm.view_attachment_client_workflow model_terms:ir.ui.view,arch_db:plm.view_attachment_form_plm_hinerit
@@ -1029,7 +1029,7 @@ msgstr "正確的組件"
 #. module: plm
 #: model_terms:ir.ui.view,arch_db:plm.view_attachment_client_workflow model_terms:ir.ui.view,arch_db:plm.view_attachment_form_plm_hinerit
 msgid "Correct Document"
-msgstr "正確的檔"
+msgstr "正確的文件"
 
 #. module: plm
 #: model:ir.model.fields,field_description:plm.field_product_template__standard_price
@@ -1039,7 +1039,10 @@ msgstr "成本"
 #. module: plm
 #: model:ir.model.fields,help:plm.field_product_template__standard_price
 msgid "Cost of the product, in the default unit of measure of the product."
-msgstr "產品成本，以產品的預設計量單位表示."
+msgstr ""
+"產品價值（在 AVCO 中自動計算）。\n"
+"        用於在採購成本未知情況下對產品進行估值（例如庫存調整）。\n"
+"        用於計算銷售訂單的利潤率。"
 
 #. module: plm
 #. odoo-python
@@ -1082,14 +1085,14 @@ msgstr "從WEB創建新版本"
 #: code:addons/plm/models/ir_attachment.py:0 code:addons/plm/models/product_product.py:0
 #, python-format
 msgid "Created : New Revision."
-msgstr "已創建：新修訂."
+msgstr "已創建：新修訂"
 
 #. module: plm
 #. odoo-python
 #: code:addons/plm/models/product_product.py:0
 #, python-format
 msgid "Created Normal Bom."
-msgstr "已創建普通Bom."
+msgstr "已創建普通Bom"
 
 #. module: plm
 #: model:ir.model.fields,field_description:plm.field_ir_attachment_relation__create_uid
@@ -1149,7 +1152,7 @@ msgstr "創建"
 #: model:ir.model.fields,field_description:plm.field_mrp_bom_line__create_date
 #, python-format
 msgid "Creation Date"
-msgstr "創建日期"
+msgstr "建立於"
 
 #. module: plm
 #: model_terms:ir.ui.view,arch_db:plm.plm_component_create_normal_bom
@@ -1195,7 +1198,7 @@ msgstr "創建日期"
 #: code:addons/plm/models/product_product.py:0 model:ir.model.fields,field_description:plm.field_product_product__write_date
 #, python-format
 msgid "Date Modified"
-msgstr "修改日期"
+msgstr "寫入日期"
 
 #. module: plm
 #. odoo-python
@@ -1276,17 +1279,17 @@ msgstr "顯示名稱"
 #. module: plm
 #: model_terms:ir.ui.view,arch_db:plm.report_doc_bom model_terms:ir.ui.view,arch_db:plm.report_prod_bom
 msgid "Doc Name"
-msgstr "文檔名稱"
+msgstr "文件名稱"
 
 #. module: plm
 #: model_terms:ir.ui.view,arch_db:plm.view_attachment_form_plm_hinerit
 msgid "Doc Structure"
-msgstr "文檔結構"
+msgstr "文件結構"
 
 #. module: plm
 #: model:ir.model,name:plm.model_report_plm_report_doc_structure
 msgid "Doc Structure Report"
-msgstr "文檔結構報告"
+msgstr "文件結構報告"
 
 #. module: plm
 #. odoo-python
@@ -1294,50 +1297,50 @@ msgstr "文檔結構報告"
 #: model_terms:ir.ui.view,arch_db:plm.plm_cad_open_search_bck model_terms:ir.ui.view,arch_db:plm.view_plm_settings
 #, python-format
 msgid "Document"
-msgstr "文檔"
+msgstr "文件"
 
 #. module: plm
 #. odoo-python
 #: code:addons/plm/models/product_product.py:0
 #, python-format
 msgid "Document %r with revision %r is in check-out, cannot create variant."
-msgstr "修訂版為%r的文檔%r正在簽出中，無法創建變體。"
+msgstr "修訂版為%r的文件%r正在簽出中，無法創建變體。"
 
 #. module: plm
 #. odoo-python
 #: code:addons/plm/models/ir_attachment.py:0
 #, python-format
 msgid "Document %r with revision %r not present in Odoo."
-msgstr "Odoo中不存在修訂版%r的文件%r."
+msgstr "Odoo中不存在修訂版%r的文件%r"
 
 #. module: plm
 #. odoo-python
 #: code:addons/plm/models/ir_attachment.py:0
 #, python-format
 msgid "Document Already in the system"
-msgstr "文檔已在系統中"
+msgstr "文件已在系統中"
 
 #. module: plm
 #: model_terms:ir.ui.view,arch_db:plm.plm_backupdoc_search
 msgid "Document Name"
-msgstr "文檔名稱"
+msgstr "文件名稱"
 
 #. module: plm
 #: model:ir.model.fields,field_description:plm.field_ir_attachment__document_rel_count
 #: model:ir.model.fields,field_description:plm.field_mrp_document__document_rel_count
 #: model:ir.model.fields,field_description:plm.field_product_document__document_rel_count
 msgid "Document Rel Count"
-msgstr "文檔相關計數"
+msgstr "文件相關計數"
 
 #. module: plm
 #: model_terms:ir.ui.view,arch_db:plm.plm_docbom_search
 msgid "Document Relation Kind"
-msgstr "文檔關係類型"
+msgstr "文件關係類型"
 
 #. module: plm
 #: model:ir.actions.act_window,name:plm.plm_action_document_relations model_terms:ir.ui.view,arch_db:plm.plm_docbom_tree_view
 msgid "Document Relations"
-msgstr "文檔關係"
+msgstr "文件關係"
 
 #. module: plm
 #. odoo-python
@@ -1346,48 +1349,48 @@ msgstr "文檔關係"
 #: model:ir.model.fields,field_description:plm.field_product_document__document_type
 #, python-format
 msgid "Document Type"
-msgstr "文檔類型"
+msgstr "文件類型"
 
 #. module: plm
 #. odoo-python
 #: code:addons/plm/models/ir_attachment.py:0
 #, python-format
 msgid "Document in check-In unable to save!"
-msgstr "簽入文檔無法保存！"
+msgstr "簽入文件無法保存！"
 
 #. module: plm
 #. odoo-python
 #: code:addons/plm/models/ir_attachment.py:0
 #, python-format
 msgid "Document is Check-Out from User %r"
-msgstr "文檔已從用戶簽出 %r"
+msgstr "文件已被用戶%r 簽出"
 
 #. module: plm
 #. odoo-python
 #: code:addons/plm/models/ir_attachment.py:0
 #, python-format
 msgid "Document is released and cannot be saved"
-msgstr "文檔已發佈，無法保存"
+msgstr "文件已發佈，無法保存"
 
 #. module: plm
 #: model:ir.model.fields,field_description:plm.field_plm_dbthread__documement_name_version
 msgid "Document name and version"
-msgstr "文檔名稱和版本"
+msgstr "文件名稱和版本"
 
 #. module: plm
 #: model_terms:ir.ui.view,arch_db:plm.document_search_tooltip
 msgid "Document released"
-msgstr "文檔已發佈"
+msgstr "文件已發佈"
 
 #. module: plm
 #: model:ir.actions.report,name:plm.action_report_doc_structure
 msgid "Document structure"
-msgstr "文檔結構"
+msgstr "文件結構"
 
 #. module: plm
 #: model:ir.model,name:plm.model_plm_checkout
 msgid "Document that are locked from someone"
-msgstr "被某人鎖定的文檔"
+msgstr "被某人鎖定的文件"
 
 #. module: plm
 #. odoo-python
@@ -1396,12 +1399,12 @@ msgstr "被某人鎖定的文檔"
 #: model_terms:ir.ui.view,arch_db:plm.view_attachment_form_plm_hinerit
 #, python-format
 msgid "Documents"
-msgstr "文檔"
+msgstr "文件"
 
 #. module: plm
 #: model_terms:ir.ui.view,arch_db:plm.plm_backupdoc_tree model_terms:ir.ui.view,arch_db:plm.plm_checkout_tree
 msgid "Documents in Check-Out"
-msgstr "文檔在簽出"
+msgstr "文件在簽出"
 
 #. module: plm
 #: model_terms:ir.ui.view,arch_db:plm.view_plm_settings
@@ -1447,7 +1450,7 @@ msgstr "啟用Eco/Ecr"
 #. module: plm
 #: model:ir.model.fields,field_description:plm.field_res_config_settings__module_plm_pdf_workorder
 msgid "Enable Plm PDF document inside workorder"
-msgstr "在工單內啟用Plm PDF文檔"
+msgstr "在工單內啟用Plm PDF文件"
 
 #. module: plm
 #: model:ir.model.fields,field_description:plm.field_res_config_settings__module_plm_breakages
@@ -1462,7 +1465,7 @@ msgstr "在幫助臺上啟用破損管理（僅限企業）"
 #. module: plm
 #: model_terms:ir.ui.view,arch_db:plm.view_attachment_form_plm_hinerit
 msgid "Eng. Document Name"
-msgstr "工程檔案名稱"
+msgstr "工程文件名稱"
 
 #. module: plm
 #: model:ir.model.fields,field_description:plm.field_ir_attachment__engineering_branch_revision
@@ -1478,7 +1481,6 @@ msgstr "工程分部索引"
 #: model:ir.model.fields,field_description:plm.field_ir_attachment__engineering_code
 #: model:ir.model.fields,field_description:plm.field_mrp_document__engineering_code
 #: model:ir.model.fields,field_description:plm.field_product_document__engineering_code
-#: model:ir.model.fields,field_description:plm.field_product_product__engineering_code
 #: model:ir.model.fields,field_description:plm.field_revision_plm_mixin__engineering_code
 msgid "Engineering Code"
 msgstr "工程碼"
@@ -1547,9 +1549,6 @@ msgid "Engineering Revision letter"
 msgstr "工程修訂函"
 
 #. module: plm
-#: model:ir.model.fields,field_description:plm.field_ir_attachment__engineering_state
-#: model:ir.model.fields,field_description:plm.field_mrp_document__engineering_state
-#: model:ir.model.fields,field_description:plm.field_product_document__engineering_state
 #: model:ir.model.fields,field_description:plm.field_product_product__engineering_state
 #: model:ir.model.fields,field_description:plm.field_product_template__engineering_state
 #: model:ir.model.fields,field_description:plm.field_revision_plm_mixin__engineering_state
@@ -1576,7 +1575,7 @@ msgstr "工程修訂"
 #: code:addons/plm/models/product_product.py:0
 #, python-format
 msgid "Error during component creation with values:\n"
-msgstr "使用值創建元件時出錯:\n"
+msgstr "使用值創建元件時出錯：\n"
 
 #. module: plm
 #: model:ir.model.fields,field_description:plm.field_plm_dbthread__error_message
@@ -1598,7 +1597,7 @@ msgstr "示例結果"
 #. module: plm
 #: model_terms:ir.ui.view,arch_db:plm.view_plm_description
 msgid "Example Values:<br/>"
-msgstr "示例值：<br/>"
+msgstr "示例值："
 
 #. module: plm
 #: model_terms:ir.ui.view,arch_db:plm.view_plm_description
@@ -1659,12 +1658,12 @@ msgstr "功能。值3（以組件形式）=3"
 #: model:ir.model.fields,field_description:plm.field_ir_attachment__datas model:ir.model.fields,field_description:plm.field_mrp_document__datas
 #: model:ir.model.fields,field_description:plm.field_product_document__datas
 msgid "File Content (base64))"
-msgstr "檔內容（base64）"
+msgstr "檔案內容 (base64)"
 
 #. module: plm
 #: model_terms:ir.ui.view,arch_db:plm.view_attachment_form_plm_hinerit
 msgid "File Data:"
-msgstr "檔資料："
+msgstr "檔案資料："
 
 #. module: plm
 #: model_terms:ir.ui.view,arch_db:plm.report_doc_bom model_terms:ir.ui.view,arch_db:plm.report_prod_bom
@@ -1683,29 +1682,29 @@ msgstr "文件大小"
 #: model:ir.model.fields,field_description:plm.field_mrp_document__library_path
 #: model:ir.model.fields,field_description:plm.field_product_document__library_path
 msgid "File library path"
-msgstr "檔庫路徑"
+msgstr "檔案庫路徑"
 
 #. module: plm
 #: model:ir.model,name:plm.model_report_ir_attachment_file
 msgid "Files details by Directory"
-msgstr "按目錄列出的檔詳細資訊"
+msgstr "按目錄列出的檔案詳細資訊"
 
 #. module: plm
 #: model_terms:ir.ui.view,arch_db:plm.ir_attachment_search model_terms:ir.ui.view,arch_db:plm.plm_component_base_search
 #: model_terms:ir.ui.view,arch_db:plm.plm_docbom_search
 msgid "Filter on documents changed by me"
-msgstr "篩選我更改的文檔"
+msgstr "篩選我更改的文件"
 
 #. module: plm
 #: model_terms:ir.ui.view,arch_db:plm.ir_attachment_search model_terms:ir.ui.view,arch_db:plm.plm_component_base_search
 #: model_terms:ir.ui.view,arch_db:plm.plm_docbom_search
 msgid "Filter on documents created by me"
-msgstr "篩選我創建的文檔"
+msgstr "篩選我創建的文件"
 
 #. module: plm
 #: model_terms:ir.ui.view,arch_db:plm.ir_attachment_search
 msgid "Filter on documents with error"
-msgstr "篩選有錯誤的文檔"
+msgstr "篩選有錯誤的文件"
 
 #. module: plm
 #: model_terms:ir.ui.view,arch_db:plm.view_plm_description
@@ -1826,7 +1825,7 @@ msgstr "生成自"
 #: model:ir.model.fields,help:plm.field_plm_treatment__sequence
 #, python-format
 msgid "Gives the sequence order when displaying a list of product categories."
-msgstr "顯示產品類別清單時給出序列順序."
+msgstr "顯示產品類別清單時給出序列順序"
 
 #. module: plm
 #: model_terms:ir.ui.view,arch_db:plm.document_graph_view
@@ -1905,7 +1904,7 @@ msgstr "主機名稱"
 #: model:ir.model.fields,field_description:plm.field_plm_treatment__id model:ir.model.fields,field_description:plm.field_report_ir_attachment_file__id
 #: model:ir.model.fields,field_description:plm.field_report_plmcomponent__id
 msgid "ID"
-msgstr "ID"
+msgstr ""
 
 #. module: plm
 #: model:ir.model.fields,field_description:plm.field_ir_attachment__activity_exception_icon
@@ -1992,7 +1991,7 @@ msgstr "附件"
 #: model:ir.model.fields,field_description:plm.field_ir_attachment__is_plm model:ir.model.fields,field_description:plm.field_mrp_document__is_plm
 #: model:ir.model.fields,field_description:plm.field_product_document__is_plm
 msgid "Is A Plm Document"
-msgstr "是否為Plm檔"
+msgstr "是否為Plm文件"
 
 #. module: plm
 #. odoo-python
@@ -2082,7 +2081,7 @@ msgstr "上個月"
 #: model:ir.model.fields,field_description:plm.field_plm_temporary_message__write_uid
 #: model:ir.model.fields,field_description:plm.field_plm_treatment__write_uid
 msgid "Last Updated by"
-msgstr "最後更新時間: "
+msgstr "最後更新時間："
 
 #. module: plm
 #: model:ir.model.fields,field_description:plm.field_ir_attachment_relation__write_date
@@ -2154,19 +2153,19 @@ msgstr "連結元件"
 #: code:addons/plm/models/product_product.py:0 model:ir.model.fields,field_description:plm.field_product_product__linkeddocuments
 #, python-format
 msgid "Linked Docs"
-msgstr "連結文檔"
+msgstr "連結文件"
 
 #. module: plm
 #. odoo-python
 #: code:addons/plm/models/product_product_document_rel.py:0 model:ir.model.fields,field_description:plm.field_plm_component_document_rel__document_id
 #, python-format
 msgid "Linked Document"
-msgstr "連結文檔"
+msgstr "連結文件"
 
 #. module: plm
 #: model_terms:ir.ui.view,arch_db:plm.plm_product_product_normal_form_view_inherit
 msgid "Linked Documents"
-msgstr "連結文檔"
+msgstr "連結文件"
 
 #. module: plm
 #. odoo-python
@@ -2218,7 +2217,7 @@ msgstr "管理更多語言PLM報告"
 #. module: plm
 #: model_terms:ir.ui.view,arch_db:plm.view_plm_settings
 msgid "Manage product Suspension State on workFlow for document and product"
-msgstr "管理文檔和產品工作流上的產品暫停狀態"
+msgstr "管理文件和產品工作流上的產品暫停狀態"
 
 #. module: plm
 #. odoo-python
@@ -2296,7 +2295,7 @@ msgstr "月份"
 #: code:addons/plm/models/product_product.py:0
 #, python-format
 msgid "Mrp Bom"
-msgstr "Mrp Bom"
+msgstr ""
 
 #. module: plm
 #: model:ir.model.fields,field_description:plm.field_res_config_settings__module_plm_document_multi_site
@@ -2320,7 +2319,7 @@ msgstr "我的活動截止時間"
 #. module: plm
 #: model_terms:ir.ui.view,arch_db:plm.view_attachment_form_plm_hinerit
 msgid "N.Rev."
-msgstr "N.Rev."
+msgstr "N.Rev"
 
 #. module: plm
 #. odoo-python
@@ -2379,7 +2378,7 @@ msgstr "沒有"
 #: code:addons/plm/models/mrp_bom.py:0 model:ir.model.fields.selection,name:plm.selection__mrp_bom__type__normal
 #, python-format
 msgid "Normal BoM"
-msgstr "普通BOM"
+msgstr "製造此產品"
 
 #. module: plm
 #: model:ir.actions.act_window,name:plm.plm_action_normal_form
@@ -2428,7 +2427,7 @@ msgstr "備註"
 #. module: plm
 #: model:ir.model.fields,field_description:plm.field_ir_attachment_relation__notes
 msgid "Notes: "
-msgstr "備註: "
+msgstr "備註"
 
 #. module: plm
 #: model:ir.model.fields,field_description:plm.field_ir_attachment__message_needaction_counter
@@ -2478,7 +2477,7 @@ msgstr "已廢除"
 #. module: plm
 #: model:ir.module.category,name:plm.odooplm_module_category
 msgid "OdooPLM"
-msgstr "OdooPLM"
+msgstr ""
 
 #. module: plm
 #: model_terms:ir.ui.view,arch_db:plm.plm_product_product_normal_form_view_inherit
@@ -2533,7 +2532,7 @@ msgstr "PDF圖紙"
 #. module: plm
 #: model:ir.ui.menu,name:plm.plm_menu
 msgid "PLM"
-msgstr "PLM"
+msgstr ""
 
 #. module: plm
 #: model:res.groups,name:plm.group_plm_release_users
@@ -2607,7 +2606,7 @@ msgstr "父階已確認"
 #: code:addons/plm/models/ir_attachment_relations.py:0 model:ir.model.fields,field_description:plm.field_ir_attachment_relation__parent_type
 #, python-format
 msgid "Parent Document Type"
-msgstr "父階文檔類型"
+msgstr "父階文件類型"
 
 #. module: plm
 #. odoo-python
@@ -2665,12 +2664,13 @@ msgstr "父子產品必須不同！"
 #: code:addons/plm/models/product_product.py:0
 #, python-format
 msgid "Part %r cannot be updated"
-msgstr "無法更新部件%r"
+msgstr "無法更新部件 %r"
 
 #. module: plm
+#: model:ir.model.fields,field_description:plm.field_product_product__engineering_code
 #: model:ir.model.fields,field_description:plm.field_product_template__engineering_code
 msgid "Part Number"
-msgstr "零件編號"
+msgstr "工程碼"
 
 #. module: plm
 #: model_terms:ir.ui.view,arch_db:plm.plm_component_base_search
@@ -2682,14 +2682,14 @@ msgstr "零件"
 #: code:addons/plm/models/ir_attachment.py:0
 #, python-format
 msgid "Permission denied for folder %r."
-msgstr "資料夾%r的許可權被拒絕 ."
+msgstr "資料夾%r的許可權被拒絕"
 
 #. module: plm
 #. odoo-python
 #: code:addons/plm/models/plm_backup_document.py:0 model:ir.model.fields,field_description:plm.field_plm_backupdoc__existingfile
 #, python-format
 msgid "Physical Document Location"
-msgstr "物理文檔位置"
+msgstr "物理文件位置"
 
 #. module: plm
 #: model:mail.activity.type,name:plm.mail_activity_plm_activity
@@ -2720,7 +2720,7 @@ msgstr "用工程零件號填充內部參考"
 #. module: plm
 #: model_terms:ir.ui.view,arch_db:plm.bom_structure_all
 msgid "Pos."
-msgstr "POS."
+msgstr "POS"
 
 #. module: plm
 #: model_terms:ir.ui.view,arch_db:plm.plm_bom_tree_structure
@@ -2763,7 +2763,7 @@ msgstr "預覽內容"
 #: model:ir.model.fields,help:plm.field_mrp_document__printout model:ir.model.fields,help:plm.field_product_document__printout
 #, python-format
 msgid "Print PDF content."
-msgstr "列印PDF內容."
+msgstr "列印PDF內容"
 
 #. module: plm
 #: model:ir.actions.report,name:plm.report_ir_attachment_pdf
@@ -2791,7 +2791,7 @@ msgstr "列印輸出名稱"
 #. module: plm
 #: model:ir.model,name:plm.model_report_plm_report_prod_structure
 msgid "Prod Doc Structure Report"
-msgstr "產品文檔結構報告"
+msgstr "產品文件結構報告"
 
 #. module: plm
 #. odoo-python
@@ -2814,7 +2814,7 @@ msgstr "產品Cad搜索"
 #. module: plm
 #: model:ir.model,name:plm.model_product_category
 msgid "Product Category"
-msgstr "產品類別"
+msgstr "產品分類"
 
 #. module: plm
 #. odoo-python
@@ -2840,12 +2840,12 @@ msgstr "產品名"
 #. module: plm
 #: model:ir.model,name:plm.model_product_product
 msgid "Product Product"
-msgstr "產品變體"
+msgstr "產品款式"
 
 #. module: plm
 #: model:ir.model,name:plm.model_product_template
 msgid "Product Template"
-msgstr "產品範本"
+msgstr "商品"
 
 #. module: plm
 #: model:ir.model.fields,field_description:plm.field_mrp_bom_line__product_tag_ids
@@ -2935,7 +2935,7 @@ msgstr "原材料必須是獨一無二的！"
 #: model:ir.model.fields,help:plm.field_product_template__engineering_material
 #, python-format
 msgid "Raw material for current product, only description for titleblock."
-msgstr "當前產品的原材料，僅標題列的描述."
+msgstr "當前產品的原材料，僅標題列的描述"
 
 #. module: plm
 #: model_terms:ir.ui.view,arch_db:plm.view_attachment_form_plm_hinerit
@@ -2945,7 +2945,7 @@ msgstr "重新發佈"
 #. module: plm
 #: model:ir.actions.server,name:plm.action_update_doc_type
 msgid "Recompute Doc Type"
-msgstr "重新計算文檔類型"
+msgstr "重新計算文件類型"
 
 #. module: plm
 #. odoo-python
@@ -2980,7 +2980,7 @@ msgstr "相關BOMs"
 #: model:ir.model.fields,field_description:plm.field_plm_checkout__documentid
 #, python-format
 msgid "Related Document"
-msgstr "相關檔"
+msgstr "相關文件"
 
 #. module: plm
 #. odoo-python
@@ -2988,7 +2988,7 @@ msgstr "相關檔"
 #: model:ir.model.fields,field_description:plm.field_mrp_bom_line__related_document_ids
 #, python-format
 msgid "Related Documents"
-msgstr "相關檔"
+msgstr "相關文件"
 
 #. module: plm
 #: model_terms:ir.ui.view,arch_db:plm.view_attachment_form_plm_hinerit
@@ -3010,37 +3010,37 @@ msgstr "相關用戶"
 #: code:addons/plm/models/ir_attachment_relations.py:0 model:ir.model.fields,field_description:plm.field_ir_attachment_relation__child_id
 #, python-format
 msgid "Related child document"
-msgstr "相關子階文檔"
+msgstr "相關子階文件"
 
 #. module: plm
 #. odoo-python
 #: code:addons/plm/models/product_product.py:0
 #, python-format
 msgid "Related documents"
-msgstr "相關檔"
+msgstr "相關文件"
 
 #. module: plm
 #. odoo-python
 #: code:addons/plm/models/ir_attachment_relations.py:0 model:ir.model.fields,field_description:plm.field_ir_attachment_relation__parent_id
 #, python-format
 msgid "Related parent document"
-msgstr "相關父階文檔"
+msgstr "相關父階文件"
 
 #. module: plm
 #: model:ir.model,name:plm.model_ir_attachment_relation
 msgid "Relation between document used for cad file structure"
-msgstr "用於cad檔結構的文檔之間的關係"
+msgstr "用於cad檔結構的文件之間的關係"
 
 #. module: plm
 #: model_terms:ir.ui.view,arch_db:plm.plm_component_base_form model_terms:ir.ui.view,arch_db:plm.plm_product_product_normal_form_view_inherit
 #: model_terms:ir.ui.view,arch_db:plm.view_product_client_workflow
 msgid "Release Component"
-msgstr "發行組件"
+msgstr "發佈組件"
 
 #. module: plm
 #: model_terms:ir.ui.view,arch_db:plm.view_attachment_client_workflow model_terms:ir.ui.view,arch_db:plm.view_attachment_form_plm_hinerit
 msgid "Release Document"
-msgstr "發行文件"
+msgstr "發佈文件"
 
 #. module: plm
 #. odoo-python
@@ -3052,7 +3052,7 @@ msgstr "發行文件"
 #: model:ir.model.fields,field_description:plm.field_revision_plm_mixin__engineering_release_user
 #, python-format
 msgid "Release User"
-msgstr "發行用戶"
+msgstr "發佈用戶"
 
 #. module: plm
 #. odoo-python
@@ -3064,7 +3064,7 @@ msgstr "發行用戶"
 #: model:ir.model.fields,field_description:plm.field_revision_plm_mixin__engineering_release_date
 #, python-format
 msgid "Release date"
-msgstr "發行日期"
+msgstr "發佈日期"
 
 #. module: plm
 #. odoo-python
@@ -3076,14 +3076,14 @@ msgstr "發行日期"
 #: model_terms:ir.ui.view,arch_db:plm.ir_attachment_search model_terms:ir.ui.view,arch_db:plm.plm_component_base_search
 #, python-format
 msgid "Released"
-msgstr "發行"
+msgstr "釋放"
 
 #. module: plm
 #. odoo-python
 #: code:addons/plm/models/ir_attachment.py:0 code:addons/plm/models/product_product.py:0
 #, python-format
 msgid "Removed : Latest Revision."
-msgstr "已刪除：最新版本."
+msgstr "已刪除：最新版本"
 
 #. module: plm
 #: model:ir.model,name:plm.model_report_plm_bom_structure_all
@@ -3098,7 +3098,7 @@ msgstr "報告Bom所有結構匯總"
 #. module: plm
 #: model:ir.model,name:plm.model_report_plm_bom_structure_leaves
 msgid "Report Bom Leavs"
-msgstr "報告BOM結構"
+msgstr "報告炸彈結構"
 
 #. module: plm
 #: model:ir.model,name:plm.model_report_plm_bom_structure_flat
@@ -3113,7 +3113,7 @@ msgstr "報告組件"
 #. module: plm
 #: model:ir.model,name:plm.model_report_plm_ir_attachment_pdf
 msgid "Report Document PDF"
-msgstr "報告文檔PDF"
+msgstr "報告文件PDF"
 
 #. module: plm
 #: model:ir.model,name:plm.model_report_plm_bom_structure_one
@@ -3154,14 +3154,14 @@ msgstr "責任用戶"
 #. module: plm
 #: model:ir.actions.act_window,name:plm.act_restore_document
 msgid "Restore Document"
-msgstr "還原文檔"
+msgstr "還原文件"
 
 #. module: plm
 #. odoo-python
 #: code:addons/plm/models/plm_backup_document.py:0
 #, python-format
 msgid "Restore Document Error"
-msgstr "還原文檔錯誤"
+msgstr "還原文件錯誤"
 
 #. module: plm
 #: model_terms:ir.ui.view,arch_db:plm.restore_document_button_view
@@ -3171,27 +3171,27 @@ msgstr "還原條目"
 #. module: plm
 #: model_terms:ir.ui.view,arch_db:plm.restore_document_button_view
 msgid "Restore Selected Document"
-msgstr "還原所選文檔"
+msgstr "還原所選文件"
 
 #. module: plm
 #: model_terms:ir.ui.view,arch_db:plm.restore_document_button_view
 msgid "Restore this document"
-msgstr "還原此文檔"
+msgstr "還原此文件"
 
 #. module: plm
 #: model_terms:ir.ui.view,arch_db:plm.product_template_form_view_plm_custom
 msgid "Rev."
-msgstr "Rev."
+msgstr "Rev"
 
 #. module: plm
 #: model_terms:ir.ui.view,arch_db:plm.plm_product_product_normal_form_view_inherit
 msgid "Rev.s."
-msgstr "Rev.s."
+msgstr "Rev.s"
 
 #. module: plm
 #: model_terms:ir.ui.view,arch_db:plm.view_plm_settings
 msgid "Revise a product / plm document from the web interface"
-msgstr "從web介面修改產品/plm文檔"
+msgstr "從web介面修改產品/plm文件"
 
 #. module: plm
 #. odoo-python
@@ -3215,12 +3215,12 @@ msgstr "修訂混合"
 #. module: plm
 #: model_terms:ir.ui.view,arch_db:plm.plm_product_product_normal_form_view_inherit
 msgid "Revision Rel Docs"
-msgstr "修訂相關文檔"
+msgstr "修訂相關文件"
 
 #. module: plm
 #: model_terms:ir.ui.view,arch_db:plm.view_attachment_form_plm_hinerit
 msgid "S.ERR"
-msgstr "S.ERR"
+msgstr ""
 
 #. module: plm
 #: model:ir.model.fields,field_description:plm.field_ir_attachment__message_has_sms_error
@@ -3329,7 +3329,7 @@ msgstr "設置"
 #. module: plm
 #: model_terms:ir.ui.view,arch_db:plm.plm_docbom_form_view
 msgid "Show Document Relation"
-msgstr "顯示文檔關係"
+msgstr "顯示文件關係"
 
 #. module: plm
 #. odoo-python
@@ -3382,7 +3382,7 @@ msgstr "規範"
 #. module: plm
 #: model:ir.model.fields,help:plm.field_product_product__sale_ok model:ir.model.fields,help:plm.field_product_template__sale_ok
 msgid "Specify if the product can be selected in a sales order line."
-msgstr "指定是否可以在銷售訂單行中選擇產品."
+msgstr "指定是否可以在銷售訂單行中選擇產品"
 
 #. module: plm
 #. odoo-python
@@ -3423,13 +3423,16 @@ msgstr "狀態"
 #. module: plm
 #. odoo-python
 #: code:addons/plm/models/mrp_bom.py:0 code:addons/plm/models/mrp_bom_line.py:0 code:addons/plm/models/plm_backup_document.py:0
+#: model:ir.model.fields,field_description:plm.field_ir_attachment__engineering_state
 #: model:ir.model.fields,field_description:plm.field_mrp_bom__engineering_state
 #: model:ir.model.fields,field_description:plm.field_mrp_bom_line__engineering_state
-#: model:ir.model.fields,field_description:plm.field_plm_backupdoc__engineering_state model_terms:ir.ui.view,arch_db:plm.ir_attachment_search
+#: model:ir.model.fields,field_description:plm.field_mrp_document__engineering_state
+#: model:ir.model.fields,field_description:plm.field_plm_backupdoc__engineering_state
+#: model:ir.model.fields,field_description:plm.field_product_document__engineering_state model_terms:ir.ui.view,arch_db:plm.ir_attachment_search
 #: model_terms:ir.ui.view,arch_db:plm.plm_component_base_search
 #, python-format
 msgid "Status"
-msgstr "狀態"
+msgstr "工程狀態"
 
 #. module: plm
 #: model:ir.model.fields,help:plm.field_ir_attachment__activity_state model:ir.model.fields,help:plm.field_product_template__activity_state
@@ -3450,7 +3453,7 @@ msgstr ""
 #: code:addons/plm/models/product_product.py:0
 #, python-format
 msgid "Status moved to: %s by %s."
-msgstr "狀態移動到：%s by %s."
+msgstr "狀態移動到：%s by%s"
 
 #. module: plm
 #: model_terms:ir.ui.view,arch_db:plm.document_search_button
@@ -3477,7 +3480,7 @@ msgstr "子修訂路徑"
 #. module: plm
 #: model:ir.model.fields,field_description:plm.field_plm_temporary__summarize
 msgid "Summarise Bom Lines if needed."
-msgstr "如果需要，總結Bom線."
+msgstr "如果需要，總結Bom線"
 
 #. module: plm
 #. odoo-python
@@ -3501,6 +3504,13 @@ msgstr "表面處理必須獨一無二！"
 #, python-format
 msgid "Surface finishing for current product, only description for titleblock."
 msgstr "目前產品的表面處理，僅標題列的描述。"
+
+#. module: plm
+#: model:ir.model.fields.selection,name:plm.selection__ir_attachment__engineering_state__suspended
+#: model:ir.model.fields.selection,name:plm.selection__product_template__engineering_state__suspended
+#: model:ir.model.fields.selection,name:plm.selection__revision_plm_mixin__engineering_state__suspended
+msgid "Suspended"
+msgstr "暫停的"
 
 #. module: plm
 #: model_terms:ir.ui.view,arch_db:plm.plm_bom_tree_structure model_terms:ir.ui.view,arch_db:plm.plm_grp_by_parent
@@ -3551,7 +3561,7 @@ msgstr "物料清單淨重，單位為千克。"
 #: code:addons/plm/models/ir_attachment_relations.py:0 model:ir.model.constraint,message:plm.constraint_ir_attachment_relation_relation_uniq
 #, python-format
 msgid "The Document Relation must be unique !"
-msgstr "文檔關係必須是唯一的！"
+msgstr "文件關係必須是唯一的！"
 
 #. module: plm
 #. odoo-python
@@ -3565,14 +3575,14 @@ msgstr "活動狀態不允許您進行保存操作"
 #: code:addons/plm/models/ir_attachment.py:0
 #, python-format
 msgid "The document %s - %s has not checked-in"
-msgstr "文檔%s-%s尚未簽入"
+msgstr "文件%s-%s尚未簽入"
 
 #. module: plm
 #. odoo-python
 #: code:addons/plm/models/plm_checkout.py:0 model:ir.model.constraint,message:plm.constraint_plm_checkout_documentid
 #, python-format
 msgid "The documentid must be unique !"
-msgstr "文檔ID必須是唯一的！"
+msgstr "文件ID必須是唯一的！"
 
 #. module: plm
 #. odoo-python
@@ -3580,7 +3590,7 @@ msgstr "文檔ID必須是唯一的！"
 #: model:ir.model.fields,help:plm.field_mrp_bom_line__engineering_revision
 #, python-format
 msgid "The revision of the product."
-msgstr "產品的修訂."
+msgstr "產品的修訂"
 
 #. module: plm
 #. odoo-python
@@ -3591,11 +3601,18 @@ msgid "The status of the product in its LifeCycle."
 msgstr "產品在其生命週期中的狀態。"
 
 #. module: plm
+#: model:ir.model.fields,help:plm.field_ir_attachment__engineering_state model:ir.model.fields,help:plm.field_ir_attachment_relation__child_state
+#: model:ir.model.fields,help:plm.field_ir_attachment_relation__parent_state model:ir.model.fields,help:plm.field_mrp_document__engineering_state
+#: model:ir.model.fields,help:plm.field_product_document__engineering_state
+msgid "The status of the product."
+msgstr "產品的狀態."
+
+#. module: plm
 #. odoo-python
 #: code:addons/plm/models/mrp_bom_line.py:0
 #, python-format
 msgid "There aren't related boms to this line."
-msgstr "這條線沒有相關的bom."
+msgstr "這條線沒有相關的bom"
 
 #. module: plm
 #. odoo-python
@@ -3631,9 +3648,9 @@ msgid "This Module extend the capability of the standard automated action based 
 msgstr "此模組基於工作流程操作擴展了標準自動化操作的能力"
 
 #. module: plm
-#: model:ir.model.fields,help:plm.field_product_template__engineering_code
+#: model:ir.model.fields,help:plm.field_product_product__engineering_code model:ir.model.fields,help:plm.field_product_template__engineering_code
 msgid "This is engineering reference to manage a different P/N from item Name."
-msgstr "這是管理與專案名稱不同的 P/N 的工程參考。"
+msgstr "這是工程參考，用來管理與項目名稱不同的 P/N。"
 
 #. module: plm
 #. odoo-python
@@ -3641,7 +3658,7 @@ msgstr "這是管理與專案名稱不同的 P/N 的工程參考。"
 #: model:ir.model.fields,help:plm.field_mrp_bom_line__source_id
 #, python-format
 msgid "This is the document object that declares this BoM."
-msgstr "這是聲明此BoM的文檔物件."
+msgstr "這是聲明此BoM的文件物件"
 
 #. module: plm
 #. odoo-python
@@ -3699,7 +3716,7 @@ msgstr "試驗處理"
 #. module: plm
 #: model_terms:ir.ui.view,arch_db:plm.ir_attachment_search
 msgid "Type Document"
-msgstr "類型文檔"
+msgstr "類型文件"
 
 #. module: plm
 #: model:ir.model.fields,help:plm.field_ir_attachment__activity_exception_decoration
@@ -3786,28 +3803,28 @@ msgstr ""
 #: code:addons/plm/models/ir_attachment.py:0
 #, python-format
 msgid "Unable to check-Out a document that is already checked IN by user %r"
-msgstr "無法簽出已被用戶%r 簽入的文件 ."
+msgstr "無法簽出已被用戶 %r 簽入的文件"
 
 #. module: plm
 #. odoo-python
 #: code:addons/plm/models/ir_attachment.py:0
 #, python-format
 msgid "Unable to check-Out a document that is in state %r"
-msgstr "無法簽出狀態為%r的文檔"
+msgstr "無法簽出狀態為%r的文件"
 
 #. module: plm
 #. odoo-python
 #: code:addons/plm/models/plm_checkout.py:0
 #, python-format
 msgid "Unable to check-out the required document (-)."
-msgstr "無法簽出所需的文檔（-）"
+msgstr "無法簽出所需的文件（-）"
 
 #. module: plm
 #. odoo-python
 #: code:addons/plm/models/ir_attachment.py:0
 #, python-format
 msgid "Unable to find document to check-out. Please save it."
-msgstr "找不到要簽出的文檔。請保存."
+msgstr "找不到要簽出的文件。請保存"
 
 #. module: plm
 #. odoo-python
@@ -3885,7 +3902,7 @@ msgstr ""
 #. module: plm
 #: model:ir.model,name:plm.model_res_users model_terms:ir.ui.view,arch_db:plm.view_attachment_form_plm_hinerit
 msgid "User"
-msgstr "用戶"
+msgstr "使用者"
 
 #. module: plm
 #. odoo-python
@@ -3933,12 +3950,12 @@ msgstr "變數名稱"
 #. module: plm
 #: model:ir.model,name:plm.model_ir_ui_view
 msgid "View"
-msgstr "視圖"
+msgstr "檢視"
 
 #. module: plm
 #: model:ir.actions.act_window,name:plm.act_view_doc_related
 msgid "View Document Relations"
-msgstr "查看文檔關係"
+msgstr "查看文件關係"
 
 #. module: plm
 #: model:res.groups,name:plm.group_plm_view_user
@@ -3948,7 +3965,7 @@ msgstr "查看用戶"
 #. module: plm
 #: model:res.groups,name:plm.group_plm_release_document
 msgid "View only released document"
-msgstr "僅查看已發佈的文檔"
+msgstr "僅查看已發佈的文件"
 
 #. module: plm
 #: model:ir.model.fields,field_description:plm.field_plm_description__show_help
@@ -4053,7 +4070,7 @@ msgstr "昨天"
 #: code:addons/plm/models/plm_backup_document.py:0
 #, python-format
 msgid "You can restore only a document at a time."
-msgstr "一次只能還原一筆文件"
+msgstr "一次只能還原一個文件"
 
 #. module: plm
 #: model_terms:ir.ui.view,arch_db:plm.view_plm_description
@@ -4065,7 +4082,7 @@ msgstr ""
 #: code:addons/plm/models/ir_attachment.py:0
 #, python-format
 msgid "You cannot edit a file not in check-out by you! User ID %s"
-msgstr "您不能在簽出時編輯您的檔！用戶ID%s"
+msgstr "您不能編輯非由您簽出的文件！用戶ID%s"
 
 #. module: plm
 #. odoo-python
@@ -4101,7 +4118,7 @@ msgstr "主機名稱"
 #. module: plm
 #: model:ir.model,name:plm.model_plm_backupdoc
 msgid "manage your document back up"
-msgstr "管理文檔備份"
+msgstr "管理文件備份"
 
 #. module: plm
 #. odoo-python
@@ -4118,7 +4135,7 @@ msgstr "在進行"
 #. module: plm
 #: model_terms:ir.ui.view,arch_db:plm.view_plm_settings
 msgid "plm"
-msgstr "plm"
+msgstr ""
 
 #. module: plm
 #. odoo-python
@@ -4153,7 +4170,7 @@ msgstr "saveChild.toCompute：父階“%s”指的是他自己"
 #: code:addons/plm/models/product_product_document_rel.py:0
 #, python-format
 msgid "saveChild: Unable to create a link."
-msgstr "saveChild:無法創建連結."
+msgstr "saveChild:無法創建連結"
 
 #. module: plm
 #. odoo-python
@@ -4167,7 +4184,7 @@ msgstr ""
 #: code:addons/plm/models/ir_attachment_relations.py:0
 #, python-format
 msgid "saveChild: Unable to create a relation."
-msgstr "saveChild:無法創建關係."
+msgstr "saveChild:無法創建關係"
 
 #. module: plm
 #. odoo-python

@@ -68,6 +68,7 @@ class InhtProductModel(models.Model):
                         strv=encode + '_01_' + str(engineering_revision)
                         # raise UserError(strv+' 000')
                         res.write({'default_code': strv})
+        
         return res
        
                 

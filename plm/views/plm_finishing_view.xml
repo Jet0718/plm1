@@ -8,8 +8,13 @@
         <field name="arch" type="xml">
             <form string="Finishing">
             	<sheet>
-                <group colspan="4" col="6">
+                <!-- <group colspan="4" col="6">
                     <field name="name" select="1" colspan="4"/>
+                    <field name="description" select="1" />
+                    <field name="sequence"/>
+                </group> -->
+                <group>
+                    <field name="name" select="1"/>
                     <field name="description" select="1" />
                     <field name="sequence"/>
                 </group>
@@ -24,7 +29,7 @@
         <field name="type">tree</field>
         <field name="priority" eval="1"/>
         <field name="arch" type="xml">
-            <tree string="Finishings">
+            <tree string="Finishings" editable="bottom">
                    <field name="name"/>
                    <field name="description"/>
                    <field name="sequence"/>

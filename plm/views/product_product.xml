@@ -153,18 +153,17 @@
                     <group name="plm_fields_area"  colspan="4">
 	                    <field name="name" string="Description" colspan="4"/>
                         <field name="id" invisible="1"/>
-                        <group name="engineering_group" colspan="4" col="6">
+                        <group name="engineering_group" colspan="4">
 	                        <field name="engineering_code" 
-	                               colspan="4"
+	                               colspan="2"
 	                               select="1"
 	                               readonly="id>0"/>
 	                        <field name="engineering_revision"
 	                               colspan="2"
 	                               readonly="id>0"/>
                         </group>
-                        <group name="str_description" colspan="4">
+                        <group name="str_description" >
 	                        <field name="std_description"
-	                               colspan="4"
 	                               readonly="engineering_state in ['released','obsoleted']"/>
 	                        <field name="show_std_field1" invisible="1"/>
 	                        <field name="show_std_field2" invisible="1"/>
@@ -199,20 +198,20 @@
                                    readonly="std_umc3==False and engineering_state in ['released','obsoleted']"
                                    invisible="show_std_field3 ==  False"/>
                         </group>
-                        <field name="desc_modify" colspan="4"
+                        <field name="desc_modify" 
                                readonly="engineering_state in ['released','obsoleted']"
                                invisible="engineering_revision==0"/>
 	                    <field name="detailed_type" invisible="1"/>
 	                    <field name="source_product" invisible="1"/>
 	                    <field name="is_engcode_editable" invisible="1"/>
                     </group>
-                    <group name="notebooks" colspan="4">
+                    <!-- <group name="notebooks" > -->
                     <notebook>
                         <page name="technical_infos" string="Technical Information">
                             <group name="group_general">
                                 <field name="categ_id" string="Category"/>
                             </group>
-                            <group col="4" colspan="4" name='uom_weight'>
+                            <group name='uom_weight'>
                                 <label for="weight"/>
                                 <div name="weight"
                                      class="o_row" 
@@ -228,28 +227,29 @@
                                        readonly="engineering_state in ['released','obsoleted']"
                                        groups="base.group_no_one"/>
                             </group>
-                            <group colspan="4" col="4" name="technical_infos_group" string="Material / Surface / Treatment">
-                                <field name="tmp_material"
-                                       readonly="engineering_state in ['released','obsoleted']"/>
-                                <field name="engineering_material"
-                                       readonly="engineering_state in ['released','obsoleted']"
-                                       colspan="2"
-                                       groups='base.group_no_one'/>
-                                <field name="tmp_surface"
-                                       readonly="engineering_state in ['released','obsoleted']"/>
-                                <field name="engineering_surface"
-                                       readonly="engineering_state in ['released','obsoleted']"
-                                       colspan="2"
-                                       groups='base.group_no_one'/>
-                                <field name="tmp_treatment"
-                                       readonly="engineering_state in ['released','obsoleted']"/>
-                                <field name="engineering_treatment"
-                                       readonly="engineering_state in ['released','obsoleted']"
-                                       colspan="2"
-                                       groups='base.group_no_one'/>
+                            <group name="technical_infos_group" string="Material / Surface / Treatment">
+                                <group>
+                                    <field name="tmp_material"
+                                        readonly="engineering_state in ['released','obsoleted']"/>
+                                    <field name="tmp_surface"
+                                        readonly="engineering_state in ['released','obsoleted']"/>
+                                    <field name="tmp_treatment"
+                                        readonly="engineering_state in ['released','obsoleted']"/>
+                                </group>
+                                <group>
+                                    <field name="engineering_material"
+                                        readonly="engineering_state in ['released','obsoleted']"
+                                        groups='base.group_no_one'/>
+                                    <field name="engineering_surface"
+                                        readonly="engineering_state in ['released','obsoleted']"
+                                        groups='base.group_no_one'/>
+                                    <field name="engineering_treatment"
+                                        readonly="engineering_state in ['released','obsoleted']"
+                                        groups='base.group_no_one'/>
+                                </group>
                             </group>
 
-                            <group col="4" colspan="4" name="workflow_section" string="Workflow">
+                            <group name="workflow_section" string="Workflow">
 				                 <field name="engineering_release_user"   readonly="1"/>
 				                 <field name="engineering_release_date"  readonly="1"/>
 				                 <field name="engineering_revision_user"   readonly="1"/>
@@ -259,7 +259,7 @@
                             </group>
                         </page>
                     </notebook>
-                    </group>
+                    <!-- </group> -->
                 </sheet>
             </form>
         </field>
@@ -395,33 +395,46 @@
             </xpath>
             <xpath expr="//notebook[last()]" position="inside">
 				<page name="technical_infos" string="Technical Information">
-					<group colspan="4" col="4" name="technical_infos_group" string="Material / Surface / Treatment">
-					    <field name="tmp_material"
+					<group name="technical_infos_group" string="Material / Surface / Treatment">
+                        <group>
+					        <field name="tmp_material"
 					           readonly="engineering_state in ['released','obsoleted']"/>
-					    <field name="engineering_material"
-					           readonly="engineering_state in ['released','obsoleted']"
-					           colspan="2"
-					           groups='base.group_no_one'/>
-					    <field name="tmp_surface"
+                            <field name="tmp_surface"
 					           readonly="engineering_state in ['released','obsoleted']"/>
-					    <field name="engineering_surface"
-					           readonly="engineering_state in ['released','obsoleted']"
-					           colspan="2"
-					           groups='base.group_no_one'/>
-					    <field name="tmp_treatment"
+                            <field name="tmp_treatment"
 					           readonly="engineering_state in ['released','obsoleted']"/>
-					    <field name="engineering_treatment"
-					           readonly="engineering_state in ['released','obsoleted']"
-					           colspan="2"
-					           groups='base.group_no_one'/>
+                        </group>
+                        <group>
+                            <field name="engineering_material"
+                                readonly="engineering_state in ['released','obsoleted']"
+                               
+                                groups='base.group_no_one'/>
+
+                            <field name="engineering_surface"
+                                readonly="engineering_state in ['released','obsoleted']"
+                                
+                                groups='base.group_no_one'/>
+                            
+                            <field name="engineering_treatment"
+                                readonly="engineering_state in ['released','obsoleted']"
+                                
+                                groups='base.group_no_one'/>
+                        </group>
 					</group>
-					<group col="4" colspan="4" name="workflow_section" string="Workflow">
-						<field name="engineering_release_user"   readonly="1"/>
+					<group  name="workflow_section" string="Workflow">
+                        <group>
+                        <field name="engineering_release_user"   readonly="1"/>
+                        <field name="engineering_revision_user"   readonly="1"/>
+                        <field name="engineering_workflow_user"   readonly="1"/>
+                        </group>
+                        <group>
+						
 						<field name="engineering_release_date"  readonly="1"/>
-						<field name="engineering_revision_user"   readonly="1"/>
+						
 						<field name="engineering_revision_date"  readonly="1"/>
-						<field name="engineering_workflow_user"   readonly="1"/>
+						
 						<field name="engineering_workflow_date"  readonly="1"/>
+                        </group>
 					</group>
 				</page>
                 <page string="Linked Documents" name="linkeddocuments">
