@@ -6,9 +6,9 @@ import { loadJS } from "@web/core/assets"
 
 const { Component, onWillStart, useRef, onMounted } = owl
 
-export class ChartRenderertask extends Component {
+export class ChartRendererpcotags extends Component {
     setup(){
-        // debugger
+        debugger
         
         super.setup()
         this.orm = useService('orm')
@@ -36,15 +36,30 @@ export class ChartRenderertask extends Component {
        
     }    
 
-    
+    _fetch_data(){
+      var self = this;
+      var dataarry=[];
+      this.orm.call("issue", "getpco_tag_counts", [], {}).then(function(result){
+             var array=[]
+             array.push(result.new_count)
+             array.push(result.review_count)
+             array.push(result.approved_count)
+             array.push(result.cancel_count)
+             dataarry =array  
+                     
+      }); 
+      // if (dataarry && dataarry.length<1)
+      //   setTimeout("_fetch_data();", 500); 
+      return dataarry
+     };
      async  renderChart(){
-      // debugger
+      debugger
       
       var self = this;
       // var dataarry=[];
-      this.orm.call("issue", "gettask_state_counts", [], {}).then(function(result){
-        const labels = result.map(record => record.state);
-        const values = result.map(record => record.state_count);
+      this.orm.call("issue", "getpco_tag_counts", [], {}).then(function(result){
+            const labels = result.map(record => record.tag_ids[1]);
+            const values = result.map(record => record.tag_ids_count);
              
              new Chart(self.chartRef.el,
               {
@@ -53,20 +68,12 @@ export class ChartRenderertask extends Component {
                   labels: labels,
                     datasets: [
                     {
-                      label: 'Task State',
+                      label: 'PCO Tags',
                       data:  values,
                       hoverOffset: 4
                     }
                   ]
                 },
-                // 每个柱子的数据
-                backgroundColor: [ // 每个柱子的颜色
-                    'rgba(255, 99, 132, 0.6)', // 红色
-                    'rgba(54, 162, 235, 0.6)', // 蓝色
-                    'rgba(255, 206, 86, 0.6)', // 黄色
-                    'rgba(75, 192, 192, 0.6)', // 绿色
-                    'rgba(75, 192, 192, 0.6)' // 绿色
-                ],
                 options: {
                   responsive: true,
                   plugins: {
@@ -90,4 +97,4 @@ export class ChartRenderertask extends Component {
     }
 }
 
-ChartRenderertask.template = "owl.ChartRenderer"
+ChartRendererpcotags.template = "owl.ChartRenderer"

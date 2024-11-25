@@ -26,13 +26,13 @@ class TestModel(models.Model):
     speical_req =fields.Text("特殊要求")
     ref_product =fields.Many2one('product.template',string='參考產品') 
     active =fields.Boolean("啟用",default=True)    
-    spec_ids =fields.One2many('requirement.spec','requirement_id', copy=True)
+    spec_ids =fields.One2many('requirement.specline','requirement_id')
 
     # 2024.9.29 Herbert新增内容:增加关联项目 及 项目数量
     project_ids = fields.One2many('project.project','requirement_id')
-    project_count =fields.Integer("Project Count" ,compute='_compute_project_count')
+    project_count =fields.Integer("数量" ,compute='_compute_project_count')
     lead_ids = fields.One2many('crm.lead','requirement_id')
-    lead_count =fields.Integer("Lead Count" ,compute='_compute_lead_count')
+    lead_count =fields.Integer("数量" ,compute='_compute_lead_count')
 
     # #上传单个档案写法
     # binary_field = fields.Binary("档案")

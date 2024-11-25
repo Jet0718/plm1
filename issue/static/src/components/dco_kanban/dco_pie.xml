@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <template xml:space="preserve">
-    <t t-name="ChartRendererprj" title="'Project Report'" style="width: 50%;">
+    <t t-name="ChartRendererdco" title="'Pco States count Report'" style="width: 50%;">
         <!-- <canvas t-ref="chart"/> -->
          <div class="vh-100 overflow-auto bg-muted">
             <div class="row m-3">
@@ -29,26 +29,26 @@
                         <div class="col-lg-6 m-0 p-0" style="width: 50%;">
 							<div class="shadow-sm border m-2 p-4 bg-white">
 								<div class="d-flex align-items-center justify-content-between">
-									<h3 class="text-primary fw-bold">Project Tags</h3>
+									<h3 class="text-primary fw-bold">Dco States</h3>
 									<!-- <div class="px-3 py-1 bg-primary cursor-pointer">
 										<span class="fa fa-arrow-right text-white"/>
 									</div> -->
 								</div>
 								<!-- <ChartRenderer type="'doughnut'" title="'Top Products Report'"/> -->
-								<canvas t-ref="chart"  style="width: 50%;" title="'Project Tags Report'"/>
+								<canvas t-ref="chart"  style="width: 50%;" />
 							</div>
                         </div>
                         <!-- <canvas t-ref="chart"  style="width: 50%;" /> -->
                         <div class="col-lg-6 m-0 p-0" style="width: 50%;">
 							<div class="shadow-sm border m-2 p-4 bg-white">
 								<div class="d-flex align-items-center justify-content-between">
-									<h3 class="text-primary fw-bold">Task State</h3>
+									<h3 class="text-primary fw-bold">Pco Tags</h3>
 									<!-- <div class="px-3 py-1 bg-primary cursor-pointer">
 										<span class="fa fa-arrow-right text-white"/>
 									</div> -->
 								</div>
 								<!-- <ChartRenderer type="'doughnut'" title="'Top Products Report'"/> -->
-								<ChartRenderertask type="'doughnut'" title="'Task State Report'"/>
+								<ChartRendererdcotag type="'doughnut'" title="'Dco Tags Report'"/>
 							</div>
                         </div>
                      </div> 

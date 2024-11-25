@@ -4,7 +4,7 @@ class InhtProjectModel(models.Model):
     _inherit = "project.project"    
 
     cn_prj2pdt_ship = fields.Many2one('product.template', string= '产品')
-    dmsfile_ids = fields.One2many('ir.attachment','cn_file2prj')
+    dmsfile_ids = fields.One2many('ir.attachment','cn_file2prj',domain="['&',('engineering_code', '!=', ''),('url', '=', False),('engineering_state', 'not in', ['obsoleted','undermodify'])]")
     dmsfile_count =fields.Integer("数量" ,compute='_compute_dmsfile_count')
 
     #计算关联dmsfile的数量

@@ -6,5 +6,27 @@
             <field name="tag">action_issue_dashboard</field>
         </record>
         <menuitem name="Issue Dashboard" id="issue_dashboard"  sequence="15" action="action_issue_dashboard" parent="issue.issue_menu_root_sec"/>
+        
+        <record id="action_dco_dashboard" model="ir.actions.client">
+            <field name="name">DCO Dashboard</field>
+            <field name="tag">action_dco_dashboard</field>
+        </record>
+        <menuitem name="Dco Dashboard" id="dco_dashboard"  sequence="16" action="action_dco_dashboard" parent="issue.issue_menu_root_sec"/>
+
+
+        <record id="action_pco_dashboard" model="ir.actions.client">
+            <field name="name">PCO Dashboard</field>
+            <field name="tag">action_pco_dashboard</field>
+        </record>
+        <menuitem name="Pco Dashboard" id="pco_dashboard"  sequence="17" action="action_pco_dashboard" parent="issue.issue_menu_root_sec"/>
+        
+        <record id="action_prj_dashboard" model="ir.actions.client">
+            <field name="name">Project Dashboard</field>
+            <field name="tag">action_prj_dashboard</field>
+        </record>
+        <menuitem name="Project Dashboard" id="prj_dashboard"  sequence="18" action="action_prj_dashboard" parent="issue.issue_menu_root_sec"/>
+    
+    
+    
     </data>
 </odoo>

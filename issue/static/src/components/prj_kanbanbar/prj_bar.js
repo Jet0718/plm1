@@ -3,6 +3,7 @@
 import { registry } from "@web/core/registry"
 import { useService } from "@web/core/utils/hooks"
 import { loadJS } from "@web/core/assets"
+import { ChartRenderertask } from "../task_kanbanbar/task_bar"
 
 const { Component, onWillStart, useRef, onMounted } = owl
 
@@ -59,6 +60,7 @@ export class ChartRendererprj extends Component {
                     }
                   ]
                 },
+                
                 options: {
                   responsive: true,
                   plugins: {
@@ -82,4 +84,8 @@ export class ChartRendererprj extends Component {
     }
 }
 
-ChartRendererprj.template = "owl.ChartRenderer"
+ChartRendererprj.template = "ChartRendererprj"
+
+
+ChartRendererprj.components = {ChartRenderertask}
+registry.category("actions").add("action_prj_dashboard",ChartRendererprj)

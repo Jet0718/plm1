@@ -172,14 +172,15 @@ class IssueModel(models.Model):
         ctagids_counts = self.env['project.project'].read_group(
             domain,
             ['tag_ids'],  # 分组依据的字段
-            ['tag_ids', 'count(id) as count']  # 要统计的字段
+            ['tag_ids', 'count(id) as count'],  # 要统计的字段
+            limit=5
         )
         return ctagids_counts
     
     # 任务状态数量统计
     @api.model
     def gettask_state_counts(self):      
-        domain = []  # 定义你的搜索过滤条件
+        domain = [('project_id.last_update_status','not in',('off_track', 'to_define', 'to_define', 'done'))]  # 定义你的搜索过滤条件
         ctagids_counts = self.env['project.task'].read_group(
             domain,
             ['state'],  # 分组依据的字段
@@ -187,7 +188,7 @@ class IssueModel(models.Model):
         )
         return ctagids_counts
     
-    # 项目阶段数量统计
+    # issue tag
     @api.model
     def getisu_tag_counts(self):      
         domain = [('issue_code_ids', '!=', False), ('issue_code_ids', '!=', ''), ('issue_code_ids', '!=', (False, '')), ('issue_code_ids', '!=', None)] # 定义你的搜索过滤条件
@@ -195,8 +196,44 @@ class IssueModel(models.Model):
         ctagids_counts = self.env['issue'].read_group(
             domain,
             ['issue_code_ids'],  # 分组依据的字段
-            ['issue_code_ids', 'count(id) as count']  # 要统计的字段
+            ['issue_code_ids', 'count(id) as count'],   # 要统计的字段
+            limit=5
         )
         return ctagids_counts
 
+    # 统计问题单top 5最大的产品
+    @api.model
+    def getprdmaxiss_counts(self):
+        domain = []
+        prdmaxids_counts = self.env['issue'].read_group(
+            domain,
+            ['issue_product_id'],  # 分组依据的字段
+            ['issue_product_id', 'count(id) as count'],  # 要统计的字段
+            limit=5
+        )
+        return prdmaxids_counts
+    
+
+    # 统计dco tags tag_ids
+    @api.model
+    def getdco_tag_counts(self):      
+        domain = []  # 定义你的搜索过滤条件
+        ctagids_counts = self.env['dco'].read_group(
+            domain,
+            ['tag_ids'],  # 分组依据的字段
+            ['tag_ids', 'count(id) as count'],  # 要统计的字段
+            limit=5
+        )
+        return ctagids_counts
+    # 统计dco tags tag_ids
+    @api.model
+    def getpco_tag_counts(self):      
+        domain = []  # 定义你的搜索过滤条件
+        ctagids_counts = self.env['pco'].read_group(
+            domain,
+            ['tag_ids'],  # 分组依据的字段
+            ['tag_ids', 'count(id) as count'] ,  # 要统计的字段
+            limit=5
+        )
+        return ctagids_counts
 

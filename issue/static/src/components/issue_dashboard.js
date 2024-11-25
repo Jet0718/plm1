@@ -2,11 +2,14 @@
 import { registry } from "@web/core/registry"
 import { useService } from "@web/core/utils/hooks";
 
-import { ChartRenderer1 } from "./pco_kanbanpie/pco_pie"
-import { ChartRendererdco } from "./dco_kanbanpie/dco_pie"
+// import { ChartRenderer1 } from "./pco_kanban/pco_pie"
+
+import { ChartRendererdco } from "./dco_kanban/dco_pie"
+import { ChartRendererdcotag } from "./dco_kanban/dco_tagbar"
 import { ChartRendererprj } from "./prj_kanbanbar/prj_bar"
 import { ChartRenderertask } from "./task_kanbanbar/task_bar"
 import { ChartRendererisutag } from "./isue_kanbanpie/issuetag_pie"
+import { ChartRendererissueprdmax } from "./isue_kanbanpie/issueprdmaxbar"
 import { loadJS } from "@web/core/assets"
 const { Component, onWillStart, UseRef, onMounted } = owl
 
@@ -27,6 +30,7 @@ this.orm.call("issue", "get_tiles_data", [], {}).then(function(result){
 }
 
 IssueDashboard.template ="IssueDashboard"
-IssueDashboard.components = { ChartRendererdco,ChartRenderer1,ChartRendererprj,ChartRenderertask,ChartRendererisutag }
+//ChartRenderer1
+IssueDashboard.components = { ChartRendererdco,ChartRendererprj,ChartRenderertask,ChartRendererisutag,ChartRendererissueprdmax,ChartRendererdcotag }
 // IssueDashboard.components = { ChartRendererdco }
 registry.category("actions").add("action_issue_dashboard",IssueDashboard)

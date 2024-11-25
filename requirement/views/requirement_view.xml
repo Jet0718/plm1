@@ -95,10 +95,14 @@
                             <!-- 上传多个档案显示写法 -->
                             <field name="binary_fields" widget="many2mnay_binary"/>
                         </page>
-                        <page string="規格要求">
-                            <tree editable="bottom">                           
-                                <field name="spec_ids"/>
-                            </tree>                               
+                        <page string="規格要求">                            
+                            <field name="spec_ids"> 
+                                <tree  editable="bottom"> 
+                                    <field name="spec_id" />
+                                    <field name="spec_name" />                                
+                                    <field name="reqstr" />
+                                </tree>  
+                            </field>                            
                         </page>
                         
                     </notebook>
