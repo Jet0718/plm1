@@ -45,7 +45,7 @@
                                                     <div class="stat_count_opp"
                                                         style="font-size: 17px;">
                                                         <span id="templates">
-                                                            <div id="source_customer"/>
+                                                            <span id="source_customer"/>
                                                         </span>
                                                     </div>
                                                     <div class="stat-head"
@@ -109,7 +109,7 @@
                                                     <div class="stat_count_opp"
                                                         style="font-size: 17px;">
                                                         <span id="templates">
-                                                            <div id="source_supplier"/>
+                                                            <span id="source_supplier"/>
                                                         </span>
                                                     </div>
                                                     <div class="stat-head"

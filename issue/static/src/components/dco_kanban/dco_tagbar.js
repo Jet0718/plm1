@@ -5,11 +5,12 @@ import { useService } from "@web/core/utils/hooks"
 import { loadJS } from "@web/core/assets"
 
 const { Component, onWillStart, useRef, onMounted } = owl
-
+top.dcotahchart;
+top.dcotagdocumetnthis=false;
 export class ChartRendererdcotag extends Component {
     setup(){
         // debugger
-        
+        top.dcotagdocumetnthis=this;
         super.setup()
         this.orm = useService('orm')
         this.chartRef = useRef("chart")
@@ -22,10 +23,10 @@ export class ChartRendererdcotag extends Component {
      async  renderChart(){
       // debugger      
       var self = this;
-      this.orm.call("issue", "getdco_tag_counts", [], {}).then(function(result){
+      this.orm.call("issue", "getdco_tag_counts", [top.listv], {}).then(function(result){
             const labels = result.map(record => record.tag_ids[1]);
             const values = result.map(record => record.tag_ids_count);
-            new Chart(self.chartRef.el,
+            top.dcotahchart=new Chart(self.chartRef.el,
               {
                 type: 'bar',
                 data: {
@@ -34,7 +35,8 @@ export class ChartRendererdcotag extends Component {
                     {
                       label: 'dco tag count',
                       data:  values,
-                      hoverOffset: 4
+                      hoverOffset: 4,
+                      backgroundColor: labels.map(() => (`rgb(${Math.floor(Math.random() * 256)},${Math.floor(Math.random() * 256)},${Math.floor(Math.random() * 256)})`))
                     }
                   ]
                 },

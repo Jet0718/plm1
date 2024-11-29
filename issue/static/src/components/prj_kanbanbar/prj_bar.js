@@ -6,48 +6,57 @@ import { loadJS } from "@web/core/assets"
 import { ChartRenderertask } from "../task_kanbanbar/task_bar"
 
 const { Component, onWillStart, useRef, onMounted } = owl
-
+top.prjbarchart;
+top.prjbardocumetnthis=false;
+top.listv="";
 export class ChartRendererprj extends Component {
     setup(){
         // debugger
         
+        top.prjbardocumetnthis=this;
         super.setup()
         this.orm = useService('orm')
         // const partners = await  this.orm.call("issue", "_getpco_status_counts", []);
         this.chartRef = useRef("chart")
         onWillStart(async ()=>{
             await loadJS("https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js")
-        })
-        
-        // const fetchPartners = async () => {
-        //   const dataarry = await this.orm.call("issue", "getpco_status_counts", [], {});
-        //   // this.orm.call("issue", "getpco_status_counts", [], {})
-        // };
-        // // this.fetchPartners()
-        // var dataarry =this._fetch_data();
-        
-        // setTimeout("", 1000); 
-        // if (dataarry.length<1)setTimeout("", 1000); 
-        
+        })        
         onMounted(()=>this.renderChart())
-        
-        // setTimeout("this.initChart();", 500); 
-         
-        
-       
-    }    
-
-    
+    }        
      async  renderChart(){
-      // debugger
       
+      document.getElementById('datas').addEventListener('change', function() {
+        var list=document.getElementById("datas")    
+        if(list)
+        {
+          top.listv=list.value
+          
+        }
+        else{
+            top.listv='0'            
+        }
+        top.prjbardocumetnthis.orm.call("issue", "getprj_tag_counts", [top.listv], {}).then(function(result){
+              var labels = result.map(record => record.tag_ids[1]);
+              var array = result.map(record => record.tag_ids_count);           
+              top.prjbarchart.data.datasets[0].data=array
+              top.prjbarchart.data.labels=labels
+              top.prjbarchart.update();                    
+          });
+        top.tskbardocumetnthis.orm.call("issue", "gettask_state_counts", [top.listv], {}).then(function(result){
+          var labels = result.map(record => record.state);
+          var array = result.map(record => record.state_count);          
+          top.tskbarchart.data.datasets[0].data=array
+          top.tskbarchart.data.labels=labels
+          top.tskbarchart.update();                    
+        });
+      });
       var self = this;
       // var dataarry=[];
-      this.orm.call("issue", "getprj_tag_counts", [], {}).then(function(result){
+      this.orm.call("issue", "getprj_tag_counts", [top.listv], {}).then(function(result){
         const labels = result.map(record => record.tag_ids[1]);
         const values = result.map(record => record.tag_ids_count);
-             
-             new Chart(self.chartRef.el,
+        
+        top.prjbarchart= new Chart(self.chartRef.el,
               {
                 type: 'bar',
                 data: {
@@ -56,7 +65,8 @@ export class ChartRendererprj extends Component {
                     {
                       label: 'Project Tags',
                       data:  values,
-                      hoverOffset: 4
+                      hoverOffset: 4,
+                      backgroundColor: labels.map(() => (`rgb(${Math.floor(Math.random() * 256)},${Math.floor(Math.random() * 256)},${Math.floor(Math.random() * 256)})`))
                     }
                   ]
                 },
@@ -78,9 +88,6 @@ export class ChartRendererprj extends Component {
             );
                      
       }); 
-      
-
-        
     }
 }
 

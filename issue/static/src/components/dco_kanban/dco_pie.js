@@ -7,11 +7,13 @@ import { loadJS } from "@web/core/assets"
 import { ChartRendererdcotag } from "./dco_tagbar"
 
 const { Component, onWillStart, useRef, onMounted } = owl
-
+top.dcopiechart;
+top.dcopiedocumetnthis=false;
+top.listv="";
 export class ChartRendererdco extends Component {
     setup(){
         // debugger
-        
+        top.dcopiedocumetnthis=this;
         super.setup()
         this.orm = useService('orm')
         this.chartRef = useRef("chart")
@@ -21,17 +23,43 @@ export class ChartRendererdco extends Component {
         onMounted(()=>this.renderChart())   
       }  
 
-     async  renderChart(){
-      // debugger      
-      var self = this;
-      this.orm.call("issue", "getdco_status_counts", [], {}).then(function(result){
+     async  renderChart(){      
+      var self =this;
+      document.getElementById('datas').addEventListener('change', function() {
+        var list=document.getElementById("datas")    
+        if(list)
+        {
+          top.listv=list.value
+          
+        }
+        else{
+            top.listv='0'            
+        }
+        top.dcopiedocumetnthis.orm.call("issue", "getdco_status_counts", [top.listv], {}).then(function(result){
+              var array=[]
+              array.push(result.new_count)
+              array.push(result.review_count)
+              array.push(result.approved_count)
+              array.push(result.cancel_count)            
+              top.dcopiechart.data.datasets[0].data=array
+              top.dcopiechart.update();                    
+          });
+        top.dcotagdocumetnthis.orm.call("issue", "getdco_tag_counts", [top.listv], {}).then(function(result){
+          var labels = result.map(record => record.tag_ids[1]);
+          var array = result.map(record => record.tag_ids_count);          
+          top.dcotahchart.data.datasets[0].data=array
+          top.dcotahchart.data.labels = labels
+          top.dcotahchart.update();                    
+        });
+      });
+      this.orm.call("issue", "getdco_status_counts", [top.listv], {}).then(function(result){
              var array=[]
              array.push(result.new_count)
              array.push(result.review_count)
              array.push(result.approved_count)
              array.push(result.cancel_count)
              const dataarry =array             
-             new Chart(self.chartRef.el,
+             top.dcopiechart = new Chart(self.chartRef.el,
               {
                 type: 'pie',
                 data: {

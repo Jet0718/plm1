@@ -87,6 +87,10 @@ class PCOModel(models.Model):
                                                                   ('engineering_revision','=',record.affected_product_id.engineering_revision),
                                                                   ('default_code','=',record.affected_product_id.engineering_code +'_01_'+
                                                                    str(record.affected_product_id.engineering_revision))])
+                    if not product :
+                        product = self.env['product.product'].search([('product_tmpl_id', "=", record.affected_product_id.id),
+                                                                    ('engineering_revision','=',record.affected_product_id.engineering_revision)],
+                                                                    limit=1)
                     
                     product_id = product.id
                     active_model = 'product.product'
@@ -110,6 +114,11 @@ class PCOModel(models.Model):
                 else :
                     # default_code = str(record.affected_product_id.engineering_revision)
                     product = self.env['product.product'].search([('engineering_code', "=", record.affected_product_id.engineering_code),('engineering_revision','=',record.affected_product_id.engineering_revision),('default_code','=',record.affected_product_id.engineering_code +'_01_'+str(record.affected_product_id.engineering_revision))])
+                    if not product :
+                        product = self.env['product.product'].search([('product_tmpl_id', "=", record.affected_product_id.id),
+                                                                    ('engineering_revision','=',record.affected_product_id.engineering_revision)],
+                                                                    limit=1)
+                    
                     product.action_confirm()
                     record.affected_product_id.write({'state':'confirmed'})
                     # record.affected_product_id.write({'default_code':default_code})
@@ -155,6 +164,10 @@ class PCOModel(models.Model):
             if record.new_affected_product_id:                
                 record.new_affected_product_id.write({'state':'confirmed'})  
                 product = self.env['product.product'].search([('engineering_code', "=", record.new_affected_product_id.engineering_code),('engineering_revision','=',record.new_affected_product_id.engineering_revision),('default_code','=',record.new_affected_product_id.engineering_code +'_01_'+str(record.new_affected_product_id.engineering_revision))])
+                if not product :
+                        product = self.env['product.product'].search([('product_tmpl_id', "=", record.new_affected_product_id.id),
+                                                                    ('engineering_revision','=',record.new_affected_product_id.engineering_revision)],
+                                                                    limit=1)
                 if product.engineering_state == 'draft':
                     product.action_confirm()
 
@@ -189,12 +202,23 @@ class PCOModel(models.Model):
                                                                       ('engineering_revision','=',record.new_affected_product_id.engineering_revision),
                                                                       ('default_code','=',record.new_affected_product_id.engineering_code +'_01_'
                                                                     +str(record.new_affected_product_id.engineering_revision))])
+                        if not product :
+                            product = self.env['product.product'].search([('product_tmpl_id', "=", record.new_affected_product_id.id),
+                                                                      ('engineering_revision','=',record.new_affected_product_id.engineering_revision)],
+                                                                      limit=1)
+                        
                         product.action_release()
                     else :
                         product = self.env['product.product'].search([('engineering_code', "=", record.new_affected_product_id.engineering_code),
                                                                       ('engineering_revision','=',record.new_affected_product_id.engineering_revision),
                                                                       ('default_code','=',record.new_affected_product_id.engineering_code +'_01_'
                                                                     +str(record.new_affected_product_id.engineering_revision))])
+                        if not product :
+                            product = self.env['product.product'].search([('product_tmpl_id', "=", record.new_affected_product_id.id),
+                                                                      ('engineering_revision','=',record.new_affected_product_id.engineering_revision)],
+                                                                      limit=1)
+                            
+                        
                         product.action_release()
                         # record.affected_product_id.write({'state':'Released'})
             for record in self.pco_bom_ids:

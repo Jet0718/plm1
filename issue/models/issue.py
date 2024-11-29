@@ -1,5 +1,5 @@
 from odoo import api,fields, models,_
-from datetime import timedelta
+from datetime import datetime, timedelta
 from odoo.exceptions import UserError
 
 class IssueModel(models.Model):
@@ -121,24 +121,54 @@ class IssueModel(models.Model):
 
  #增加欄位 2024.11.4 Herbert增加
     @api.model
-    def get_tiles_data(self):
-        sources =self.search([('owner_id', '=' , self.env.user.id)])
-        source_customer=sources.filtered(lambda r: r.issue_Source == 'Customer')
-        source_internal=sources.filtered(lambda r: r.issue_Source == 'Internal')
-        source_supplier=sources.filtered(lambda r: r.issue_Source == 'Supplier')
+    def get_tiles_data(self,data):
+        # sources =self.search([('owner_id', '=' , self.env.user.id)])
+        # source_customer=sources.filtered(lambda r: r.issue_Source == 'Customer')
+        # source_internal=sources.filtered(lambda r: r.issue_Source == 'Internal')
+        # source_supplier=sources.filtered(lambda r: r.issue_Source == 'Supplier')
+        source_customer = self.env['issue'].search_count([('issue_Source', '=', 'Customer')])
+        source_internal = self.env['issue'].search_count([('issue_Source', '=', 'Internal')])
+        source_supplier = self.env['issue'].search_count([('issue_Source', '=', 'Supplier')])
+        if data and data !='0' :
+            start_date = datetime.now() - timedelta(days=int(data))
+            source_customer = self.env['issue'].search_count([('issue_Source', '=', 'Customer'),('create_date','>=',start_date)])
+            source_internal = self.env['issue'].search_count([('issue_Source', '=', 'Internal'),('create_date','>=',start_date)])
+            source_supplier = self.env['issue'].search_count([('issue_Source', '=', 'Supplier'),('create_date','>=',start_date)])
+        
+        if not source_customer :
+            source_customer=0
+        if not source_internal :
+            source_internal=0
+        if not source_supplier :
+            source_supplier=0
+        
         return {
-            'total_customer': len(source_customer),
-            'total_internal': len(source_internal),
-            'total_supplier': len(source_supplier),
+            'total_customer': source_customer,
+            'total_internal': source_internal,
+            'total_supplier': source_supplier,
         }
     
     @api.model
-    def getpco_status_counts(self):   
-             
+    def getpco_status_counts(self,data):         
         new_count=self.env['pco'].search_count([('state', '=', 'New')])
         review_count=self.env['pco'].search_count([('state', '=', 'Review')])
         approved_count= self.env['pco'].search_count([('state', '=', 'Approved')])
         cancel_count= self.env['pco'].search_count([('state', '=', 'Cancel')])
+        if data and data !='0' :
+            start_date = datetime.now() - timedelta(days=int(data))
+            new_count=self.env['pco'].search_count([('state', '=', 'New'),('create_date','>=',start_date)])
+            review_count=self.env['pco'].search_count([('state', '=', 'Review'),('create_date','>=',start_date)])
+            approved_count= self.env['pco'].search_count([('state', '=', 'Approved'),('create_date','>=',start_date)])
+            cancel_count= self.env['pco'].search_count([('state', '=', 'Cancel'),('create_date','>=',start_date)])
+        
+        if not new_count :
+            new_count=0
+        if not review_count :
+            review_count=0
+        if not approved_count :
+            approved_count=0
+        if not cancel_count :
+            cancel_count=0
         return {
             'new_count': new_count,
             'review_count': review_count,
@@ -154,11 +184,25 @@ class IssueModel(models.Model):
         # ]
         # return data
     @api.model
-    def getdco_status_counts(self): 
+    def getdco_status_counts(self,data): 
         new_count=self.env['dco'].search_count([('state', '=', 'New')])
         review_count=self.env['dco'].search_count([('state', '=', 'Review')])
         approved_count= self.env['dco'].search_count([('state', '=', 'Approved')])
         cancel_count= self.env['dco'].search_count([('state', '=', 'Cancel')])
+        if data and data !='0' :
+            start_date = datetime.now() - timedelta(days=int(data))
+            new_count=self.env['dco'].search_count([('state', '=', 'New'),('create_date','>=',start_date)])
+            review_count=self.env['dco'].search_count([('state', '=', 'Review'),('create_date','>=',start_date)])
+            approved_count= self.env['dco'].search_count([('state', '=', 'Approved'),('create_date','>=',start_date)])
+            cancel_count= self.env['dco'].search_count([('state', '=', 'Cancel'),('create_date','>=',start_date)])
+        if not new_count :
+            new_count=0
+        if not review_count :
+            review_count=0
+        if not approved_count :
+            approved_count=0
+        if not cancel_count :
+            cancel_count=0
         return {
             'new_count': new_count,
             'review_count': review_count,
@@ -167,72 +211,95 @@ class IssueModel(models.Model):
         }
     # 项目阶段数量统计
     @api.model
-    def getprj_tag_counts(self):      
-        domain = []  # 定义你的搜索过滤条件
+    def getprj_tag_counts(self,data):      
+        domain = [('tag_ids','!=',''),('tag_ids', '!=', False)]  # 定义你的搜索过滤条件
+        if data and data !='0' :
+            start_date = datetime.now() - timedelta(days=int(data))
+            domain=[('create_date','>=',start_date),('tag_ids','!=',''),('tag_ids', '!=', False)]
         ctagids_counts = self.env['project.project'].read_group(
             domain,
-            ['tag_ids'],  # 分组依据的字段
+            ['tag_ids', 'id:sum'],  # 分组依据的字段
             ['tag_ids', 'count(id) as count'],  # 要统计的字段
+            orderby='id:sum DESC',
             limit=5
         )
         return ctagids_counts
     
     # 任务状态数量统计
     @api.model
-    def gettask_state_counts(self):      
+    def gettask_state_counts(self,data):      
         domain = [('project_id.last_update_status','not in',('off_track', 'to_define', 'to_define', 'done'))]  # 定义你的搜索过滤条件
+        if data and data !='0' :
+            start_date = datetime.now() - timedelta(days=int(data))
+            domain=[('project_id.last_update_status','not in',('off_track', 'to_define', 'to_define', 'done')),('create_date','>=',start_date)]
         ctagids_counts = self.env['project.task'].read_group(
             domain,
             ['state'],  # 分组依据的字段
             ['state', 'count(id) as count']  # 要统计的字段
+            
         )
         return ctagids_counts
     
     # issue tag
     @api.model
-    def getisu_tag_counts(self):      
+    def getisu_tag_counts(self,data):      
         domain = [('issue_code_ids', '!=', False), ('issue_code_ids', '!=', ''), ('issue_code_ids', '!=', (False, '')), ('issue_code_ids', '!=', None)] # 定义你的搜索过滤条件
-        
+        if data and data !='0' :
+            start_date = datetime.now() - timedelta(days=int(data))
+            domain=[('issue_code_ids', '!=', False), ('issue_code_ids', '!=', ''), ('issue_code_ids', '!=', (False, '')), ('issue_code_ids', '!=', None),('create_date','>=',start_date)]
         ctagids_counts = self.env['issue'].read_group(
             domain,
-            ['issue_code_ids'],  # 分组依据的字段
+            ['issue_code_ids', 'id:sum'],  # 分组依据的字段
             ['issue_code_ids', 'count(id) as count'],   # 要统计的字段
+            orderby='id:sum DESC',
             limit=5
         )
         return ctagids_counts
 
     # 统计问题单top 5最大的产品
     @api.model
-    def getprdmaxiss_counts(self):
-        domain = []
+    def getprdmaxiss_counts(self,data):
+        domain = [('issue_product_id','!=',''),('issue_product_id', '!=', False)]
+        if data and data !='0' :
+            start_date = datetime.now() - timedelta(days=int(data))
+            domain=[('create_date','>=',start_date),('issue_product_id','!=',''),('issue_product_id', '!=', False)]
         prdmaxids_counts = self.env['issue'].read_group(
             domain,
-            ['issue_product_id'],  # 分组依据的字段
+            ['issue_product_id', 'id:sum'],  # 分组依据的字段
             ['issue_product_id', 'count(id) as count'],  # 要统计的字段
+            orderby='id:sum DESC',
             limit=5
         )
         return prdmaxids_counts
-    
+
 
     # 统计dco tags tag_ids
     @api.model
-    def getdco_tag_counts(self):      
-        domain = []  # 定义你的搜索过滤条件
+    def getdco_tag_counts(self,data):      
+        domain = [('tag_ids','!=',''),('tag_ids', '!=', False)]  # 定义你的搜索过滤条件
+        if data and data !='0' :
+            start_date = datetime.now() - timedelta(days=int(data))
+            domain=[('create_date','>=',start_date),('tag_ids','!=',''),('tag_ids', '!=', False)]
         ctagids_counts = self.env['dco'].read_group(
             domain,
-            ['tag_ids'],  # 分组依据的字段
+            ['tag_ids', 'id:sum'],  # 分组依据的字段
             ['tag_ids', 'count(id) as count'],  # 要统计的字段
+            orderby='id:sum DESC',
             limit=5
         )
         return ctagids_counts
     # 统计dco tags tag_ids
     @api.model
-    def getpco_tag_counts(self):      
-        domain = []  # 定义你的搜索过滤条件
+    def getpco_tag_counts(self,data):      
+        domain = [('tag_ids','!=',''),('tag_ids', '!=', False)]  # 定义你的搜索过滤条件
+        if data and data !='0' :
+            start_date = datetime.now() - timedelta(days=int(data))
+            domain=[('create_date','>=',start_date),('tag_ids','!=',''),('tag_ids', '!=', False)]
         ctagids_counts = self.env['pco'].read_group(
             domain,
-            ['tag_ids'],  # 分组依据的字段
+            ['tag_ids', 'id:sum'],  # 分组依据的字段
             ['tag_ids', 'count(id) as count'] ,  # 要统计的字段
+            orderby='id:sum DESC',
             limit=5
         )
         return ctagids_counts

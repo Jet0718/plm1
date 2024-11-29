@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <template xml:space="preserve">
-    <t t-name="ChartRendererpco" title="'Pco States count Report'" style="width: 50%;">
+    <t t-name="ChartRendererpco" title="'Pco States count Report'" style="width: 50%;"  >
         <!-- <canvas t-ref="chart"/> -->
          <div class="vh-100 overflow-auto bg-muted">
             <div class="row m-3">
@@ -9,7 +9,7 @@
                         <div class="col m-0 p-0">
                             <div class="shadow-sm border m-2 p-4 bg-white">
                                 <div class="d-flex align-item-center justify-content-between">
-                                    <h1 class="text-primary fw-blod">Dashboards</h1>
+                                    <h1 class="text-primary fw-blod">PCO Dashboards</h1>
                                     <div>
                                         <select class="form-select" id="datas">
                                            <option value="0">Select Period</option>
@@ -29,7 +29,7 @@
                         <div class="col-lg-6 m-0 p-0" style="width: 50%;">
 							<div class="shadow-sm border m-2 p-4 bg-white">
 								<div class="d-flex align-items-center justify-content-between">
-									<h3 class="text-primary fw-bold">Pco Tags</h3>
+									<h3 class="text-primary fw-bold">Pco States</h3>
 									<!-- <div class="px-3 py-1 bg-primary cursor-pointer">
 										<span class="fa fa-arrow-right text-white"/>
 									</div> -->
@@ -48,7 +48,7 @@
 									</div> -->
 								</div>
 								<!-- <ChartRenderer type="'doughnut'" title="'Top Products Report'"/> -->
-								<ChartRendererpcotags type="'doughnut'" title="'Pco Tags Report'"/>
+								<ChartRendererpcotags type="'doughnut'"/>
 							</div>
                         </div>
                      </div> 
