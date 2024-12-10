@@ -33,7 +33,7 @@ class DCOModel(models.Model):
     # binary_field = fields.Binary("档案")
     # binary_file_name =fields.Char("档案名称")
     # #上传多个档案写法
-    binary_fields =fields.Many2many("ir.attachment",string="Multi Files Upload")
+    binary_fields =fields.Many2many("ir.attachment",string="Multi Files Upload" ,domain="['&',('engineering_code', '!=', ''),('is_plm', '=', True),('engineering_state', 'not in', ['obsoleted','undermodify']) ,('res_model','=',False),('active','=',True)]")
 
     #ebert 
     
@@ -117,15 +117,17 @@ class DCOModel(models.Model):
             
             for record in self.dco_file_ids:
                 if record.affected_item_id.engineering_revision !=0  or record.affected_item_id.engineering_state == 'undermodify':
-                    # record.affected_item_id.write({'engineering_state':'obsoleted'}) 
+                    record.affected_item_id.write({'engineering_state':'obsoleted'}) 
                     record.affected_item_id.write({'active':False})  
-                    # record.affected_item_id.write({'cnis_current':False}) 
+                    record.affected_item_id.write({'cnis_current':False}) 
                     record.new_affected_item_id.write({'active':True})                 
-                    # record.new_affected_item_id.write({'cnis_current':True}) 
+                    record.new_affected_item_id.write({'cnis_current':True}) 
                     # record.new_affected_item_id.write({'engineering_state':'released'}) 
 
                     # record.affected_item_id.action_obsolete()
                     record.new_affected_item_id.action_release()
+
+                    
                     
                 else :
                     record.affected_item_id.action_release()

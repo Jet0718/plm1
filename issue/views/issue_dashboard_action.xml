@@ -26,6 +26,13 @@
         </record>
         <menuitem name="Project Dashboard" id="prj_dashboard"  sequence="18" action="action_prj_dashboard" parent="issue.issue_menu_root_sec"/>
     
+        <!-- <record id="action_external_html" model="ir.actions.client">
+            <field name="name">External HTML Page</field>
+            <field name="tag">action_external_html</field>
+            <field name="url">../static/components/uploadfile.html</field>
+        </record>
+        <menuitem name="uploadfile" id="external_html"  sequence="19" action="action_external_html" parent="issue.issue_menu_root_sec"/> -->
+    
     
     
     </data>

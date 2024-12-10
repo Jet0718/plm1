@@ -72,7 +72,7 @@
                         <page string="送審產品" invisible="showproduct ==1" >
                             <group>
                                 <field name="pco_product_id">
-                                    <tree editable="bottom">  
+                                    <tree editable="bottom"> 
                                         <field name="affected_product_id" string="審批产品" />
                                         <field name="affected_product_version" string="審批产品版本" /> 
                                         <field name="new_affected_product_id" string="新版产品" readonly="1"/>
@@ -85,9 +85,9 @@
                             <group>
                                 <field name="pco_bom_ids">
                                     <tree editable="bottom"> 
-                                        <field name="affected_bom_id" string="审批物料清单" />
+                                        <field name="affected_bom_id" string="审批物料清单"  context="{'disable_preview': 1, 'form_view_ref': 'plm.product_template_form_view_plm_custom'}" />
                                         <field name="affected_bom_version" string="物料清单旧版本" /> 
-                                        <field name="new_affected_bom_id" string="新版物料清单" readonly="1"/>
+                                        <field name="new_affected_bom_id" string="新版物料清单" readonly="1"  context="{'disable_preview': 1, 'form_view_ref': 'plm.product_template_form_view_plm_custom'}"/>
                                         <field name="new_affected_bom_version" string="物料清单新版本"/>
                                     </tree>
                                 </field>                                                   
@@ -95,7 +95,7 @@
                         </page>  
                         <page string="附件">                             
                             <!-- 上传多个档案显示写法 -->
-                            <field name="binary_fields" widget="many2mnay_binary"/>
+                            <field name="binary_fields" />
                         </page>                                          
                     </notebook>
                 </sheet>

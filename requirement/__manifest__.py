@@ -1,7 +1,7 @@
 {
     'name': "Requirement & Evaluate",
     'version': '1.0',
-    'depends': ['base','product','project','plm'],
+    'depends': ['base','product','project','plm','project_inherit'],
     'author': "BWCS PMO",
     'category': 'Category',
     'license' : 'LGPL-3',

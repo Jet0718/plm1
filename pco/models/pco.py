@@ -38,7 +38,7 @@ class PCOModel(models.Model):
     # binary_field = fields.Binary("档案")
     # binary_file_name =fields.Char("档案名称")
     # #上传多个档案写法
-    binary_fields =fields.Many2many("ir.attachment",string="Multi Files Upload")
+    binary_fields =fields.Many2many("ir.attachment",string="Multi Files Upload",domain="['&',('engineering_code', '!=', ''),('is_plm', '=', True),('engineering_state', 'not in', ['obsoleted','undermodify']) ,('res_model','=',False),('cnis_current','=',True)]")
     btnflog=fields.Integer(string="顯示",default=1)
 
 

@@ -1,7 +1,7 @@
 {
     'name': "PCO",
     'version': '1.0',
-    'depends': ['base','plm_product','mrp','plm'],
+    'depends': ['base','plm_product','mrp','plm','project_inherit'],
     'author': "BWCS PMO",
     'category': 'Category',
     'license' : 'LGPL-3',

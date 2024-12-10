@@ -64,9 +64,9 @@
                         <page string="送審文件">
                             <field name="dco_file_ids">
                                 <tree editable="bottom">
-                                    <field name="affected_item_id" string="審批文件"/>   
+                                    <field name="affected_item_id" string="審批文件" context="{'disable_preview': 1, 'form_view_ref': 'project_inherit.view_attachfileprj_form_inherit'}"/>   
                                     <field name="affected_item_version" string="審批文件版本" /> 
-                                    <field name="new_affected_item_id" string="新版審批文件" readonly="1"/>
+                                    <field name="new_affected_item_id" string="新版審批文件" readonly="1"  context="{'disable_preview': 1, 'form_view_ref': 'project_inherit.view_attachfileprj_form_inherit'}"/>
                                     <field name="new_affected_item_version" string="新版審批文件版本"/>
                                 </tree>
                             </field>

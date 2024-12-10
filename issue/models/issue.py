@@ -1,6 +1,10 @@
 from odoo import api,fields, models,_
 from datetime import datetime, timedelta
 from odoo.exceptions import UserError
+# 在你的odoo模块文件夹中创建一个controllers文件夹，并添加一个py文件，例如upload.py
+from odoo import http
+from odoo.http import request
+
 
 class IssueModel(models.Model):
     _name = "issue"
@@ -67,7 +71,7 @@ class IssueModel(models.Model):
     # binary_field = fields.Binary("档案")
     # binary_file_name =fields.Char("档案名称")
     # #上传多个档案写法
-    binary_fields =fields.Many2many("ir.attachment",string="Multi Files Upload")
+    binary_fields =fields.Many2many("ir.attachment",string="Multi Files Upload",domain="['&',('engineering_code', '!=', ''),('is_plm', '=', True),('engineering_state', 'not in', ['obsoleted','undermodify']) ,('res_model','=',False),('active','=',True)]")
 
     # Seqence 自动领号写法
     @api.model_create_multi
@@ -304,3 +308,19 @@ class IssueModel(models.Model):
         )
         return ctagids_counts
 
+
+
+# class AttachmentUpload(http.Controller):
+#     @http.route('/upload_attachments', type='http', methods=['POST'], auth='public', csrf=False)
+#     def upload_attachments(self, model, id, **kwargs):
+#         files = request.httprequest.files.getlist('files')
+#         attachment_ids = []
+#         for file in files:
+#             attachment = request.env['ir.attachment'].create({
+#                 'name': file.filename,
+#                 'datas': file.read(),
+#                 'res_model': model,
+#                 'res_id': int(id),
+#             })
+#             attachment_ids.append(attachment.id)
+#         return request.make_response("Files uploaded successfully", 200)

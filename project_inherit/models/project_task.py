@@ -9,7 +9,7 @@ class InhtProjectTaskModel(models.Model):
 
 
 
-    cnprjtask_file = fields.Many2many('ir.attachment', string= '工程文件',ondelete ='cascade')
+    cnprjtask_file = fields.Many2many('ir.attachment', string= '工程文件',ondelete ='cascade' ,domain="['&',('engineering_code', '!=', ''),('is_plm', '=', True),('engineering_state', 'not in', ['obsoleted','undermodify']) ,('res_model','=',False),('active','=',True)]")
 
 
     # def write(self, vals):

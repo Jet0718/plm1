@@ -19,7 +19,7 @@ class InhtProducttmpModel(models.Model):
     #ebert         
     #cn_is_current = fields.Boolean('is Current', default=True)
     cnis_current = fields.Boolean('isCurrent', default=True,readonly=True)
-    cn_configid = fields.Char(string='configid',default="0",copy=False,readonly=True)
+    cn_configid = fields.Char(string='configid',default="0",readonly=True)
     
     pdt2pdt_id = fields.Many2one(
         'product.template', 'product_template',
@@ -35,7 +35,7 @@ class InhtProducttmpModel(models.Model):
     @api.model_create_multi
     def create(self,vals_list):          
         for vals in vals_list:
-            encode=vals.get('engineering_code')            
+            encode=vals.engineering_code           
             if not encode:
                 vals['engineering_code'] =self.env['ir.sequence'].next_by_code('plm.eng.code')  
                  
@@ -72,7 +72,7 @@ class InhtProducttmpModel(models.Model):
             'view_mode': 'tree,form',
             #'view_id': self.env.ref('product.template.product_template_tree_view').id,   
             'domain': [('active', '=', False),('cn_configid', '=', self.cn_configid)],  
-            #'context': {'search_default_group': 'my_group'},
+            'context': {'disable_preview': 1, 'form_view_ref': 'plm_product.product_template_only_form_inherit_itemnumber'},
             'type': 'ir.actions.act_window',
         }
 
