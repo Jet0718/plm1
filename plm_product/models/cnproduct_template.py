@@ -35,7 +35,7 @@ class InhtProducttmpModel(models.Model):
     @api.model_create_multi
     def create(self,vals_list):          
         for vals in vals_list:
-            encode=vals.engineering_code           
+            encode=vals['engineering_code']           
             if not encode:
                 vals['engineering_code'] =self.env['ir.sequence'].next_by_code('plm.eng.code')  
                  
