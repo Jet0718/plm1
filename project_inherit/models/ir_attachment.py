@@ -1,6 +1,8 @@
 from odoo import api,fields, models,_
-
+import base64
 from odoo.exceptions import UserError
+from odoo import http
+from odoo.http import request
 
 # from odoo import http
 # import json
@@ -15,47 +17,17 @@ class InhtProjectModel(models.Model):
     _inherit = ['revision.plm.mixin', 'ir.attachment']    
     
     #ebert
-    # item_number = fields.Char(string="編號",default=lambda self:_("no"),copy=False,readonly=True)
-    # version =fields.Integer(string ="版本",default=1,readonly=True)
     active = fields.Boolean(string ="启用",default=True,readonly=True)
     owner=fields.Many2one('res.users', default=lambda self: self.env.user.id, string="責任人")
     contactor =fields.Many2one('res.partner', string="聯絡人")
-    # state = fields.Selection([
-    #         ('Draft', 'Draft'),
-    #         ('Review', 'Review'),
-    #         ('Released', 'Released'),
-    #         ('InChange', 'InChange'),
-    #         ('Superseded', 'Superseded')],string = "狀態",
-    #         copy=False, default='Draft',  required=True, index=True)
     cnis_current = fields.Boolean('isCurrent', default=True,readonly=True)
     cn_configid = fields.Char(string='configid',default="0",readonly=True)
-
     cn_file2prj = fields.Many2many('project.project',string='项目')
-
     cn_file2prd = fields.Many2many('product.template',string='产品')
-
-
-    # cn_file2prj = fields.One2many('project.project','cn_prj2file1',string='项目')
     cn_cadfile_ships = fields.One2many('ir.attachment.ships','iship_id','子阶图纸')
 
-
-
-
-    # @api.model_create_multi
-    # def create(self, vals_list):
-    #     new_vals_list = []
-    #     for vals in vals_list:           
-    #         #ebert
-    #         # if vals.get('item_number',_('no'))== _('no'):
-    #         #     vals['item_number'] =self.env['ir.sequence'].next_by_code('dmsdocument')
-            
-    #         if not vals.get('engineering_code'):
-    #             # raise UserError(self.env['ir.sequence'].next_by_code('irattachmen_seq'))
-    #             vals['engineering_code'] =self.env['ir.sequence'].next_by_code('irattachmenseq')
-    #             vals['cn_configid'] = vals.get('id')
-    #         new_vals_list.append(vals)
-    #     return super().create(new_vals_list)
-    
+    url = fields.Char(string="URL")
+    iframe_html = fields.Html(string='Iframe Preview', compute='_compute_iframe_html', sanitize=False)    
     @api.model_create_multi
     def create(self, vals_list):
         for vals in vals_list:
@@ -64,7 +36,21 @@ class InhtProjectModel(models.Model):
                 # vals['cn_configid'] = vals.get('id')                
         res = super().create(vals_list)
         if res.cn_configid =="0" :
-            res.write({'cn_configid': res.id})
+            res.write({'cn_configid': res.id,'public':True})
+
+        # 从 name 字段中提取文件后缀名
+        if res.name:
+            file_name = res.name
+            # file_extension = file_name.split('.')[-1].lower() if '.' in file_name else ''
+            if file_name.lower().endswith('.pdf'):
+                base_url = self.env['ir.config_parameter'].sudo().get_param('web.base.url')
+                thisid=res.id
+                pdf_url =  f"{base_url}/web/static/lib/pdfjs/web/viewer.html?file={base_url}/web/content?model=ir.attachment%26field=datas%26id={thisid}#page=1"            
+                res.write({"url":pdf_url}) 
+                
+
+
+
         return res
     
     #ebert按钮跳转页面    
@@ -78,39 +64,67 @@ class InhtProjectModel(models.Model):
             'context': {'disable_preview': 1, 'form_view_ref': 'project_inherit.view_attachfileprj_form_inherit'},
             'type': 'ir.actions.act_window',
         }
-  
 
 
-# class AttachmentUpload(http.Controller):
-#     @http.route('/issue/upload_attachment', type='http', auth='public', methods=['POST'], csrf=False)
-#     def upload_attachment(self, **kwargs):
-#         file = request.httprequest.files.get('file')
-#         if not file:
-#             return request.make_response("No file provided", 400)
-        
-#         # 读取文件内容并编码为base64
-#         file_content = file.read()
-#         base64_data = base64.b64encode(file_content)
-        
-#         # 创建附件记录
-#         attachment = request.env['ir.attachment'].create({
-#             'name': file.filename,
-#             'datas': base64_data,
-#             'res_model': 'your.res.model',  # 指定关联的模型
-#             'res_id': 0,  # 指定关联的记录ID，如果是新记录则为0
-#         })
-        
-#         # 读取Excel文件内容
-#         book = openpyxl.load_workbook(BytesIO(base64.b64decode(base64_data)))
-#         sheet = book.active
-#         data = []
-#         for row in sheet.iter_rows(min_row=2, values_only=True):  # 假设第一行是标题行
-#             data.append(row)
-        
-#         # 返回附件的URL和Excel数据
-#         attachment_url = '/web/content/%s/%s' % (attachment.id, file.filename)
-#         return request.make_response(json.dumps({'url': attachment_url, 'data': data}), 200)
+   
 
+    @api.depends('url')
+    def _compute_iframe_html(self):
+        for record in self:
+            if record.url:
+                record.iframe_html = f'<iframe src="{record.url}" width="100%" height="500px" frameborder="0" allowfullscreen></iframe>'
+            else:
+                record.iframe_html = False
 
+    def action_open_pdf(self):
+         return {
+                'type': 'ir.actions.act_window',
+                'name': 'PDF View',
+                'res_model': 'ir.attachment',  # 可以是任意模型
+                'view_mode': 'form',
+                'view_id': self.env.ref('project_inherit.custom_iframe_view').id,  # 自定义视图
+                'target': 'new',  # 打开浮层对话框
+                'context': {
+                    'default_url': self.url,  # 传递动态生成的 URL
+                },
+            }
+        # 假设所有PDF文件都是内容类型为'application/pdf'
+        # pdf_attachment = self.env['ir.attachment'].search([('id', '=', self.id)], limit=1)
+        # if pdf_attachment.datas and pdf_attachment.name.lower().endswith('.pdf'):
+        #     base_url = self.env['ir.config_parameter'].sudo().get_param('web.base.url')
+        #     pdf_url =  f"{base_url}/web/static/lib/pdfjs/web/viewer.html?file={base_url}/web/content?model=ir.attachment%26field=datas%26id={self.id}#page=1"            
+        #     self.write({"url":pdf_url})            
+        #     return {
+        #         'type': 'ir.actions.act_window',
+        #         'name': 'PDF View',
+        #         'res_model': 'ir.attachment',  # 可以是任意模型
+        #         'view_mode': 'form',
+        #         'view_id': self.env.ref('project_inherit.custom_iframe_view').id,  # 自定义视图
+        #         'target': 'new',  # 打开浮层对话框
+        #         'context': {
+        #             'default_url': pdf_url,  # 传递动态生成的 URL
+        #         },
+        #     }
+        # else:
+        #     self.write({"url":""})
             
+    
+    @api.onchange('datas')
+    def _onchange_datas(self):
+        #  当 datas 字段发生变化时，自动提取文件后缀名并存储到 file_extension 字段
+        for attachment in self:
+            if attachment._origin and attachment.name :
+                # 从 name 字段中提取文件后缀名
+                file_name = attachment.name
+                # file_extension = file_name.split('.')[-1].lower() if '.' in file_name else ''
+                if file_name.lower().endswith('.pdf'):
+                    base_url = self.env['ir.config_parameter'].sudo().get_param('web.base.url')
+                    thisid=attachment._origin.id
+                    pdf_url =  f"{base_url}/web/static/lib/pdfjs/web/viewer.html?file={base_url}/web/content?model=ir.attachment%26field=datas%26id={thisid}#page=1"            
+                    attachment.write({"url":pdf_url}) 
+                else:                    
+                    self.write({"url":""})
+            # elif not attachment._origin  and attachment.name :
+                
+
 

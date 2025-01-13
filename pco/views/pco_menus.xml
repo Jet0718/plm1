@@ -30,12 +30,12 @@
 
 
     <menuitem id="pco_menu_root_sec" name="PCO.产品签审单"   parent="plm.plm_menu"    sequence="60"/>
-    <!-- <menuitem id="pco_first_level_menu_sec" name="Overview" parent="pco.pco_menu_root_sec" sequence="1"/>  -->
-    <menuitem id="pco_model_menu_action_sec" name="Product Approval"  parent="pco_menu_root_sec" action="pco.pco_model_action" sequence="1"/>
-    <!-- <menuitem id="pco_setting_menu_sec" name="Setting" parent="pco.pco_menu_root_sec" sequence="2"/>    -->
-    <menuitem id="pco_tag_setting_action_sec" name="Tag" parent="pco_menu_root_sec" action="pco.pco_tag_action" sequence="2"/>
-    <menuitem id="pco_product_setting_action_sec" name="pco_product" parent="pco_menu_root_sec" action="pco.pco_product_model_action" sequence="3"/>
-    <menuitem id="pco_type_setting_action_sec" name="pco_type" parent="pco_menu_root_sec" action="pco.pco_type_model_action" sequence="4"/>
+    <menuitem id="pco_first_level_menu_sec" name="Overview" parent="pco.pco_menu_root_sec" sequence="1"/> 
+    <menuitem id="pco_model_menu_action_sec" name="Product Approval"  parent="pco.pco_first_level_menu_sec" action="pco.pco_model_action"/>
+    <menuitem id="pco_setting_menu_sec" name="Setting" parent="pco.pco_menu_root_sec" sequence="2"/>   
+    <menuitem id="pco_tag_setting_action_sec" name="Tag" parent="pco.pco_setting_menu_sec" action="pco.pco_tag_action"/>
+    <menuitem id="pco_product_setting_action_sec" name="pco_product" parent="pco.pco_setting_menu_sec" action="pco.pco_product_model_action"/>
+    <menuitem id="pco_type_setting_action_sec" name="pco_type" parent="pco.pco_setting_menu_sec" action="pco.pco_type_model_action"/>
     
     <!-- <menuitem
         id="menu_pco_master_data_sec"

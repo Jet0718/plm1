@@ -4,7 +4,7 @@ from odoo.exceptions import UserError
 # 在你的odoo模块文件夹中创建一个controllers文件夹，并添加一个py文件，例如upload.py
 from odoo import http
 from odoo.http import request
-
+import base64
 
 class IssueModel(models.Model):
     _name = "issue"
@@ -310,17 +310,38 @@ class IssueModel(models.Model):
 
 
 
-# class AttachmentUpload(http.Controller):
-#     @http.route('/upload_attachments', type='http', methods=['POST'], auth='public', csrf=False)
-#     def upload_attachments(self, model, id, **kwargs):
-#         files = request.httprequest.files.getlist('files')
-#         attachment_ids = []
-#         for file in files:
-#             attachment = request.env['ir.attachment'].create({
-#                 'name': file.filename,
-#                 'datas': file.read(),
-#                 'res_model': model,
-#                 'res_id': int(id),
-#             })
-#             attachment_ids.append(attachment.id)
-#         return request.make_response("Files uploaded successfully", 200)
+
+
+class FileUploadController(http.Controller):
+    @http.route('/upload_attachment', type='http', methods=['POST'], auth='user', csrf=False)
+    def upload_attachment(self, model, id, **kwargs):
+        files = request.httprequest.files.getlist('files')
+        attachment_ids = []
+        for file in files:
+            attachment = request.env['ir.attachment'].create({
+                'name': file.filename,
+                'datas': base64.b64encode(file.read()),
+                'res_model': model,
+                'res_id': int(id),
+            })
+            attachment_ids.append(attachment.id)
+        return request.make_response("Files uploaded successfully", 200)
+
+
+
+
+
+class AttachmentUpload(http.Controller):
+    @http.route('/upload_attachments', type='http', methods=['POST'], auth='public', csrf=False)
+    def upload_attachments(self, model, id, **kwargs):
+        files = request.httprequest.files.getlist('files')
+        attachment_ids = []
+        for file in files:
+            attachment = request.env['ir.attachment'].create({
+                'name': file.filename,
+                'datas': file.read(),
+                'res_model': model,
+                'res_id': int(id),
+            })
+            attachment_ids.append(attachment.id)
+        return request.make_response("Files uploaded successfully", 200)

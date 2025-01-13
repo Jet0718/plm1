@@ -2,10 +2,25 @@ from odoo import api,fields, models,_
 from datetime import timedelta
 from odoo.exceptions import UserError
 
+class TierDefinition(models.Model):
+    _inherit = "tier.definition"
+
+    @api.model
+    def _get_tier_validation_model_names(self):
+        res = super()._get_tier_validation_model_names()
+        res.append("pco")
+        return res
+
 class PCOModel(models.Model):
     _name = "pco"
     _description = "PCO main model for OpenPLM."
-    _inherit = ['mail.thread','mail.activity.mixin']
+    _inherit = ['mail.thread','mail.activity.mixin', "tier.validation"]
+
+    # 添加审批
+    _state_field = "state"
+    _state_from = ["New","Review"]
+    _state_to = ["Review","Approved"]
+    _tier_validation_manual_config = False
         
     item_number =fields.Char("編號" , default=lambda self: _('New'), copy=False , readonly=True )
     title=fields.Char("主旨" ,required=True,readonly=False,default=" ") 
@@ -39,7 +54,7 @@ class PCOModel(models.Model):
     # binary_file_name =fields.Char("档案名称")
     # #上传多个档案写法
     binary_fields =fields.Many2many("ir.attachment",string="Multi Files Upload",domain="['&',('engineering_code', '!=', ''),('is_plm', '=', True),('engineering_state', 'not in', ['obsoleted','undermodify']) ,('res_model','=',False),('cnis_current','=',True)]")
-    btnflog=fields.Integer(string="顯示",default=1)
+    versionflog=fields.Integer(string="换版",default=1)
 
 
     showproduct=fields.Integer(string="顯示part",default=1)
@@ -57,31 +72,24 @@ class PCOModel(models.Model):
     
     #定义按钮
     def action_set_Review(self):
-        if self.state =='New':
-            self.write ({'state':'Review'}) 
+        if self.state =='Review':
+            # self.write ({'state':'Review'}) 
+            
             names=""
             for record in self.pco_product_id: 
                 # names=names+"," +record.affected_product_id.name
             # raise UserError(names)
-            
+             # 退回后需要判断是否已经换版
+                if len(record.new_affected_product_id) !=0 :
+                    
+                    befor_version=record.record.affected_product_id.engineering_revision
+                    after_version=record.new_affected_product_id.engineering_revision
+                    if after_version ==befor_version+1:
+                        continue  
             #ebert version item 换版 条件判断送审物件的版本是否是1， 是则送审发布，否则换版
                 if record.affected_product_id.engineering_revision !=0  or record.affected_product_id.engineering_state == 'released':
-                    # copyitem=record.affected_product_id.copy()
-                    # fields = record.env['product.template']._fields
-                    # #for fld in fields :
-                    # copyitem.write({'cn_configid': record.affected_product_id.cn_configid})
-                    # copyitem.write({'cnis_current': False})
-                    # copyitem.write({'active': False})
-                    # copyitem.write({'name': record.affected_product_id.name})
-                    # copyitem.write({'engineering_revision': record.affected_product_id.engineering_revision+1})                 
-                    # copyitem.write({'state': "Draft"})
-                    # #抄写内部参考号 编号-版本
-                    # default_code = str(record.affected_product_id.engineering_revision+1)
-                    # copyitem.write({'default_code': record.affected_product_id.item_number+"-"+default_code})
-                    # record.write ({'new_affected_product_id':copyitem.id})  
-                    # record.affected_product_id.write({'state':'InChange'}) 
-                    # record.affected_product_id.write({'active':True})
-                    # record.affected_product_id.write({'cnis_current':True})  
+                   
+                    
                     # 用对应的product进行 plm的方法变更送审
                     product = self.env['product.product'].search([('engineering_code', "=", record.affected_product_id.engineering_code),
                                                                   ('engineering_revision','=',record.affected_product_id.engineering_revision),
@@ -107,9 +115,10 @@ class PCOModel(models.Model):
 
                     newrecord = self.env['product.template'].search([('engineering_code', '=' ,ecode ),('engineering_revision', '=' ,eversion)])
                     newrecord.write({'cn_configid': record.affected_product_id.cn_configid,'cnis_current': True})
-                    record.affected_product_id.write({'cnis_current': False,'active':False})
-                    record.write({'new_affected_product_id': newrecord.id})
-                    self.write({'btnflog': False})
+                    record.affected_product_id.write({'cnis_current': False,'state':'undermodify','engineering_state':'undermodify'})
+                    
+                    record.write({'new_affected_product_id': newrecord.id,'active':False})
+                    # self.write({'btnflog': False})
                         
                 else :
                     # default_code = str(record.affected_product_id.engineering_revision)
@@ -129,8 +138,14 @@ class PCOModel(models.Model):
                     #if self.producaffected_product_idtion_id:
                     # This ECO was generated from a MO. Uses it MO as base for the revision.
 
-
+                    # 退回后需要判断是否已经换版
+                    if len(record.new_affected_bom_id) !=0 :
+                        befor_version=record.record.new_affected_bom_id.engineering_revision
+                        after_version=record.new_affected_bom_id.engineering_revision
+                        if after_version ==befor_version+1:
+                            continue  
                     if record.affected_bom_id.version !=0  or record.affected_bom_id.state == 'Released':
+                        
                         if not record.new_affected_bom_id:
                             code = str(record.affected_bom_id.version+1)
                             record.new_affected_bom_id = record.affected_bom_id.sudo().copy(default={
@@ -144,7 +159,7 @@ class PCOModel(models.Model):
                             record.affected_bom_id.write({'state':'InChange'}) 
                             record.affected_bom_id.write({'cnis_current':True})
                             record.write({'new_affected_bom_id':record.new_affected_bom_id.id})   
-                            self.write({'btnflog': False})
+                            # self.write({'btnflog': False})
                     else :
                         code = str(record.affected_bom_id.version+1)
                         record.affected_bom_id.write({'state':'Review'})                        
@@ -154,8 +169,8 @@ class PCOModel(models.Model):
                     
             # ebert end             
              
-        elif self.state =='Review':
-            raise UserError('已是"审核中"状态')
+        # elif self.state =='Review':
+        #     raise UserError('已是"审核中"状态')
         else:
             raise UserError('不可以推到"审核中"状态')
    
@@ -174,23 +189,23 @@ class PCOModel(models.Model):
         for record in self.pco_bom_ids: 
             if record.new_affected_bom_id != False  :                
                 record.new_affected_bom_id.write({'state':'Review'}) 
-        for record in self :
+        # for record in self :
             
-            record.write({'btnflog': True})
+            # record.write({'btnflog': True})
         # elif self.state =='Review':
         #     raise UserError('已是"变更后审核"状态')
         # else:
         #     raise UserError('不可以推到"变更后审核"状态')  
 
     def action_set_Approved(self):
-        if self.state =='Review':
-            self.write({'state':'Approved'})
+        if self.state =='Approved':
+            # self.write({'state':'Approved'})
 
     #          #ebert 发布 Released
             for record in self.pco_product_id:
                 if record.affected_product_id :                    
                     if record.affected_product_id.engineering_revision !=1  or record.affected_product_id.state == 'undermodify':
-                        record.affected_product_id.write({'state':'obsoleted'}) 
+                        record.affected_product_id.write({'state':'obsoleted','engineering_state':'obsoleted'}) 
                         record.affected_product_id.write({'active':False}) 
                         record.affected_product_id.write({'cnis_current':False}) 
                         record.new_affected_product_id.write({'active':True}) 
@@ -239,14 +254,20 @@ class PCOModel(models.Model):
                         
     #         # ebert end 
              
-        elif self.state =='Approved':
-            raise UserError('已是"核准"状态')
+        # elif self.state =='Approved':
+        #     raise UserError('已是"核准"状态')
         elif self.state =='Cancel':
             raise UserError('已取消,不能被核准')
         else:
             raise UserError('不可以推到"核准"状态')
         
     def action_set_Cancel(self):
+        for nd in self.pco_product_id:                
+            if nd.new_affected_product_id and nd.new_affected_product_id.engineering_revision !=1 :
+                raise UserError('已换版,不能被取消')
+        for nd in self.pco_bom_ids:                
+            if nd.new_affected_bom_id.version !=1 :
+                raise UserError('已换版,不能被取消')
         if self.state =='New':
             self.write({'state':'Cancel'})
         elif self.state =='Review':
@@ -273,17 +294,7 @@ class PCOModel(models.Model):
     # @api.onchange('pco_product_id')
     # def _compute_pco_product_id(self):
     def write(self, vals):
-        
-        # raise UserError(typestr)
-        # self.write({'btnflog':1})        
-        # for record in self:
-        #     for nd in record.pco_product_id:
-        #         if res.state =='Review' and nd.new_affected_product_id.version !=1:
-        #             self.write({'btnflog':0})
-        #     for nd in record.pco_bom_ids:
-        #         if res.state =='Review' and nd.new_affected_bom_id.version !=1:
-        #             self.write({'btnflog':0})
-
+        vals['create_uid'] =self.create_uid
         is_setflog =False
         for record in self.pco_product_id: 
             if record.new_affected_product_id and  record.new_affected_product_id.state == 'confirmed':                
@@ -295,24 +306,42 @@ class PCOModel(models.Model):
         if is_setflog :
             res =  super(PCOModel, self).write(vals)
             return res   
-            
-
-
-        btnflog= True
-        for record in self:
-            for nd in record.pco_product_id:
-                if record.state =='Review' and nd.new_affected_product_id.version !=0:
-                    btnflog= False
-                    # self.write({'btnflog':False})
-            for nd in record.pco_bom_ids:
-                if record.state =='Review' and nd.new_affected_bom_id.version !=0:
-                    btnflog= False
-                    # self.write({'btnflog':False})
-        vals['btnflog'] =btnflog
         res =  super(PCOModel, self).write(vals)
-
         return res
 
+    def setversionflog(self):
+        for record in self:
+            for nd in record.pco_product_id:                
+                if nd.affected_product_id.engineering_state =="released" :
+                    versionflog= False  
+                    self.write({"versionflog":versionflog,"create_uid":self.create_uid})
+            for nd in record.pco_bom_ids:                
+                if nd.affected_bom_id.state =="released" :
+                    versionflog= False  
+                    self.write({"versionflog":versionflog,"create_uid":self.create_uid})
+    
+    def do_reject(self):
+        self.write({"state":'New',"create_uid":self.create_uid})
+        for record in self:
+            for nd in record.pco_product_id:                
+                    if nd.affected_product_id.engineering_state !="released" :
+                        versionflog= False  
+                        self.write({"engineering_state":'New'})
+            for nd in record.pco_bom_ids:                
+                if nd.affected_bom_id.state !="released" :
+                    versionflog= False  
+                    self.write({"state":'New'})
+
+
+    #退回检查
+    def reject_chk(self):
+        for record in self:
+            for nd in record.pco_product_id:                
+                if nd.new_affected_product_id and nd.new_affected_product_id.engineering_revision !=1 :
+                    raise UserError('已核准,不能被取消')
+            for nd in record.pco_bom_ids:                
+                if nd.new_affected_bom_id.version !=1 :
+                    raise UserError('已换版,不能被取消')
     @api.onchange('classstr')
     def _compute_classstr(self):
         self.write({'showproduct':1})
@@ -322,20 +351,3 @@ class PCOModel(models.Model):
                 self.write({'showproduct':0})
             if r.name=="Bom":
                 self.write({'showbom':0})
-
-    
-    # def _getpco_status_counts(self):
-        
-    #     new_count=self.search_count([('state', '=', 'New')])
-    #     review_count=self.search_count([('state', '=', 'Review')])
-    #     approved_count= self.search_count([('state', '=', 'Approved')])
-    #     cancel_count= self.search_count([('state', '=', 'Cancel')])
-    #     return {
-    #         'new_count': new_count,
-    #         'review_count': review_count,
-    #         'approved_count': approved_count,
-    #         'cancel_count':  cancel_count,
-    #     }
-
-        
-

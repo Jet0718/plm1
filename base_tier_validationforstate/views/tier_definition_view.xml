@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2017-19 ForgeFlow S.L. (https://www.forgeflow.com)
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record id="tier_definition_view_form_inhertstate" model="ir.ui.view">
+        <field name="name">tier.definition.formforstate</field>
+        <field name="model">tier.definition</field>
+        <field name="inherit_id" ref="base_tier_validation.tier_definition_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='reviewer_id']" position="after"> 
+                <field name="to_state"/>
+                <field name="domethod"/>
+                <!-- <field name="reject_state_parent"/> -->
+                <field name="reject_method"/>
+            </xpath>
+        </field>
+    </record>
+    <!-- <template id="tier_validation_buttons_inhert">
+        <field name="inherit_id" ref="base_tier_validation.tier_validation_buttons" />
+        <xpath expr="//button[@name='restart_validation']" position="attributes">
+                <attribute name="invisible">not review_ids or hide_reviews or versionflog, '!=', 1 or state == 'Approved'</attribute>
+        </xpath> 
+            
+    </template> -->
+    <template id="tier_validation_buttons_inhert" inherit_id="base_tier_validation.tier_validation_buttons">
+        <xpath expr="//button[@name='restart_validation']" position="attributes">
+                <attribute name="invisible">not review_ids or hide_reviews or versionflog != 1 or state == 'Approved'</attribute>
+        </xpath> 
+    </template>
+</odoo>

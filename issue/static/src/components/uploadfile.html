@@ -1,0 +1,28 @@
+<!-- 在你的资产文件中添加 -->
+<input type="file" id="file_input" multiple>
+<button onclick="uploadFiles()">Upload</button>
+
+<script>
+function uploadFiles() {
+    var fileInput = document.getElementById('file_input');
+    var files = fileInput.files;
+    var formData = new FormData();
+    for (var i = 0; i < files.length; i++) {
+        formData.append('files', files[i]);
+    }
+    
+    fetch('/upload_attachments', {
+        method: 'POST',
+        body: formData,
+    })
+    .then(
+        response => response.json()
+    )
+    .then(data => {
+        console.log('Files uploaded:', data);
+    })
+    .catch(error => {
+        console.error('Error uploading files:', error);
+    });
+}
+</script>

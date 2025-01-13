@@ -14,6 +14,6 @@
         'views/project_task.xml',
         'views/ir_attachment_view.xml',
         'views/ir_attachment_relations.xml', 
-    ],
+    ],        
     'application': True,
 }

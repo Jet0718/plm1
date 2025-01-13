@@ -155,11 +155,22 @@
 	               	</group>
                     <notebook>
                     	<page string="Attachment">
-                        	<group string="File Data:" name="FileData">
+                            
+                                 <group string="File Data:" >
+                                    <group>
+                                        <field name="datas"
+                                                        filename="name"
+                                                        readonly="engineering_state in ['released','obsoleted']"/>
+                                    </group>
+                                    <group  name="group_datas2">
+                                    </group>
+                                </group>
+                        	<group name="FileData">
+                           
                             	<group invisible="type=='url'" name="group_datas" colspan="4" col="2">
-                                    <field name="datas"
-                                           filename="name"
-                                           readonly="engineering_state in ['released','obsoleted']"/>
+                                    <!-- <field name="datas"
+                                                filename="name"
+                                                readonly="engineering_state in ['released','obsoleted']"/> -->
                                     <field name="name"
                                            select="1"
                                            readonly="engineering_state in ['released','obsoleted']"/>
@@ -169,6 +180,7 @@
                                            readonly="engineering_state in ['released','obsoleted']"/>
                                     <field name="printout" invisible="1"/>
                                 </group>
+                                
                                 <group string="Website:"
                                        name="group_url"
                                        colspan="4"

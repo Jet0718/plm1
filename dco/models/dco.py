@@ -2,10 +2,37 @@ from odoo import api,fields, models,_
 from datetime import timedelta
 from odoo.exceptions import UserError
 
+
+
+
+class TierDefinition(models.Model):
+    _inherit = "tier.definition"
+
+    @api.model
+    def _get_tier_validation_model_names(self):
+        res = super()._get_tier_validation_model_names()
+        res.append("dco")
+        return res
+
+
 class DCOModel(models.Model):
     _name = "dco"
     _description = "DCO main model for OpenPLM."
     _inherit = ['mail.thread','mail.activity.mixin']
+
+    _inherit = ['mail.thread','mail.activity.mixin', "tier.validation"]
+    # _state_name = ["New"]
+    _state_field = "state"
+    _state_from = ["New","Review"]
+    _state_to = ["Review","Approved"]
+
+    _tier_validation_manual_config = False
+
+    @api.model
+    def _get_under_validation_exceptions(self):
+        res = super()._get_under_validation_exceptions()
+        res.append("route_id")
+        return res
         
     item_number =fields.Char("編號" , default=lambda self: _('New'), copy=False , readonly=True )
     title=fields.Char("主旨" ,required=True,readonly=False) 
@@ -46,7 +73,7 @@ class DCOModel(models.Model):
 
     dco_file_ids =fields.One2many('dco.file','dco_id',string=' ')
 
-    btnflog=fields.Integer(default=1)
+    versionflog=fields.Integer(string="换版",default=1)
 
     # Seqence 自动领号写法 compute='_comput_show_version',  ,related='new_affected_item_id.version'
     @api.model_create_multi
@@ -59,21 +86,17 @@ class DCOModel(models.Model):
     
     #定义按钮
     def action_set_Review(self):
-        if self.state =='New':
-            self.write ({'state':'Review'})  
+        if self.state =='Review':
+            # self.write ({'state':'Review'})  
             #ebert 
             for record in self.dco_file_ids:            
                 if record.affected_item_id.engineering_revision !=0  or record.affected_item_id.engineering_state == 'released':
-                    # record.affected_item_id.write({'active':False})
-                    # copyitem=record.affected_item_id.copy()
-                    # fields = record.env['product.template']._fields
-                    # #for fld in fields :
-                    # copyitem.write({'cn_configid': record.affected_item_id.cn_configid})
-                    # copyitem.write({'cnis_current': False})
-                    # copyitem.write({'active': False})
-                    # copyitem.write({'name': record.affected_item_id.name})
-                    # copyitem.write({'version': record.affected_item_id.engineering_revision+1})                 
-                    # copyitem.write({'engineering_state': "draft"})
+                    # 退回后需要判断是否已经换版
+                    if len(record.new_affected_item_id) !=0 :
+                        befor_version=record.affected_item_id.engineering_revision
+                        after_version=record.new_affected_item_id.engineering_revision
+                        if after_version ==befor_version+1:
+                            continue
                     # 执行换版
                     record.affected_item_id.newVersion()
                     ecode = record.affected_item_id.engineering_code
@@ -85,13 +108,6 @@ class DCOModel(models.Model):
                     newrecord.write({'cn_configid': record.affected_item_id.cn_configid,'cnis_current': True, 'active': False})
                     record.affected_item_id.write({'cnis_current': False })
                     record.write({'new_affected_item_id': newrecord.id})
-                    self.write({'btnflog': False})
-                    
-                    # record.write ({'new_affected_item_id':newrecord.id})  
-                    # record.affected_item_id.write({'engineering_state':'undermodify'}) 
-                    # record.affected_item_id.write({'active':True})
-                    #self.affected_item_id.write({'cnis_current':True})     
-                    
 
 
                 else :
@@ -99,21 +115,21 @@ class DCOModel(models.Model):
                     # record.affected_item_id.write({'engineering_state':'confirmed'})
                     record.write({'new_affected_item_id':record.affected_item_id.id}) 
             #ebert end
-        elif self.state =='Review':
-            raise UserError('已是"审核中"状态')
-        else:
-            raise UserError('不可以推到"审核中"状态')
+        # elif self.state =='Review':
+        #     raise UserError('已是"审核中"状态')
+        # else:
+        #     raise UserError('不可以推到"审核中"状态')
         
     def action_set_Review_after(self): 
         for record in self.dco_file_ids:                    
             # record.new_affected_item_id.write({'engineering_state':'confirmed'})  
             if record.new_affected_item_id.engineering_state == 'draft' :
                 record.new_affected_item_id.action_confirm()
-        self.write({'btnflog': True})
+        # self.write({'btnflog': True})
           
     def action_set_Approved(self):
-        if self.state =='Review':
-            self.write({'state':'Approved'})
+        if self.state =='Approved':
+            # self.write({'state':'Approved'})
             
             for record in self.dco_file_ids:
                 if record.affected_item_id.engineering_revision !=0  or record.affected_item_id.engineering_state == 'undermodify':
@@ -132,12 +148,12 @@ class DCOModel(models.Model):
                 else :
                     record.affected_item_id.action_release()
                     # record.affected_item_id.write({'engineering_state':'released'})
-        elif self.state =='Approved':
-            raise UserError('已是"核准"状态')
-        elif self.state =='Cancel':
-            raise UserError('已取消,不能被核准')
-        else:
-            raise UserError('不可以推到"核准"状态')
+        # elif self.state =='Approved':
+        #     raise UserError('已是"核准"状态')
+        # elif self.state =='Cancel':
+        #     raise UserError('已取消,不能被核准')
+        # else:
+        #     raise UserError('不可以推到"核准"状态')
     def action_set_Cancel(self):
         if self.state =='New':
             self.write({'state':'Cancel'})
@@ -147,37 +163,43 @@ class DCOModel(models.Model):
             raise UserError('已是"取消"状态')
         else:
             raise UserError('已核准,不能被取消')
-
-    # @api.onchange('dco_file_ids','state')
-    # def _onchange_dco_file_ids(self):
-    #     for record in self.dco_file_ids:
-    #         # (not affected_item_id and not new_affected_item_id) or state !='Review' or affected_item_id.version ==1
-    #         if  record.affected_item_id.engineering_revision !=0 or record.new_affected_item_id.engineering_revision !=0:
-    #             self.write({'btnflog':0})
-    def write(self, vals):        
-        # raise UserError(typestr)
-        # self.write({'btnflog':1})        
-        # for record in self:
-        #     for nd in record.pco_product_id:
-        #         if res.state =='Review' and nd.new_affected_product_id.version !=1:
-        #             self.write({'btnflog':0})
-        #     for nd in record.pco_bom_ids:
-        #         if res.state =='Review' and nd.new_affected_bom_id.version !=1:
-        #             self.write({'btnflog':0})
-        
+    
+    
+    def write(self, vals):    
+        vals['create_uid'] =self.create_uid
         for record in self.dco_file_ids: 
             if record.new_affected_item_id and  record.new_affected_item_id.engineering_state == 'confirmed':
+               vals['create_uid'] =self.create_uid
                res =  super(DCOModel, self).write(vals)                
                return res
             
-        btnflog= True
-        for record in self:
-            for nd in record.dco_file_ids:
-                if record.state =='Review' and (nd.affected_item_id.engineering_revision !=0  or nd.new_affected_item_id.engineering_revision !=0):
-                    btnflog= False                    
-        vals['btnflog'] =btnflog
+        # btnflog= True
+        # for record in self:
+        #     # raise UserError(record.dco_file_ids) 
+        #     for nd in record.dco_file_ids:
+        #         # if record.state =='Review' and (nd.affected_item_id.engineering_revision !=0  or nd.new_affected_item_id.engineering_revision !=0):
+        #         #     btnflog= False 
+                  
+        #         if nd.affected_item_id.engineering_state =="released" :
+        #             btnflog= False  
+        #             vals['btnflog'] =btnflog     
         res =  super(DCOModel, self).write(vals)
-
+       
         return res
 
 
+    def setversionflog(self):
+        for record in self:
+            for nd in record.dco_file_ids:                
+                if nd.affected_item_id.engineering_state =="released" :
+                    versionflog= False  
+                    self.write({"versionflog":versionflog,"create_uid":self.create_uid})
+
+    def do_reject(self):
+        self.write({"state":'New',"create_uid":self.create_uid})
+        for record in self:
+            for nd in record.dco_file_ids:                
+                if nd.new_affected_item_id.engineering_state !="released" :                    
+                    nd.new_affected_item_id.engineering_state.write({"engineering_state":'New'})
+
+    

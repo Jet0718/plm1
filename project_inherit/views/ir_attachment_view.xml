@@ -13,14 +13,21 @@
                   <!-- #将状态改成管道状态列 -->
                 <xpath expr="//header" position="inside">
                     <field name="engineering_state" widget="statusbar" statusbar_visible="draft,confirmed,released,undermodify,obsoleted"/>   
-                </xpath>      
+                </xpath> 
+                <!-- PDF预览按钮 -->
+                <xpath expr="//group[@name='group_datas2']" position="inside">                                  
+                    <button name="action_open_pdf" type="object" title="预览PDF" invisible="url=='' or url== False"  class="btn btn-secondary fa fa-search preview_file"/>
+                </xpath> 
+
+
+
                 <field name="preview" position="after">   
                         <!-- <field name="item_number"  /> --> 
                         <p/>  
                         <field name="owner"  />
                         <field name="active"  />
-                         <field name="cnis_current"  />
-                </field>
+                         <field name="cnis_current"  />                        
+                </field>                 
                 <!-- ebert button_box 顶部添加按钮 -->    
                 <div name="button_box" position="inside">
                     <button string="versions"  icon="fa-sitemap" class="oe_stat_button" type="object"   name="action_openfileversions"/>                  
@@ -61,6 +68,7 @@
             </field> 
         </record>
 
+         
        
         <record id="view_attachment_tree_inheritcn" model="ir.ui.view">
             <field name="name">ir.attachmentinhert.tree</field>
@@ -73,8 +81,31 @@
                         <field name="engineering_state" string="engineering state"/>
                 </xpath>                 
             </field>
+        </record>        
+        <record id="custom_iframe_view" model="ir.ui.view">
+            <field name="name">custom.iframe.view</field>
+            <field name="model">ir.attachment</field>
+            <field name="arch" type="xml">
+                <form string="Custom Dialog">
+                    
+                    <sheet>     
+                        <field name="url" invisible="1"/>
+                        <field name="iframe_html" widget="html" nolabel="1" />               
+                        <!-- <field name="url" invisible="1"/>
+                        
+                        <iframe src ="context.get('default_url')"  width="100%"  height="500px" frameborder="0">
+                           
+                             <attribute name="src">
+                                <field name="url" />
+                            </attribute>
+                        </iframe> -->
+
+
+                        
+                    </sheet>
+                </form>
+            </field>
         </record>
     </data>
+
 </odoo>
-
-
