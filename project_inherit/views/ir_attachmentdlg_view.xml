@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+               
+        <record id="custom_iframe_view" model="ir.ui.view">
+            <field name="name">custom.iframe.view</field>
+            <field name="model">ir.attachmentdlg</field>
+            <field name="arch" type="xml">
+                <form>                    
+                    <sheet>     
+                        <field name="url" invisible="1"/>
+                        <field name="iframe_html" widget="html" nolabel="1"  />    
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+
+</odoo>
